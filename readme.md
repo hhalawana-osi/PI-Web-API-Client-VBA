@@ -68,60 +68,81 @@ If you want to use basic authentication instead of Kerberos, set useKerberos to 
 ### Send values in bulk using the StreamSet/UpdateValuesAdHoc
 
 ```vb# 
-   Dim streamValuesItems As New PIItemsStreamValues
-   Dim streamValue1 As New PIStreamValues
-   Dim streamValue2 As New PIStreamValues
-   Dim streamValue3 As New PIStreamValues
-   Dim value1 As New PITimedValue
-	  Dim value2 As New PITimedValue
-  	Dim value3 As New PITimedValue
-  	Dim value4 As New PITimedValue
-   Dim value5 As New PITimedValue
-  	Dim value6 As New PITimedValue
+    Call GetPIPoints
+    Dim streamValuesItems As New PIItemsStreamValues
+    Dim streamValue1 As New PIStreamValues
+    Dim streamValue2 As New PIStreamValues
+    Dim streamValue3 As New PIStreamValues
+    Dim value1 As New PITimedValue
+    Dim value2 As New PITimedValue
+    Dim value3 As New PITimedValue
+    Dim value4 As New PITimedValue
+    Dim value5 As New PITimedValue
+    Dim value6 As New PITimedValue
 
-  	streamValuesItems.CreateItemsArray (3)
-  	value1.SetValueWithInt (2)
-  	value1.Timestamp = "*-1d"
-	  value2.SetValueWithInt (3)
-  	value2.Timestamp = "*-2d"
-  	value3.SetValueWithInt (4)
-  	value3.Timestamp = "*-1d"
-  	value4.SetValueWithInt (5)
-  	value4.Timestamp = "*-2d"
-  	value5.SetValueWithInt (6)
-  	value5.Timestamp = "*-1d"
-  	value6.SetValueWithInt (7)
-  	value6.Timestamp = "*-2d"
+    streamValuesItems.CreateItemsArray (3)
+    value1.SetValueWithInt (2)
+    value1.Timestamp = "*-1d"
+    value2.SetValueWithInt (3)
+    value2.Timestamp = "*-2d"
+    value3.SetValueWithInt (4)
+    value3.Timestamp = "*-1d"
+    value4.SetValueWithInt (5)
+    value4.Timestamp = "*-2d"
+    value5.SetValueWithInt (6)
+    value5.Timestamp = "*-1d"
+    value6.SetValueWithInt (7)
+    value6.Timestamp = "*-2d"
 
-   streamValue1.webId = point1.webId
-	  streamValue1.CreateItemsArray (2)
-  	Call streamValue1.SetItem(0, value1)
-  	Call streamValue1.SetItem(1, value2)
-  	Call streamValuesItems.SetItem(0, streamValue1)
+    streamValue1.webId = point1.webId
+    streamValue1.CreateItemsArray (2)
+    Call streamValue1.SetItem(0, value1)
+    Call streamValue1.SetItem(1, value2)
+    Call streamValuesItems.SetItem(0, streamValue1)
 
-  streamValue2.webId = point2.webId
-  streamValue2.CreateItemsArray (2)
-	 Call streamValue2.SetItem(0, value3)
-	 Call streamValue2.SetItem(1, value4)
-	 Call streamValuesItems.SetItem(1, streamValue2)
+    streamValue2.webId = point2.webId
+    streamValue2.CreateItemsArray (2)
+    Call streamValue2.SetItem(0, value3)
+    Call streamValue2.SetItem(1, value4)
+    Call streamValuesItems.SetItem(1, streamValue2)
 
-	 streamValue3.webId = point2.webId
-	 streamValue3.CreateItemsArray (2)
-	 Call streamValue3.SetItem(0, value5)
-	 Call streamValue3.SetItem(1, value6)
-	 Call streamValuesItems.SetItem(2, streamValue3)
+    streamValue3.webId = point2.webId
+    streamValue3.CreateItemsArray (2)
+    Call streamValue3.SetItem(0, value5)
+    Call streamValue3.SetItem(1, value6)
+    Call streamValuesItems.SetItem(2, streamValue3)
 
-	 Dim response As ApiResponsePIItemsItemsSubstatus
-	 Set response = client.StreamSet.UpdateValuesAdHocWithHttpInfo(streamValuesItems)
+    Dim response As ApiResponsePIItemsItemsSubstatus
+    Set response = client.StreamSet.UpdateValuesAdHocWithHttpInfo(streamValuesItems)
 ```
 
 
-### Get recorded values in bulk using the StreamSet/GetRecordedAdHoc
+### Get AF Attribute given an AF Element path
 
 ```vb# 
-    webIds = point1.webId + "," + point2.webId + "," + point3.webId
-    Set compressedData = client.StreamSet.GetRecordedAdHoc(webIds, True, 1000)
+    Set elem = client.element.GetByPath(ERD.CurrentContext(ThisDisplay))
+    ElemDesc.Contents = elem.Description
+    Dim attributes As PIItemsAttribute
+    Set attributes = client.element.GetAttributes(elem.webId, 1000, False, False, False, 0)
 ```
+
+
+### Get current value given an AF Attribute path
+
+```vb# 
+    attributePath = ERD.CurrentContext(ThisDisplay) + "|" + AttrList.Text
+    Set attr = client.attribute.GetByPath(attributePath)
+    Set timedValue = client.Stream.GetEnd(attr.webId)
+    AttrValue.Contents = timedValue.value
+```
+
+### Get Event Frames given an AF database path
+
+```vb# 
+  Set db = client.AssetData.GetByPath(dbPath)
+  Set efs = client.AssetData.GetEventFrames(db.webId, False, False, 100, True, 0, "", "*", "", elem.Name, elem.templateName, "", "", "None", "", "", "*-900", "*")
+```
+
 
 ## Licensing
 Copyright 2017 OSIsoft, LLC.
