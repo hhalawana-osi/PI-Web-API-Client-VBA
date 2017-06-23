@@ -13,10 +13,10 @@ PI ProcessBook 2012 SP1+
 
 ## Installation
 
-Download this source code
-Create a new folder under %PIHOME% named WebAPIWrapper 
-Copy all files from the dist folder to %PIHOME%\WebAPIWrapper 
-Run as Administrator the reg.bat located on %PIHOME%\WebAPIWrapper in order to register the PIWebApiWrapper assmebly.
+ - Download this source code
+ - Create a new folder under %PIHOME% named WebAPIWrapper 
+ - Copy all files from the dist folder to %PIHOME%\WebAPIWrapper 
+ - Run as Administrator the reg.bat located on %PIHOME%\WebAPIWrapper in order to register the PIWebApiWrapper assmebly.
 
 
 ```vb#  
