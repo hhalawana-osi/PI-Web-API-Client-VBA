@@ -23,9 +23,12 @@ This repository has the source code package of the PI Web API Wrapper for VBA.
 
 Create or edit a PI ProcessBook display. Press ALT+F11 to open Visual Basic for Applications. On the menu, click on Tools --> References. Find PIWebApiWrapper on the list box of the available reference and add it to the VBA project.
 
+## Source code
+The Visual Studio solution that generates the final library is available on the src folder. You might want to add or edit a method and rebuild the solution in order to generate custom assemblies.
+
 ## Examples
 
-Please refer to the following examples to understand how to use this library: 
+There are two PI ProcessBook displays available on the Samples folder of this repository. In addition, please refer to the following examples to understand how to use this library: 
 
 
 ### Create an intance of the piwebapi top level object.
