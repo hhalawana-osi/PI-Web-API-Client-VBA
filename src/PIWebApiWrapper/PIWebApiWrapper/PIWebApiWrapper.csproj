@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0371762-6464-4C58-A4FC-31DDA56BF6E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PIWebApiWrapper</RootNamespace>
+    <AssemblyName>PIWebApiWrapper</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\dist\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net35\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.1.0\lib\net35\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\AnalysisApi.cs" />
+    <Compile Include="Api\AnalysisCategoryApi.cs" />
+    <Compile Include="Api\AnalysisRuleApi.cs" />
+    <Compile Include="Api\AnalysisRulePlugInApi.cs" />
+    <Compile Include="Api\AnalysisTemplateApi.cs" />
+    <Compile Include="Api\AssetDatabaseApi.cs" />
+    <Compile Include="Api\AssetServerApi.cs" />
+    <Compile Include="Api\AttributeApi.cs" />
+    <Compile Include="Api\AttributeCategoryApi.cs" />
+    <Compile Include="Api\AttributeTemplateApi.cs" />
+    <Compile Include="Api\AttributeTraitApi.cs" />
+    <Compile Include="Api\CalculationApi.cs" />
+    <Compile Include="Api\ChannelApi.cs" />
+    <Compile Include="Api\ConfigurationApi.cs" />
+    <Compile Include="Api\DataServerApi.cs" />
+    <Compile Include="Api\ElementApi.cs" />
+    <Compile Include="Api\ElementCategoryApi.cs" />
+    <Compile Include="Api\ElementTemplateApi.cs" />
+    <Compile Include="Api\EnumerationSetApi.cs" />
+    <Compile Include="Api\EnumerationValueApi.cs" />
+    <Compile Include="Api\EventFrameApi.cs" />
+    <Compile Include="Api\HomeApi.cs" />
+    <Compile Include="Api\PointApi.cs" />
+    <Compile Include="Api\SecurityIdentityApi.cs" />
+    <Compile Include="Api\SecurityMappingApi.cs" />
+    <Compile Include="Api\StreamApi.cs" />
+    <Compile Include="Api\StreamSetApi.cs" />
+    <Compile Include="Api\SystemApi.cs" />
+    <Compile Include="Api\TableApi.cs" />
+    <Compile Include="Api\TableCategoryApi.cs" />
+    <Compile Include="Api\TimeRuleApi.cs" />
+    <Compile Include="Api\TimeRulePlugInApi.cs" />
+    <Compile Include="Api\UnitApi.cs" />
+    <Compile Include="Api\UnitClassApi.cs" />
+    <Compile Include="Client\ApiClient.cs" />
+    <Compile Include="Client\ApiException.cs" />
+    <Compile Include="Client\ApiParentResponse.cs" />
+    <Compile Include="Client\Configuration.cs" />
+    <Compile Include="Client\ExceptionFactory.cs" />
+    <Compile Include="Client\IApiAccessor.cs" />
+    <Compile Include="Client\IValidatableObject.cs" />
+    <Compile Include="Client\ValidationContext.cs" />
+    <Compile Include="Client\ValidationResult.cs" />
+    <Compile Include="CustomDictionaryForQueryString.cs" />
+    <Compile Include="Client\ExtensionMethods.cs" />
+    <Compile Include="Model\PIAnalysis.cs" />
+    <Compile Include="Model\PIAnalysisCategory.cs" />
+    <Compile Include="Model\PIAnalysisRule.cs" />
+    <Compile Include="Model\PIAnalysisRulePlugIn.cs" />
+    <Compile Include="Model\PIAnalysisTemplate.cs" />
+    <Compile Include="Model\PIAnnotation.cs" />
+    <Compile Include="Model\PIAssetDatabase.cs" />
+    <Compile Include="Model\PIAssetServer.cs" />
+    <Compile Include="Model\PIAttribute.cs" />
+    <Compile Include="Model\PIAttributeCategory.cs" />
+    <Compile Include="Model\PIAttributeTemplate.cs" />
+    <Compile Include="Model\PIAttributeTrait.cs" />
+    <Compile Include="Model\PICacheInstance.cs" />
+    <Compile Include="Model\PIDataServer.cs" />
+    <Compile Include="Model\PIElement.cs" />
+    <Compile Include="Model\PIElementCategory.cs" />
+    <Compile Include="Model\PIElementTemplate.cs" />
+    <Compile Include="Model\PIEnumerationSet.cs" />
+    <Compile Include="Model\PIEnumerationValue.cs" />
+    <Compile Include="Model\PIErrors.cs" />
+    <Compile Include="Model\PIEventFrame.cs" />
+    <Compile Include="Model\PIItemAttribute.cs" />
+    <Compile Include="Model\PIItemElement.cs" />
+    <Compile Include="Model\PIItemEventFrame.cs" />
+    <Compile Include="Model\PIItemPoint.cs" />
+    <Compile Include="Model\PIItemsAnalysis.cs" />
+    <Compile Include="Model\PIItemsAnalysisCategory.cs" />
+    <Compile Include="Model\PIItemsAnalysisRule.cs" />
+    <Compile Include="Model\PIItemsAnalysisRulePlugIn.cs" />
+    <Compile Include="Model\PIItemsAnalysisTemplate.cs" />
+    <Compile Include="Model\PIItemsAnnotation.cs" />
+    <Compile Include="Model\PIItemsAssetDatabase.cs" />
+    <Compile Include="Model\PIItemsAssetServer.cs" />
+    <Compile Include="Model\PIItemsAttribute.cs" />
+    <Compile Include="Model\PIItemsAttributeCategory.cs" />
+    <Compile Include="Model\PIItemsAttributeTemplate.cs" />
+    <Compile Include="Model\PIItemsAttributeTrait.cs" />
+    <Compile Include="Model\PIItemsCacheInstance.cs" />
+    <Compile Include="Model\PIItemsDataServer.cs" />
+    <Compile Include="Model\PIItemsElement.cs" />
+    <Compile Include="Model\PIItemsElementCategory.cs" />
+    <Compile Include="Model\PIItemsElementTemplate.cs" />
+    <Compile Include="Model\PIItemsEnumerationSet.cs" />
+    <Compile Include="Model\PIItemsEnumerationValue.cs" />
+    <Compile Include="Model\PIItemsEventFrame.cs" />
+    <Compile Include="Model\PIItemsItemAttribute.cs" />
+    <Compile Include="Model\PIItemsItemElement.cs" />
+    <Compile Include="Model\PIItemsItemEventFrame.cs" />
+    <Compile Include="Model\PIItemsItemPoint.cs" />
+    <Compile Include="Model\PIItemsItemsSubstatus.cs" />
+    <Compile Include="Model\PIItemsPoint.cs" />
+    <Compile Include="Model\PIItemsPointAttribute.cs" />
+    <Compile Include="Model\PIItemsSecurityEntry.cs" />
+    <Compile Include="Model\PIItemsSecurityIdentity.cs" />
+    <Compile Include="Model\PIItemsSecurityMapping.cs" />
+    <Compile Include="Model\PIItemsSecurityRights.cs" />
+    <Compile Include="Model\PIItemsStreamSummaries.cs" />
+    <Compile Include="Model\PIItemsStreamValue.cs" />
+    <Compile Include="Model\PIItemsStreamValues.cs" />
+    <Compile Include="Model\PIItemsSubstatus.cs" />
+    <Compile Include="Model\PIItemsSummaryValue.cs" />
+    <Compile Include="Model\PIItemsTable.cs" />
+    <Compile Include="Model\PIItemsTableCategory.cs" />
+    <Compile Include="Model\PIItemsTimeRulePlugIn.cs" />
+    <Compile Include="Model\PIItemsUnitClass.cs" />
+    <Compile Include="Model\PILanding.cs" />
+    <Compile Include="Model\PIPoint.cs" />
+    <Compile Include="Model\PIPointAttribute.cs" />
+    <Compile Include="Model\PIRequest.cs" />
+    <Compile Include="Model\PIRequestTemplate.cs" />
+    <Compile Include="Model\PIResponse.cs" />
+    <Compile Include="Model\PISecurity.cs" />
+    <Compile Include="Model\PISecurityEntry.cs" />
+    <Compile Include="Model\PISecurityIdentity.cs" />
+    <Compile Include="Model\PISecurityMapping.cs" />
+    <Compile Include="Model\PISecurityRights.cs" />
+    <Compile Include="Model\PIStreamSummaries.cs" />
+    <Compile Include="Model\PIStreamValue.cs" />
+    <Compile Include="Model\PIStreamValues.cs" />
+    <Compile Include="Model\PISubstatus.cs" />
+    <Compile Include="Model\PISummaryValue.cs" />
+    <Compile Include="Model\PISystemLanding.cs" />
+    <Compile Include="Model\PISystemStatus.cs" />
+    <Compile Include="Model\PITable.cs" />
+    <Compile Include="Model\PITableCategory.cs" />
+    <Compile Include="Model\PITableData.cs" />
+    <Compile Include="Model\PITimedValue.cs" />
+    <Compile Include="Model\PITimedValues.cs" />
+    <Compile Include="Model\PITimeRule.cs" />
+    <Compile Include="Model\PITimeRulePlugIn.cs" />
+    <Compile Include="Model\PIUnit.cs" />
+    <Compile Include="Model\PIUnitClass.cs" />
+    <Compile Include="Model\PIUserInfo.cs" />
+    <Compile Include="Model\PIValue.cs" />
+    <Compile Include="Model\PIVersion.cs" />
+    <Compile Include="PIWebApiClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responses\ApiResponseObject.cs" />
+    <Compile Include="Responses\ApiResponsePIAnalysis.cs" />
+    <Compile Include="Responses\ApiResponsePIAnalysisCategory.cs" />
+    <Compile Include="Responses\ApiResponsePIAnalysisRule.cs" />
+    <Compile Include="Responses\ApiResponsePIAnalysisRulePlugIn.cs" />
+    <Compile Include="Responses\ApiResponsePIAnalysisTemplate.cs" />
+    <Compile Include="Responses\ApiResponsePIAnnotation.cs" />
+    <Compile Include="Responses\ApiResponsePIAssetDatabase.cs" />
+    <Compile Include="Responses\ApiResponsePIAssetServer.cs" />
+    <Compile Include="Responses\ApiResponsePIAttribute.cs" />
+    <Compile Include="Responses\ApiResponsePIAttributeCategory.cs" />
+    <Compile Include="Responses\ApiResponsePIAttributeTemplate.cs" />
+    <Compile Include="Responses\ApiResponsePIAttributeTrait.cs" />
+    <Compile Include="Responses\ApiResponsePICacheInstance.cs" />
+    <Compile Include="Responses\ApiResponsePIDataServer.cs" />
+    <Compile Include="Responses\ApiResponsePIElement.cs" />
+    <Compile Include="Responses\ApiResponsePIElementCategory.cs" />
+    <Compile Include="Responses\ApiResponsePIElementTemplate.cs" />
+    <Compile Include="Responses\ApiResponsePIEnumerationSet.cs" />
+    <Compile Include="Responses\ApiResponsePIEnumerationValue.cs" />
+    <Compile Include="Responses\ApiResponsePIErrors.cs" />
+    <Compile Include="Responses\ApiResponsePIEventFrame.cs" />
+    <Compile Include="Responses\ApiResponsePIItemAttribute.cs" />
+    <Compile Include="Responses\ApiResponsePIItemElement.cs" />
+    <Compile Include="Responses\ApiResponsePIItemEventFrame.cs" />
+    <Compile Include="Responses\ApiResponsePIItemPoint.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAnalysis.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAnalysisCategory.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAnalysisRule.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAnalysisRulePlugIn.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAnalysisTemplate.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAnnotation.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAssetDatabase.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAssetServer.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAttribute.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAttributeCategory.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAttributeTemplate.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsAttributeTrait.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsCacheInstance.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsDataServer.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsElement.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsElementCategory.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsElementTemplate.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsEnumerationSet.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsEnumerationValue.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsEventFrame.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsItemAttribute.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsItemElement.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsItemEventFrame.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsItemPoint.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsItemsSubstatus.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsPoint.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsPointAttribute.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsSecurityEntry.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsSecurityIdentity.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsSecurityMapping.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsSecurityRights.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsStreamSummaries.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsStreamValue.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsStreamValues.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsSubstatus.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsSummaryValue.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsTable.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsTableCategory.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsTimeRulePlugIn.cs" />
+    <Compile Include="Responses\ApiResponsePIItemsUnitClass.cs" />
+    <Compile Include="Responses\ApiResponsePILanding.cs" />
+    <Compile Include="Responses\ApiResponsePIPoint.cs" />
+    <Compile Include="Responses\ApiResponsePIPointAttribute.cs" />
+    <Compile Include="Responses\ApiResponsePIRequest.cs" />
+    <Compile Include="Responses\ApiResponsePIRequestTemplate.cs" />
+    <Compile Include="Responses\ApiResponsePIResponse.cs" />
+    <Compile Include="Responses\ApiResponsePISecurity.cs" />
+    <Compile Include="Responses\ApiResponsePISecurityEntry.cs" />
+    <Compile Include="Responses\ApiResponsePISecurityIdentity.cs" />
+    <Compile Include="Responses\ApiResponsePISecurityMapping.cs" />
+    <Compile Include="Responses\ApiResponsePISecurityRights.cs" />
+    <Compile Include="Responses\ApiResponsePIStreamSummaries.cs" />
+    <Compile Include="Responses\ApiResponsePIStreamValue.cs" />
+    <Compile Include="Responses\ApiResponsePIStreamValues.cs" />
+    <Compile Include="Responses\ApiResponsePISubstatus.cs" />
+    <Compile Include="Responses\ApiResponsePISummaryValue.cs" />
+    <Compile Include="Responses\ApiResponsePISystemLanding.cs" />
+    <Compile Include="Responses\ApiResponsePISystemStatus.cs" />
+    <Compile Include="Responses\ApiResponsePITable.cs" />
+    <Compile Include="Responses\ApiResponsePITableCategory.cs" />
+    <Compile Include="Responses\ApiResponsePITableData.cs" />
+    <Compile Include="Responses\ApiResponsePITimedValue.cs" />
+    <Compile Include="Responses\ApiResponsePITimedValues.cs" />
+    <Compile Include="Responses\ApiResponsePITimeRule.cs" />
+    <Compile Include="Responses\ApiResponsePITimeRulePlugIn.cs" />
+    <Compile Include="Responses\ApiResponsePIUnit.cs" />
+    <Compile Include="Responses\ApiResponsePIUnitClass.cs" />
+    <Compile Include="Responses\ApiResponsePIUserInfo.cs" />
+    <Compile Include="Responses\ApiResponsePIValue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
