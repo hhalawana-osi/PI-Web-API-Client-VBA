@@ -27,6 +27,102 @@ End Function
 
 
 
+## Examples
+
+Please refer to the following examples to understand how to use this library: 
+
+
+### Create an intance of the piwebapi top level object.
+
+```vb# 
+Dim client As New PIWebApiClient
+Dim connectedToPIWebAPI As Boolean
+connectedToPIWebAPI = client.DefineProperties("https://marc-web-sql.marc.net/piwebapi", True)
+``` 
+
+If you want to use basic authentication instead of Kerberos, set useKerberos to False and set the username and password accordingly.
+
+
+### Get the PI Data Archive WebId
+
+```vb# 
+    Set dataServer = client.dataServer.GetByName(tbPIDataArchiveName.Text)
+```
+
+
+### Get PI Points WebIds
+
+```vb# 
+    Set point1 = client.point.GetByPath("\\" + tbPIDataArchiveName.Text + "\" + tbTagName1.Text)
+    Set point2 = client.point.GetByPath("\\" + tbPIDataArchiveName.Text + "\" + tbTagName2.Text)
+    Set point3 = client.point.GetByPath("\\" + tbPIDataArchiveName.Text + "\" + tbTagName3.Text)
+```
+
+### Get recorded values in bulk using the StreamSet/GetRecordedAdHoc
+
+```vb# 
+    webIds = point1.webId + "," + point2.webId + "," + point3.webId
+    Set compressedData = client.StreamSet.GetRecordedAdHoc(webIds, True, 1000)
+```
+
+### Send values in bulk using the StreamSet/UpdateValuesAdHoc
+
+```vb# 
+   Dim streamValuesItems As New PIItemsStreamValues
+   Dim streamValue1 As New PIStreamValues
+   Dim streamValue2 As New PIStreamValues
+   Dim streamValue3 As New PIStreamValues
+   Dim value1 As New PITimedValue
+	  Dim value2 As New PITimedValue
+  	Dim value3 As New PITimedValue
+  	Dim value4 As New PITimedValue
+   Dim value5 As New PITimedValue
+  	Dim value6 As New PITimedValue
+
+  	streamValuesItems.CreateItemsArray (3)
+  	value1.SetValueWithInt (2)
+  	value1.Timestamp = "*-1d"
+	  value2.SetValueWithInt (3)
+  	value2.Timestamp = "*-2d"
+  	value3.SetValueWithInt (4)
+  	value3.Timestamp = "*-1d"
+  	value4.SetValueWithInt (5)
+  	value4.Timestamp = "*-2d"
+  	value5.SetValueWithInt (6)
+  	value5.Timestamp = "*-1d"
+  	value6.SetValueWithInt (7)
+  	value6.Timestamp = "*-2d"
+
+   streamValue1.webId = point1.webId
+	  streamValue1.CreateItemsArray (2)
+  	Call streamValue1.SetItem(0, value1)
+  	Call streamValue1.SetItem(1, value2)
+  	Call streamValuesItems.SetItem(0, streamValue1)
+
+  streamValue2.webId = point2.webId
+  streamValue2.CreateItemsArray (2)
+	 Call streamValue2.SetItem(0, value3)
+	 Call streamValue2.SetItem(1, value4)
+	 Call streamValuesItems.SetItem(1, streamValue2)
+
+	 streamValue3.webId = point2.webId
+	 streamValue3.CreateItemsArray (2)
+	 Call streamValue3.SetItem(0, value5)
+	 Call streamValue3.SetItem(1, value6)
+	 Call streamValuesItems.SetItem(2, streamValue3)
+
+	 Dim response As ApiResponsePIItemsItemsSubstatus
+	 Set response = client.StreamSet.UpdateValuesAdHocWithHttpInfo(streamValuesItems)
+```
+
+
+### Get recorded values in bulk using the StreamSet/GetRecordedAdHoc
+
+```vb# 
+    webIds = point1.webId + "," + point2.webId + "," + point3.webId
+    Set compressedData = client.StreamSet.GetRecordedAdHoc(webIds, True, 1000)
+```
+
 ## Licensing
 Copyright 2017 OSIsoft, LLC.
 
