@@ -6,9 +6,9 @@ This repository has the source code package of the PI Web API Wrapper for VBA.
 
 ## Requirements
 
-PI Web API 2017 installed within your domain using Kerberos or Basic Authentication.
-PI ProcessBook 2012 SP1+
-.NET Framework 3.5  
+ - PI Web API 2017 installed within your domain using Kerberos or Basic Authentication.
+ - PI ProcessBook 2012 SP1+
+ - .NET Framework 3.5  
 
 
 ## Installation
