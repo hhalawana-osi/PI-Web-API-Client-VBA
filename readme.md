@@ -19,12 +19,6 @@ This repository has the source code package of the PI Web API Wrapper for VBA.
  - Run as Administrator the reg.bat located on %PIHOME%\WebAPIWrapper in order to register the PIWebApiWrapper assmebly.
 
 
-```vb#  
-Protected Overrides Function GetAutomationObject() As Object  
-    Return New DocumentUtilities()  
-End Function  
-``` 
-
 
 
 ## Examples
@@ -35,9 +29,9 @@ Please refer to the following examples to understand how to use this library:
 ### Create an intance of the piwebapi top level object.
 
 ```vb# 
-Dim client As New PIWebApiClient
-Dim connectedToPIWebAPI As Boolean
-connectedToPIWebAPI = client.DefineProperties("https://marc-web-sql.marc.net/piwebapi", True)
+    Dim client As New PIWebApiClient
+    Dim connectedToPIWebAPI As Boolean
+    connectedToPIWebAPI = client.DefineProperties("https://marc-web-sql.marc.net/piwebapi", True)
 ``` 
 
 If you want to use basic authentication instead of Kerberos, set useKerberos to False and set the username and password accordingly.
@@ -139,8 +133,8 @@ If you want to use basic authentication instead of Kerberos, set useKerberos to 
 ### Get Event Frames given an AF database path
 
 ```vb# 
-  Set db = client.AssetData.GetByPath(dbPath)
-  Set efs = client.AssetData.GetEventFrames(db.webId, False, False, 100, True, 0, "", "*", "", elem.Name, elem.templateName, "", "", "None", "", "", "*-900", "*")
+    Set db = client.AssetData.GetByPath(dbPath)
+    Set efs = client.AssetData.GetEventFrames(db.webId, False, False, 100, True, 0, "", "*", "", elem.Name, elem.templateName, "", "", "None", "", "", "*-900", "*")
 ```
 
 
