@@ -12,8 +12,8 @@ Name | Type | Notes
 
 ## Methods
 
-# ** SetItem**
-> void  SetItem(int i, PITimedValue values)
+# **SetItem**
+> void SetItem(int i, PITimedValue values)
 
 Set an item of the Items array.
 
@@ -29,8 +29,8 @@ Name | Type
 void
 
 
-# ** GetItem**
-> PITimedValue  GetItem(int i)
+# **GetItem**
+> PITimedValue GetItem(int i)
 
 Get item of the Items array.
 
@@ -45,8 +45,8 @@ Name | Type
 PITimedValue
 
 
-# ** GetItemsLength**
-> int  GetItemsLength()
+# **GetItemsLength**
+> int GetItemsLength()
 
 Get the length of the Items array.
 

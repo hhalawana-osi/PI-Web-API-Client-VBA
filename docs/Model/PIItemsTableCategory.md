@@ -8,8 +8,8 @@ Name | Type | Notes
 
 ## Methods
 
-# ** SetItem**
-> void  SetItem(int i, PITableCategory values)
+# **SetItem**
+> void SetItem(int i, PITableCategory values)
 
 Set an item of the Items array.
 
@@ -25,8 +25,8 @@ Name | Type
 void
 
 
-# ** GetItem**
-> PITableCategory  GetItem(int i)
+# **GetItem**
+> PITableCategory GetItem(int i)
 
 Get item of the Items array.
 
@@ -41,8 +41,8 @@ Name | Type
 PITableCategory
 
 
-# ** GetItemsLength**
-> int  GetItemsLength()
+# **GetItemsLength**
+> int GetItemsLength()
 
 Get the length of the Items array.
 

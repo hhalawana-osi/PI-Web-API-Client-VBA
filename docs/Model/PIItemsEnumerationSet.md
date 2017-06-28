@@ -8,8 +8,8 @@ Name | Type | Notes
 
 ## Methods
 
-# ** SetItem**
-> void  SetItem(int i, PIEnumerationSet values)
+# **SetItem**
+> void SetItem(int i, PIEnumerationSet values)
 
 Set an item of the Items array.
 
@@ -25,8 +25,8 @@ Name | Type
 void
 
 
-# ** GetItem**
-> PIEnumerationSet  GetItem(int i)
+# **GetItem**
+> PIEnumerationSet GetItem(int i)
 
 Get item of the Items array.
 
@@ -41,8 +41,8 @@ Name | Type
 PIEnumerationSet
 
 
-# ** GetItemsLength**
-> int  GetItemsLength()
+# **GetItemsLength**
+> int GetItemsLength()
 
 Get the length of the Items array.
 

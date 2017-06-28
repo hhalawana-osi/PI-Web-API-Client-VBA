@@ -11,8 +11,8 @@ Name | Type | Notes
 
 ## Methods
 
-# ** SetItem**
-> void  SetItem(int i, PISummaryValue values)
+# **SetItem**
+> void SetItem(int i, PISummaryValue values)
 
 Set an item of the Items array.
 
@@ -28,8 +28,8 @@ Name | Type
 void
 
 
-# ** GetItem**
-> PISummaryValue  GetItem(int i)
+# **GetItem**
+> PISummaryValue GetItem(int i)
 
 Get item of the Items array.
 
@@ -44,8 +44,8 @@ Name | Type
 PISummaryValue
 
 
-# ** GetItemsLength**
-> int  GetItemsLength()
+# **GetItemsLength**
+> int GetItemsLength()
 
 Get the length of the Items array.
 
