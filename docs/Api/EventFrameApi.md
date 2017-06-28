@@ -69,8 +69,8 @@ Retrieve an event frame by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -88,8 +88,8 @@ Retrieve an event frame by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -107,8 +107,8 @@ Retrieve an event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -126,8 +126,8 @@ Retrieve an event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -145,8 +145,8 @@ Update an event frame by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame to update.. |
- **eventFrame** | **PIEventFrame**| A partial event frame containing the desired changes.. |
+ **webId** | **string**| The ID of the event frame to update.. | [required]
+ **eventFrame** | **PIEventFrame**| A partial event frame containing the desired changes.. | [required]
 
 
 ### Return type
@@ -164,8 +164,8 @@ Update an event frame by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame to update.. |
- **eventFrame** | **PIEventFrame**| A partial event frame containing the desired changes.. |
+ **webId** | **string**| The ID of the event frame to update.. | [required]
+ **eventFrame** | **PIEventFrame**| A partial event frame containing the desired changes.. | [required]
 
 
 ### Return type
@@ -183,7 +183,7 @@ Delete an event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame to delete.. |
+ **webId** | **string**| The ID of the event frame to delete.. | [required]
 
 
 ### Return type
@@ -201,7 +201,7 @@ Delete an event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame to delete.. |
+ **webId** | **string**| The ID of the event frame to delete.. | [required]
 
 
 ### Return type
@@ -219,7 +219,7 @@ Calls the EventFrame's Acknowledge method.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
 
 
 ### Return type
@@ -237,7 +237,7 @@ Calls the EventFrame's Acknowledge method.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
 
 
 ### Return type
@@ -255,8 +255,8 @@ Get an event frame's annotations.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the owner event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the owner event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -274,8 +274,8 @@ Get an event frame's annotations.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the owner event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the owner event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -293,8 +293,8 @@ Create an annotation on an event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the owner event frame on which to create the annotation.. |
- **annotation** | **PIAnnotation**| The new annotation definition.. |
+ **webId** | **string**| The ID of the owner event frame on which to create the annotation.. | [required]
+ **annotation** | **PIAnnotation**| The new annotation definition.. | [required]
 
 
 ### Return type
@@ -312,8 +312,8 @@ Create an annotation on an event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the owner event frame on which to create the annotation.. |
- **annotation** | **PIAnnotation**| The new annotation definition.. |
+ **webId** | **string**| The ID of the owner event frame on which to create the annotation.. | [required]
+ **annotation** | **PIAnnotation**| The new annotation definition.. | [required]
 
 
 ### Return type
@@ -331,9 +331,9 @@ Get a specific annotation on an event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| The Annotation identifier of the specific annotation.. |
- **webId** | **string**| The ID of the owner event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **id** | **string**| The Annotation identifier of the specific annotation.. | [required]
+ **webId** | **string**| The ID of the owner event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -351,9 +351,9 @@ Get a specific annotation on an event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| The Annotation identifier of the specific annotation.. |
- **webId** | **string**| The ID of the owner event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **id** | **string**| The Annotation identifier of the specific annotation.. | [required]
+ **webId** | **string**| The ID of the owner event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -371,9 +371,9 @@ Update an annotation on an event frame by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| The Annotation identifier of the annotation to be updated.. |
- **webId** | **string**| The ID of the owner event frame of the annotation to update.. |
- **annotation** | **PIAnnotation**| A partial annotation containing the desired changes.. |
+ **id** | **string**| The Annotation identifier of the annotation to be updated.. | [required]
+ **webId** | **string**| The ID of the owner event frame of the annotation to update.. | [required]
+ **annotation** | **PIAnnotation**| A partial annotation containing the desired changes.. | [required]
 
 
 ### Return type
@@ -391,9 +391,9 @@ Update an annotation on an event frame by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| The Annotation identifier of the annotation to be updated.. |
- **webId** | **string**| The ID of the owner event frame of the annotation to update.. |
- **annotation** | **PIAnnotation**| A partial annotation containing the desired changes.. |
+ **id** | **string**| The Annotation identifier of the annotation to be updated.. | [required]
+ **webId** | **string**| The ID of the owner event frame of the annotation to update.. | [required]
+ **annotation** | **PIAnnotation**| A partial annotation containing the desired changes.. | [required]
 
 
 ### Return type
@@ -411,8 +411,8 @@ Delete an annotation on an event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| The Annotation identifier of the annotation to be deleted.. |
- **webId** | **string**| The ID of the owner event frame of the annotation to delete.. |
+ **id** | **string**| The Annotation identifier of the annotation to be deleted.. | [required]
+ **webId** | **string**| The ID of the owner event frame of the annotation to delete.. | [required]
 
 
 ### Return type
@@ -430,8 +430,8 @@ Delete an annotation on an event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| The Annotation identifier of the annotation to be deleted.. |
- **webId** | **string**| The ID of the owner event frame of the annotation to delete.. |
+ **id** | **string**| The Annotation identifier of the annotation to be deleted.. | [required]
+ **webId** | **string**| The ID of the owner event frame of the annotation to delete.. | [required]
 
 
 ### Return type
@@ -449,19 +449,19 @@ Get the attributes of the specified event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **categoryName** | **string**| Specify that returned attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for finding attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **templateName** | **string**| Specify that returned attributes must be members of this template. The default is no template filter.. |
- **valueType** | **string**| Specify that returned attributes' value type must be the given value type. The default is no value type filter.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **categoryName** | **string**| Specify that returned attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for finding attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that returned attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **valueType** | **string**| Specify that returned attributes' value type must be the given value type. The default is no value type filter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -479,19 +479,19 @@ Get the attributes of the specified event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **categoryName** | **string**| Specify that returned attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for finding attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **templateName** | **string**| Specify that returned attributes must be members of this template. The default is no template filter.. |
- **valueType** | **string**| Specify that returned attributes' value type must be the given value type. The default is no value type filter.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **categoryName** | **string**| Specify that returned attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for finding attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that returned attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **valueType** | **string**| Specify that returned attributes' value type must be the given value type. The default is no value type filter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -509,8 +509,8 @@ Create a new attribute of the specified event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame on which to create the attribute.. |
- **attribute** | **PIAttribute**| The definition of the new attribute.. |
+ **webId** | **string**| The ID of the event frame on which to create the attribute.. | [required]
+ **attribute** | **PIAttribute**| The definition of the new attribute.. | [required]
 
 
 ### Return type
@@ -528,8 +528,8 @@ Create a new attribute of the specified event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame on which to create the attribute.. |
- **attribute** | **PIAttribute**| The definition of the new attribute.. |
+ **webId** | **string**| The ID of the event frame on which to create the attribute.. | [required]
+ **attribute** | **PIAttribute**| The definition of the new attribute.. | [required]
 
 
 ### Return type
@@ -547,7 +547,7 @@ Calls the EventFrame's CaptureValues method.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
 
 
 ### Return type
@@ -565,7 +565,7 @@ Calls the EventFrame's CaptureValues method.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
 
 
 ### Return type
@@ -583,8 +583,8 @@ Get an event frame's categories.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -602,8 +602,8 @@ Get an event frame's categories.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -621,8 +621,8 @@ Executes the create configuration function of the data references found within t
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
- **includeChildElements** | **bool**| If true, includes the child event frames of the specified event frame.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **includeChildElements** | **bool**| If true, includes the child event frames of the specified event frame.. | [required]
 
 
 ### Return type
@@ -640,8 +640,8 @@ Executes the create configuration function of the data references found within t
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
- **includeChildElements** | **bool**| If true, includes the child event frames of the specified event frame.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **includeChildElements** | **bool**| If true, includes the child event frames of the specified event frame.. | [required]
 
 
 ### Return type
@@ -659,25 +659,25 @@ Retrieves a list of event frame attributes matching the specified filters from t
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame to use as the root of the search.. |
- **maxCount** | **int**| The maximum number of objects to be returned (the page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include objects nested further than immediate children of the given resource. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **attributeCategory** | **string**| Specify that returned attributes must have this category. The default is no filter.. |
- **attributeDescriptionFilter** | **string**| The attribute description filter string used for finding objects. Only the first 440 characters of the description will be searched. For Asset Servers older than 2.7, a 400 status code (Bad Request) will be returned if this parameter is specified. The default is no filter.. |
- **attributeNameFilter** | **string**| The attribute name filter string used for finding objects. The default is no filter.. |
- **attributeType** | **string**| Specify that returned attributes' value type must be this value type. The default is no filter.. |
- **endTime** | **string**| A string representing the latest ending time for the event frames to be matched. The endTime must be greater than or equal to the startTime. The default is '*'.. |
- **eventFrameCategory** | **string**| Specify that the owner of the returned attributes must have this category. The default is no filter.. |
- **eventFrameDescriptionFilter** | **string**| The event frame description filter string used for finding objects. Only the first 440 characters of the description will be searched. For Asset Servers older than 2.7, a 400 status code (Bad Request) will be returned if this parameter is specified. The default is no filter.. |
- **eventFrameNameFilter** | **string**| The event frame name filter string used for finding objects. The default is no filter.. |
- **eventFrameTemplate** | **string**| Specify that the owner of the returned attributes must have this template or a template derived from this template. The default is no filter.. |
- **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. |
- **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frames.     The default is 'Overlapped'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **startTime** | **string**| A string representing the earliest starting time for the event frames to be matched. startTime must be less than or equal to the endTime. The default is '*-8h'.. |
+ **webId** | **string**| The ID of the event frame to use as the root of the search.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned (the page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include objects nested further than immediate children of the given resource. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **attributeCategory** | **string**| Specify that returned attributes must have this category. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **attributeDescriptionFilter** | **string**| The attribute description filter string used for finding objects. Only the first 440 characters of the description will be searched. For Asset Servers older than 2.7, a 400 status code (Bad Request) will be returned if this parameter is specified. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **attributeNameFilter** | **string**| The attribute name filter string used for finding objects. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **attributeType** | **string**| Specify that returned attributes' value type must be this value type. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| A string representing the latest ending time for the event frames to be matched. The endTime must be greater than or equal to the startTime. The default is '*'.. | [optional] - always use empty strings("") instead of Null
+ **eventFrameCategory** | **string**| Specify that the owner of the returned attributes must have this category. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **eventFrameDescriptionFilter** | **string**| The event frame description filter string used for finding objects. Only the first 440 characters of the description will be searched. For Asset Servers older than 2.7, a 400 status code (Bad Request) will be returned if this parameter is specified. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **eventFrameNameFilter** | **string**| The event frame name filter string used for finding objects. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **eventFrameTemplate** | **string**| Specify that the owner of the returned attributes must have this template or a template derived from this template. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frames.     The default is 'Overlapped'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| A string representing the earliest starting time for the event frames to be matched. startTime must be less than or equal to the endTime. The default is '*-8h'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -695,25 +695,25 @@ Retrieves a list of event frame attributes matching the specified filters from t
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame to use as the root of the search.. |
- **maxCount** | **int**| The maximum number of objects to be returned (the page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include objects nested further than immediate children of the given resource. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **attributeCategory** | **string**| Specify that returned attributes must have this category. The default is no filter.. |
- **attributeDescriptionFilter** | **string**| The attribute description filter string used for finding objects. Only the first 440 characters of the description will be searched. For Asset Servers older than 2.7, a 400 status code (Bad Request) will be returned if this parameter is specified. The default is no filter.. |
- **attributeNameFilter** | **string**| The attribute name filter string used for finding objects. The default is no filter.. |
- **attributeType** | **string**| Specify that returned attributes' value type must be this value type. The default is no filter.. |
- **endTime** | **string**| A string representing the latest ending time for the event frames to be matched. The endTime must be greater than or equal to the startTime. The default is '*'.. |
- **eventFrameCategory** | **string**| Specify that the owner of the returned attributes must have this category. The default is no filter.. |
- **eventFrameDescriptionFilter** | **string**| The event frame description filter string used for finding objects. Only the first 440 characters of the description will be searched. For Asset Servers older than 2.7, a 400 status code (Bad Request) will be returned if this parameter is specified. The default is no filter.. |
- **eventFrameNameFilter** | **string**| The event frame name filter string used for finding objects. The default is no filter.. |
- **eventFrameTemplate** | **string**| Specify that the owner of the returned attributes must have this template or a template derived from this template. The default is no filter.. |
- **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. |
- **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frames.     The default is 'Overlapped'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **startTime** | **string**| A string representing the earliest starting time for the event frames to be matched. startTime must be less than or equal to the endTime. The default is '*-8h'.. |
+ **webId** | **string**| The ID of the event frame to use as the root of the search.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned (the page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include objects nested further than immediate children of the given resource. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **attributeCategory** | **string**| Specify that returned attributes must have this category. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **attributeDescriptionFilter** | **string**| The attribute description filter string used for finding objects. Only the first 440 characters of the description will be searched. For Asset Servers older than 2.7, a 400 status code (Bad Request) will be returned if this parameter is specified. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **attributeNameFilter** | **string**| The attribute name filter string used for finding objects. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **attributeType** | **string**| Specify that returned attributes' value type must be this value type. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| A string representing the latest ending time for the event frames to be matched. The endTime must be greater than or equal to the startTime. The default is '*'.. | [optional] - always use empty strings("") instead of Null
+ **eventFrameCategory** | **string**| Specify that the owner of the returned attributes must have this category. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **eventFrameDescriptionFilter** | **string**| The event frame description filter string used for finding objects. Only the first 440 characters of the description will be searched. For Asset Servers older than 2.7, a 400 status code (Bad Request) will be returned if this parameter is specified. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **eventFrameNameFilter** | **string**| The event frame name filter string used for finding objects. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **eventFrameTemplate** | **string**| Specify that the owner of the returned attributes must have this template or a template derived from this template. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frames.     The default is 'Overlapped'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| A string representing the earliest starting time for the event frames to be matched. startTime must be less than or equal to the endTime. The default is '*-8h'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -731,24 +731,24 @@ Retrieve event frames based on the specified conditions. By default, returns all
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame to use as the root of the search.. |
- **canBeAcknowledged** | **bool**| Specify the returned event frames' canBeAcknowledged property. The default is no canBeAcknowledged filter.. |
- **isAcknowledged** | **bool**| Specify the returned event frames' isAcknowledged property. The default no isAcknowledged filter.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies whether the search should include objects nested further than the immediate children of the search root. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **categoryName** | **string**| Specify that returned event frames must have this category. The default is no category filter.. |
- **endTime** | **string**| The ending time for the search. The endTime must be greater than or equal to the startTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*' if searchMode is not one of the 'Backward*' or 'Forward*' values.. |
- **nameFilter** | **string**| The name query string used for finding event frames. The default is no filter.. |
- **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. |
- **referencedElementTemplateName** | **string**| Specify that returned event frames must have an element in the event frame's referenced elements collection that derives from the template. Specify this parameter by name.. |
- **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frame objects to be included in the returned collection. If this parameter is one of the 'Backward*' or 'Forward*' values, none of endTime, sortField, or sortOrder may be specified. The default is 'Overlapped'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **severities** | **string**| Specify that returned event frames must have this severity. Multiple severity values may be specified with multiple instances of the parameter. The default is no severity filter.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name' if searchMode is not one of the 'Backward*' or 'Forward*' values.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending' if searchMode is not one of the 'Backward*' or 'Forward*' values.. |
- **startTime** | **string**| The starting time for the search. startTime must be less than or equal to the endTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*-8h'.. |
- **templateName** | **string**| Specify that returned event frames must have this template or a template derived from this template. The default is no template filter. Specify this parameter by name.. |
+ **webId** | **string**| The ID of the event frame to use as the root of the search.. | [required]
+ **canBeAcknowledged** | **bool**| Specify the returned event frames' canBeAcknowledged property. The default is no canBeAcknowledged filter.. | [required]
+ **isAcknowledged** | **bool**| Specify the returned event frames' isAcknowledged property. The default no isAcknowledged filter.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies whether the search should include objects nested further than the immediate children of the search root. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **categoryName** | **string**| Specify that returned event frames must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| The ending time for the search. The endTime must be greater than or equal to the startTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*' if searchMode is not one of the 'Backward*' or 'Forward*' values.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for finding event frames. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **referencedElementTemplateName** | **string**| Specify that returned event frames must have an element in the event frame's referenced elements collection that derives from the template. Specify this parameter by name.. | [optional] - always use empty strings("") instead of Null
+ **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frame objects to be included in the returned collection. If this parameter is one of the 'Backward*' or 'Forward*' values, none of endTime, sortField, or sortOrder may be specified. The default is 'Overlapped'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **severities** | **string**| Specify that returned event frames must have this severity. Multiple severity values may be specified with multiple instances of the parameter. The default is no severity filter.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name' if searchMode is not one of the 'Backward*' or 'Forward*' values.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending' if searchMode is not one of the 'Backward*' or 'Forward*' values.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| The starting time for the search. startTime must be less than or equal to the endTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*-8h'.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that returned event frames must have this template or a template derived from this template. The default is no template filter. Specify this parameter by name.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -766,24 +766,24 @@ Retrieve event frames based on the specified conditions. By default, returns all
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame to use as the root of the search.. |
- **canBeAcknowledged** | **bool**| Specify the returned event frames' canBeAcknowledged property. The default is no canBeAcknowledged filter.. |
- **isAcknowledged** | **bool**| Specify the returned event frames' isAcknowledged property. The default no isAcknowledged filter.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies whether the search should include objects nested further than the immediate children of the search root. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **categoryName** | **string**| Specify that returned event frames must have this category. The default is no category filter.. |
- **endTime** | **string**| The ending time for the search. The endTime must be greater than or equal to the startTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*' if searchMode is not one of the 'Backward*' or 'Forward*' values.. |
- **nameFilter** | **string**| The name query string used for finding event frames. The default is no filter.. |
- **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. |
- **referencedElementTemplateName** | **string**| Specify that returned event frames must have an element in the event frame's referenced elements collection that derives from the template. Specify this parameter by name.. |
- **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frame objects to be included in the returned collection. If this parameter is one of the 'Backward*' or 'Forward*' values, none of endTime, sortField, or sortOrder may be specified. The default is 'Overlapped'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **severities** | **string**| Specify that returned event frames must have this severity. Multiple severity values may be specified with multiple instances of the parameter. The default is no severity filter.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name' if searchMode is not one of the 'Backward*' or 'Forward*' values.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending' if searchMode is not one of the 'Backward*' or 'Forward*' values.. |
- **startTime** | **string**| The starting time for the search. startTime must be less than or equal to the endTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*-8h'.. |
- **templateName** | **string**| Specify that returned event frames must have this template or a template derived from this template. The default is no template filter. Specify this parameter by name.. |
+ **webId** | **string**| The ID of the event frame to use as the root of the search.. | [required]
+ **canBeAcknowledged** | **bool**| Specify the returned event frames' canBeAcknowledged property. The default is no canBeAcknowledged filter.. | [required]
+ **isAcknowledged** | **bool**| Specify the returned event frames' isAcknowledged property. The default no isAcknowledged filter.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies whether the search should include objects nested further than the immediate children of the search root. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **categoryName** | **string**| Specify that returned event frames must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| The ending time for the search. The endTime must be greater than or equal to the startTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*' if searchMode is not one of the 'Backward*' or 'Forward*' values.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for finding event frames. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **referencedElementTemplateName** | **string**| Specify that returned event frames must have an element in the event frame's referenced elements collection that derives from the template. Specify this parameter by name.. | [optional] - always use empty strings("") instead of Null
+ **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frame objects to be included in the returned collection. If this parameter is one of the 'Backward*' or 'Forward*' values, none of endTime, sortField, or sortOrder may be specified. The default is 'Overlapped'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **severities** | **string**| Specify that returned event frames must have this severity. Multiple severity values may be specified with multiple instances of the parameter. The default is no severity filter.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name' if searchMode is not one of the 'Backward*' or 'Forward*' values.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending' if searchMode is not one of the 'Backward*' or 'Forward*' values.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| The starting time for the search. startTime must be less than or equal to the endTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*-8h'.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that returned event frames must have this template or a template derived from this template. The default is no template filter. Specify this parameter by name.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -801,8 +801,8 @@ Create an event frame as a child of the specified event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent event frame on which to create the event frame.. |
- **eventFrame** | **PIEventFrame**| The new event frame definition.. |
+ **webId** | **string**| The ID of the parent event frame on which to create the event frame.. | [required]
+ **eventFrame** | **PIEventFrame**| The new event frame definition.. | [required]
 
 
 ### Return type
@@ -820,8 +820,8 @@ Create an event frame as a child of the specified event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent event frame on which to create the event frame.. |
- **eventFrame** | **PIEventFrame**| The new event frame definition.. |
+ **webId** | **string**| The ID of the parent event frame on which to create the event frame.. | [required]
+ **eventFrame** | **PIEventFrame**| The new event frame definition.. | [required]
 
 
 ### Return type
@@ -839,8 +839,8 @@ Retrieve the event frame's referenced elements.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame whose referenced elements should be retrieved.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the event frame whose referenced elements should be retrieved.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -858,8 +858,8 @@ Retrieve the event frame's referenced elements.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame whose referenced elements should be retrieved.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the event frame whose referenced elements should be retrieved.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -877,10 +877,10 @@ Get the security information of the specified security item associated with the 
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame for the security to be checked.. |
- **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. |
- **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the event frame for the security to be checked.. | [required]
+ **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. | [required] - join strings separated by ','
+ **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -898,10 +898,10 @@ Get the security information of the specified security item associated with the 
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame for the security to be checked.. |
- **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. |
- **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the event frame for the security to be checked.. | [required]
+ **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. | [required] - join strings separated by ','
+ **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -919,9 +919,9 @@ Retrieve the security entries associated with the event frame based on the speci
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
- **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -939,9 +939,9 @@ Retrieve the security entries associated with the event frame based on the speci
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame.. |
- **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -959,9 +959,9 @@ Create a security entry owned by the event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame where the security entry will be created.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **webId** | **string**| The ID of the event frame where the security entry will be created.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type
@@ -979,9 +979,9 @@ Create a security entry owned by the event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the event frame where the security entry will be created.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **webId** | **string**| The ID of the event frame where the security entry will be created.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type
@@ -999,9 +999,9 @@ Retrieve the security entry associated with the event frame with the specified n
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1019,9 +1019,9 @@ Retrieve the security entry associated with the event frame with the specified n
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the event frame.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the event frame.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1039,10 +1039,10 @@ Update a security entry owned by the event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry.. |
- **webId** | **string**| The ID of the event frame where the security entry will be updated.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **name** | **string**| The name of the security entry.. | [required]
+ **webId** | **string**| The ID of the event frame where the security entry will be updated.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type
@@ -1060,10 +1060,10 @@ Update a security entry owned by the event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry.. |
- **webId** | **string**| The ID of the event frame where the security entry will be updated.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **name** | **string**| The name of the security entry.. | [required]
+ **webId** | **string**| The ID of the event frame where the security entry will be updated.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type
@@ -1081,9 +1081,9 @@ Delete a security entry owned by the event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the event frame where the security entry will be deleted.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the event frame where the security entry will be deleted.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type
@@ -1101,9 +1101,9 @@ Delete a security entry owned by the event frame.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the event frame where the security entry will be deleted.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the event frame where the security entry will be deleted.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type
@@ -1121,11 +1121,11 @@ Retrieve multiple event frames by web ids or paths.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested attributes. The default is 'false'.. |
- **includeMode** | **string**| The include mode for the return list. The default is 'All'.. |
- **paths** | **string**| The path of an event frame. Multiple event frames may be specified with multiple instances of the parameter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **webIds** | **string**| The ID of an event frame. Multiple event frames may be specified with multiple instances of the parameter.. |
+ **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested attributes. The default is 'false'.. | [required]
+ **includeMode** | **string**| The include mode for the return list. The default is 'All'.. | [optional] - always use empty strings("") instead of Null
+ **paths** | **string**| The path of an event frame. Multiple event frames may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **webIds** | **string**| The ID of an event frame. Multiple event frames may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1143,11 +1143,11 @@ Retrieve multiple event frames by web ids or paths.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested attributes. The default is 'false'.. |
- **includeMode** | **string**| The include mode for the return list. The default is 'All'.. |
- **paths** | **string**| The path of an event frame. Multiple event frames may be specified with multiple instances of the parameter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **webIds** | **string**| The ID of an event frame. Multiple event frames may be specified with multiple instances of the parameter.. |
+ **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested attributes. The default is 'false'.. | [required]
+ **includeMode** | **string**| The include mode for the return list. The default is 'All'.. | [optional] - always use empty strings("") instead of Null
+ **paths** | **string**| The path of an event frame. Multiple event frames may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **webIds** | **string**| The ID of an event frame. Multiple event frames may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1199,21 +1199,21 @@ Execute a "Search EventFrames By Attribute Value" operation.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **searchId** | **string**| The encoded search Id of the "Search EventFrames By Attribute Value" operation.. |
- **canBeAcknowledged** | **bool**| Specify the returned event frames' canBeAcknowledged property. The default is no canBeAcknowledged filter.. |
- **isAcknowledged** | **bool**| Specify the returned event frames' isAcknowledged property. The default no isAcknowledged filter.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies whether the search should include objects nested further than the immediate children of the search root. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **endTime** | **string**| The ending time for the search. endTime must be greater than or equal to the startTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*'.. |
- **nameFilter** | **string**| The name query string used for finding event frames. The default is no filter.. |
- **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. |
- **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frame objects to be included in the returned collection. The default is 'Overlapped'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **severities** | **string**| Specify that returned event frames must have this severity. Multiple severity values may be specified with multiple instances of the parameter. The default is no severity filter.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **startTime** | **string**| The starting time for the search. startTime must be less than or equal to the endTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*-8h'.. |
+ **searchId** | **string**| The encoded search Id of the "Search EventFrames By Attribute Value" operation.. | [required]
+ **canBeAcknowledged** | **bool**| Specify the returned event frames' canBeAcknowledged property. The default is no canBeAcknowledged filter.. | [required]
+ **isAcknowledged** | **bool**| Specify the returned event frames' isAcknowledged property. The default no isAcknowledged filter.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies whether the search should include objects nested further than the immediate children of the search root. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **endTime** | **string**| The ending time for the search. endTime must be greater than or equal to the startTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*'.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for finding event frames. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frame objects to be included in the returned collection. The default is 'Overlapped'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **severities** | **string**| Specify that returned event frames must have this severity. Multiple severity values may be specified with multiple instances of the parameter. The default is no severity filter.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| The starting time for the search. startTime must be less than or equal to the endTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*-8h'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1231,21 +1231,21 @@ Execute a "Search EventFrames By Attribute Value" operation.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **searchId** | **string**| The encoded search Id of the "Search EventFrames By Attribute Value" operation.. |
- **canBeAcknowledged** | **bool**| Specify the returned event frames' canBeAcknowledged property. The default is no canBeAcknowledged filter.. |
- **isAcknowledged** | **bool**| Specify the returned event frames' isAcknowledged property. The default no isAcknowledged filter.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies whether the search should include objects nested further than the immediate children of the search root. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **endTime** | **string**| The ending time for the search. endTime must be greater than or equal to the startTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*'.. |
- **nameFilter** | **string**| The name query string used for finding event frames. The default is no filter.. |
- **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. |
- **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frame objects to be included in the returned collection. The default is 'Overlapped'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **severities** | **string**| Specify that returned event frames must have this severity. Multiple severity values may be specified with multiple instances of the parameter. The default is no severity filter.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **startTime** | **string**| The starting time for the search. startTime must be less than or equal to the endTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*-8h'.. |
+ **searchId** | **string**| The encoded search Id of the "Search EventFrames By Attribute Value" operation.. | [required]
+ **canBeAcknowledged** | **bool**| Specify the returned event frames' canBeAcknowledged property. The default is no canBeAcknowledged filter.. | [required]
+ **isAcknowledged** | **bool**| Specify the returned event frames' isAcknowledged property. The default no isAcknowledged filter.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies whether the search should include objects nested further than the immediate children of the search root. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **endTime** | **string**| The ending time for the search. endTime must be greater than or equal to the startTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*'.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for finding event frames. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **referencedElementNameFilter** | **string**| The name query string which must match the name of a referenced element. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **searchMode** | **string**| Determines how the startTime and endTime parameters are treated when searching for event frame objects to be included in the returned collection. The default is 'Overlapped'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **severities** | **string**| Specify that returned event frames must have this severity. Multiple severity values may be specified with multiple instances of the parameter. The default is no severity filter.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| The starting time for the search. startTime must be less than or equal to the endTime. The searchMode parameter will control whether the comparison will be performed against the event frame's startTime or endTime. The default is '*-8h'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type

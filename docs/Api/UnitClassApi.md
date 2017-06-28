@@ -27,8 +27,8 @@ Retrieve a unit class by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the unit class.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the unit class.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -46,8 +46,8 @@ Retrieve a unit class by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the unit class.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the unit class.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -65,8 +65,8 @@ Retrieve a unit class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the unit class.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the unit class.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -84,8 +84,8 @@ Retrieve a unit class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the unit class.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the unit class.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -103,8 +103,8 @@ Update a unit class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the unit class.. |
- **unitClassDTO** | **PIUnitClass**| A partial unit class containing the desired changes.. |
+ **webId** | **string**| The ID of the unit class.. | [required]
+ **unitClassDTO** | **PIUnitClass**| A partial unit class containing the desired changes.. | [required]
 
 
 ### Return type
@@ -122,8 +122,8 @@ Update a unit class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the unit class.. |
- **unitClassDTO** | **PIUnitClass**| A partial unit class containing the desired changes.. |
+ **webId** | **string**| The ID of the unit class.. | [required]
+ **unitClassDTO** | **PIUnitClass**| A partial unit class containing the desired changes.. | [required]
 
 
 ### Return type
@@ -141,7 +141,7 @@ Delete a unit class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the unit class.. |
+ **webId** | **string**| The ID of the unit class.. | [required]
 
 
 ### Return type
@@ -159,7 +159,7 @@ Delete a unit class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the unit class.. |
+ **webId** | **string**| The ID of the unit class.. | [required]
 
 
 ### Return type
@@ -177,8 +177,8 @@ Get the canonical unit of a unit class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of unit class.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of unit class.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -196,8 +196,8 @@ Get the canonical unit of a unit class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of unit class.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of unit class.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -215,8 +215,8 @@ Get a list of all units belonging to the unit class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of unit class.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of unit class.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -234,8 +234,8 @@ Get a list of all units belonging to the unit class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of unit class.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of unit class.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -253,8 +253,8 @@ Create a unit in the specified Unit Class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **unitDTO** | **PIUnit**| The new unit definition.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **unitDTO** | **PIUnit**| The new unit definition.. | [required]
 
 
 ### Return type
@@ -272,8 +272,8 @@ Create a unit in the specified Unit Class.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **unitDTO** | **PIUnit**| The new unit definition.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **unitDTO** | **PIUnit**| The new unit definition.. | [required]
 
 
 ### Return type

@@ -61,14 +61,14 @@ Opens a channel that will send messages about any value changes for the attribut
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. |
- **includeInitialValues** | **bool**| Specified if the channel should send a message with the current values of all the streams after the connection is opened. The default is 'false'.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
+ **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **includeInitialValues** | **bool**| Specified if the channel should send a message with the current values of all the streams after the connection is opened. The default is 'false'.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -86,14 +86,14 @@ Opens a channel that will send messages about any value changes for the attribut
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. |
- **includeInitialValues** | **bool**| Specified if the channel should send a message with the current values of all the streams after the connection is opened. The default is 'false'.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
+ **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **includeInitialValues** | **bool**| Specified if the channel should send a message with the current values of all the streams after the connection is opened. The default is 'false'.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -111,14 +111,14 @@ Returns End of stream values of the attributes for an Element, Event Frame or At
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
+ **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -136,14 +136,14 @@ Returns End of stream values of the attributes for an Element, Event Frame or At
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
+ **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -161,20 +161,20 @@ Returns interpolated values of attributes for an element, event frame or attribu
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. |
- **interval** | **string**| The sampling interval, in AFTimeSpan format.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **interval** | **string**| The sampling interval, in AFTimeSpan format.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -192,20 +192,20 @@ Returns interpolated values of attributes for an element, event frame or attribu
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. |
- **interval** | **string**| The sampling interval, in AFTimeSpan format.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **interval** | **string**| The sampling interval, in AFTimeSpan format.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -223,19 +223,19 @@ Returns interpolated values of attributes for an element, event frame or attribu
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **times** | **string**| The timestamp at which to retrieve a interpolated value. Multiple timestamps may be specified with multiple instances of the parameter.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **times** | **string**| The timestamp at which to retrieve a interpolated value. Multiple timestamps may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -253,19 +253,19 @@ Returns interpolated values of attributes for an element, event frame or attribu
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **times** | **string**| The timestamp at which to retrieve a interpolated value. Multiple timestamps may be specified with multiple instances of the parameter.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **times** | **string**| The timestamp at which to retrieve a interpolated value. Multiple timestamps may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -283,18 +283,18 @@ Returns values of attributes for an element, event frame or attribute over the s
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **intervals** | **int**| The number of intervals to plot over. Typically, this would be the number of horizontal pixels in the trend. The default is '24'. For each interval, the data available is examined and significant values are returned. Each interval can produce up to 5 values if they are unique, the first value in the interval, the last value, the highest value, the lowest value and at most one exceptional point (bad status or digital state).. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **intervals** | **int**| The number of intervals to plot over. Typically, this would be the number of horizontal pixels in the trend. The default is '24'. For each interval, the data available is examined and significant values are returned. Each interval can produce up to 5 values if they are unique, the first value in the interval, the last value, the highest value, the lowest value and at most one exceptional point (bad status or digital state).. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -312,18 +312,18 @@ Returns values of attributes for an element, event frame or attribute over the s
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **intervals** | **int**| The number of intervals to plot over. Typically, this would be the number of horizontal pixels in the trend. The default is '24'. For each interval, the data available is examined and significant values are returned. Each interval can produce up to 5 values if they are unique, the first value in the interval, the last value, the highest value, the lowest value and at most one exceptional point (bad status or digital state).. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **intervals** | **int**| The number of intervals to plot over. Typically, this would be the number of horizontal pixels in the trend. The default is '24'. For each interval, the data available is examined and significant values are returned. Each interval can produce up to 5 values if they are unique, the first value in the interval, the last value, the highest value, the lowest value and at most one exceptional point (bad status or digital state).. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -341,21 +341,21 @@ Returns recorded values of the attributes for an element, event frame, or attrib
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **maxCount** | **int**| The maximum number of values to be returned. The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **boundaryType** | **string**| An optional value that determines how the times and values of the returned end points are determined. The default is 'Inside'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. The default is no filtering.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **maxCount** | **int**| The maximum number of values to be returned. The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **boundaryType** | **string**| An optional value that determines how the times and values of the returned end points are determined. The default is 'Inside'.. | [optional] - always use empty strings("") instead of Null
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -373,21 +373,21 @@ Returns recorded values of the attributes for an element, event frame, or attrib
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **maxCount** | **int**| The maximum number of values to be returned. The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **boundaryType** | **string**| An optional value that determines how the times and values of the returned end points are determined. The default is 'Inside'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. The default is no filtering.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **maxCount** | **int**| The maximum number of values to be returned. The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **boundaryType** | **string**| An optional value that determines how the times and values of the returned end points are determined. The default is 'Inside'.. | [optional] - always use empty strings("") instead of Null
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -405,10 +405,10 @@ Updates multiple values for the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent element, event frame, or attribute. Attributes specified in the body must be descendants of the specified object.. |
- **values** | **PIItemsStreamValues**| The values to add or update.. |
- **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. |
- **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. |
+ **webId** | **string**| The ID of the parent element, event frame, or attribute. Attributes specified in the body must be descendants of the specified object.. | [required]
+ **values** | **PIItemsStreamValues**| The values to add or update.. | [required]
+ **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. | [optional] - always use empty strings("") instead of Null
+ **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -426,10 +426,10 @@ Updates multiple values for the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent element, event frame, or attribute. Attributes specified in the body must be descendants of the specified object.. |
- **values** | **PIItemsStreamValues**| The values to add or update.. |
- **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. |
- **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. |
+ **webId** | **string**| The ID of the parent element, event frame, or attribute. Attributes specified in the body must be descendants of the specified object.. | [required]
+ **values** | **PIItemsStreamValues**| The values to add or update.. | [required]
+ **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. | [optional] - always use empty strings("") instead of Null
+ **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -447,17 +447,17 @@ Returns recorded values of the attributes for an element, event frame, or attrib
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **time** | **string**| The timestamp at which the values are desired.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **time** | **string**| The timestamp at which the values are desired.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -475,17 +475,17 @@ Returns recorded values of the attributes for an element, event frame, or attrib
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **time** | **string**| The timestamp at which the values are desired.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **time** | **string**| The timestamp at which the values are desired.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -503,18 +503,18 @@ Returns recorded values of attributes for an element, event frame or attribute a
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **times** | **string**| The timestamp at which to retrieve a recorded value. Multiple timestamps may be specified with multiple instances of the parameter.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **times** | **string**| The timestamp at which to retrieve a recorded value. Multiple timestamps may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -532,18 +532,18 @@ Returns recorded values of attributes for an element, event frame or attribute a
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **times** | **string**| The timestamp at which to retrieve a recorded value. Multiple timestamps may be specified with multiple instances of the parameter.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **times** | **string**| The timestamp at which to retrieve a recorded value. Multiple timestamps may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -561,24 +561,24 @@ Returns summary values of the attributes for an element, event frame or attribut
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **calculationBasis** | **string**| Specifies the method of evaluating the data over the time range. The default is 'TimeWeighted'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| A string containing a filter expression. Expression variables are relative to the attribute. Use '.' to reference the containing attribute. The default is no filtering.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **sampleInterval** | **string**| A time span specifies how often the filter expression is evaluated when computing the summary for an interval, if the sampleType is 'Interval'.. |
- **sampleType** | **string**| A flag which specifies one or more summaries to compute for each interval over the time range. The default is 'ExpressionRecordedValues'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. |
- **summaryDuration** | **string**| The duration of each summary interval.. |
- **summaryTypes** | **string**| Specifies the kinds of summaries to produce over the range. The default is 'Total'. Multiple summary types may be specified by using multiple instances of summaryType.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeType** | **string**| Specifies how to calculate the timestamp for each interval. The default is 'Auto'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **calculationBasis** | **string**| Specifies the method of evaluating the data over the time range. The default is 'TimeWeighted'.. | [optional] - always use empty strings("") instead of Null
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| A string containing a filter expression. Expression variables are relative to the attribute. Use '.' to reference the containing attribute. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **sampleInterval** | **string**| A time span specifies how often the filter expression is evaluated when computing the summary for an interval, if the sampleType is 'Interval'.. | [optional] - always use empty strings("") instead of Null
+ **sampleType** | **string**| A flag which specifies one or more summaries to compute for each interval over the time range. The default is 'ExpressionRecordedValues'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. | [optional] - always use empty strings("") instead of Null
+ **summaryDuration** | **string**| The duration of each summary interval.. | [optional] - always use empty strings("") instead of Null
+ **summaryTypes** | **string**| Specifies the kinds of summaries to produce over the range. The default is 'Total'. Multiple summary types may be specified by using multiple instances of summaryType.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeType** | **string**| Specifies how to calculate the timestamp for each interval. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -596,24 +596,24 @@ Returns summary values of the attributes for an element, event frame or attribut
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **calculationBasis** | **string**| Specifies the method of evaluating the data over the time range. The default is 'TimeWeighted'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| A string containing a filter expression. Expression variables are relative to the attribute. Use '.' to reference the containing attribute. The default is no filtering.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **sampleInterval** | **string**| A time span specifies how often the filter expression is evaluated when computing the summary for an interval, if the sampleType is 'Interval'.. |
- **sampleType** | **string**| A flag which specifies one or more summaries to compute for each interval over the time range. The default is 'ExpressionRecordedValues'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. |
- **summaryDuration** | **string**| The duration of each summary interval.. |
- **summaryTypes** | **string**| Specifies the kinds of summaries to produce over the range. The default is 'Total'. Multiple summary types may be specified by using multiple instances of summaryType.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **timeType** | **string**| Specifies how to calculate the timestamp for each interval. The default is 'Auto'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an element, event frame or attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **calculationBasis** | **string**| Specifies the method of evaluating the data over the time range. The default is 'TimeWeighted'.. | [optional] - always use empty strings("") instead of Null
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| A string containing a filter expression. Expression variables are relative to the attribute. Use '.' to reference the containing attribute. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **sampleInterval** | **string**| A time span specifies how often the filter expression is evaluated when computing the summary for an interval, if the sampleType is 'Interval'.. | [optional] - always use empty strings("") instead of Null
+ **sampleType** | **string**| A flag which specifies one or more summaries to compute for each interval over the time range. The default is 'ExpressionRecordedValues'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d' for element attributes and points. For event frame attributes, the default is the event frame's start time, or '*-1d' if that is not set.. | [optional] - always use empty strings("") instead of Null
+ **summaryDuration** | **string**| The duration of each summary interval.. | [optional] - always use empty strings("") instead of Null
+ **summaryTypes** | **string**| Specifies the kinds of summaries to produce over the range. The default is 'Total'. Multiple summary types may be specified by using multiple instances of summaryType.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **timeType** | **string**| Specifies how to calculate the timestamp for each interval. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -631,16 +631,16 @@ Returns values of the attributes for an Element, Event Frame or Attribute at the
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **time** | **string**| An AF time string, which is used as the time context to get stream values if it is provided. By default, it is not specified, and the default time context of the AF object will be used.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **time** | **string**| An AF time string, which is used as the time context to get stream values if it is provided. By default, it is not specified, and the default time context of the AF object will be used.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -658,16 +658,16 @@ Returns values of the attributes for an Element, Event Frame or Attribute at the
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. |
- **time** | **string**| An AF time string, which is used as the time context to get stream values if it is provided. By default, it is not specified, and the default time context of the AF object will be used.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webId** | **string**| The ID of an Element, Event Frame or Attribute, which is the base element or parent of all the stream attributes.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **categoryName** | **string**| Specify that included attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for filtering attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that included attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **time** | **string**| An AF time string, which is used as the time context to get stream values if it is provided. By default, it is not specified, and the default time context of the AF object will be used.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -685,10 +685,10 @@ Updates a single value for the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent element, event frame, or attribute. Attributes specified in the body must be descendants of the specified object.. |
- **values** | **PIItemsStreamValue**| The values to add or update.. |
- **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. |
- **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. |
+ **webId** | **string**| The ID of the parent element, event frame, or attribute. Attributes specified in the body must be descendants of the specified object.. | [required]
+ **values** | **PIItemsStreamValue**| The values to add or update.. | [required]
+ **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. | [optional] - always use empty strings("") instead of Null
+ **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -706,10 +706,10 @@ Updates a single value for the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent element, event frame, or attribute. Attributes specified in the body must be descendants of the specified object.. |
- **values** | **PIItemsStreamValue**| The values to add or update.. |
- **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. |
- **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. |
+ **webId** | **string**| The ID of the parent element, event frame, or attribute. Attributes specified in the body must be descendants of the specified object.. | [required]
+ **values** | **PIItemsStreamValue**| The values to add or update.. | [required]
+ **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. | [optional] - always use empty strings("") instead of Null
+ **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -727,8 +727,8 @@ Opens a channel that will send messages about any value changes for the specifie
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **includeInitialValues** | **bool**| Specified if the channel should send a message with the current values of all the streams after the connection is opened. The default is 'false'.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **includeInitialValues** | **bool**| Specified if the channel should send a message with the current values of all the streams after the connection is opened. The default is 'false'.. | [required]
 
 
 ### Return type
@@ -746,8 +746,8 @@ Opens a channel that will send messages about any value changes for the specifie
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **includeInitialValues** | **bool**| Specified if the channel should send a message with the current values of all the streams after the connection is opened. The default is 'false'.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **includeInitialValues** | **bool**| Specified if the channel should send a message with the current values of all the streams after the connection is opened. The default is 'false'.. | [required]
 
 
 ### Return type
@@ -765,8 +765,8 @@ Returns End Of Stream values for attributes of the specified streams
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -784,8 +784,8 @@ Returns End Of Stream values for attributes of the specified streams
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -803,14 +803,14 @@ Returns interpolated values of the specified streams over the specified time ran
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. |
- **interval** | **string**| The sampling interval, in AFTimeSpan format.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **interval** | **string**| The sampling interval, in AFTimeSpan format.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -828,14 +828,14 @@ Returns interpolated values of the specified streams over the specified time ran
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. |
- **interval** | **string**| The sampling interval, in AFTimeSpan format.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **interval** | **string**| The sampling interval, in AFTimeSpan format.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -853,13 +853,13 @@ Returns interpolated values of the specified streams at the specified times.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **times** | **string**| The timestamp at which to retrieve a interpolated value. Multiple timestamps may be specified with multiple instances of the parameter.. |
- **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **times** | **string**| The timestamp at which to retrieve a interpolated value. Multiple timestamps may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -877,13 +877,13 @@ Returns interpolated values of the specified streams at the specified times.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **times** | **string**| The timestamp at which to retrieve a interpolated value. Multiple timestamps may be specified with multiple instances of the parameter.. |
- **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **times** | **string**| The timestamp at which to retrieve a interpolated value. Multiple timestamps may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. If the attribute does not support filtering, the filter will be ignored. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -901,12 +901,12 @@ Returns values of attributes for the specified streams over the specified time r
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **intervals** | **int**| The number of intervals to plot over. Typically, this would be the number of horizontal pixels in the trend. The default is '24'. For each interval, the data available is examined and significant values are returned. Each interval can produce up to 5 values if they are unique, the first value in the interval, the last value, the highest value, the lowest value and at most one exceptional point (bad status or digital state).. |
- **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **intervals** | **int**| The number of intervals to plot over. Typically, this would be the number of horizontal pixels in the trend. The default is '24'. For each interval, the data available is examined and significant values are returned. Each interval can produce up to 5 values if they are unique, the first value in the interval, the last value, the highest value, the lowest value and at most one exceptional point (bad status or digital state).. | [required]
+ **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -924,12 +924,12 @@ Returns values of attributes for the specified streams over the specified time r
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **intervals** | **int**| The number of intervals to plot over. Typically, this would be the number of horizontal pixels in the trend. The default is '24'. For each interval, the data available is examined and significant values are returned. Each interval can produce up to 5 values if they are unique, the first value in the interval, the last value, the highest value, the lowest value and at most one exceptional point (bad status or digital state).. |
- **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **intervals** | **int**| The number of intervals to plot over. Typically, this would be the number of horizontal pixels in the trend. The default is '24'. For each interval, the data available is examined and significant values are returned. Each interval can produce up to 5 values if they are unique, the first value in the interval, the last value, the highest value, the lowest value and at most one exceptional point (bad status or digital state).. | [required]
+ **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -947,15 +947,15 @@ Returns recorded values of the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **maxCount** | **int**| The maximum number of values to be returned. The default is 1000.. |
- **boundaryType** | **string**| An optional value that determines how the times and values of the returned end points are determined. The default is 'Inside'.. |
- **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. The default is no filtering.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **maxCount** | **int**| The maximum number of values to be returned. The default is 1000.. | [required]
+ **boundaryType** | **string**| An optional value that determines how the times and values of the returned end points are determined. The default is 'Inside'.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -973,15 +973,15 @@ Returns recorded values of the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. |
- **maxCount** | **int**| The maximum number of values to be returned. The default is 1000.. |
- **boundaryType** | **string**| An optional value that determines how the times and values of the returned end points are determined. The default is 'Inside'.. |
- **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. The default is no filtering.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **includeFilteredValues** | **bool**| Specify 'true' to indicate that values which fail the filter criteria are present in the returned data at the times where they occurred with a value set to a 'Filtered' enumeration value with bad status. Repeated consecutive failures are omitted.. | [required]
+ **maxCount** | **int**| The maximum number of values to be returned. The default is 1000.. | [required]
+ **boundaryType** | **string**| An optional value that determines how the times and values of the returned end points are determined. The default is 'Inside'.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| An optional string containing a filter expression. Expression variables are relative to the data point. Use '.' to reference the containing attribute. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -999,9 +999,9 @@ Updates multiple values for the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **values** | **PIItemsStreamValues**| The values to add or update.. |
- **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. |
- **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. |
+ **values** | **PIItemsStreamValues**| The values to add or update.. | [required]
+ **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. | [optional] - always use empty strings("") instead of Null
+ **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1019,9 +1019,9 @@ Updates multiple values for the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **values** | **PIItemsStreamValues**| The values to add or update.. |
- **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. |
- **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. |
+ **values** | **PIItemsStreamValues**| The values to add or update.. | [required]
+ **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. | [optional] - always use empty strings("") instead of Null
+ **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1039,11 +1039,11 @@ Returns recorded values based on the passed time and retrieval mode.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **time** | **string**| The timestamp at which the values are desired.. |
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **time** | **string**| The timestamp at which the values are desired.. | [required]
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1061,11 +1061,11 @@ Returns recorded values based on the passed time and retrieval mode.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **time** | **string**| The timestamp at which the values are desired.. |
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **time** | **string**| The timestamp at which the values are desired.. | [required]
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1083,12 +1083,12 @@ Returns recorded values of the specified streams at the specified times.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **times** | **string**| The timestamp at which to retrieve a recorded value. Multiple timestamps may be specified with multiple instances of the parameter.. |
- **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. |
- **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **times** | **string**| The timestamp at which to retrieve a recorded value. Multiple timestamps may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1106,12 +1106,12 @@ Returns recorded values of the specified streams at the specified times.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **times** | **string**| The timestamp at which to retrieve a recorded value. Multiple timestamps may be specified with multiple instances of the parameter.. |
- **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. |
- **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **times** | **string**| The timestamp at which to retrieve a recorded value. Multiple timestamps may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **webIds** | **string**| The ID of a stream. Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **retrievalMode** | **string**| An optional value that determines the values to return when values don't exist at the exact time specified. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1129,18 +1129,18 @@ Returns summary values of the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **calculationBasis** | **string**| Specifies the method of evaluating the data over the time range. The default is 'TimeWeighted'.. |
- **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| A string containing a filter expression. Expression variables are relative to the attribute. Use '.' to reference the containing attribute. The default is no filtering.. |
- **sampleInterval** | **string**| A time span specifies how often the filter expression is evaluated when computing the summary for an interval, if the sampleType is 'Interval'.. |
- **sampleType** | **string**| A flag which specifies one or more summaries to compute for each interval over the time range. The default is 'ExpressionRecordedValues'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d'.. |
- **summaryDuration** | **string**| The duration of each summary interval.. |
- **summaryTypes** | **string**| Specifies the kinds of summaries to produce over the range. The default is 'Total'. Multiple summary types may be specified by using multiple instances of summaryType.. |
- **timeType** | **string**| Specifies how to calculate the timestamp for each interval. The default is 'Auto'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **calculationBasis** | **string**| Specifies the method of evaluating the data over the time range. The default is 'TimeWeighted'.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| A string containing a filter expression. Expression variables are relative to the attribute. Use '.' to reference the containing attribute. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **sampleInterval** | **string**| A time span specifies how often the filter expression is evaluated when computing the summary for an interval, if the sampleType is 'Interval'.. | [optional] - always use empty strings("") instead of Null
+ **sampleType** | **string**| A flag which specifies one or more summaries to compute for each interval over the time range. The default is 'ExpressionRecordedValues'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d'.. | [optional] - always use empty strings("") instead of Null
+ **summaryDuration** | **string**| The duration of each summary interval.. | [optional] - always use empty strings("") instead of Null
+ **summaryTypes** | **string**| Specifies the kinds of summaries to produce over the range. The default is 'Total'. Multiple summary types may be specified by using multiple instances of summaryType.. | [optional] - always use empty strings("") instead of Null
+ **timeType** | **string**| Specifies how to calculate the timestamp for each interval. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1158,18 +1158,18 @@ Returns summary values of the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **calculationBasis** | **string**| Specifies the method of evaluating the data over the time range. The default is 'TimeWeighted'.. |
- **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
- **filterExpression** | **string**| A string containing a filter expression. Expression variables are relative to the attribute. Use '.' to reference the containing attribute. The default is no filtering.. |
- **sampleInterval** | **string**| A time span specifies how often the filter expression is evaluated when computing the summary for an interval, if the sampleType is 'Interval'.. |
- **sampleType** | **string**| A flag which specifies one or more summaries to compute for each interval over the time range. The default is 'ExpressionRecordedValues'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **startTime** | **string**| An optional start time. The default is '*-1d'.. |
- **summaryDuration** | **string**| The duration of each summary interval.. |
- **summaryTypes** | **string**| Specifies the kinds of summaries to produce over the range. The default is 'Total'. Multiple summary types may be specified by using multiple instances of summaryType.. |
- **timeType** | **string**| Specifies how to calculate the timestamp for each interval. The default is 'Auto'.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **calculationBasis** | **string**| Specifies the method of evaluating the data over the time range. The default is 'TimeWeighted'.. | [optional] - always use empty strings("") instead of Null
+ **endTime** | **string**| An optional end time. The default is '*'. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. | [optional] - always use empty strings("") instead of Null
+ **filterExpression** | **string**| A string containing a filter expression. Expression variables are relative to the attribute. Use '.' to reference the containing attribute. The default is no filtering.. | [optional] - always use empty strings("") instead of Null
+ **sampleInterval** | **string**| A time span specifies how often the filter expression is evaluated when computing the summary for an interval, if the sampleType is 'Interval'.. | [optional] - always use empty strings("") instead of Null
+ **sampleType** | **string**| A flag which specifies one or more summaries to compute for each interval over the time range. The default is 'ExpressionRecordedValues'.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **startTime** | **string**| An optional start time. The default is '*-1d'.. | [optional] - always use empty strings("") instead of Null
+ **summaryDuration** | **string**| The duration of each summary interval.. | [optional] - always use empty strings("") instead of Null
+ **summaryTypes** | **string**| Specifies the kinds of summaries to produce over the range. The default is 'Total'. Multiple summary types may be specified by using multiple instances of summaryType.. | [optional] - always use empty strings("") instead of Null
+ **timeType** | **string**| Specifies how to calculate the timestamp for each interval. The default is 'Auto'.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1187,10 +1187,10 @@ Returns values of the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **time** | **string**| An AF time string, which is used as the time context to get stream values if it is provided. By default, it is not specified, and the default time context of the AF object will be used.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **time** | **string**| An AF time string, which is used as the time context to get stream values if it is provided. By default, it is not specified, and the default time context of the AF object will be used.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1208,10 +1208,10 @@ Returns values of the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **time** | **string**| An AF time string, which is used as the time context to get stream values if it is provided. By default, it is not specified, and the default time context of the AF object will be used.. |
- **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. |
+ **webIds** | **string**| The ID of a stream.  Multiple streams may be specified with multiple instances of the parameter.. | [required] - join strings separated by ','
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **time** | **string**| An AF time string, which is used as the time context to get stream values if it is provided. By default, it is not specified, and the default time context of the AF object will be used.. | [optional] - always use empty strings("") instead of Null
+ **timeZone** | **string**| The time zone in which the time string will be interpreted. This parameter will be ignored if a time zone is specified in the time string. If no time zone is specified in either places, the PI Web API server time zone will be used.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1229,9 +1229,9 @@ Updates a single value for the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **values** | **PIItemsStreamValues**| The values to add or update.. |
- **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. |
- **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. |
+ **values** | **PIItemsStreamValues**| The values to add or update.. | [required]
+ **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. | [optional] - always use empty strings("") instead of Null
+ **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -1249,9 +1249,9 @@ Updates a single value for the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **values** | **PIItemsStreamValues**| The values to add or update.. |
- **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. |
- **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. |
+ **values** | **PIItemsStreamValues**| The values to add or update.. | [required]
+ **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. | [optional] - always use empty strings("") instead of Null
+ **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type

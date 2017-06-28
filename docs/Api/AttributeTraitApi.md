@@ -17,8 +17,8 @@ Retrieve all attribute traits of the specified category/categories.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **categorys** | **string**| The category of the attribute traits. Multiple categories may be specified with multiple instances of the parameter. If the parameter is not specified, or if its value is "all", then all attribute traits of all categories will be returned.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **categorys** | **string**| The category of the attribute traits. Multiple categories may be specified with multiple instances of the parameter. If the parameter is not specified, or if its value is "all", then all attribute traits of all categories will be returned.. | [required] - join strings separated by ','
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -36,8 +36,8 @@ Retrieve all attribute traits of the specified category/categories.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **categorys** | **string**| The category of the attribute traits. Multiple categories may be specified with multiple instances of the parameter. If the parameter is not specified, or if its value is "all", then all attribute traits of all categories will be returned.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **categorys** | **string**| The category of the attribute traits. Multiple categories may be specified with multiple instances of the parameter. If the parameter is not specified, or if its value is "all", then all attribute traits of all categories will be returned.. | [required] - join strings separated by ','
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -55,8 +55,8 @@ Retrieve an attribute trait.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name or abbreviation of the attribute trait.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name or abbreviation of the attribute trait.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -74,8 +74,8 @@ Retrieve an attribute trait.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name or abbreviation of the attribute trait.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name or abbreviation of the attribute trait.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type

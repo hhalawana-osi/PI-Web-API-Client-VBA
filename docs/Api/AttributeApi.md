@@ -35,8 +35,8 @@ Retrieve an attribute by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the attribute.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the attribute.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -54,8 +54,8 @@ Retrieve an attribute by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the attribute.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the attribute.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -73,8 +73,8 @@ Retrieve an attribute.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -92,8 +92,8 @@ Retrieve an attribute.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -111,8 +111,8 @@ Update an attribute by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
- **attribute** | **PIAttribute**| A partial attribute containing the desired changes.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
+ **attribute** | **PIAttribute**| A partial attribute containing the desired changes.. | [required]
 
 
 ### Return type
@@ -130,8 +130,8 @@ Update an attribute by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
- **attribute** | **PIAttribute**| A partial attribute containing the desired changes.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
+ **attribute** | **PIAttribute**| A partial attribute containing the desired changes.. | [required]
 
 
 ### Return type
@@ -149,7 +149,7 @@ Delete an attribute.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
 
 
 ### Return type
@@ -167,7 +167,7 @@ Delete an attribute.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
 
 
 ### Return type
@@ -185,19 +185,19 @@ Get the child attributes of the specified attribute.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent attribute.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **categoryName** | **string**| Specify that returned attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for finding attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **templateName** | **string**| Specify that returned attributes must be members of this template. The default is no template filter.. |
- **valueType** | **string**| Specify that returned attributes' value type must be the given value type. The default is no value type filter.. |
+ **webId** | **string**| The ID of the parent attribute.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **categoryName** | **string**| Specify that returned attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for finding attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that returned attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **valueType** | **string**| Specify that returned attributes' value type must be the given value type. The default is no value type filter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -215,19 +215,19 @@ Get the child attributes of the specified attribute.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent attribute.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
- **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. |
- **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **categoryName** | **string**| Specify that returned attributes must have this category. The default is no category filter.. |
- **nameFilter** | **string**| The name query string used for finding attributes. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
- **templateName** | **string**| Specify that returned attributes must be members of this template. The default is no template filter.. |
- **valueType** | **string**| Specify that returned attributes' value type must be the given value type. The default is no value type filter.. |
+ **webId** | **string**| The ID of the parent attribute.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. | [required]
+ **showExcluded** | **bool**| Specified if the search should include attributes with the Excluded property set. The default is 'false'.. | [required]
+ **showHidden** | **bool**| Specified if the search should include attributes with the Hidden property set. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **categoryName** | **string**| Specify that returned attributes must have this category. The default is no category filter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The name query string used for finding attributes. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
+ **templateName** | **string**| Specify that returned attributes must be members of this template. The default is no template filter.. | [optional] - always use empty strings("") instead of Null
+ **valueType** | **string**| Specify that returned attributes' value type must be the given value type. The default is no value type filter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -245,8 +245,8 @@ Create a new attribute as a child of the specified attribute.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent attribute on which to create the attribute.. |
- **attribute** | **PIAttribute**| The definition of the new attribute.. |
+ **webId** | **string**| The ID of the parent attribute on which to create the attribute.. | [required]
+ **attribute** | **PIAttribute**| The definition of the new attribute.. | [required]
 
 
 ### Return type
@@ -264,8 +264,8 @@ Create a new attribute as a child of the specified attribute.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent attribute on which to create the attribute.. |
- **attribute** | **PIAttribute**| The definition of the new attribute.. |
+ **webId** | **string**| The ID of the parent attribute on which to create the attribute.. | [required]
+ **attribute** | **PIAttribute**| The definition of the new attribute.. | [required]
 
 
 ### Return type
@@ -283,8 +283,8 @@ Get an attribute's categories.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -302,8 +302,8 @@ Get an attribute's categories.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -321,7 +321,7 @@ Create or update an attribute's DataReference configuration (Create/Update PI po
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
 
 
 ### Return type
@@ -339,7 +339,7 @@ Create or update an attribute's DataReference configuration (Create/Update PI po
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
 
 
 ### Return type
@@ -357,8 +357,8 @@ Get the attribute's value. This call is intended for use with attributes that ha
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -376,8 +376,8 @@ Get the attribute's value. This call is intended for use with attributes that ha
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -395,8 +395,8 @@ Set the value of a configuration item attribute. For attributes with a data refe
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
- **value** | **PITimedValue**| The value to write.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
+ **value** | **PITimedValue**| The value to write.. | [required]
 
 
 ### Return type
@@ -414,8 +414,8 @@ Set the value of a configuration item attribute. For attributes with a data refe
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute.. |
- **value** | **PITimedValue**| The value to write.. |
+ **webId** | **string**| The ID of the attribute.. | [required]
+ **value** | **PITimedValue**| The value to write.. | [required]
 
 
 ### Return type
@@ -433,11 +433,11 @@ Retrieve multiple attributes by web id or path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested attributes. The default is 'false'.. |
- **includeMode** | **string**| The include mode for the return list. The default is 'All'.. |
- **paths** | **string**| The path of an attribute. Multiple attributes may be specified with multiple instances of the parameter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **webIds** | **string**| The ID of an attribute. Multiple attributes may be specified with multiple instances of the parameter.. |
+ **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested attributes. The default is 'false'.. | [required]
+ **includeMode** | **string**| The include mode for the return list. The default is 'All'.. | [optional] - always use empty strings("") instead of Null
+ **paths** | **string**| The path of an attribute. Multiple attributes may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **webIds** | **string**| The ID of an attribute. Multiple attributes may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -455,11 +455,11 @@ Retrieve multiple attributes by web id or path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested attributes. The default is 'false'.. |
- **includeMode** | **string**| The include mode for the return list. The default is 'All'.. |
- **paths** | **string**| The path of an attribute. Multiple attributes may be specified with multiple instances of the parameter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **webIds** | **string**| The ID of an attribute. Multiple attributes may be specified with multiple instances of the parameter.. |
+ **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested attributes. The default is 'false'.. | [required]
+ **includeMode** | **string**| The include mode for the return list. The default is 'All'.. | [optional] - always use empty strings("") instead of Null
+ **paths** | **string**| The path of an attribute. Multiple attributes may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **webIds** | **string**| The ID of an attribute. Multiple attributes may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type

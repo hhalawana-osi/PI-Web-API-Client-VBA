@@ -55,7 +55,7 @@ Retrieve a list of all Asset Servers known to this service.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -73,7 +73,7 @@ Retrieve a list of all Asset Servers known to this service.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -91,8 +91,8 @@ Retrieve an Asset Server by name.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -110,8 +110,8 @@ Retrieve an Asset Server by name.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -129,8 +129,8 @@ Retrieve an Asset Server by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -148,8 +148,8 @@ Retrieve an Asset Server by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -167,8 +167,8 @@ Retrieve an Asset Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -186,8 +186,8 @@ Retrieve an Asset Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -205,8 +205,8 @@ Retrieve a list of all Analysis Rule Plug-in's.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server, where the Analysis Rule Plug-in's are installed.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the asset server, where the Analysis Rule Plug-in's are installed.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -224,8 +224,8 @@ Retrieve a list of all Analysis Rule Plug-in's.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server, where the Analysis Rule Plug-in's are installed.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the asset server, where the Analysis Rule Plug-in's are installed.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -243,8 +243,8 @@ Retrieve a list of all Asset Databases on the specified Asset Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -262,8 +262,8 @@ Retrieve a list of all Asset Databases on the specified Asset Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -281,8 +281,8 @@ Create an asset database.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server on which to create the database.. |
- **database** | **PIAssetDatabase**| The new database definition.. |
+ **webId** | **string**| The ID of the asset server on which to create the database.. | [required]
+ **database** | **PIAssetDatabase**| The new database definition.. | [required]
 
 
 ### Return type
@@ -300,8 +300,8 @@ Create an asset database.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server on which to create the database.. |
- **database** | **PIAssetDatabase**| The new database definition.. |
+ **webId** | **string**| The ID of the asset server on which to create the database.. | [required]
+ **database** | **PIAssetDatabase**| The new database definition.. | [required]
 
 
 ### Return type
@@ -319,11 +319,11 @@ Get the security information of the specified security item associated with the 
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server for the security to be checked.. |
- **securityItems** | **string**| The security item of the desired security information to be returned. Multiple security items may be specified with multiple instances of the parameter. If the parameter is not specified, only 'Default' security item of the security information will be returned.. |
- **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. |
- **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the asset server for the security to be checked.. | [required]
+ **securityItems** | **string**| The security item of the desired security information to be returned. Multiple security items may be specified with multiple instances of the parameter. If the parameter is not specified, only 'Default' security item of the security information will be returned.. | [required] - join strings separated by ','
+ **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. | [required] - join strings separated by ','
+ **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -341,11 +341,11 @@ Get the security information of the specified security item associated with the 
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server for the security to be checked.. |
- **securityItems** | **string**| The security item of the desired security information to be returned. Multiple security items may be specified with multiple instances of the parameter. If the parameter is not specified, only 'Default' security item of the security information will be returned.. |
- **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. |
- **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the asset server for the security to be checked.. | [required]
+ **securityItems** | **string**| The security item of the desired security information to be returned. Multiple security items may be specified with multiple instances of the parameter. If the parameter is not specified, only 'Default' security item of the security information will be returned.. | [required] - join strings separated by ','
+ **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. | [required] - join strings separated by ','
+ **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -363,10 +363,10 @@ Retrieve the security entries of the specified security item associated with the
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server.. |
- **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. |
- **securityItem** | **string**| The security item of the desired security entries information to be returned. If the parameter is not specified, security entries of the 'Default' security item will be returned.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the asset server.. | [required]
+ **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **securityItem** | **string**| The security item of the desired security entries information to be returned. If the parameter is not specified, security entries of the 'Default' security item will be returned.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -384,10 +384,10 @@ Retrieve the security entries of the specified security item associated with the
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server.. |
- **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. |
- **securityItem** | **string**| The security item of the desired security entries information to be returned. If the parameter is not specified, security entries of the 'Default' security item will be returned.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the asset server.. | [required]
+ **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **securityItem** | **string**| The security item of the desired security entries information to be returned. If the parameter is not specified, security entries of the 'Default' security item will be returned.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -405,10 +405,10 @@ Create a security entry owned by the asset server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server where the security entry will be created.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
- **securityItem** | **string**| The security item of the desired security entries to be created. If the parameter is not specified, security entries of the 'Default' security item will be created.. |
+ **webId** | **string**| The ID of the asset server where the security entry will be created.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
+ **securityItem** | **string**| The security item of the desired security entries to be created. If the parameter is not specified, security entries of the 'Default' security item will be created.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -426,10 +426,10 @@ Create a security entry owned by the asset server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server where the security entry will be created.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
- **securityItem** | **string**| The security item of the desired security entries to be created. If the parameter is not specified, security entries of the 'Default' security item will be created.. |
+ **webId** | **string**| The ID of the asset server where the security entry will be created.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
+ **securityItem** | **string**| The security item of the desired security entries to be created. If the parameter is not specified, security entries of the 'Default' security item will be created.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -447,10 +447,10 @@ Retrieve the security entry of the specified security item associated with the a
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the asset server.. |
- **securityItem** | **string**| The security item of the desired security entries information to be returned. If the parameter is not specified, security entries of the 'Default' security item will be returned.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the asset server.. | [required]
+ **securityItem** | **string**| The security item of the desired security entries information to be returned. If the parameter is not specified, security entries of the 'Default' security item will be returned.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -468,10 +468,10 @@ Retrieve the security entry of the specified security item associated with the a
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the asset server.. |
- **securityItem** | **string**| The security item of the desired security entries information to be returned. If the parameter is not specified, security entries of the 'Default' security item will be returned.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the asset server.. | [required]
+ **securityItem** | **string**| The security item of the desired security entries information to be returned. If the parameter is not specified, security entries of the 'Default' security item will be returned.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -489,11 +489,11 @@ Update a security entry owned by the asset server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry.. |
- **webId** | **string**| The ID of the asset server where the security entry will be updated.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
- **securityItem** | **string**| The security item of the desired security entries to be updated. If the parameter is not specified, security entries of the 'Default' security item will be updated.. |
+ **name** | **string**| The name of the security entry.. | [required]
+ **webId** | **string**| The ID of the asset server where the security entry will be updated.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
+ **securityItem** | **string**| The security item of the desired security entries to be updated. If the parameter is not specified, security entries of the 'Default' security item will be updated.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -511,11 +511,11 @@ Update a security entry owned by the asset server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry.. |
- **webId** | **string**| The ID of the asset server where the security entry will be updated.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
- **securityItem** | **string**| The security item of the desired security entries to be updated. If the parameter is not specified, security entries of the 'Default' security item will be updated.. |
+ **name** | **string**| The name of the security entry.. | [required]
+ **webId** | **string**| The ID of the asset server where the security entry will be updated.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
+ **securityItem** | **string**| The security item of the desired security entries to be updated. If the parameter is not specified, security entries of the 'Default' security item will be updated.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -533,10 +533,10 @@ Delete a security entry owned by the asset server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the asset server where the security entry will be deleted.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
- **securityItem** | **string**| The security item of the desired security entries to be deleted. If the parameter is not specified, security entries of the 'Default' security item will be deleted.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the asset server where the security entry will be deleted.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
+ **securityItem** | **string**| The security item of the desired security entries to be deleted. If the parameter is not specified, security entries of the 'Default' security item will be deleted.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -554,10 +554,10 @@ Delete a security entry owned by the asset server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the asset server where the security entry will be deleted.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
- **securityItem** | **string**| The security item of the desired security entries to be deleted. If the parameter is not specified, security entries of the 'Default' security item will be deleted.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the asset server where the security entry will be deleted.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
+ **securityItem** | **string**| The security item of the desired security entries to be deleted. If the parameter is not specified, security entries of the 'Default' security item will be deleted.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -575,13 +575,13 @@ Retrieve security identities based on the specified criteria. By default, all se
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server to search.. |
- **maxCount** | **int**| The maximum number of objects to be returned. The default is 1000.. |
- **field** | **string**| Specifies which of the object's properties are searched. The default is 'Name'.. |
- **query** | **string**| The query string used for finding objects. The default is no query string.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
+ **webId** | **string**| The ID of the asset server to search.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned. The default is 1000.. | [required]
+ **field** | **string**| Specifies which of the object's properties are searched. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **query** | **string**| The query string used for finding objects. The default is no query string.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -599,13 +599,13 @@ Retrieve security identities based on the specified criteria. By default, all se
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server to search.. |
- **maxCount** | **int**| The maximum number of objects to be returned. The default is 1000.. |
- **field** | **string**| Specifies which of the object's properties are searched. The default is 'Name'.. |
- **query** | **string**| The query string used for finding objects. The default is no query string.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
+ **webId** | **string**| The ID of the asset server to search.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned. The default is 1000.. | [required]
+ **field** | **string**| Specifies which of the object's properties are searched. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **query** | **string**| The query string used for finding objects. The default is no query string.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -623,8 +623,8 @@ Create a security identity.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server on which to create the security identity.. |
- **securityIdentity** | **PISecurityIdentity**| The new security identity definition.. |
+ **webId** | **string**| The ID of the asset server on which to create the security identity.. | [required]
+ **securityIdentity** | **PISecurityIdentity**| The new security identity definition.. | [required]
 
 
 ### Return type
@@ -642,8 +642,8 @@ Create a security identity.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server on which to create the security identity.. |
- **securityIdentity** | **PISecurityIdentity**| The new security identity definition.. |
+ **webId** | **string**| The ID of the asset server on which to create the security identity.. | [required]
+ **securityIdentity** | **PISecurityIdentity**| The new security identity definition.. | [required]
 
 
 ### Return type
@@ -661,9 +661,9 @@ Retrieve security identities for a specific user.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **userIdentity** | **string**| The user identity to search for.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **userIdentity** | **string**| The user identity to search for.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -681,9 +681,9 @@ Retrieve security identities for a specific user.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **userIdentity** | **string**| The user identity to search for.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **userIdentity** | **string**| The user identity to search for.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -701,13 +701,13 @@ Retrieve security mappings based on the specified criteria. By default, all secu
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server to search.. |
- **maxCount** | **int**| The maximum number of objects to be returned. The default is 1000.. |
- **field** | **string**| Specifies which of the object's properties are searched. The default is 'Name'.. |
- **query** | **string**| The query string used for finding objects. The default is no query string.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
+ **webId** | **string**| The ID of the asset server to search.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned. The default is 1000.. | [required]
+ **field** | **string**| Specifies which of the object's properties are searched. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **query** | **string**| The query string used for finding objects. The default is no query string.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -725,13 +725,13 @@ Retrieve security mappings based on the specified criteria. By default, all secu
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server to search.. |
- **maxCount** | **int**| The maximum number of objects to be returned. The default is 1000.. |
- **field** | **string**| Specifies which of the object's properties are searched. The default is 'Name'.. |
- **query** | **string**| The query string used for finding objects. The default is no query string.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
+ **webId** | **string**| The ID of the asset server to search.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned. The default is 1000.. | [required]
+ **field** | **string**| Specifies which of the object's properties are searched. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **query** | **string**| The query string used for finding objects. The default is no query string.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -749,8 +749,8 @@ Create a security mapping.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server on which to create the security mapping.. |
- **securityMapping** | **PISecurityMapping**| The new security mapping definition.. |
+ **webId** | **string**| The ID of the asset server on which to create the security mapping.. | [required]
+ **securityMapping** | **PISecurityMapping**| The new security mapping definition.. | [required]
 
 
 ### Return type
@@ -768,8 +768,8 @@ Create a security mapping.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server on which to create the security mapping.. |
- **securityMapping** | **PISecurityMapping**| The new security mapping definition.. |
+ **webId** | **string**| The ID of the asset server on which to create the security mapping.. | [required]
+ **securityMapping** | **PISecurityMapping**| The new security mapping definition.. | [required]
 
 
 ### Return type
@@ -787,8 +787,8 @@ Retrieve a list of all Time Rule Plug-in's.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server, where the Time Rule Plug-in's are installed.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the asset server, where the Time Rule Plug-in's are installed.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -806,8 +806,8 @@ Retrieve a list of all Time Rule Plug-in's.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the asset server, where the Time Rule Plug-in's are installed.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the asset server, where the Time Rule Plug-in's are installed.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -825,8 +825,8 @@ Retrieve a list of all unit classes on the specified Asset Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -844,8 +844,8 @@ Retrieve a list of all unit classes on the specified Asset Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -863,8 +863,8 @@ Create a unit class in the specified Asset Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **unitClass** | **PIUnitClass**| The new unit class definition.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **unitClass** | **PIUnitClass**| The new unit class definition.. | [required]
 
 
 ### Return type
@@ -882,8 +882,8 @@ Create a unit class in the specified Asset Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **unitClass** | **PIUnitClass**| The new unit class definition.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **unitClass** | **PIUnitClass**| The new unit class definition.. | [required]
 
 
 ### Return type

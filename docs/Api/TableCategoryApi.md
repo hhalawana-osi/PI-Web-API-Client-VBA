@@ -33,8 +33,8 @@ Retrieve a table category by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the target table category.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the target table category.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -52,8 +52,8 @@ Retrieve a table category by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the target table category.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the target table category.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -71,8 +71,8 @@ Retrieve a table category.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The id of the table category.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The id of the table category.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -90,8 +90,8 @@ Retrieve a table category.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The id of the table category.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The id of the table category.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -109,8 +109,8 @@ Update a table category by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the table category to update.. |
- **tableCategory** | **PITableCategory**| A partial table category containing the desired changes.. |
+ **webId** | **string**| The ID of the table category to update.. | [required]
+ **tableCategory** | **PITableCategory**| A partial table category containing the desired changes.. | [required]
 
 
 ### Return type
@@ -128,8 +128,8 @@ Update a table category by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the table category to update.. |
- **tableCategory** | **PITableCategory**| A partial table category containing the desired changes.. |
+ **webId** | **string**| The ID of the table category to update.. | [required]
+ **tableCategory** | **PITableCategory**| A partial table category containing the desired changes.. | [required]
 
 
 ### Return type
@@ -147,7 +147,7 @@ Delete a table category.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the table category to delete.. |
+ **webId** | **string**| The ID of the table category to delete.. | [required]
 
 
 ### Return type
@@ -165,7 +165,7 @@ Delete a table category.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the table category to delete.. |
+ **webId** | **string**| The ID of the table category to delete.. | [required]
 
 
 ### Return type
@@ -183,10 +183,10 @@ Get the security information of the specified security item associated with the 
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the table category for the security to be checked.. |
- **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. |
- **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the table category for the security to be checked.. | [required]
+ **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. | [required] - join strings separated by ','
+ **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -204,10 +204,10 @@ Get the security information of the specified security item associated with the 
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the table category for the security to be checked.. |
- **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. |
- **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the table category for the security to be checked.. | [required]
+ **userIdentities** | **string**| The user identity for the security information to be checked. Multiple security identities may be specified with multiple instances of the parameter. If the parameter is not specified, only the current user's security rights will be returned.. | [required] - join strings separated by ','
+ **forceRefresh** | **bool**| Indicates if the security cache should be refreshed before getting security information. The default is 'false'.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -225,9 +225,9 @@ Retrieve the security entries associated with the table category based on the sp
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the table category.. |
- **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the table category.. | [required]
+ **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -245,9 +245,9 @@ Retrieve the security entries associated with the table category based on the sp
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the table category.. |
- **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the table category.. | [required]
+ **nameFilter** | **string**| The name query string used for filtering security entries. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -265,9 +265,9 @@ Create a security entry owned by the table category.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the table category where the security entry will be created.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **webId** | **string**| The ID of the table category where the security entry will be created.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type
@@ -285,9 +285,9 @@ Create a security entry owned by the table category.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the table category where the security entry will be created.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **webId** | **string**| The ID of the table category where the security entry will be created.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type
@@ -305,9 +305,9 @@ Retrieve the security entry associated with the table category with the specifie
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the table category.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the table category.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -325,9 +325,9 @@ Retrieve the security entry associated with the table category with the specifie
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the table category.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the table category.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -345,10 +345,10 @@ Update a security entry owned by the table category.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry.. |
- **webId** | **string**| The ID of the table category where the security entry will be updated.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **name** | **string**| The name of the security entry.. | [required]
+ **webId** | **string**| The ID of the table category where the security entry will be updated.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type
@@ -366,10 +366,10 @@ Update a security entry owned by the table category.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry.. |
- **webId** | **string**| The ID of the table category where the security entry will be updated.. |
- **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **name** | **string**| The name of the security entry.. | [required]
+ **webId** | **string**| The ID of the table category where the security entry will be updated.. | [required]
+ **securityEntry** | **PISecurityEntry**| The new security entry definition. The full list of allow and deny rights must be supplied or they will be removed.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type
@@ -387,9 +387,9 @@ Delete a security entry owned by the table category.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the table category where the security entry will be deleted.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the table category where the security entry will be deleted.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type
@@ -407,9 +407,9 @@ Delete a security entry owned by the table category.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. |
- **webId** | **string**| The ID of the table category where the security entry will be deleted.. |
- **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. |
+ **name** | **string**| The name of the security entry. For every backslash character (\) in the security entry name, replace with asterisk (*). As an example, use domain*username instead of domain\username.. | [required]
+ **webId** | **string**| The ID of the table category where the security entry will be deleted.. | [required]
+ **applyToChildren** | **bool**| If false, the new access permissions are only applied to the associated object. If true, the access permissions of children with any parent-child reference types will change when the permissions on the primary parent change.. | [required]
 
 
 ### Return type

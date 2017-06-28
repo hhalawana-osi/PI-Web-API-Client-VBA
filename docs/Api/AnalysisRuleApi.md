@@ -25,8 +25,8 @@ Retrieve an Analysis Rule by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the Analysis Rule.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the Analysis Rule.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -44,8 +44,8 @@ Retrieve an Analysis Rule by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the Analysis Rule.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the Analysis Rule.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -63,8 +63,8 @@ Retrieve an Analysis Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Analysis Rule.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the Analysis Rule.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -82,8 +82,8 @@ Retrieve an Analysis Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Analysis Rule.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the Analysis Rule.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -101,8 +101,8 @@ Update an Analysis Rule by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Analysis Rule.. |
- **analysisRule** | **PIAnalysisRule**| A partial Analysis Rule containing the desired changes.. |
+ **webId** | **string**| The ID of the Analysis Rule.. | [required]
+ **analysisRule** | **PIAnalysisRule**| A partial Analysis Rule containing the desired changes.. | [required]
 
 
 ### Return type
@@ -120,8 +120,8 @@ Update an Analysis Rule by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Analysis Rule.. |
- **analysisRule** | **PIAnalysisRule**| A partial Analysis Rule containing the desired changes.. |
+ **webId** | **string**| The ID of the Analysis Rule.. | [required]
+ **analysisRule** | **PIAnalysisRule**| A partial Analysis Rule containing the desired changes.. | [required]
 
 
 ### Return type
@@ -139,7 +139,7 @@ Delete an Analysis Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Analysis Rule.. |
+ **webId** | **string**| The ID of the Analysis Rule.. | [required]
 
 
 ### Return type
@@ -157,7 +157,7 @@ Delete an Analysis Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Analysis Rule.. |
+ **webId** | **string**| The ID of the Analysis Rule.. | [required]
 
 
 ### Return type
@@ -175,14 +175,14 @@ Get the child Analysis Rules of the Analysis Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent Analysis Rule.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include Analysis Rules nested further than the immediate children of the searchRoot. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **nameFilter** | **string**| The name query string used for finding Analysis Rules. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
+ **webId** | **string**| The ID of the parent Analysis Rule.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include Analysis Rules nested further than the immediate children of the searchRoot. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **nameFilter** | **string**| The name query string used for finding Analysis Rules. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -200,14 +200,14 @@ Get the child Analysis Rules of the Analysis Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent Analysis Rule.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **searchFullHierarchy** | **bool**| Specifies if the search should include Analysis Rules nested further than the immediate children of the searchRoot. The default is 'false'.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. |
- **nameFilter** | **string**| The name query string used for finding Analysis Rules. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. |
- **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
+ **webId** | **string**| The ID of the parent Analysis Rule.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **searchFullHierarchy** | **bool**| Specifies if the search should include Analysis Rules nested further than the immediate children of the searchRoot. The default is 'false'.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is 0.. | [required]
+ **nameFilter** | **string**| The name query string used for finding Analysis Rules. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **sortField** | **string**| The field or property of the object used to sort the returned collection. The default is 'Name'.. | [optional] - always use empty strings("") instead of Null
+ **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -225,8 +225,8 @@ Create a new Analysis Rule as a child of an existing Analysis Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent Analysis Rule, on which to create the child Analysis Rule.. |
- **analysisRule** | **PIAnalysisRule**| The definition of the new Analysis Rule.. |
+ **webId** | **string**| The ID of the parent Analysis Rule, on which to create the child Analysis Rule.. | [required]
+ **analysisRule** | **PIAnalysisRule**| The definition of the new Analysis Rule.. | [required]
 
 
 ### Return type
@@ -244,8 +244,8 @@ Create a new Analysis Rule as a child of an existing Analysis Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent Analysis Rule, on which to create the child Analysis Rule.. |
- **analysisRule** | **PIAnalysisRule**| The definition of the new Analysis Rule.. |
+ **webId** | **string**| The ID of the parent Analysis Rule, on which to create the child Analysis Rule.. | [required]
+ **analysisRule** | **PIAnalysisRule**| The definition of the new Analysis Rule.. | [required]
 
 
 ### Return type

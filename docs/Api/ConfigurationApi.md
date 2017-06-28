@@ -53,7 +53,7 @@ Get the value of a configuration item.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **string**| The key of the configuration item.. |
+ **key** | **string**| The key of the configuration item.. | [required]
 
 
 ### Return type
@@ -71,7 +71,7 @@ Get the value of a configuration item.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **string**| The key of the configuration item.. |
+ **key** | **string**| The key of the configuration item.. | [required]
 
 
 ### Return type
@@ -89,7 +89,7 @@ Delete a configuration item.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **string**| The key of the configuration item to remove.. |
+ **key** | **string**| The key of the configuration item to remove.. | [required]
 
 
 ### Return type
@@ -107,7 +107,7 @@ Delete a configuration item.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **string**| The key of the configuration item to remove.. |
+ **key** | **string**| The key of the configuration item to remove.. | [required]
 
 
 ### Return type

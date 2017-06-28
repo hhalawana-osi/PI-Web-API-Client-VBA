@@ -21,8 +21,8 @@ Retrieve an enumeration value by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the target enumeration value.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the target enumeration value.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -40,8 +40,8 @@ Retrieve an enumeration value by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the target enumeration value.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the target enumeration value.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -59,8 +59,8 @@ Retrieve an enumeration value mapping
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the enumeration value.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the enumeration value.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -78,8 +78,8 @@ Retrieve an enumeration value mapping
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the enumeration value.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the enumeration value.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -97,8 +97,8 @@ Update an enumeration value by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the enumeration value to update.. |
- **enumerationValue** | **PIEnumerationValue**| A partial enumeration value containing the desired changes.. |
+ **webId** | **string**| The ID of the enumeration value to update.. | [required]
+ **enumerationValue** | **PIEnumerationValue**| A partial enumeration value containing the desired changes.. | [required]
 
 
 ### Return type
@@ -116,8 +116,8 @@ Update an enumeration value by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the enumeration value to update.. |
- **enumerationValue** | **PIEnumerationValue**| A partial enumeration value containing the desired changes.. |
+ **webId** | **string**| The ID of the enumeration value to update.. | [required]
+ **enumerationValue** | **PIEnumerationValue**| A partial enumeration value containing the desired changes.. | [required]
 
 
 ### Return type
@@ -135,7 +135,7 @@ Delete an enumeration value from an enumeration set.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the enumeration value.. |
+ **webId** | **string**| The ID of the enumeration value.. | [required]
 
 
 ### Return type
@@ -153,7 +153,7 @@ Delete an enumeration value from an enumeration set.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the enumeration value.. |
+ **webId** | **string**| The ID of the enumeration value.. | [required]
 
 
 ### Return type

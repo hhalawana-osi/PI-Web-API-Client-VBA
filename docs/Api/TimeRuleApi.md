@@ -21,8 +21,8 @@ Retrieve a Time Rule by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the Time Rule.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the Time Rule.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -40,8 +40,8 @@ Retrieve a Time Rule by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the Time Rule.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the Time Rule.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -59,8 +59,8 @@ Retrieve a Time Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Time Rule.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the Time Rule.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -78,8 +78,8 @@ Retrieve a Time Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Time Rule.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the Time Rule.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -97,8 +97,8 @@ Update a Time Rule by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Time Rule.. |
- **timeRule** | **PITimeRule**| A partial Time Rule containing the desired changes.. |
+ **webId** | **string**| The ID of the Time Rule.. | [required]
+ **timeRule** | **PITimeRule**| A partial Time Rule containing the desired changes.. | [required]
 
 
 ### Return type
@@ -116,8 +116,8 @@ Update a Time Rule by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Time Rule.. |
- **timeRule** | **PITimeRule**| A partial Time Rule containing the desired changes.. |
+ **webId** | **string**| The ID of the Time Rule.. | [required]
+ **timeRule** | **PITimeRule**| A partial Time Rule containing the desired changes.. | [required]
 
 
 ### Return type
@@ -135,7 +135,7 @@ Delete a Time Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Time Rule.. |
+ **webId** | **string**| The ID of the Time Rule.. | [required]
 
 
 ### Return type
@@ -153,7 +153,7 @@ Delete a Time Rule.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the Time Rule.. |
+ **webId** | **string**| The ID of the Time Rule.. | [required]
 
 
 ### Return type

@@ -27,8 +27,8 @@ Get a point by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the point.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the point.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -46,8 +46,8 @@ Get a point by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the point.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the point.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -65,8 +65,8 @@ Get a point.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the point.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the point.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -84,8 +84,8 @@ Get a point.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the point.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the point.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -103,8 +103,8 @@ Update a point.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the point.. |
- **pointDTO** | **PIPoint**| A partial point containing the desired changes.. |
+ **webId** | **string**| The ID of the point.. | [required]
+ **pointDTO** | **PIPoint**| A partial point containing the desired changes.. | [required]
 
 
 ### Return type
@@ -122,8 +122,8 @@ Update a point.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the point.. |
- **pointDTO** | **PIPoint**| A partial point containing the desired changes.. |
+ **webId** | **string**| The ID of the point.. | [required]
+ **pointDTO** | **PIPoint**| A partial point containing the desired changes.. | [required]
 
 
 ### Return type
@@ -141,7 +141,7 @@ Delete a point.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the point.. |
+ **webId** | **string**| The ID of the point.. | [required]
 
 
 ### Return type
@@ -159,7 +159,7 @@ Delete a point.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the point.. |
+ **webId** | **string**| The ID of the point.. | [required]
 
 
 ### Return type
@@ -177,10 +177,10 @@ Get point attributes.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the point.. |
- **names** | **string**| The name of a point attribute to be returned. Multiple attributes may be specified with multiple instances of the parameter.. |
- **nameFilter** | **string**| The filter to the names of the list of point attributes to be returned. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the point.. | [required]
+ **names** | **string**| The name of a point attribute to be returned. Multiple attributes may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The filter to the names of the list of point attributes to be returned. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -198,10 +198,10 @@ Get point attributes.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the point.. |
- **names** | **string**| The name of a point attribute to be returned. Multiple attributes may be specified with multiple instances of the parameter.. |
- **nameFilter** | **string**| The filter to the names of the list of point attributes to be returned. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the point.. | [required]
+ **names** | **string**| The name of a point attribute to be returned. Multiple attributes may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
+ **nameFilter** | **string**| The filter to the names of the list of point attributes to be returned. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -219,9 +219,9 @@ Get a point attribute by name.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the attribute.. |
- **webId** | **string**| The ID of the point.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the attribute.. | [required]
+ **webId** | **string**| The ID of the point.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -239,9 +239,9 @@ Get a point attribute by name.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the attribute.. |
- **webId** | **string**| The ID of the point.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the attribute.. | [required]
+ **webId** | **string**| The ID of the point.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -259,11 +259,11 @@ Retrieve multiple points by web id or path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested points. The default is 'false'.. |
- **includeMode** | **string**| The include mode for the return list. The default is 'All'.. |
- **paths** | **string**| The path of a point. Multiple points may be specified with multiple instances of the parameter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **webIds** | **string**| The ID of a point. Multiple points may be specified with multiple instances of the parameter.. |
+ **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested points. The default is 'false'.. | [required]
+ **includeMode** | **string**| The include mode for the return list. The default is 'All'.. | [optional] - always use empty strings("") instead of Null
+ **paths** | **string**| The path of a point. Multiple points may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **webIds** | **string**| The ID of a point. Multiple points may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -281,11 +281,11 @@ Retrieve multiple points by web id or path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested points. The default is 'false'.. |
- **includeMode** | **string**| The include mode for the return list. The default is 'All'.. |
- **paths** | **string**| The path of a point. Multiple points may be specified with multiple instances of the parameter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
- **webIds** | **string**| The ID of a point. Multiple points may be specified with multiple instances of the parameter.. |
+ **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested points. The default is 'false'.. | [required]
+ **includeMode** | **string**| The include mode for the return list. The default is 'All'.. | [optional] - always use empty strings("") instead of Null
+ **paths** | **string**| The path of a point. Multiple points may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
+ **webIds** | **string**| The ID of a point. Multiple points may be specified with multiple instances of the parameter.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type

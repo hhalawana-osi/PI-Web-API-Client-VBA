@@ -27,8 +27,8 @@ Retrieve an attribute template by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the attribute template.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the attribute template.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -46,8 +46,8 @@ Retrieve an attribute template by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the attribute template.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the attribute template.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -65,8 +65,8 @@ Retrieve an attribute template.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute template.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute template.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -84,8 +84,8 @@ Retrieve an attribute template.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute template.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute template.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -103,8 +103,8 @@ Update an existing attribute template by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute template.. |
- **template** | **PIAttributeTemplate**| A partial attribute template containing the desired changes.. |
+ **webId** | **string**| The ID of the attribute template.. | [required]
+ **template** | **PIAttributeTemplate**| A partial attribute template containing the desired changes.. | [required]
 
 
 ### Return type
@@ -122,8 +122,8 @@ Update an existing attribute template by replacing items in its definition.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute template.. |
- **template** | **PIAttributeTemplate**| A partial attribute template containing the desired changes.. |
+ **webId** | **string**| The ID of the attribute template.. | [required]
+ **template** | **PIAttributeTemplate**| A partial attribute template containing the desired changes.. | [required]
 
 
 ### Return type
@@ -141,7 +141,7 @@ Delete an attribute template.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute template.. |
+ **webId** | **string**| The ID of the attribute template.. | [required]
 
 
 ### Return type
@@ -159,7 +159,7 @@ Delete an attribute template.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute template.. |
+ **webId** | **string**| The ID of the attribute template.. | [required]
 
 
 ### Return type
@@ -177,8 +177,8 @@ Retrieve an attribute template's child attribute templates.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute template.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute template.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -196,8 +196,8 @@ Retrieve an attribute template's child attribute templates.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute template.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute template.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -215,8 +215,8 @@ Create an attribute template as a child of another attribute template.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent attribute template on which to create the attribute template.. |
- **template** | **PIAttributeTemplate**| The attribute template definition.. |
+ **webId** | **string**| The ID of the parent attribute template on which to create the attribute template.. | [required]
+ **template** | **PIAttributeTemplate**| The attribute template definition.. | [required]
 
 
 ### Return type
@@ -234,8 +234,8 @@ Create an attribute template as a child of another attribute template.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the parent attribute template on which to create the attribute template.. |
- **template** | **PIAttributeTemplate**| The attribute template definition.. |
+ **webId** | **string**| The ID of the parent attribute template on which to create the attribute template.. | [required]
+ **template** | **PIAttributeTemplate**| The attribute template definition.. | [required]
 
 
 ### Return type
@@ -253,8 +253,8 @@ Get an attribute template's categories.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute template.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute template.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -272,8 +272,8 @@ Get an attribute template's categories.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the attribute template.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the attribute template.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type

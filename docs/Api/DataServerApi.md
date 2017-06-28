@@ -29,7 +29,7 @@ Retrieve a list of Data Servers known to this service.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -47,7 +47,7 @@ Retrieve a list of Data Servers known to this service.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -65,8 +65,8 @@ Retrieve a Data Server by name.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -84,8 +84,8 @@ Retrieve a Data Server by name.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **name** | **string**| The name of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -103,8 +103,8 @@ Retrieve a Data Server by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the server. Note that the path supplied to this method must be of the form '\\servername'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the server. Note that the path supplied to this method must be of the form '\\servername'.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -122,8 +122,8 @@ Retrieve a Data Server by path.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **string**| The path to the server. Note that the path supplied to this method must be of the form '\\servername'.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **path** | **string**| The path to the server. Note that the path supplied to this method must be of the form '\\servername'.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -141,8 +141,8 @@ Retrieve a Data Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -160,8 +160,8 @@ Retrieve a Data Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -179,8 +179,8 @@ Retrieve enumeration sets for given Data Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -198,8 +198,8 @@ Retrieve enumeration sets for given Data Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -217,8 +217,8 @@ Create an enumeration set on the Data Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server on which to create the enumeration set.. |
- **enumerationSet** | **PIEnumerationSet**| The new enumeration set definition.. |
+ **webId** | **string**| The ID of the server on which to create the enumeration set.. | [required]
+ **enumerationSet** | **PIEnumerationSet**| The new enumeration set definition.. | [required]
 
 
 ### Return type
@@ -236,8 +236,8 @@ Create an enumeration set on the Data Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server on which to create the enumeration set.. |
- **enumerationSet** | **PIEnumerationSet**| The new enumeration set definition.. |
+ **webId** | **string**| The ID of the server on which to create the enumeration set.. | [required]
+ **enumerationSet** | **PIEnumerationSet**| The new enumeration set definition.. | [required]
 
 
 ### Return type
@@ -255,11 +255,11 @@ Retrieve a list of points on a specified Data Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is '0'.. |
- **nameFilter** | **string**| A query string for filtering by point name. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is '0'.. | [required]
+ **nameFilter** | **string**| A query string for filtering by point name. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -277,11 +277,11 @@ Retrieve a list of points on a specified Data Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
- **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is '0'.. |
- **nameFilter** | **string**| A query string for filtering by point name. The default is no filter.. |
- **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. | [required]
+ **startIndex** | **int**| The starting index (zero based) of the items to be returned. The default is '0'.. | [required]
+ **nameFilter** | **string**| A query string for filtering by point name. The default is no filter.. | [optional] - always use empty strings("") instead of Null
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. | [optional] - always use empty strings("") instead of Null
 
 
 ### Return type
@@ -299,8 +299,8 @@ Create a point in the specified Data Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **pointDTO** | **PIPoint**| The new point definition.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **pointDTO** | **PIPoint**| The new point definition.. | [required]
 
 
 ### Return type
@@ -318,8 +318,8 @@ Create a point in the specified Data Server.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **webId** | **string**| The ID of the server.. |
- **pointDTO** | **PIPoint**| The new point definition.. |
+ **webId** | **string**| The ID of the server.. | [required]
+ **pointDTO** | **PIPoint**| The new point definition.. | [required]
 
 
 ### Return type
