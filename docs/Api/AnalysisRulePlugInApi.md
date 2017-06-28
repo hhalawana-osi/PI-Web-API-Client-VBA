@@ -16,7 +16,7 @@ Retrieve an Analysis Rule Plug-in by path.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to the Analysis Rule Plug-in.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIAnalysisRulePlugIn**](../Responses/ApiResponsePIAnalysisRulePlugIn.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetByPath**
 > GetByPath(string path, string selectedFields = null)
@@ -35,7 +35,7 @@ Retrieve an Analysis Rule Plug-in by path.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to the Analysis Rule Plug-in.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -44,7 +44,7 @@ Name | Type | Description | Notes
 
 [**PIAnalysisRulePlugIn**](../Model/PIAnalysisRulePlugIn.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetWithHttpInfo**
 > GetWithHttpInfo(string webId, string selectedFields = null)
@@ -54,7 +54,7 @@ Retrieve an Analysis Rule Plug-in.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the Analysis Rule Plug-in.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -63,7 +63,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIAnalysisRulePlugIn**](../Responses/ApiResponsePIAnalysisRulePlugIn.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Get**
 > Get(string webId, string selectedFields = null)
@@ -73,7 +73,7 @@ Retrieve an Analysis Rule Plug-in.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the Analysis Rule Plug-in.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -82,4 +82,4 @@ Name | Type | Description | Notes
 
 [**PIAnalysisRulePlugIn**](../Model/PIAnalysisRulePlugIn.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

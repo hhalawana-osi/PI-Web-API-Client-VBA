@@ -20,7 +20,7 @@ Returns results of evaluating the expression over the time range from the start 
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
  **expression** | **string**| A string containing the expression to be evaluated. The syntax for the expression generally follows the Performance Equation syntax as described in the PI Server documentation, with the exception that expressions which target AF objects use attribute names in place of tag names in the equation.. |
  **sampleInterval** | **string**| A time span specifies how often the filter expression is evaluated when computing the summary for an interval.. |
@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePITimedValues**](../Responses/ApiResponsePITimedValues.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetAtIntervals**
 > GetAtIntervals(string endTime = null, string expression = null, string sampleInterval = null, string selectedFields = null, string startTime = null, string webId = null)
@@ -43,7 +43,7 @@ Returns results of evaluating the expression over the time range from the start 
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
  **expression** | **string**| A string containing the expression to be evaluated. The syntax for the expression generally follows the Performance Equation syntax as described in the PI Server documentation, with the exception that expressions which target AF objects use attribute names in place of tag names in the equation.. |
  **sampleInterval** | **string**| A time span specifies how often the filter expression is evaluated when computing the summary for an interval.. |
@@ -56,7 +56,7 @@ Name | Type | Description | Notes
 
 [**PITimedValues**](../Model/PITimedValues.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetAtRecordedWithHttpInfo**
 > GetAtRecordedWithHttpInfo(string endTime = null, string expression = null, string selectedFields = null, string startTime = null, string webId = null)
@@ -66,7 +66,7 @@ Returns the result of evaluating the expression at each point in time over the t
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
  **expression** | **string**| A string containing the expression to be evaluated. The syntax for the expression generally follows the Performance Equation syntax as described in the PI Server documentation, with the exception that expressions which target AF objects use attribute names in place of tag names in the equation.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
@@ -78,7 +78,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePITimedValues**](../Responses/ApiResponsePITimedValues.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetAtRecorded**
 > GetAtRecorded(string endTime = null, string expression = null, string selectedFields = null, string startTime = null, string webId = null)
@@ -88,7 +88,7 @@ Returns the result of evaluating the expression at each point in time over the t
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
  **expression** | **string**| A string containing the expression to be evaluated. The syntax for the expression generally follows the Performance Equation syntax as described in the PI Server documentation, with the exception that expressions which target AF objects use attribute names in place of tag names in the equation.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
@@ -100,7 +100,7 @@ Name | Type | Description | Notes
 
 [**PITimedValues**](../Model/PITimedValues.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetSummaryWithHttpInfo**
 > GetSummaryWithHttpInfo(string calculationBasis = null, string endTime = null, string expression = null, string sampleInterval = null, string sampleType = null, string selectedFields = null, string startTime = null, string summaryDuration = null, string summaryTypes = null, string timeType = null, string webId = null)
@@ -110,7 +110,7 @@ Returns the result of evaluating the expression over the time range from the sta
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **calculationBasis** | **string**| Specifies the method of evaluating the data over the time range. The default is 'TimeWeighted'.. |
  **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
  **expression** | **string**| A string containing the expression to be evaluated. The syntax for the expression generally follows the Performance Equation syntax as described in the PI Server documentation, with the exception that expressions which target AF objects use attribute names in place of tag names in the equation.. |
@@ -128,7 +128,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIItemsSummaryValue**](../Responses/ApiResponsePIItemsSummaryValue.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetSummary**
 > GetSummary(string calculationBasis = null, string endTime = null, string expression = null, string sampleInterval = null, string sampleType = null, string selectedFields = null, string startTime = null, string summaryDuration = null, string summaryTypes = null, string timeType = null, string webId = null)
@@ -138,7 +138,7 @@ Returns the result of evaluating the expression over the time range from the sta
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **calculationBasis** | **string**| Specifies the method of evaluating the data over the time range. The default is 'TimeWeighted'.. |
  **endTime** | **string**| An optional end time. The default is '*' for element attributes and points. For event frame attributes, the default is the event frame's end time, or '*' if that is not set. Note that if endTime is earlier than startTime, the resulting values will be in time-descending order.. |
  **expression** | **string**| A string containing the expression to be evaluated. The syntax for the expression generally follows the Performance Equation syntax as described in the PI Server documentation, with the exception that expressions which target AF objects use attribute names in place of tag names in the equation.. |
@@ -156,7 +156,7 @@ Name | Type | Description | Notes
 
 [**PIItemsSummaryValue**](../Model/PIItemsSummaryValue.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetAtTimesWithHttpInfo**
 > GetAtTimesWithHttpInfo(string expression = null, string selectedFields = null, string sortOrder = null, string times = null, string webId = null)
@@ -166,7 +166,7 @@ Returns the result of evaluating the expression at the specified timestamps.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **expression** | **string**| A string containing the expression to be evaluated. The syntax for the expression generally follows the Performance Equation syntax as described in the PI Server documentation, with the exception that expressions which target AF objects use attribute names in place of tag names in the equation.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
  **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
@@ -178,7 +178,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePITimedValues**](../Responses/ApiResponsePITimedValues.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetAtTimes**
 > GetAtTimes(string expression = null, string selectedFields = null, string sortOrder = null, string times = null, string webId = null)
@@ -188,7 +188,7 @@ Returns the result of evaluating the expression at the specified timestamps.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **expression** | **string**| A string containing the expression to be evaluated. The syntax for the expression generally follows the Performance Equation syntax as described in the PI Server documentation, with the exception that expressions which target AF objects use attribute names in place of tag names in the equation.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
  **sortOrder** | **string**| The order that the returned collection is sorted. The default is 'Ascending'.. |
@@ -200,4 +200,4 @@ Name | Type | Description | Notes
 
 [**PITimedValues**](../Model/PITimedValues.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

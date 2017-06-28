@@ -22,14 +22,14 @@ Get system links for this PI System Web API instance.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type
 
 [**ApiResponsePISystemLanding**](../Responses/ApiResponsePISystemLanding.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Landing**
 > Landing()
@@ -39,14 +39,14 @@ Get system links for this PI System Web API instance.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type
 
 [**PISystemLanding**](../Model/PISystemLanding.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **CacheInstancesWithHttpInfo**
 > CacheInstancesWithHttpInfo()
@@ -56,14 +56,14 @@ Get AF cache instances currently in use by the system. These are caches from whi
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type
 
 [**ApiResponsePIItemsCacheInstance**](../Responses/ApiResponsePIItemsCacheInstance.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **CacheInstances**
 > CacheInstances()
@@ -73,14 +73,14 @@ Get AF cache instances currently in use by the system. These are caches from whi
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type
 
 [**PIItemsCacheInstance**](../Model/PIItemsCacheInstance.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **StatusWithHttpInfo**
 > StatusWithHttpInfo()
@@ -90,14 +90,14 @@ Get the system uptime, the system state and the number of cache instances for th
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type
 
 [**ApiResponsePISystemStatus**](../Responses/ApiResponsePISystemStatus.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Status**
 > Status()
@@ -107,14 +107,14 @@ Get the system uptime, the system state and the number of cache instances for th
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type
 
 [**PISystemStatus**](../Model/PISystemStatus.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **UserInfoWithHttpInfo**
 > UserInfoWithHttpInfo()
@@ -124,14 +124,14 @@ Get information about the Windows identity used to fulfill the request. This dep
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type
 
 [**ApiResponsePIUserInfo**](../Responses/ApiResponsePIUserInfo.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **UserInfo**
 > UserInfo()
@@ -141,14 +141,14 @@ Get information about the Windows identity used to fulfill the request. This dep
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type
 
 [**PIUserInfo**](../Model/PIUserInfo.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **VersionsWithHttpInfo**
 > VersionsWithHttpInfo()
@@ -158,14 +158,14 @@ Get the current versions of the PI Web API instance and all external plugins.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type
 
 [**ApiResponseObject**](../Responses/ApiResponseObject.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Versions**
 > Versions()
@@ -175,11 +175,11 @@ Get the current versions of the PI Web API instance and all external plugins.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type
 
 [**Object**](../Model/Object.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

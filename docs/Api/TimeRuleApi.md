@@ -20,7 +20,7 @@ Retrieve a Time Rule by path.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to the Time Rule.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePITimeRule**](../Responses/ApiResponsePITimeRule.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetByPath**
 > GetByPath(string path, string selectedFields = null)
@@ -39,7 +39,7 @@ Retrieve a Time Rule by path.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to the Time Rule.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -48,7 +48,7 @@ Name | Type | Description | Notes
 
 [**PITimeRule**](../Model/PITimeRule.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetWithHttpInfo**
 > GetWithHttpInfo(string webId, string selectedFields = null)
@@ -58,7 +58,7 @@ Retrieve a Time Rule.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the Time Rule.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -67,7 +67,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePITimeRule**](../Responses/ApiResponsePITimeRule.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Get**
 > Get(string webId, string selectedFields = null)
@@ -77,7 +77,7 @@ Retrieve a Time Rule.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the Time Rule.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -86,7 +86,7 @@ Name | Type | Description | Notes
 
 [**PITimeRule**](../Model/PITimeRule.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **UpdateWithHttpInfo**
 > UpdateWithHttpInfo(string webId, PITimeRule timeRule)
@@ -96,7 +96,7 @@ Update a Time Rule by replacing items in its definition.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the Time Rule.. |
  **timeRule** | **PITimeRule**| A partial Time Rule containing the desired changes.. |
 
@@ -105,7 +105,7 @@ Name | Type | Description | Notes
 
 [**ApiResponseObject**](../Responses/ApiResponseObject.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Update**
 > Update(string webId, PITimeRule timeRule)
@@ -115,7 +115,7 @@ Update a Time Rule by replacing items in its definition.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the Time Rule.. |
  **timeRule** | **PITimeRule**| A partial Time Rule containing the desired changes.. |
 
@@ -124,7 +124,7 @@ Name | Type | Description | Notes
 
 [**Object**](../Model/Object.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **DeleteWithHttpInfo**
 > DeleteWithHttpInfo(string webId)
@@ -134,7 +134,7 @@ Delete a Time Rule.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the Time Rule.. |
 
 
@@ -142,7 +142,7 @@ Name | Type | Description | Notes
 
 [**ApiResponseObject**](../Responses/ApiResponseObject.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Delete**
 > Delete(string webId)
@@ -152,7 +152,7 @@ Delete a Time Rule.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the Time Rule.. |
 
 
@@ -160,4 +160,4 @@ Name | Type | Description | Notes
 
 [**Object**](../Model/Object.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

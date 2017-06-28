@@ -26,7 +26,7 @@ Retrieve a unit class by path.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to the unit class.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIUnitClass**](../Responses/ApiResponsePIUnitClass.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetByPath**
 > GetByPath(string path, string selectedFields = null)
@@ -45,7 +45,7 @@ Retrieve a unit class by path.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to the unit class.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -54,7 +54,7 @@ Name | Type | Description | Notes
 
 [**PIUnitClass**](../Model/PIUnitClass.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetWithHttpInfo**
 > GetWithHttpInfo(string webId, string selectedFields = null)
@@ -64,7 +64,7 @@ Retrieve a unit class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the unit class.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -73,7 +73,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIUnitClass**](../Responses/ApiResponsePIUnitClass.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Get**
 > Get(string webId, string selectedFields = null)
@@ -83,7 +83,7 @@ Retrieve a unit class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the unit class.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -92,7 +92,7 @@ Name | Type | Description | Notes
 
 [**PIUnitClass**](../Model/PIUnitClass.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **UpdateWithHttpInfo**
 > UpdateWithHttpInfo(string webId, PIUnitClass unitClassDTO)
@@ -102,7 +102,7 @@ Update a unit class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the unit class.. |
  **unitClassDTO** | **PIUnitClass**| A partial unit class containing the desired changes.. |
 
@@ -111,7 +111,7 @@ Name | Type | Description | Notes
 
 [**ApiResponseObject**](../Responses/ApiResponseObject.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Update**
 > Update(string webId, PIUnitClass unitClassDTO)
@@ -121,7 +121,7 @@ Update a unit class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the unit class.. |
  **unitClassDTO** | **PIUnitClass**| A partial unit class containing the desired changes.. |
 
@@ -130,7 +130,7 @@ Name | Type | Description | Notes
 
 [**Object**](../Model/Object.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **DeleteWithHttpInfo**
 > DeleteWithHttpInfo(string webId)
@@ -140,7 +140,7 @@ Delete a unit class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the unit class.. |
 
 
@@ -148,7 +148,7 @@ Name | Type | Description | Notes
 
 [**ApiResponseObject**](../Responses/ApiResponseObject.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Delete**
 > Delete(string webId)
@@ -158,7 +158,7 @@ Delete a unit class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the unit class.. |
 
 
@@ -166,7 +166,7 @@ Name | Type | Description | Notes
 
 [**Object**](../Model/Object.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetCanonicalUnitWithHttpInfo**
 > GetCanonicalUnitWithHttpInfo(string webId, string selectedFields = null)
@@ -176,7 +176,7 @@ Get the canonical unit of a unit class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of unit class.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -185,7 +185,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIUnit**](../Responses/ApiResponsePIUnit.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetCanonicalUnit**
 > GetCanonicalUnit(string webId, string selectedFields = null)
@@ -195,7 +195,7 @@ Get the canonical unit of a unit class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of unit class.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -204,7 +204,7 @@ Name | Type | Description | Notes
 
 [**PIUnit**](../Model/PIUnit.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetUnitsWithHttpInfo**
 > GetUnitsWithHttpInfo(string webId, string selectedFields = null)
@@ -214,7 +214,7 @@ Get a list of all units belonging to the unit class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of unit class.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -223,7 +223,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIUnit**](../Responses/ApiResponsePIUnit.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetUnits**
 > GetUnits(string webId, string selectedFields = null)
@@ -233,7 +233,7 @@ Get a list of all units belonging to the unit class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of unit class.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -242,7 +242,7 @@ Name | Type | Description | Notes
 
 [**PIUnit**](../Model/PIUnit.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **CreateUnitWithHttpInfo**
 > CreateUnitWithHttpInfo(string webId, PIUnit unitDTO)
@@ -252,7 +252,7 @@ Create a unit in the specified Unit Class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the server.. |
  **unitDTO** | **PIUnit**| The new unit definition.. |
 
@@ -261,7 +261,7 @@ Name | Type | Description | Notes
 
 [**ApiResponseObject**](../Responses/ApiResponseObject.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **CreateUnit**
 > CreateUnit(string webId, PIUnit unitDTO)
@@ -271,7 +271,7 @@ Create a unit in the specified Unit Class.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the server.. |
  **unitDTO** | **PIUnit**| The new unit definition.. |
 
@@ -280,4 +280,4 @@ Name | Type | Description | Notes
 
 [**Object**](../Model/Object.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

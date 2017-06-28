@@ -34,7 +34,7 @@ Retrieve an attribute by path.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to the attribute.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -43,7 +43,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIAttribute**](../Responses/ApiResponsePIAttribute.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetByPath**
 > GetByPath(string path, string selectedFields = null)
@@ -53,7 +53,7 @@ Retrieve an attribute by path.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to the attribute.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -62,7 +62,7 @@ Name | Type | Description | Notes
 
 [**PIAttribute**](../Model/PIAttribute.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetWithHttpInfo**
 > GetWithHttpInfo(string webId, string selectedFields = null)
@@ -72,7 +72,7 @@ Retrieve an attribute.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -81,7 +81,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIAttribute**](../Responses/ApiResponsePIAttribute.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Get**
 > Get(string webId, string selectedFields = null)
@@ -91,7 +91,7 @@ Retrieve an attribute.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -100,7 +100,7 @@ Name | Type | Description | Notes
 
 [**PIAttribute**](../Model/PIAttribute.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **UpdateWithHttpInfo**
 > UpdateWithHttpInfo(string webId, PIAttribute attribute)
@@ -110,7 +110,7 @@ Update an attribute by replacing items in its definition.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
  **attribute** | **PIAttribute**| A partial attribute containing the desired changes.. |
 
@@ -119,7 +119,7 @@ Name | Type | Description | Notes
 
 [**ApiResponseObject**](../Responses/ApiResponseObject.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Update**
 > Update(string webId, PIAttribute attribute)
@@ -129,7 +129,7 @@ Update an attribute by replacing items in its definition.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
  **attribute** | **PIAttribute**| A partial attribute containing the desired changes.. |
 
@@ -138,7 +138,7 @@ Name | Type | Description | Notes
 
 [**Object**](../Model/Object.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **DeleteWithHttpInfo**
 > DeleteWithHttpInfo(string webId)
@@ -148,7 +148,7 @@ Delete an attribute.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
 
 
@@ -156,7 +156,7 @@ Name | Type | Description | Notes
 
 [**ApiResponseObject**](../Responses/ApiResponseObject.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **Delete**
 > Delete(string webId)
@@ -166,7 +166,7 @@ Delete an attribute.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
 
 
@@ -174,7 +174,7 @@ Name | Type | Description | Notes
 
 [**Object**](../Model/Object.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetAttributesWithHttpInfo**
 > GetAttributesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, bool showExcluded, bool showHidden, int startIndex, string categoryName = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null, string valueType = null)
@@ -184,7 +184,7 @@ Get the child attributes of the specified attribute.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the parent attribute.. |
  **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
  **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
@@ -204,7 +204,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIItemsAttribute**](../Responses/ApiResponsePIItemsAttribute.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetAttributes**
 > GetAttributes(string webId, int maxCount, bool searchFullHierarchy, bool showExcluded, bool showHidden, int startIndex, string categoryName = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null, string valueType = null)
@@ -214,7 +214,7 @@ Get the child attributes of the specified attribute.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the parent attribute.. |
  **maxCount** | **int**| The maximum number of objects to be returned per call (page size). The default is 1000.. |
  **searchFullHierarchy** | **bool**| Specifies if the search should include attributes nested further than the immediate attributes of the searchRoot. The default is 'false'.. |
@@ -234,7 +234,7 @@ Name | Type | Description | Notes
 
 [**PIItemsAttribute**](../Model/PIItemsAttribute.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **CreateAttributeWithHttpInfo**
 > CreateAttributeWithHttpInfo(string webId, PIAttribute attribute)
@@ -244,7 +244,7 @@ Create a new attribute as a child of the specified attribute.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the parent attribute on which to create the attribute.. |
  **attribute** | **PIAttribute**| The definition of the new attribute.. |
 
@@ -253,7 +253,7 @@ Name | Type | Description | Notes
 
 [**ApiResponseObject**](../Responses/ApiResponseObject.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **CreateAttribute**
 > CreateAttribute(string webId, PIAttribute attribute)
@@ -263,7 +263,7 @@ Create a new attribute as a child of the specified attribute.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the parent attribute on which to create the attribute.. |
  **attribute** | **PIAttribute**| The definition of the new attribute.. |
 
@@ -272,7 +272,7 @@ Name | Type | Description | Notes
 
 [**Object**](../Model/Object.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetCategoriesWithHttpInfo**
 > GetCategoriesWithHttpInfo(string webId, string selectedFields = null)
@@ -282,7 +282,7 @@ Get an attribute's categories.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -291,7 +291,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIItemsAttributeCategory**](../Responses/ApiResponsePIItemsAttributeCategory.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetCategories**
 > GetCategories(string webId, string selectedFields = null)
@@ -301,7 +301,7 @@ Get an attribute's categories.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -310,7 +310,7 @@ Name | Type | Description | Notes
 
 [**PIItemsAttributeCategory**](../Model/PIItemsAttributeCategory.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **CreateConfigWithHttpInfo**
 > CreateConfigWithHttpInfo(string webId)
@@ -320,7 +320,7 @@ Create or update an attribute's DataReference configuration (Create/Update PI po
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
 
 
@@ -328,7 +328,7 @@ Name | Type | Description | Notes
 
 [**ApiResponseObject**](../Responses/ApiResponseObject.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **CreateConfig**
 > CreateConfig(string webId)
@@ -338,7 +338,7 @@ Create or update an attribute's DataReference configuration (Create/Update PI po
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
 
 
@@ -346,7 +346,7 @@ Name | Type | Description | Notes
 
 [**Object**](../Model/Object.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetValueWithHttpInfo**
 > GetValueWithHttpInfo(string webId, string selectedFields = null)
@@ -356,7 +356,7 @@ Get the attribute's value. This call is intended for use with attributes that ha
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -365,7 +365,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePITimedValue**](../Responses/ApiResponsePITimedValue.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetValue**
 > GetValue(string webId, string selectedFields = null)
@@ -375,7 +375,7 @@ Get the attribute's value. This call is intended for use with attributes that ha
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
@@ -384,7 +384,7 @@ Name | Type | Description | Notes
 
 [**PITimedValue**](../Model/PITimedValue.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **SetValueWithHttpInfo**
 > SetValueWithHttpInfo(string webId, PITimedValue value)
@@ -394,7 +394,7 @@ Set the value of a configuration item attribute. For attributes with a data refe
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
  **value** | **PITimedValue**| The value to write.. |
 
@@ -403,7 +403,7 @@ Name | Type | Description | Notes
 
 [**ApiResponseObject**](../Responses/ApiResponseObject.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **SetValue**
 > SetValue(string webId, PITimedValue value)
@@ -413,7 +413,7 @@ Set the value of a configuration item attribute. For attributes with a data refe
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **webId** | **string**| The ID of the attribute.. |
  **value** | **PITimedValue**| The value to write.. |
 
@@ -422,7 +422,7 @@ Name | Type | Description | Notes
 
 [**Object**](../Model/Object.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetMultipleWithHttpInfo**
 > GetMultipleWithHttpInfo(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null)
@@ -432,7 +432,7 @@ Retrieve multiple attributes by web id or path.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested attributes. The default is 'false'.. |
  **includeMode** | **string**| The include mode for the return list. The default is 'All'.. |
  **paths** | **string**| The path of an attribute. Multiple attributes may be specified with multiple instances of the parameter.. |
@@ -444,7 +444,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIItemsItemAttribute**](../Responses/ApiResponsePIItemsItemAttribute.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **GetMultiple**
 > GetMultiple(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null)
@@ -454,7 +454,7 @@ Retrieve multiple attributes by web id or path.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **asParallel** | **bool**| Specifies if the retrieval processes should be run in parallel on the server. This may improve the response time for large amounts of requested attributes. The default is 'false'.. |
  **includeMode** | **string**| The include mode for the return list. The default is 'All'.. |
  **paths** | **string**| The path of an attribute. Multiple attributes may be specified with multiple instances of the parameter.. |
@@ -466,4 +466,4 @@ Name | Type | Description | Notes
 
 [**PIItemsItemAttribute**](../Model/PIItemsItemAttribute.md)
 
-[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
