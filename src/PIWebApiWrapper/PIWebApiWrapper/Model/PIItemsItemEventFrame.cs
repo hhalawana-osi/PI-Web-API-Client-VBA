@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Linq;
 using System.IO;
@@ -16,7 +32,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Model
 {
 
-	[Guid("D978443C-DF8B-4589-B8B1-7EBEA681ABEC")]
+	[Guid("EC7D30DD-EBFD-4368-B9D8-FC7E3889EB72")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -42,7 +58,7 @@ namespace PIWebAPIWrapper.Model
 
 	}
 
-	[Guid("C774A4E9-D018-49D6-AEE3-A34F74B72677")]
+	[Guid("7C551766-537C-4438-B87E-B7232EE76C3B")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IPIItemsItemEventFrame))]

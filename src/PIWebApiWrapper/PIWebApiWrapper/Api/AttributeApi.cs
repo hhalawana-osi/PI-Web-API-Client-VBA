@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,83 +27,105 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("DE319AB1-9D7D-4CBE-AAC5-2CF5DF01C1F0")]
+	[Guid("D6BD5DD9-FFE0-40A0-9011-25B11525B3CA")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IAttributeApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve an attribute by path.</summary>
 		[DispId(1)]
 		PIAttribute GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an attribute by path.</summary>
 		[DispId(2)]
 		ApiResponsePIAttribute GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an attribute.</summary>
 		[DispId(3)]
 		PIAttribute Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an attribute.</summary>
 		[DispId(4)]
 		ApiResponsePIAttribute GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update an attribute by replacing items in its definition.</summary>
 		[DispId(5)]
 		Object Update(string webId, PIAttribute attribute);
 
+		/// <summary>Update an attribute by replacing items in its definition.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PIAttribute attribute);
 
+		/// <summary>Delete an attribute.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete an attribute.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
+		/// <summary>Get the child attributes of the specified attribute.</summary>
 		[DispId(9)]
 		PIItemsAttribute GetAttributes(string webId, int maxCount, bool searchFullHierarchy, bool showExcluded, bool showHidden, int startIndex, string categoryName = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null, string valueType = null);
 
+		/// <summary>Get the child attributes of the specified attribute.</summary>
 		[DispId(10)]
 		ApiResponsePIItemsAttribute GetAttributesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, bool showExcluded, bool showHidden, int startIndex, string categoryName = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null, string valueType = null);
 
+		/// <summary>Create a new attribute as a child of the specified attribute.</summary>
 		[DispId(11)]
 		Object CreateAttribute(string webId, PIAttribute attribute);
 
+		/// <summary>Create a new attribute as a child of the specified attribute.</summary>
 		[DispId(12)]
 		ApiResponseObject CreateAttributeWithHttpInfo(string webId, PIAttribute attribute);
 
+		/// <summary>Get an attribute's categories.</summary>
 		[DispId(13)]
 		PIItemsAttributeCategory GetCategories(string webId, string selectedFields = null);
 
+		/// <summary>Get an attribute's categories.</summary>
 		[DispId(14)]
 		ApiResponsePIItemsAttributeCategory GetCategoriesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create or update an attribute's DataReference configuration (Create/Update PI point for PI Point DataReference).</summary>
 		[DispId(15)]
 		Object CreateConfig(string webId);
 
+		/// <summary>Create or update an attribute's DataReference configuration (Create/Update PI point for PI Point DataReference).</summary>
 		[DispId(16)]
 		ApiResponseObject CreateConfigWithHttpInfo(string webId);
 
+		/// <summary>Get the attribute's value. This call is intended for use with attributes that have no data reference only. For attributes with a data reference, consult the documentation for Streams.</summary>
 		[DispId(17)]
 		PITimedValue GetValue(string webId, string selectedFields = null);
 
+		/// <summary>Get the attribute's value. This call is intended for use with attributes that have no data reference only. For attributes with a data reference, consult the documentation for Streams.</summary>
 		[DispId(18)]
 		ApiResponsePITimedValue GetValueWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Set the value of a configuration item attribute. For attributes with a data reference or non-configuration item attributes, consult the documentation for streams.</summary>
 		[DispId(19)]
 		Object SetValue(string webId, PITimedValue value);
 
+		/// <summary>Set the value of a configuration item attribute. For attributes with a data reference or non-configuration item attributes, consult the documentation for streams.</summary>
 		[DispId(20)]
 		ApiResponseObject SetValueWithHttpInfo(string webId, PITimedValue value);
 
+		/// <summary>Retrieve multiple attributes by web id or path.</summary>
 		[DispId(21)]
 		PIItemsItemAttribute GetMultiple(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null);
 
+		/// <summary>Retrieve multiple attributes by web id or path.</summary>
 		[DispId(22)]
 		ApiResponsePIItemsItemAttribute GetMultipleWithHttpInfo(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null);
 
 		#endregion
 	}
 
-	[Guid("8204171D-08BF-4125-9E70-AD013F7E2E2D")]
+	[Guid("5508B7F3-DD0E-47A0-955F-5D2513E2DB40")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IAttributeApi))]
@@ -125,12 +163,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve an attribute by path.</summary>
 		public PIAttribute GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIAttribute localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an attribute by path.</summary>
 		public ApiResponsePIAttribute GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -186,12 +226,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAttribute)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAttribute)));
 		}
 
+		/// <summary>Retrieve an attribute.</summary>
 		public PIAttribute Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIAttribute localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an attribute.</summary>
 		public ApiResponsePIAttribute GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -247,12 +289,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAttribute)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAttribute)));
 		}
 
+		/// <summary>Update an attribute by replacing items in its definition.</summary>
 		public Object Update(string webId, PIAttribute attribute)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, attribute);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update an attribute by replacing items in its definition.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PIAttribute attribute)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -313,12 +357,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete an attribute.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete an attribute.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -369,12 +415,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get the child attributes of the specified attribute.</summary>
 		public PIItemsAttribute GetAttributes(string webId, int maxCount, bool searchFullHierarchy, bool showExcluded, bool showHidden, int startIndex, string categoryName = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null, string valueType = null)
 		{
 			ApiResponsePIItemsAttribute localVarResponse = GetAttributesWithHttpInfo(webId, maxCount, searchFullHierarchy, showExcluded, showHidden, startIndex, categoryName, nameFilter, selectedFields, sortField, sortOrder, templateName, valueType);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the child attributes of the specified attribute.</summary>
 		public ApiResponsePIItemsAttribute GetAttributesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, bool showExcluded, bool showHidden, int startIndex, string categoryName = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null, string valueType = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -465,12 +513,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAttribute)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAttribute)));
 		}
 
+		/// <summary>Create a new attribute as a child of the specified attribute.</summary>
 		public Object CreateAttribute(string webId, PIAttribute attribute)
 		{
 			ApiResponseObject localVarResponse = CreateAttributeWithHttpInfo(webId, attribute);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a new attribute as a child of the specified attribute.</summary>
 		public ApiResponseObject CreateAttributeWithHttpInfo(string webId, PIAttribute attribute)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -531,12 +581,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get an attribute's categories.</summary>
 		public PIItemsAttributeCategory GetCategories(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsAttributeCategory localVarResponse = GetCategoriesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get an attribute's categories.</summary>
 		public ApiResponsePIItemsAttributeCategory GetCategoriesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -592,12 +644,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAttributeCategory)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAttributeCategory)));
 		}
 
+		/// <summary>Create or update an attribute's DataReference configuration (Create/Update PI point for PI Point DataReference).</summary>
 		public Object CreateConfig(string webId)
 		{
 			ApiResponseObject localVarResponse = CreateConfigWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create or update an attribute's DataReference configuration (Create/Update PI point for PI Point DataReference).</summary>
 		public ApiResponseObject CreateConfigWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -648,12 +702,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get the attribute's value. This call is intended for use with attributes that have no data reference only. For attributes with a data reference, consult the documentation for Streams.</summary>
 		public PITimedValue GetValue(string webId, string selectedFields = null)
 		{
 			ApiResponsePITimedValue localVarResponse = GetValueWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the attribute's value. This call is intended for use with attributes that have no data reference only. For attributes with a data reference, consult the documentation for Streams.</summary>
 		public ApiResponsePITimedValue GetValueWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -709,12 +765,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimedValue)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimedValue)));
 		}
 
+		/// <summary>Set the value of a configuration item attribute. For attributes with a data reference or non-configuration item attributes, consult the documentation for streams.</summary>
 		public Object SetValue(string webId, PITimedValue value)
 		{
 			ApiResponseObject localVarResponse = SetValueWithHttpInfo(webId, value);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Set the value of a configuration item attribute. For attributes with a data reference or non-configuration item attributes, consult the documentation for streams.</summary>
 		public ApiResponseObject SetValueWithHttpInfo(string webId, PITimedValue value)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -775,12 +833,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve multiple attributes by web id or path.</summary>
 		public PIItemsItemAttribute GetMultiple(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null)
 		{
 			ApiResponsePIItemsItemAttribute localVarResponse = GetMultipleWithHttpInfo(asParallel, includeMode, paths, selectedFields, webIds);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve multiple attributes by web id or path.</summary>
 		public ApiResponsePIItemsItemAttribute GetMultipleWithHttpInfo(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null)
 		{
 			List<string> path = ExtensionMethods.ConvertToList(paths);

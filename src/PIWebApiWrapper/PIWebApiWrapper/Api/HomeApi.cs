@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,23 +27,25 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("F8E83A87-6AA9-43D4-A3C3-BB8B78423499")]
+	[Guid("A12FDCCA-7ACF-463B-AEE1-3DADE1B6CF89")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IHomeApi
 	{
 		#region Synchronous Operations
+		/// <summary>Get top level links for this PI System Web API instance.</summary>
 		[DispId(1)]
 		PILanding Get();
 
+		/// <summary>Get top level links for this PI System Web API instance.</summary>
 		[DispId(2)]
 		ApiResponsePILanding GetWithHttpInfo();
 
 		#endregion
 	}
 
-	[Guid("659B01DD-9F8B-4A4C-A98F-C3C784078EAD")]
+	[Guid("684990CD-D0EC-4432-B75C-4079E6C7D842")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IHomeApi))]
@@ -65,12 +83,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Get top level links for this PI System Web API instance.</summary>
 		public PILanding Get()
 		{
 			ApiResponsePILanding localVarResponse = GetWithHttpInfo();
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get top level links for this PI System Web API instance.</summary>
 		public ApiResponsePILanding GetWithHttpInfo()
 		{
 

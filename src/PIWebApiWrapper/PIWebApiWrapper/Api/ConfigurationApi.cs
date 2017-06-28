@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,35 +27,41 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("3DF7145D-306D-4CB0-BE53-4CA448FCE6A9")]
+	[Guid("190D0B0C-70E3-473D-804E-2928DB467667")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IConfigurationApi
 	{
 		#region Synchronous Operations
+		/// <summary>Get the current system configuration.</summary>
 		[DispId(1)]
 		Object List();
 
+		/// <summary>Get the current system configuration.</summary>
 		[DispId(2)]
 		ApiResponseObject ListWithHttpInfo();
 
+		/// <summary>Get the value of a configuration item.</summary>
 		[DispId(3)]
 		Object Get(string key);
 
+		/// <summary>Get the value of a configuration item.</summary>
 		[DispId(4)]
 		ApiResponseObject GetWithHttpInfo(string key);
 
+		/// <summary>Delete a configuration item.</summary>
 		[DispId(5)]
 		Object Delete(string key);
 
+		/// <summary>Delete a configuration item.</summary>
 		[DispId(6)]
 		ApiResponseObject DeleteWithHttpInfo(string key);
 
 		#endregion
 	}
 
-	[Guid("6AFA685A-6C69-41F5-8017-3436BC4429F7")]
+	[Guid("2AD55BB9-EF8D-4435-B1A3-0318CC84F98E")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IConfigurationApi))]
@@ -77,12 +99,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Get the current system configuration.</summary>
 		public Object List()
 		{
 			ApiResponseObject localVarResponse = ListWithHttpInfo();
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the current system configuration.</summary>
 		public ApiResponseObject ListWithHttpInfo()
 		{
 
@@ -126,12 +150,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get the value of a configuration item.</summary>
 		public Object Get(string key)
 		{
 			ApiResponseObject localVarResponse = GetWithHttpInfo(key);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the value of a configuration item.</summary>
 		public ApiResponseObject GetWithHttpInfo(string key)
 		{
 			if (string.IsNullOrEmpty(key)==true)
@@ -182,12 +208,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a configuration item.</summary>
 		public Object Delete(string key)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(key);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a configuration item.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string key)
 		{
 			if (string.IsNullOrEmpty(key)==true)

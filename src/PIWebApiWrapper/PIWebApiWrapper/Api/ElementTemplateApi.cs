@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,101 +27,129 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("0EC4B03C-0114-4203-9295-D6DE30156028")]
+	[Guid("9E41591E-5AC0-4048-964A-949A6030867E")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IElementTemplateApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve an element template by path.</summary>
 		[DispId(1)]
 		PIElementTemplate GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an element template by path.</summary>
 		[DispId(2)]
 		ApiResponsePIElementTemplate GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an element template.</summary>
 		[DispId(3)]
 		PIElementTemplate Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an element template.</summary>
 		[DispId(4)]
 		ApiResponsePIElementTemplate GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update an element template by replacing items in its definition.</summary>
 		[DispId(5)]
 		Object Update(string webId, PIElementTemplate template);
 
+		/// <summary>Update an element template by replacing items in its definition.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PIElementTemplate template);
 
+		/// <summary>Delete an element template.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete an element template.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
+		/// <summary>Get analysis templates for an element template.</summary>
 		[DispId(9)]
 		PIItemsAnalysisTemplate GetAnalysisTemplates(string webId, string selectedFields = null);
 
+		/// <summary>Get analysis templates for an element template.</summary>
 		[DispId(10)]
 		ApiResponsePIItemsAnalysisTemplate GetAnalysisTemplatesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Get child attribute templates for an element template.</summary>
 		[DispId(11)]
 		PIItemsAttributeTemplate GetAttributeTemplates(string webId, bool showInherited, string selectedFields = null);
 
+		/// <summary>Get child attribute templates for an element template.</summary>
 		[DispId(12)]
 		ApiResponsePIItemsAttributeTemplate GetAttributeTemplatesWithHttpInfo(string webId, bool showInherited, string selectedFields = null);
 
+		/// <summary>Create an attribute template.</summary>
 		[DispId(13)]
 		Object CreateAttributeTemplate(string webId, PIAttributeTemplate template);
 
+		/// <summary>Create an attribute template.</summary>
 		[DispId(14)]
 		ApiResponseObject CreateAttributeTemplateWithHttpInfo(string webId, PIAttributeTemplate template);
 
+		/// <summary>Get an element template's categories.</summary>
 		[DispId(15)]
 		PIItemsElementCategory GetCategories(string webId, bool showInherited, string selectedFields = null);
 
+		/// <summary>Get an element template's categories.</summary>
 		[DispId(16)]
 		ApiResponsePIItemsElementCategory GetCategoriesWithHttpInfo(string webId, bool showInherited, string selectedFields = null);
 
+		/// <summary>Get the security information of the specified security item associated with the element template for a specified user.</summary>
 		[DispId(17)]
 		PIItemsSecurityRights GetSecurity(string webId, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Get the security information of the specified security item associated with the element template for a specified user.</summary>
 		[DispId(18)]
 		ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries associated with the element template based on the specified criteria. By default, all security entries for this element template are returned.</summary>
 		[DispId(19)]
 		PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries associated with the element template based on the specified criteria. By default, all security entries for this element template are returned.</summary>
 		[DispId(20)]
 		ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Create a security entry owned by the element template.</summary>
 		[DispId(21)]
 		Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Create a security entry owned by the element template.</summary>
 		[DispId(22)]
 		ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Retrieve the security entry associated with the element template with the specified name.</summary>
 		[DispId(23)]
 		PIItemsSecurityEntry GetSecurityEntryByName(string name, string webId, string selectedFields = null);
 
+		/// <summary>Retrieve the security entry associated with the element template with the specified name.</summary>
 		[DispId(24)]
 		ApiResponsePIItemsSecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string selectedFields = null);
 
+		/// <summary>Update a security entry owned by the element template.</summary>
 		[DispId(25)]
 		Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Update a security entry owned by the element template.</summary>
 		[DispId(26)]
 		ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Delete a security entry owned by the element template.</summary>
 		[DispId(27)]
 		Object DeleteSecurityEntry(string name, string webId, bool applyToChildren);
 
+		/// <summary>Delete a security entry owned by the element template.</summary>
 		[DispId(28)]
 		ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren);
 
 		#endregion
 	}
 
-	[Guid("511131B7-6CAA-46BF-ADF3-DDB22BEC5820")]
+	[Guid("3D818489-3D14-4563-ADCD-02BDC94E84AE")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IElementTemplateApi))]
@@ -143,12 +187,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve an element template by path.</summary>
 		public PIElementTemplate GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIElementTemplate localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an element template by path.</summary>
 		public ApiResponsePIElementTemplate GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -204,12 +250,14 @@ namespace PIWebAPIWrapper.Api
 				(PIElementTemplate)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIElementTemplate)));
 		}
 
+		/// <summary>Retrieve an element template.</summary>
 		public PIElementTemplate Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIElementTemplate localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an element template.</summary>
 		public ApiResponsePIElementTemplate GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -265,12 +313,14 @@ namespace PIWebAPIWrapper.Api
 				(PIElementTemplate)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIElementTemplate)));
 		}
 
+		/// <summary>Update an element template by replacing items in its definition.</summary>
 		public Object Update(string webId, PIElementTemplate template)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, template);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update an element template by replacing items in its definition.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PIElementTemplate template)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -331,12 +381,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete an element template.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete an element template.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -387,12 +439,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get analysis templates for an element template.</summary>
 		public PIItemsAnalysisTemplate GetAnalysisTemplates(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsAnalysisTemplate localVarResponse = GetAnalysisTemplatesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get analysis templates for an element template.</summary>
 		public ApiResponsePIItemsAnalysisTemplate GetAnalysisTemplatesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -448,12 +502,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAnalysisTemplate)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAnalysisTemplate)));
 		}
 
+		/// <summary>Get child attribute templates for an element template.</summary>
 		public PIItemsAttributeTemplate GetAttributeTemplates(string webId, bool showInherited, string selectedFields = null)
 		{
 			ApiResponsePIItemsAttributeTemplate localVarResponse = GetAttributeTemplatesWithHttpInfo(webId, showInherited, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get child attribute templates for an element template.</summary>
 		public ApiResponsePIItemsAttributeTemplate GetAttributeTemplatesWithHttpInfo(string webId, bool showInherited, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -510,12 +566,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAttributeTemplate)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAttributeTemplate)));
 		}
 
+		/// <summary>Create an attribute template.</summary>
 		public Object CreateAttributeTemplate(string webId, PIAttributeTemplate template)
 		{
 			ApiResponseObject localVarResponse = CreateAttributeTemplateWithHttpInfo(webId, template);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an attribute template.</summary>
 		public ApiResponseObject CreateAttributeTemplateWithHttpInfo(string webId, PIAttributeTemplate template)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -576,12 +634,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get an element template's categories.</summary>
 		public PIItemsElementCategory GetCategories(string webId, bool showInherited, string selectedFields = null)
 		{
 			ApiResponsePIItemsElementCategory localVarResponse = GetCategoriesWithHttpInfo(webId, showInherited, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get an element template's categories.</summary>
 		public ApiResponsePIItemsElementCategory GetCategoriesWithHttpInfo(string webId, bool showInherited, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -638,12 +698,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsElementCategory)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsElementCategory)));
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the element template for a specified user.</summary>
 		public PIItemsSecurityRights GetSecurity(string webId, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityRights localVarResponse = GetSecurityWithHttpInfo(webId, userIdentities, forceRefresh, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the element template for a specified user.</summary>
 		public ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			List<string> userIdentity = ExtensionMethods.ConvertToList(userIdentities);
@@ -702,12 +764,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityRights)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityRights)));
 		}
 
+		/// <summary>Retrieve the security entries associated with the element template based on the specified criteria. By default, all security entries for this element template are returned.</summary>
 		public PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityEntry localVarResponse = GetSecurityEntriesWithHttpInfo(webId, nameFilter, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entries associated with the element template based on the specified criteria. By default, all security entries for this element template are returned.</summary>
 		public ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -768,12 +832,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityEntry)));
 		}
 
+		/// <summary>Create a security entry owned by the element template.</summary>
 		public Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = CreateSecurityEntryWithHttpInfo(webId, securityEntry, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a security entry owned by the element template.</summary>
 		public ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -835,12 +901,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve the security entry associated with the element template with the specified name.</summary>
 		public PIItemsSecurityEntry GetSecurityEntryByName(string name, string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityEntry localVarResponse = GetSecurityEntryByNameWithHttpInfo(name, webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entry associated with the element template with the specified name.</summary>
 		public ApiResponsePIItemsSecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -903,12 +971,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityEntry)));
 		}
 
+		/// <summary>Update a security entry owned by the element template.</summary>
 		public Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = UpdateSecurityEntryWithHttpInfo(name, webId, securityEntry, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update a security entry owned by the element template.</summary>
 		public ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -977,12 +1047,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a security entry owned by the element template.</summary>
 		public Object DeleteSecurityEntry(string name, string webId, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = DeleteSecurityEntryWithHttpInfo(name, webId, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a security entry owned by the element template.</summary>
 		public ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(name)==true)

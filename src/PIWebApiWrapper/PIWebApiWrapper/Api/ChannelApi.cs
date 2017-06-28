@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,23 +27,25 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("4E096958-76DC-4A49-87A7-B5D6934A9C53")]
+	[Guid("DF1238A8-1998-41FE-A0B7-17C0282A8005")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IChannelApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieves a list of currently running channel instances.</summary>
 		[DispId(1)]
 		Object Instances();
 
+		/// <summary>Retrieves a list of currently running channel instances.</summary>
 		[DispId(2)]
 		ApiResponseObject InstancesWithHttpInfo();
 
 		#endregion
 	}
 
-	[Guid("EDD62FC2-3A24-4E3F-90A1-8329C2A3E716")]
+	[Guid("633DDDF8-3070-4AD6-ABE0-2327D6E51E71")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IChannelApi))]
@@ -65,12 +83,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieves a list of currently running channel instances.</summary>
 		public Object Instances()
 		{
 			ApiResponseObject localVarResponse = InstancesWithHttpInfo();
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieves a list of currently running channel instances.</summary>
 		public ApiResponseObject InstancesWithHttpInfo()
 		{
 

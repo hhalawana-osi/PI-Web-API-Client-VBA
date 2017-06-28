@@ -1,4 +1,20 @@
-﻿using PIWebAPIWrapper.Api;
+﻿// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
+using PIWebAPIWrapper.Api;
 using PIWebAPIWrapper.Client;
 using RestSharp;
 using System;
@@ -16,8 +32,9 @@ namespace PIWebAPIWrapper
     [InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
     public interface IPIWebApiClient
     {
+		/// <summary>Try to connect to PI Web API</summary>
         [DispId(1)]
-        bool DefineProperties(string baseUrl, bool useKerberos, string username = null, string password = null);
+        bool Connect(string baseUrl, bool useKerberos, string username = null, string password = null);
         [DispId(2)]
         IAnalysisApi Analysis { get; }
         [DispId(3)]
@@ -79,10 +96,16 @@ namespace PIWebAPIWrapper
         IUnitApi Unit { get; }
         [DispId(32)]
         IUnitClassApi UnitClass { get; }
+		
+		/// <summary>Get defined user name</summary>
         [DispId(33)]
         string GetUserName();
+		
+		/// <summary>Get defined PI Web API base service url</summary>
         [DispId(34)]
         string GeBaseUrl();
+		
+		/// <summary>Check if the authentication which is being used is Kerberos or Basic</summary>
         [DispId(35)]
         bool IsUsingKerberos();
 
@@ -108,8 +131,8 @@ namespace PIWebAPIWrapper
 
         }
 
-
-        public bool DefineProperties(string baseUrl, bool useKerberos, string username = null, string password = null)
+		/// <summary>Try to connect to PI Web API</summary>
+        public bool Connect(string baseUrl, bool useKerberos, string username = null, string password = null)
         {
             try
             {
@@ -129,16 +152,22 @@ namespace PIWebAPIWrapper
             }
         }
 
+		
+
+		
+	    /// <summary>Get defined user name</summary>
         public string GetUserName()
         {
             return userName;
         }
-
+		
+		/// <summary>Get defined PI Web API base service url</summary>
         public string GeBaseUrl()
         {
             return baseUrl;
         }
-
+		
+	    /// <summary>Check if the authentication which is being used is Kerberos or Basic</summary>
         public bool IsUsingKerberos()
         {
             return useKerberos;

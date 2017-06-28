@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,41 +27,49 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("C3F36331-409F-444B-B5E4-FCF8536A7BF9")]
+	[Guid("C479C6FA-789A-44BE-A6DC-5BB36FB91F2E")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface ITimeRuleApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve a Time Rule by path.</summary>
 		[DispId(1)]
 		PITimeRule GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a Time Rule by path.</summary>
 		[DispId(2)]
 		ApiResponsePITimeRule GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a Time Rule.</summary>
 		[DispId(3)]
 		PITimeRule Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a Time Rule.</summary>
 		[DispId(4)]
 		ApiResponsePITimeRule GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update a Time Rule by replacing items in its definition.</summary>
 		[DispId(5)]
 		Object Update(string webId, PITimeRule timeRule);
 
+		/// <summary>Update a Time Rule by replacing items in its definition.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PITimeRule timeRule);
 
+		/// <summary>Delete a Time Rule.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete a Time Rule.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
 		#endregion
 	}
 
-	[Guid("A97549A0-DE57-4524-96F3-859D2446F790")]
+	[Guid("E3CFC881-285D-4951-B6A1-ADC633F52E51")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(ITimeRuleApi))]
@@ -83,12 +107,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve a Time Rule by path.</summary>
 		public PITimeRule GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePITimeRule localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a Time Rule by path.</summary>
 		public ApiResponsePITimeRule GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -144,12 +170,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimeRule)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimeRule)));
 		}
 
+		/// <summary>Retrieve a Time Rule.</summary>
 		public PITimeRule Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePITimeRule localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a Time Rule.</summary>
 		public ApiResponsePITimeRule GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -205,12 +233,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimeRule)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimeRule)));
 		}
 
+		/// <summary>Update a Time Rule by replacing items in its definition.</summary>
 		public Object Update(string webId, PITimeRule timeRule)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, timeRule);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update a Time Rule by replacing items in its definition.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PITimeRule timeRule)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -271,12 +301,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a Time Rule.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a Time Rule.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,53 +27,65 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("804C6954-28D6-457E-9045-A39DA33B61DF")]
+	[Guid("93054C30-97CD-4282-B1DB-E72F429DF67C")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IAnalysisRuleApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve an Analysis Rule by path.</summary>
 		[DispId(1)]
 		PIAnalysisRule GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an Analysis Rule by path.</summary>
 		[DispId(2)]
 		ApiResponsePIAnalysisRule GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an Analysis Rule.</summary>
 		[DispId(3)]
 		PIAnalysisRule Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an Analysis Rule.</summary>
 		[DispId(4)]
 		ApiResponsePIAnalysisRule GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update an Analysis Rule by replacing items in its definition.</summary>
 		[DispId(5)]
 		Object Update(string webId, PIAnalysisRule analysisRule);
 
+		/// <summary>Update an Analysis Rule by replacing items in its definition.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PIAnalysisRule analysisRule);
 
+		/// <summary>Delete an Analysis Rule.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete an Analysis Rule.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
+		/// <summary>Get the child Analysis Rules of the Analysis Rule.</summary>
 		[DispId(9)]
 		PIItemsAnalysisRule GetAnalysisRules(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Get the child Analysis Rules of the Analysis Rule.</summary>
 		[DispId(10)]
 		ApiResponsePIItemsAnalysisRule GetAnalysisRulesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Create a new Analysis Rule as a child of an existing Analysis Rule.</summary>
 		[DispId(11)]
 		Object CreateAnalysisRule(string webId, PIAnalysisRule analysisRule);
 
+		/// <summary>Create a new Analysis Rule as a child of an existing Analysis Rule.</summary>
 		[DispId(12)]
 		ApiResponseObject CreateAnalysisRuleWithHttpInfo(string webId, PIAnalysisRule analysisRule);
 
 		#endregion
 	}
 
-	[Guid("B2ADA1D0-0FCE-464E-9D56-6E449295E683")]
+	[Guid("C9E6D3B6-BAFA-4D0C-A510-FE9399BB719E")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IAnalysisRuleApi))]
@@ -95,12 +123,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve an Analysis Rule by path.</summary>
 		public PIAnalysisRule GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIAnalysisRule localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an Analysis Rule by path.</summary>
 		public ApiResponsePIAnalysisRule GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -156,12 +186,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAnalysisRule)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAnalysisRule)));
 		}
 
+		/// <summary>Retrieve an Analysis Rule.</summary>
 		public PIAnalysisRule Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIAnalysisRule localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an Analysis Rule.</summary>
 		public ApiResponsePIAnalysisRule GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -217,12 +249,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAnalysisRule)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAnalysisRule)));
 		}
 
+		/// <summary>Update an Analysis Rule by replacing items in its definition.</summary>
 		public Object Update(string webId, PIAnalysisRule analysisRule)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, analysisRule);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update an Analysis Rule by replacing items in its definition.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PIAnalysisRule analysisRule)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -283,12 +317,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete an Analysis Rule.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete an Analysis Rule.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -339,12 +375,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get the child Analysis Rules of the Analysis Rule.</summary>
 		public PIItemsAnalysisRule GetAnalysisRules(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			ApiResponsePIItemsAnalysisRule localVarResponse = GetAnalysisRulesWithHttpInfo(webId, maxCount, searchFullHierarchy, startIndex, nameFilter, selectedFields, sortField, sortOrder);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the child Analysis Rules of the Analysis Rule.</summary>
 		public ApiResponsePIItemsAnalysisRule GetAnalysisRulesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -418,12 +456,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAnalysisRule)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAnalysisRule)));
 		}
 
+		/// <summary>Create a new Analysis Rule as a child of an existing Analysis Rule.</summary>
 		public Object CreateAnalysisRule(string webId, PIAnalysisRule analysisRule)
 		{
 			ApiResponseObject localVarResponse = CreateAnalysisRuleWithHttpInfo(webId, analysisRule);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a new Analysis Rule as a child of an existing Analysis Rule.</summary>
 		public ApiResponseObject CreateAnalysisRuleWithHttpInfo(string webId, PIAnalysisRule analysisRule)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

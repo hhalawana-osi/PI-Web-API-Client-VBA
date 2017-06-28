@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,29 +27,33 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("090EC297-0E49-42FE-B3DC-A1802C637C22")]
+	[Guid("BE8BC160-6672-4F61-8B96-16195473D083")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IAnalysisRulePlugInApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve an Analysis Rule Plug-in by path.</summary>
 		[DispId(1)]
 		PIAnalysisRulePlugIn GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an Analysis Rule Plug-in by path.</summary>
 		[DispId(2)]
 		ApiResponsePIAnalysisRulePlugIn GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an Analysis Rule Plug-in.</summary>
 		[DispId(3)]
 		PIAnalysisRulePlugIn Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an Analysis Rule Plug-in.</summary>
 		[DispId(4)]
 		ApiResponsePIAnalysisRulePlugIn GetWithHttpInfo(string webId, string selectedFields = null);
 
 		#endregion
 	}
 
-	[Guid("8095C81D-2680-4064-9B89-3B2DAFB22D5D")]
+	[Guid("0AA22450-0FE1-4C76-B8CB-60E83AB1351E")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IAnalysisRulePlugInApi))]
@@ -71,12 +91,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve an Analysis Rule Plug-in by path.</summary>
 		public PIAnalysisRulePlugIn GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIAnalysisRulePlugIn localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an Analysis Rule Plug-in by path.</summary>
 		public ApiResponsePIAnalysisRulePlugIn GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -132,12 +154,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAnalysisRulePlugIn)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAnalysisRulePlugIn)));
 		}
 
+		/// <summary>Retrieve an Analysis Rule Plug-in.</summary>
 		public PIAnalysisRulePlugIn Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIAnalysisRulePlugIn localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an Analysis Rule Plug-in.</summary>
 		public ApiResponsePIAnalysisRulePlugIn GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

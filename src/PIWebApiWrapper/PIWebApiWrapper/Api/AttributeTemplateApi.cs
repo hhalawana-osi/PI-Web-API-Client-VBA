@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,59 +27,73 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("E7C790E7-580C-4051-ADA9-113B8ED0AF15")]
+	[Guid("D36B1788-FC5F-48CF-94E5-BDFBBAEA8DA8")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IAttributeTemplateApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve an attribute template by path.</summary>
 		[DispId(1)]
 		PIAttributeTemplate GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an attribute template by path.</summary>
 		[DispId(2)]
 		ApiResponsePIAttributeTemplate GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an attribute template.</summary>
 		[DispId(3)]
 		PIAttributeTemplate Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an attribute template.</summary>
 		[DispId(4)]
 		ApiResponsePIAttributeTemplate GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update an existing attribute template by replacing items in its definition.</summary>
 		[DispId(5)]
 		Object Update(string webId, PIAttributeTemplate template);
 
+		/// <summary>Update an existing attribute template by replacing items in its definition.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PIAttributeTemplate template);
 
+		/// <summary>Delete an attribute template.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete an attribute template.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
+		/// <summary>Retrieve an attribute template's child attribute templates.</summary>
 		[DispId(9)]
 		PIItemsAttributeTemplate GetAttributeTemplates(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an attribute template's child attribute templates.</summary>
 		[DispId(10)]
 		ApiResponsePIItemsAttributeTemplate GetAttributeTemplatesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create an attribute template as a child of another attribute template.</summary>
 		[DispId(11)]
 		Object CreateAttributeTemplate(string webId, PIAttributeTemplate template);
 
+		/// <summary>Create an attribute template as a child of another attribute template.</summary>
 		[DispId(12)]
 		ApiResponseObject CreateAttributeTemplateWithHttpInfo(string webId, PIAttributeTemplate template);
 
+		/// <summary>Get an attribute template's categories.</summary>
 		[DispId(13)]
 		PIItemsAttributeCategory GetCategories(string webId, string selectedFields = null);
 
+		/// <summary>Get an attribute template's categories.</summary>
 		[DispId(14)]
 		ApiResponsePIItemsAttributeCategory GetCategoriesWithHttpInfo(string webId, string selectedFields = null);
 
 		#endregion
 	}
 
-	[Guid("C31B75C1-40EC-4086-A477-C54207000EF9")]
+	[Guid("0D595F47-2E90-4693-B457-67F58B4E7169")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IAttributeTemplateApi))]
@@ -101,12 +131,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve an attribute template by path.</summary>
 		public PIAttributeTemplate GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIAttributeTemplate localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an attribute template by path.</summary>
 		public ApiResponsePIAttributeTemplate GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -162,12 +194,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAttributeTemplate)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAttributeTemplate)));
 		}
 
+		/// <summary>Retrieve an attribute template.</summary>
 		public PIAttributeTemplate Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIAttributeTemplate localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an attribute template.</summary>
 		public ApiResponsePIAttributeTemplate GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -223,12 +257,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAttributeTemplate)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAttributeTemplate)));
 		}
 
+		/// <summary>Update an existing attribute template by replacing items in its definition.</summary>
 		public Object Update(string webId, PIAttributeTemplate template)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, template);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update an existing attribute template by replacing items in its definition.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PIAttributeTemplate template)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -289,12 +325,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete an attribute template.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete an attribute template.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -345,12 +383,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve an attribute template's child attribute templates.</summary>
 		public PIItemsAttributeTemplate GetAttributeTemplates(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsAttributeTemplate localVarResponse = GetAttributeTemplatesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an attribute template's child attribute templates.</summary>
 		public ApiResponsePIItemsAttributeTemplate GetAttributeTemplatesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -406,12 +446,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAttributeTemplate)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAttributeTemplate)));
 		}
 
+		/// <summary>Create an attribute template as a child of another attribute template.</summary>
 		public Object CreateAttributeTemplate(string webId, PIAttributeTemplate template)
 		{
 			ApiResponseObject localVarResponse = CreateAttributeTemplateWithHttpInfo(webId, template);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an attribute template as a child of another attribute template.</summary>
 		public ApiResponseObject CreateAttributeTemplateWithHttpInfo(string webId, PIAttributeTemplate template)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -472,12 +514,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get an attribute template's categories.</summary>
 		public PIItemsAttributeCategory GetCategories(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsAttributeCategory localVarResponse = GetCategoriesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get an attribute template's categories.</summary>
 		public ApiResponsePIItemsAttributeCategory GetCategoriesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

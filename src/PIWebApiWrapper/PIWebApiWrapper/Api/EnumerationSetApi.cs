@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,89 +27,113 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("4D3FA1A3-18D7-4F7B-9BCA-723DBD7B469B")]
+	[Guid("40CB3794-F1A2-45AA-8554-B94302559391")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IEnumerationSetApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve an enumeration set by path.</summary>
 		[DispId(1)]
 		PIEnumerationSet GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an enumeration set by path.</summary>
 		[DispId(2)]
 		ApiResponsePIEnumerationSet GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an enumeration set.</summary>
 		[DispId(3)]
 		PIEnumerationSet Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an enumeration set.</summary>
 		[DispId(4)]
 		ApiResponsePIEnumerationSet GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update an enumeration set by replacing items in its definition.</summary>
 		[DispId(5)]
 		Object Update(string webId, PIEnumerationSet enumerationSet);
 
+		/// <summary>Update an enumeration set by replacing items in its definition.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PIEnumerationSet enumerationSet);
 
+		/// <summary>Delete an enumeration set.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete an enumeration set.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
+		/// <summary>Retrieve an enumeration set's values.</summary>
 		[DispId(9)]
 		PIItemsEnumerationValue GetValues(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an enumeration set's values.</summary>
 		[DispId(10)]
 		ApiResponsePIItemsEnumerationValue GetValuesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create an enumeration value for a enumeration set.</summary>
 		[DispId(11)]
 		Object CreateValue(string webId, PIEnumerationValue enumerationValue);
 
+		/// <summary>Create an enumeration value for a enumeration set.</summary>
 		[DispId(12)]
 		ApiResponseObject CreateValueWithHttpInfo(string webId, PIEnumerationValue enumerationValue);
 
+		/// <summary>Get the security information of the specified security item associated with the enumeration set for a specified user.</summary>
 		[DispId(13)]
 		PIItemsSecurityRights GetSecurity(string webId, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Get the security information of the specified security item associated with the enumeration set for a specified user.</summary>
 		[DispId(14)]
 		ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries associated with the enumeration set based on the specified criteria. By default, all security entries for this enumeration set are returned.</summary>
 		[DispId(15)]
 		PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries associated with the enumeration set based on the specified criteria. By default, all security entries for this enumeration set are returned.</summary>
 		[DispId(16)]
 		ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Create a security entry owned by the enumeration set.</summary>
 		[DispId(17)]
 		Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Create a security entry owned by the enumeration set.</summary>
 		[DispId(18)]
 		ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Retrieve the security entry associated with the enumeration set with the specified name.</summary>
 		[DispId(19)]
 		PISecurityEntry GetSecurityEntryByName(string name, string webId, string selectedFields = null);
 
+		/// <summary>Retrieve the security entry associated with the enumeration set with the specified name.</summary>
 		[DispId(20)]
 		ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string selectedFields = null);
 
+		/// <summary>Update a security entry owned by the enumeration set.</summary>
 		[DispId(21)]
 		Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Update a security entry owned by the enumeration set.</summary>
 		[DispId(22)]
 		ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Delete a security entry owned by the enumeration set.</summary>
 		[DispId(23)]
 		Object DeleteSecurityEntry(string name, string webId, bool applyToChildren);
 
+		/// <summary>Delete a security entry owned by the enumeration set.</summary>
 		[DispId(24)]
 		ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren);
 
 		#endregion
 	}
 
-	[Guid("01CC01B4-A6D1-4BE1-9B7F-27CE52A98639")]
+	[Guid("E55BD4E6-B424-4454-AC1C-5CCFE4041C60")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IEnumerationSetApi))]
@@ -131,12 +171,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve an enumeration set by path.</summary>
 		public PIEnumerationSet GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIEnumerationSet localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an enumeration set by path.</summary>
 		public ApiResponsePIEnumerationSet GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -192,12 +234,14 @@ namespace PIWebAPIWrapper.Api
 				(PIEnumerationSet)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIEnumerationSet)));
 		}
 
+		/// <summary>Retrieve an enumeration set.</summary>
 		public PIEnumerationSet Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIEnumerationSet localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an enumeration set.</summary>
 		public ApiResponsePIEnumerationSet GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -253,12 +297,14 @@ namespace PIWebAPIWrapper.Api
 				(PIEnumerationSet)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIEnumerationSet)));
 		}
 
+		/// <summary>Update an enumeration set by replacing items in its definition.</summary>
 		public Object Update(string webId, PIEnumerationSet enumerationSet)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, enumerationSet);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update an enumeration set by replacing items in its definition.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PIEnumerationSet enumerationSet)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -319,12 +365,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete an enumeration set.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete an enumeration set.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -375,12 +423,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve an enumeration set's values.</summary>
 		public PIItemsEnumerationValue GetValues(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsEnumerationValue localVarResponse = GetValuesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an enumeration set's values.</summary>
 		public ApiResponsePIItemsEnumerationValue GetValuesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -436,12 +486,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsEnumerationValue)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsEnumerationValue)));
 		}
 
+		/// <summary>Create an enumeration value for a enumeration set.</summary>
 		public Object CreateValue(string webId, PIEnumerationValue enumerationValue)
 		{
 			ApiResponseObject localVarResponse = CreateValueWithHttpInfo(webId, enumerationValue);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an enumeration value for a enumeration set.</summary>
 		public ApiResponseObject CreateValueWithHttpInfo(string webId, PIEnumerationValue enumerationValue)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -502,12 +554,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the enumeration set for a specified user.</summary>
 		public PIItemsSecurityRights GetSecurity(string webId, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityRights localVarResponse = GetSecurityWithHttpInfo(webId, userIdentities, forceRefresh, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the enumeration set for a specified user.</summary>
 		public ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			List<string> userIdentity = ExtensionMethods.ConvertToList(userIdentities);
@@ -566,12 +620,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityRights)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityRights)));
 		}
 
+		/// <summary>Retrieve the security entries associated with the enumeration set based on the specified criteria. By default, all security entries for this enumeration set are returned.</summary>
 		public PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityEntry localVarResponse = GetSecurityEntriesWithHttpInfo(webId, nameFilter, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entries associated with the enumeration set based on the specified criteria. By default, all security entries for this enumeration set are returned.</summary>
 		public ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -632,12 +688,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityEntry)));
 		}
 
+		/// <summary>Create a security entry owned by the enumeration set.</summary>
 		public Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = CreateSecurityEntryWithHttpInfo(webId, securityEntry, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a security entry owned by the enumeration set.</summary>
 		public ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -699,12 +757,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve the security entry associated with the enumeration set with the specified name.</summary>
 		public PISecurityEntry GetSecurityEntryByName(string name, string webId, string selectedFields = null)
 		{
 			ApiResponsePISecurityEntry localVarResponse = GetSecurityEntryByNameWithHttpInfo(name, webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entry associated with the enumeration set with the specified name.</summary>
 		public ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -767,12 +827,14 @@ namespace PIWebAPIWrapper.Api
 				(PISecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PISecurityEntry)));
 		}
 
+		/// <summary>Update a security entry owned by the enumeration set.</summary>
 		public Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = UpdateSecurityEntryWithHttpInfo(name, webId, securityEntry, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update a security entry owned by the enumeration set.</summary>
 		public ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -841,12 +903,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a security entry owned by the enumeration set.</summary>
 		public Object DeleteSecurityEntry(string name, string webId, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = DeleteSecurityEntryWithHttpInfo(name, webId, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a security entry owned by the enumeration set.</summary>
 		public ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(name)==true)

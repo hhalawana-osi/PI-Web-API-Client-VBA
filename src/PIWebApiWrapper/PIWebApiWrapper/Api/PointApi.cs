@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,59 +27,73 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("9442B59F-4359-4E9A-8C9F-5D68E3994F59")]
+	[Guid("9094C953-3BB7-4F94-A2CF-539884C8EEA3")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IPointApi
 	{
 		#region Synchronous Operations
+		/// <summary>Get a point by path.</summary>
 		[DispId(1)]
 		PIPoint GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Get a point by path.</summary>
 		[DispId(2)]
 		ApiResponsePIPoint GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Get a point.</summary>
 		[DispId(3)]
 		PIPoint Get(string webId, string selectedFields = null);
 
+		/// <summary>Get a point.</summary>
 		[DispId(4)]
 		ApiResponsePIPoint GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update a point.</summary>
 		[DispId(5)]
 		Object Update(string webId, PIPoint pointDTO);
 
+		/// <summary>Update a point.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PIPoint pointDTO);
 
+		/// <summary>Delete a point.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete a point.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
+		/// <summary>Get point attributes.</summary>
 		[DispId(9)]
 		PIItemsPointAttribute GetAttributes(string webId, string names = null, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Get point attributes.</summary>
 		[DispId(10)]
 		ApiResponsePIItemsPointAttribute GetAttributesWithHttpInfo(string webId, string names = null, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Get a point attribute by name.</summary>
 		[DispId(11)]
 		PIPointAttribute GetAttributeByName(string name, string webId, string selectedFields = null);
 
+		/// <summary>Get a point attribute by name.</summary>
 		[DispId(12)]
 		ApiResponsePIPointAttribute GetAttributeByNameWithHttpInfo(string name, string webId, string selectedFields = null);
 
+		/// <summary>Retrieve multiple points by web id or path.</summary>
 		[DispId(13)]
 		PIItemsItemPoint GetMultiple(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null);
 
+		/// <summary>Retrieve multiple points by web id or path.</summary>
 		[DispId(14)]
 		ApiResponsePIItemsItemPoint GetMultipleWithHttpInfo(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null);
 
 		#endregion
 	}
 
-	[Guid("136FE7AD-9001-4024-A73E-6BAC826E3048")]
+	[Guid("AAB44474-7B22-4FF3-B193-D4FB8C1E2258")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IPointApi))]
@@ -101,12 +131,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Get a point by path.</summary>
 		public PIPoint GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIPoint localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get a point by path.</summary>
 		public ApiResponsePIPoint GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -162,12 +194,14 @@ namespace PIWebAPIWrapper.Api
 				(PIPoint)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIPoint)));
 		}
 
+		/// <summary>Get a point.</summary>
 		public PIPoint Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIPoint localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get a point.</summary>
 		public ApiResponsePIPoint GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -223,12 +257,14 @@ namespace PIWebAPIWrapper.Api
 				(PIPoint)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIPoint)));
 		}
 
+		/// <summary>Update a point.</summary>
 		public Object Update(string webId, PIPoint pointDTO)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, pointDTO);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update a point.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PIPoint pointDTO)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -289,12 +325,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a point.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a point.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -345,12 +383,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get point attributes.</summary>
 		public PIItemsPointAttribute GetAttributes(string webId, string names = null, string nameFilter = null, string selectedFields = null)
 		{
 			ApiResponsePIItemsPointAttribute localVarResponse = GetAttributesWithHttpInfo(webId, names, nameFilter, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get point attributes.</summary>
 		public ApiResponsePIItemsPointAttribute GetAttributesWithHttpInfo(string webId, string names = null, string nameFilter = null, string selectedFields = null)
 		{
 			List<string> name = ExtensionMethods.ConvertToList(names);
@@ -413,12 +453,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsPointAttribute)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsPointAttribute)));
 		}
 
+		/// <summary>Get a point attribute by name.</summary>
 		public PIPointAttribute GetAttributeByName(string name, string webId, string selectedFields = null)
 		{
 			ApiResponsePIPointAttribute localVarResponse = GetAttributeByNameWithHttpInfo(name, webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get a point attribute by name.</summary>
 		public ApiResponsePIPointAttribute GetAttributeByNameWithHttpInfo(string name, string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -481,12 +523,14 @@ namespace PIWebAPIWrapper.Api
 				(PIPointAttribute)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIPointAttribute)));
 		}
 
+		/// <summary>Retrieve multiple points by web id or path.</summary>
 		public PIItemsItemPoint GetMultiple(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null)
 		{
 			ApiResponsePIItemsItemPoint localVarResponse = GetMultipleWithHttpInfo(asParallel, includeMode, paths, selectedFields, webIds);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve multiple points by web id or path.</summary>
 		public ApiResponsePIItemsItemPoint GetMultipleWithHttpInfo(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null)
 		{
 			List<string> path = ExtensionMethods.ConvertToList(paths);

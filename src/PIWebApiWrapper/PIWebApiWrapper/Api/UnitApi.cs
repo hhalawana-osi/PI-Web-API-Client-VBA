@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,41 +27,49 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("36B3B985-DFD2-4007-9527-3875E7F197FF")]
+	[Guid("2A37E177-7F06-4BD9-83A3-8BEA57F7B253")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IUnitApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve a unit by path.</summary>
 		[DispId(1)]
 		PIUnit GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a unit by path.</summary>
 		[DispId(2)]
 		ApiResponsePIUnit GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a unit.</summary>
 		[DispId(3)]
 		PIUnit Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a unit.</summary>
 		[DispId(4)]
 		ApiResponsePIUnit GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update a unit.</summary>
 		[DispId(5)]
 		Object Update(string webId, PIUnit unitDTO);
 
+		/// <summary>Update a unit.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PIUnit unitDTO);
 
+		/// <summary>Delete a unit.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete a unit.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
 		#endregion
 	}
 
-	[Guid("5715C8E5-D38F-428F-B028-F731E318D4BB")]
+	[Guid("4A331BF1-8242-4325-9556-47870DE4F9BF")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IUnitApi))]
@@ -83,12 +107,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve a unit by path.</summary>
 		public PIUnit GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIUnit localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a unit by path.</summary>
 		public ApiResponsePIUnit GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -144,12 +170,14 @@ namespace PIWebAPIWrapper.Api
 				(PIUnit)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIUnit)));
 		}
 
+		/// <summary>Retrieve a unit.</summary>
 		public PIUnit Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIUnit localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a unit.</summary>
 		public ApiResponsePIUnit GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -205,12 +233,14 @@ namespace PIWebAPIWrapper.Api
 				(PIUnit)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIUnit)));
 		}
 
+		/// <summary>Update a unit.</summary>
 		public Object Update(string webId, PIUnit unitDTO)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, unitDTO);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update a unit.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PIUnit unitDTO)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -271,12 +301,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a unit.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a unit.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

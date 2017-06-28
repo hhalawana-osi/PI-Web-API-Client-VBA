@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,59 +27,73 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("4FD18E4C-2DCD-473D-AE9D-7C9C5B76BA00")]
+	[Guid("DA49C5A5-F341-485A-AA96-A54E1E00B6DE")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface ISecurityMappingApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve a security mapping by path.</summary>
 		[DispId(1)]
 		PISecurityMapping GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a security mapping by path.</summary>
 		[DispId(2)]
 		ApiResponsePISecurityMapping GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a security mapping.</summary>
 		[DispId(3)]
 		PISecurityMapping Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a security mapping.</summary>
 		[DispId(4)]
 		ApiResponsePISecurityMapping GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update a security mapping by replacing items in its definition.</summary>
 		[DispId(5)]
 		Object Update(string webId, PISecurityMapping securityMapping);
 
+		/// <summary>Update a security mapping by replacing items in its definition.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PISecurityMapping securityMapping);
 
+		/// <summary>Delete a security mapping.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete a security mapping.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
+		/// <summary>Get the security information of the specified security item associated with the security mapping for a specified user.</summary>
 		[DispId(9)]
 		PIItemsSecurityRights GetSecurity(string webId, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Get the security information of the specified security item associated with the security mapping for a specified user.</summary>
 		[DispId(10)]
 		ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries associated with the security mapping based on the specified criteria. By default, all security entries for this security mapping are returned.</summary>
 		[DispId(11)]
 		PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries associated with the security mapping based on the specified criteria. By default, all security entries for this security mapping are returned.</summary>
 		[DispId(12)]
 		ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Retrieve the security entry associated with the security mapping with the specified name.</summary>
 		[DispId(13)]
 		PISecurityEntry GetSecurityEntryByName(string name, string webId, string selectedFields = null);
 
+		/// <summary>Retrieve the security entry associated with the security mapping with the specified name.</summary>
 		[DispId(14)]
 		ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string selectedFields = null);
 
 		#endregion
 	}
 
-	[Guid("D6E5A541-A6CF-4707-9F9A-88E40780B550")]
+	[Guid("2315EB16-5967-4186-9B98-3E589CDAC5F3")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(ISecurityMappingApi))]
@@ -101,12 +131,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve a security mapping by path.</summary>
 		public PISecurityMapping GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePISecurityMapping localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a security mapping by path.</summary>
 		public ApiResponsePISecurityMapping GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -162,12 +194,14 @@ namespace PIWebAPIWrapper.Api
 				(PISecurityMapping)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PISecurityMapping)));
 		}
 
+		/// <summary>Retrieve a security mapping.</summary>
 		public PISecurityMapping Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePISecurityMapping localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a security mapping.</summary>
 		public ApiResponsePISecurityMapping GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -223,12 +257,14 @@ namespace PIWebAPIWrapper.Api
 				(PISecurityMapping)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PISecurityMapping)));
 		}
 
+		/// <summary>Update a security mapping by replacing items in its definition.</summary>
 		public Object Update(string webId, PISecurityMapping securityMapping)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, securityMapping);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update a security mapping by replacing items in its definition.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PISecurityMapping securityMapping)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -289,12 +325,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a security mapping.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a security mapping.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -345,12 +383,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the security mapping for a specified user.</summary>
 		public PIItemsSecurityRights GetSecurity(string webId, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityRights localVarResponse = GetSecurityWithHttpInfo(webId, userIdentities, forceRefresh, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the security mapping for a specified user.</summary>
 		public ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			List<string> userIdentity = ExtensionMethods.ConvertToList(userIdentities);
@@ -409,12 +449,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityRights)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityRights)));
 		}
 
+		/// <summary>Retrieve the security entries associated with the security mapping based on the specified criteria. By default, all security entries for this security mapping are returned.</summary>
 		public PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityEntry localVarResponse = GetSecurityEntriesWithHttpInfo(webId, nameFilter, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entries associated with the security mapping based on the specified criteria. By default, all security entries for this security mapping are returned.</summary>
 		public ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -475,12 +517,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityEntry)));
 		}
 
+		/// <summary>Retrieve the security entry associated with the security mapping with the specified name.</summary>
 		public PISecurityEntry GetSecurityEntryByName(string name, string webId, string selectedFields = null)
 		{
 			ApiResponsePISecurityEntry localVarResponse = GetSecurityEntryByNameWithHttpInfo(name, webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entry associated with the security mapping with the specified name.</summary>
 		public ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)

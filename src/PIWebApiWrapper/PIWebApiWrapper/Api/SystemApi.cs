@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,47 +27,57 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("0F044B9C-713D-4F4E-BC33-85F2F3E4E8D4")]
+	[Guid("D4BFFE78-FBF7-4366-A137-56CCB792C71E")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface ISystemApi
 	{
 		#region Synchronous Operations
+		/// <summary>Get system links for this PI System Web API instance.</summary>
 		[DispId(1)]
 		PISystemLanding Landing();
 
+		/// <summary>Get system links for this PI System Web API instance.</summary>
 		[DispId(2)]
 		ApiResponsePISystemLanding LandingWithHttpInfo();
 
+		/// <summary>Get AF cache instances currently in use by the system. These are caches from which user requests are serviced. The number of instances depends on the number of users connected to the service, the service's authentication method, and the cache instance configuration.</summary>
 		[DispId(3)]
 		PIItemsCacheInstance CacheInstances();
 
+		/// <summary>Get AF cache instances currently in use by the system. These are caches from which user requests are serviced. The number of instances depends on the number of users connected to the service, the service's authentication method, and the cache instance configuration.</summary>
 		[DispId(4)]
 		ApiResponsePIItemsCacheInstance CacheInstancesWithHttpInfo();
 
+		/// <summary>Get the system uptime, the system state and the number of cache instances for this PI System Web API instance.</summary>
 		[DispId(5)]
 		PISystemStatus Status();
 
+		/// <summary>Get the system uptime, the system state and the number of cache instances for this PI System Web API instance.</summary>
 		[DispId(6)]
 		ApiResponsePISystemStatus StatusWithHttpInfo();
 
+		/// <summary>Get information about the Windows identity used to fulfill the request. This depends on the service's authentication method and the credentials passed by the client. The impersonation level of the Windows identity is included.</summary>
 		[DispId(7)]
 		PIUserInfo UserInfo();
 
+		/// <summary>Get information about the Windows identity used to fulfill the request. This depends on the service's authentication method and the credentials passed by the client. The impersonation level of the Windows identity is included.</summary>
 		[DispId(8)]
 		ApiResponsePIUserInfo UserInfoWithHttpInfo();
 
+		/// <summary>Get the current versions of the PI Web API instance and all external plugins.</summary>
 		[DispId(9)]
 		Object Versions();
 
+		/// <summary>Get the current versions of the PI Web API instance and all external plugins.</summary>
 		[DispId(10)]
 		ApiResponseObject VersionsWithHttpInfo();
 
 		#endregion
 	}
 
-	[Guid("80C30C35-D001-42A1-9FD4-A1C58A7412BB")]
+	[Guid("942CD2BE-3E39-4B7B-B095-AD867DC325BB")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(ISystemApi))]
@@ -89,12 +115,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Get system links for this PI System Web API instance.</summary>
 		public PISystemLanding Landing()
 		{
 			ApiResponsePISystemLanding localVarResponse = LandingWithHttpInfo();
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get system links for this PI System Web API instance.</summary>
 		public ApiResponsePISystemLanding LandingWithHttpInfo()
 		{
 
@@ -138,12 +166,14 @@ namespace PIWebAPIWrapper.Api
 				(PISystemLanding)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PISystemLanding)));
 		}
 
+		/// <summary>Get AF cache instances currently in use by the system. These are caches from which user requests are serviced. The number of instances depends on the number of users connected to the service, the service's authentication method, and the cache instance configuration.</summary>
 		public PIItemsCacheInstance CacheInstances()
 		{
 			ApiResponsePIItemsCacheInstance localVarResponse = CacheInstancesWithHttpInfo();
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get AF cache instances currently in use by the system. These are caches from which user requests are serviced. The number of instances depends on the number of users connected to the service, the service's authentication method, and the cache instance configuration.</summary>
 		public ApiResponsePIItemsCacheInstance CacheInstancesWithHttpInfo()
 		{
 
@@ -187,12 +217,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsCacheInstance)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsCacheInstance)));
 		}
 
+		/// <summary>Get the system uptime, the system state and the number of cache instances for this PI System Web API instance.</summary>
 		public PISystemStatus Status()
 		{
 			ApiResponsePISystemStatus localVarResponse = StatusWithHttpInfo();
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the system uptime, the system state and the number of cache instances for this PI System Web API instance.</summary>
 		public ApiResponsePISystemStatus StatusWithHttpInfo()
 		{
 
@@ -236,12 +268,14 @@ namespace PIWebAPIWrapper.Api
 				(PISystemStatus)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PISystemStatus)));
 		}
 
+		/// <summary>Get information about the Windows identity used to fulfill the request. This depends on the service's authentication method and the credentials passed by the client. The impersonation level of the Windows identity is included.</summary>
 		public PIUserInfo UserInfo()
 		{
 			ApiResponsePIUserInfo localVarResponse = UserInfoWithHttpInfo();
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get information about the Windows identity used to fulfill the request. This depends on the service's authentication method and the credentials passed by the client. The impersonation level of the Windows identity is included.</summary>
 		public ApiResponsePIUserInfo UserInfoWithHttpInfo()
 		{
 
@@ -285,12 +319,14 @@ namespace PIWebAPIWrapper.Api
 				(PIUserInfo)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIUserInfo)));
 		}
 
+		/// <summary>Get the current versions of the PI Web API instance and all external plugins.</summary>
 		public Object Versions()
 		{
 			ApiResponseObject localVarResponse = VersionsWithHttpInfo();
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the current versions of the PI Web API instance and all external plugins.</summary>
 		public ApiResponseObject VersionsWithHttpInfo()
 		{
 

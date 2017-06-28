@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,29 +27,33 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("787F3384-EF52-428C-8399-CF8FF7103DB2")]
+	[Guid("7497AAC8-C933-4D1A-88CD-AA857C244E70")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IAttributeTraitApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve all attribute traits of the specified category/categories.</summary>
 		[DispId(1)]
 		PIItemsAttributeTrait GetByCategory(string categorys, string selectedFields = null);
 
+		/// <summary>Retrieve all attribute traits of the specified category/categories.</summary>
 		[DispId(2)]
 		ApiResponsePIItemsAttributeTrait GetByCategoryWithHttpInfo(string categorys, string selectedFields = null);
 
+		/// <summary>Retrieve an attribute trait.</summary>
 		[DispId(3)]
 		PIAttributeTrait Get(string name, string selectedFields = null);
 
+		/// <summary>Retrieve an attribute trait.</summary>
 		[DispId(4)]
 		ApiResponsePIAttributeTrait GetWithHttpInfo(string name, string selectedFields = null);
 
 		#endregion
 	}
 
-	[Guid("0E805775-40E8-49C2-8A02-47D6343B0A67")]
+	[Guid("1FFC619E-A038-426D-85E0-BBD46B433BB4")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IAttributeTraitApi))]
@@ -71,12 +91,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve all attribute traits of the specified category/categories.</summary>
 		public PIItemsAttributeTrait GetByCategory(string categorys, string selectedFields = null)
 		{
 			ApiResponsePIItemsAttributeTrait localVarResponse = GetByCategoryWithHttpInfo(categorys, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve all attribute traits of the specified category/categories.</summary>
 		public ApiResponsePIItemsAttributeTrait GetByCategoryWithHttpInfo(string categorys, string selectedFields = null)
 		{
 			List<string> category = ExtensionMethods.ConvertToList(categorys);
@@ -127,12 +149,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAttributeTrait)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAttributeTrait)));
 		}
 
+		/// <summary>Retrieve an attribute trait.</summary>
 		public PIAttributeTrait Get(string name, string selectedFields = null)
 		{
 			ApiResponsePIAttributeTrait localVarResponse = GetWithHttpInfo(name, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an attribute trait.</summary>
 		public ApiResponsePIAttributeTrait GetWithHttpInfo(string name, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)

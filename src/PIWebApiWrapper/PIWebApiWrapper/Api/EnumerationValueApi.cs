@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,41 +27,49 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("4F1A5E96-8F9D-4F5F-9F07-E37FF2537C9C")]
+	[Guid("38324837-ED1E-493C-BD76-A38CEBEC2BB5")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IEnumerationValueApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve an enumeration value by path.</summary>
 		[DispId(1)]
 		PIEnumerationValue GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an enumeration value by path.</summary>
 		[DispId(2)]
 		ApiResponsePIEnumerationValue GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an enumeration value mapping</summary>
 		[DispId(3)]
 		PIEnumerationValue Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an enumeration value mapping</summary>
 		[DispId(4)]
 		ApiResponsePIEnumerationValue GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update an enumeration value by replacing items in its definition.</summary>
 		[DispId(5)]
 		Object UpdateEnumerationValue(string webId, PIEnumerationValue enumerationValue);
 
+		/// <summary>Update an enumeration value by replacing items in its definition.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateEnumerationValueWithHttpInfo(string webId, PIEnumerationValue enumerationValue);
 
+		/// <summary>Delete an enumeration value from an enumeration set.</summary>
 		[DispId(7)]
 		Object DeleteEnumerationValue(string webId);
 
+		/// <summary>Delete an enumeration value from an enumeration set.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteEnumerationValueWithHttpInfo(string webId);
 
 		#endregion
 	}
 
-	[Guid("2FA081AD-BD75-4A13-A987-1BE74ED275B9")]
+	[Guid("E4483C91-A5E7-4B0B-97CD-32CDB2961C98")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IEnumerationValueApi))]
@@ -83,12 +107,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve an enumeration value by path.</summary>
 		public PIEnumerationValue GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIEnumerationValue localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an enumeration value by path.</summary>
 		public ApiResponsePIEnumerationValue GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -144,12 +170,14 @@ namespace PIWebAPIWrapper.Api
 				(PIEnumerationValue)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIEnumerationValue)));
 		}
 
+		/// <summary>Retrieve an enumeration value mapping</summary>
 		public PIEnumerationValue Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIEnumerationValue localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an enumeration value mapping</summary>
 		public ApiResponsePIEnumerationValue GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -205,12 +233,14 @@ namespace PIWebAPIWrapper.Api
 				(PIEnumerationValue)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIEnumerationValue)));
 		}
 
+		/// <summary>Update an enumeration value by replacing items in its definition.</summary>
 		public Object UpdateEnumerationValue(string webId, PIEnumerationValue enumerationValue)
 		{
 			ApiResponseObject localVarResponse = UpdateEnumerationValueWithHttpInfo(webId, enumerationValue);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update an enumeration value by replacing items in its definition.</summary>
 		public ApiResponseObject UpdateEnumerationValueWithHttpInfo(string webId, PIEnumerationValue enumerationValue)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -271,12 +301,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete an enumeration value from an enumeration set.</summary>
 		public Object DeleteEnumerationValue(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteEnumerationValueWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete an enumeration value from an enumeration set.</summary>
 		public ApiResponseObject DeleteEnumerationValueWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

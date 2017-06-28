@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,89 +27,113 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("E3ACE4BE-C385-438D-B518-58BA51DAC26B")]
+	[Guid("9599703F-840D-46C2-AA5B-31EDF19B65DC")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IStreamApi
 	{
 		#region Synchronous Operations
+		/// <summary>Opens a channel that will send messages about any value changes for the specified stream.</summary>
 		[DispId(1)]
 		PIItemsStreamValues GetChannel(string webId, bool includeInitialValues);
 
+		/// <summary>Opens a channel that will send messages about any value changes for the specified stream.</summary>
 		[DispId(2)]
 		ApiResponsePIItemsStreamValues GetChannelWithHttpInfo(string webId, bool includeInitialValues);
 
+		/// <summary>Returns the end-of-stream value of the stream.</summary>
 		[DispId(3)]
 		PITimedValue GetEnd(string webId, string desiredUnits = null, string selectedFields = null);
 
+		/// <summary>Returns the end-of-stream value of the stream.</summary>
 		[DispId(4)]
 		ApiResponsePITimedValue GetEndWithHttpInfo(string webId, string desiredUnits = null, string selectedFields = null);
 
+		/// <summary>Retrieves interpolated values over the specified time range at the specified sampling interval.</summary>
 		[DispId(5)]
 		PITimedValues GetInterpolated(string webId, bool includeFilteredValues, string desiredUnits = null, string endTime = null, string filterExpression = null, string interval = null, string selectedFields = null, string startTime = null, string timeZone = null);
 
+		/// <summary>Retrieves interpolated values over the specified time range at the specified sampling interval.</summary>
 		[DispId(6)]
 		ApiResponsePITimedValues GetInterpolatedWithHttpInfo(string webId, bool includeFilteredValues, string desiredUnits = null, string endTime = null, string filterExpression = null, string interval = null, string selectedFields = null, string startTime = null, string timeZone = null);
 
+		/// <summary>Retrieves interpolated values over the specified time range at the specified sampling interval.</summary>
 		[DispId(7)]
 		PITimedValues GetInterpolatedAtTimes(string webId, bool includeFilteredValues, string desiredUnits = null, string filterExpression = null, string selectedFields = null, string sortOrder = null, string times = null, string timeZone = null);
 
+		/// <summary>Retrieves interpolated values over the specified time range at the specified sampling interval.</summary>
 		[DispId(8)]
 		ApiResponsePITimedValues GetInterpolatedAtTimesWithHttpInfo(string webId, bool includeFilteredValues, string desiredUnits = null, string filterExpression = null, string selectedFields = null, string sortOrder = null, string times = null, string timeZone = null);
 
+		/// <summary>Retrieves values over the specified time range suitable for plotting over the number of intervals (typically represents pixels).</summary>
 		[DispId(9)]
 		PITimedValues GetPlot(string webId, int intervals, string desiredUnits = null, string endTime = null, string selectedFields = null, string startTime = null, string timeZone = null);
 
+		/// <summary>Retrieves values over the specified time range suitable for plotting over the number of intervals (typically represents pixels).</summary>
 		[DispId(10)]
 		ApiResponsePITimedValues GetPlotWithHttpInfo(string webId, int intervals, string desiredUnits = null, string endTime = null, string selectedFields = null, string startTime = null, string timeZone = null);
 
+		/// <summary>Returns a list of compressed values for the requested time range from the source provider.</summary>
 		[DispId(11)]
 		PITimedValues GetRecorded(string webId, bool includeFilteredValues, int maxCount, string boundaryType = null, string desiredUnits = null, string endTime = null, string filterExpression = null, string selectedFields = null, string startTime = null, string timeZone = null);
 
+		/// <summary>Returns a list of compressed values for the requested time range from the source provider.</summary>
 		[DispId(12)]
 		ApiResponsePITimedValues GetRecordedWithHttpInfo(string webId, bool includeFilteredValues, int maxCount, string boundaryType = null, string desiredUnits = null, string endTime = null, string filterExpression = null, string selectedFields = null, string startTime = null, string timeZone = null);
 
+		/// <summary>Updates multiple values for the specified stream.</summary>
 		[DispId(13)]
 		PIItemsSubstatus UpdateValues(string webId, PIStreamValues values, string bufferOption = null, string updateOption = null);
 
+		/// <summary>Updates multiple values for the specified stream.</summary>
 		[DispId(14)]
 		ApiResponsePIItemsSubstatus UpdateValuesWithHttpInfo(string webId, PIStreamValues values, string bufferOption = null, string updateOption = null);
 
+		/// <summary>Returns a single recorded value based on the passed time and retrieval mode from the stream.</summary>
 		[DispId(15)]
 		PITimedValue GetRecordedAtTime(string webId, string time, string desiredUnits = null, string retrievalMode = null, string selectedFields = null, string timeZone = null);
 
+		/// <summary>Returns a single recorded value based on the passed time and retrieval mode from the stream.</summary>
 		[DispId(16)]
 		ApiResponsePITimedValue GetRecordedAtTimeWithHttpInfo(string webId, string time, string desiredUnits = null, string retrievalMode = null, string selectedFields = null, string timeZone = null);
 
+		/// <summary>Retrieves recorded values at the specified times.</summary>
 		[DispId(17)]
 		PITimedValues GetRecordedAtTimes(string webId, string desiredUnits = null, string retrievalMode = null, string selectedFields = null, string sortOrder = null, string times = null, string timeZone = null);
 
+		/// <summary>Retrieves recorded values at the specified times.</summary>
 		[DispId(18)]
 		ApiResponsePITimedValues GetRecordedAtTimesWithHttpInfo(string webId, string desiredUnits = null, string retrievalMode = null, string selectedFields = null, string sortOrder = null, string times = null, string timeZone = null);
 
+		/// <summary>Returns a summary over the specified time range for the stream.</summary>
 		[DispId(19)]
 		PIItemsSummaryValue GetSummary(string webId, string calculationBasis = null, string endTime = null, string filterExpression = null, string sampleInterval = null, string sampleType = null, string selectedFields = null, string startTime = null, string summaryDuration = null, string summaryTypes = null, string timeType = null, string timeZone = null);
 
+		/// <summary>Returns a summary over the specified time range for the stream.</summary>
 		[DispId(20)]
 		ApiResponsePIItemsSummaryValue GetSummaryWithHttpInfo(string webId, string calculationBasis = null, string endTime = null, string filterExpression = null, string sampleInterval = null, string sampleType = null, string selectedFields = null, string startTime = null, string summaryDuration = null, string summaryTypes = null, string timeType = null, string timeZone = null);
 
+		/// <summary>Returns the value of the stream at the specified time. By default, this is usually the current value.</summary>
 		[DispId(21)]
 		PITimedValue GetValue(string webId, string desiredUnits = null, string selectedFields = null, string time = null, string timeZone = null);
 
+		/// <summary>Returns the value of the stream at the specified time. By default, this is usually the current value.</summary>
 		[DispId(22)]
 		ApiResponsePITimedValue GetValueWithHttpInfo(string webId, string desiredUnits = null, string selectedFields = null, string time = null, string timeZone = null);
 
+		/// <summary>Updates a value for the specified stream.</summary>
 		[DispId(23)]
 		Object UpdateValue(string webId, PITimedValue value, string bufferOption = null, string updateOption = null);
 
+		/// <summary>Updates a value for the specified stream.</summary>
 		[DispId(24)]
 		ApiResponseObject UpdateValueWithHttpInfo(string webId, PITimedValue value, string bufferOption = null, string updateOption = null);
 
 		#endregion
 	}
 
-	[Guid("B607B5F7-1FEA-4A1E-A453-DF310CF10FCA")]
+	[Guid("41A99815-D746-499C-84B8-83E65AE49CF1")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IStreamApi))]
@@ -131,12 +171,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Opens a channel that will send messages about any value changes for the specified stream.</summary>
 		public PIItemsStreamValues GetChannel(string webId, bool includeInitialValues)
 		{
 			ApiResponsePIItemsStreamValues localVarResponse = GetChannelWithHttpInfo(webId, includeInitialValues);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Opens a channel that will send messages about any value changes for the specified stream.</summary>
 		public ApiResponsePIItemsStreamValues GetChannelWithHttpInfo(string webId, bool includeInitialValues)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -188,12 +230,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsStreamValues)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsStreamValues)));
 		}
 
+		/// <summary>Returns the end-of-stream value of the stream.</summary>
 		public PITimedValue GetEnd(string webId, string desiredUnits = null, string selectedFields = null)
 		{
 			ApiResponsePITimedValue localVarResponse = GetEndWithHttpInfo(webId, desiredUnits, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Returns the end-of-stream value of the stream.</summary>
 		public ApiResponsePITimedValue GetEndWithHttpInfo(string webId, string desiredUnits = null, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -254,12 +298,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimedValue)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimedValue)));
 		}
 
+		/// <summary>Retrieves interpolated values over the specified time range at the specified sampling interval.</summary>
 		public PITimedValues GetInterpolated(string webId, bool includeFilteredValues, string desiredUnits = null, string endTime = null, string filterExpression = null, string interval = null, string selectedFields = null, string startTime = null, string timeZone = null)
 		{
 			ApiResponsePITimedValues localVarResponse = GetInterpolatedWithHttpInfo(webId, includeFilteredValues, desiredUnits, endTime, filterExpression, interval, selectedFields, startTime, timeZone);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieves interpolated values over the specified time range at the specified sampling interval.</summary>
 		public ApiResponsePITimedValues GetInterpolatedWithHttpInfo(string webId, bool includeFilteredValues, string desiredUnits = null, string endTime = null, string filterExpression = null, string interval = null, string selectedFields = null, string startTime = null, string timeZone = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -346,12 +392,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimedValues)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimedValues)));
 		}
 
+		/// <summary>Retrieves interpolated values over the specified time range at the specified sampling interval.</summary>
 		public PITimedValues GetInterpolatedAtTimes(string webId, bool includeFilteredValues, string desiredUnits = null, string filterExpression = null, string selectedFields = null, string sortOrder = null, string times = null, string timeZone = null)
 		{
 			ApiResponsePITimedValues localVarResponse = GetInterpolatedAtTimesWithHttpInfo(webId, includeFilteredValues, desiredUnits, filterExpression, selectedFields, sortOrder, times, timeZone);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieves interpolated values over the specified time range at the specified sampling interval.</summary>
 		public ApiResponsePITimedValues GetInterpolatedAtTimesWithHttpInfo(string webId, bool includeFilteredValues, string desiredUnits = null, string filterExpression = null, string selectedFields = null, string sortOrder = null, string times = null, string timeZone = null)
 		{
 			List<string> time = ExtensionMethods.ConvertToList(times);
@@ -430,12 +478,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimedValues)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimedValues)));
 		}
 
+		/// <summary>Retrieves values over the specified time range suitable for plotting over the number of intervals (typically represents pixels).</summary>
 		public PITimedValues GetPlot(string webId, int intervals, string desiredUnits = null, string endTime = null, string selectedFields = null, string startTime = null, string timeZone = null)
 		{
 			ApiResponsePITimedValues localVarResponse = GetPlotWithHttpInfo(webId, intervals, desiredUnits, endTime, selectedFields, startTime, timeZone);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieves values over the specified time range suitable for plotting over the number of intervals (typically represents pixels).</summary>
 		public ApiResponsePITimedValues GetPlotWithHttpInfo(string webId, int intervals, string desiredUnits = null, string endTime = null, string selectedFields = null, string startTime = null, string timeZone = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -512,12 +562,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimedValues)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimedValues)));
 		}
 
+		/// <summary>Returns a list of compressed values for the requested time range from the source provider.</summary>
 		public PITimedValues GetRecorded(string webId, bool includeFilteredValues, int maxCount, string boundaryType = null, string desiredUnits = null, string endTime = null, string filterExpression = null, string selectedFields = null, string startTime = null, string timeZone = null)
 		{
 			ApiResponsePITimedValues localVarResponse = GetRecordedWithHttpInfo(webId, includeFilteredValues, maxCount, boundaryType, desiredUnits, endTime, filterExpression, selectedFields, startTime, timeZone);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Returns a list of compressed values for the requested time range from the source provider.</summary>
 		public ApiResponsePITimedValues GetRecordedWithHttpInfo(string webId, bool includeFilteredValues, int maxCount, string boundaryType = null, string desiredUnits = null, string endTime = null, string filterExpression = null, string selectedFields = null, string startTime = null, string timeZone = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -605,12 +657,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimedValues)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimedValues)));
 		}
 
+		/// <summary>Updates multiple values for the specified stream.</summary>
 		public PIItemsSubstatus UpdateValues(string webId, PIStreamValues values, string bufferOption = null, string updateOption = null)
 		{
 			ApiResponsePIItemsSubstatus localVarResponse = UpdateValuesWithHttpInfo(webId, values, bufferOption, updateOption);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Updates multiple values for the specified stream.</summary>
 		public ApiResponsePIItemsSubstatus UpdateValuesWithHttpInfo(string webId, PIStreamValues values, string bufferOption = null, string updateOption = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -681,12 +735,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSubstatus)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSubstatus)));
 		}
 
+		/// <summary>Returns a single recorded value based on the passed time and retrieval mode from the stream.</summary>
 		public PITimedValue GetRecordedAtTime(string webId, string time, string desiredUnits = null, string retrievalMode = null, string selectedFields = null, string timeZone = null)
 		{
 			ApiResponsePITimedValue localVarResponse = GetRecordedAtTimeWithHttpInfo(webId, time, desiredUnits, retrievalMode, selectedFields, timeZone);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Returns a single recorded value based on the passed time and retrieval mode from the stream.</summary>
 		public ApiResponsePITimedValue GetRecordedAtTimeWithHttpInfo(string webId, string time, string desiredUnits = null, string retrievalMode = null, string selectedFields = null, string timeZone = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -764,12 +820,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimedValue)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimedValue)));
 		}
 
+		/// <summary>Retrieves recorded values at the specified times.</summary>
 		public PITimedValues GetRecordedAtTimes(string webId, string desiredUnits = null, string retrievalMode = null, string selectedFields = null, string sortOrder = null, string times = null, string timeZone = null)
 		{
 			ApiResponsePITimedValues localVarResponse = GetRecordedAtTimesWithHttpInfo(webId, desiredUnits, retrievalMode, selectedFields, sortOrder, times, timeZone);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieves recorded values at the specified times.</summary>
 		public ApiResponsePITimedValues GetRecordedAtTimesWithHttpInfo(string webId, string desiredUnits = null, string retrievalMode = null, string selectedFields = null, string sortOrder = null, string times = null, string timeZone = null)
 		{
 			List<string> time = ExtensionMethods.ConvertToList(times);
@@ -847,12 +905,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimedValues)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimedValues)));
 		}
 
+		/// <summary>Returns a summary over the specified time range for the stream.</summary>
 		public PIItemsSummaryValue GetSummary(string webId, string calculationBasis = null, string endTime = null, string filterExpression = null, string sampleInterval = null, string sampleType = null, string selectedFields = null, string startTime = null, string summaryDuration = null, string summaryTypes = null, string timeType = null, string timeZone = null)
 		{
 			ApiResponsePIItemsSummaryValue localVarResponse = GetSummaryWithHttpInfo(webId, calculationBasis, endTime, filterExpression, sampleInterval, sampleType, selectedFields, startTime, summaryDuration, summaryTypes, timeType, timeZone);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Returns a summary over the specified time range for the stream.</summary>
 		public ApiResponsePIItemsSummaryValue GetSummaryWithHttpInfo(string webId, string calculationBasis = null, string endTime = null, string filterExpression = null, string sampleInterval = null, string sampleType = null, string selectedFields = null, string startTime = null, string summaryDuration = null, string summaryTypes = null, string timeType = null, string timeZone = null)
 		{
 			List<string> summaryType = ExtensionMethods.ConvertToList(summaryTypes);
@@ -955,12 +1015,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSummaryValue)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSummaryValue)));
 		}
 
+		/// <summary>Returns the value of the stream at the specified time. By default, this is usually the current value.</summary>
 		public PITimedValue GetValue(string webId, string desiredUnits = null, string selectedFields = null, string time = null, string timeZone = null)
 		{
 			ApiResponsePITimedValue localVarResponse = GetValueWithHttpInfo(webId, desiredUnits, selectedFields, time, timeZone);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Returns the value of the stream at the specified time. By default, this is usually the current value.</summary>
 		public ApiResponsePITimedValue GetValueWithHttpInfo(string webId, string desiredUnits = null, string selectedFields = null, string time = null, string timeZone = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1031,12 +1093,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimedValue)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimedValue)));
 		}
 
+		/// <summary>Updates a value for the specified stream.</summary>
 		public Object UpdateValue(string webId, PITimedValue value, string bufferOption = null, string updateOption = null)
 		{
 			ApiResponseObject localVarResponse = UpdateValueWithHttpInfo(webId, value, bufferOption, updateOption);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Updates a value for the specified stream.</summary>
 		public ApiResponseObject UpdateValueWithHttpInfo(string webId, PITimedValue value, string bufferOption = null, string updateOption = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

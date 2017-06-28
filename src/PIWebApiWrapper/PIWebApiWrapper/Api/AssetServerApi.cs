@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,143 +27,185 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("FAE3514F-1C30-4B3C-8C7F-E10D5802964B")]
+	[Guid("D1093EDB-1058-44E0-BFDD-37E0978A78F8")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IAssetServerApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve a list of all Asset Servers known to this service.</summary>
 		[DispId(1)]
 		PIItemsAssetServer List(string selectedFields = null);
 
+		/// <summary>Retrieve a list of all Asset Servers known to this service.</summary>
 		[DispId(2)]
 		ApiResponsePIItemsAssetServer ListWithHttpInfo(string selectedFields = null);
 
+		/// <summary>Retrieve an Asset Server by name.</summary>
 		[DispId(3)]
 		PIAssetServer GetByName(string name, string selectedFields = null);
 
+		/// <summary>Retrieve an Asset Server by name.</summary>
 		[DispId(4)]
 		ApiResponsePIAssetServer GetByNameWithHttpInfo(string name, string selectedFields = null);
 
+		/// <summary>Retrieve an Asset Server by path.</summary>
 		[DispId(5)]
 		PIAssetServer GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an Asset Server by path.</summary>
 		[DispId(6)]
 		ApiResponsePIAssetServer GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an Asset Server.</summary>
 		[DispId(7)]
 		PIAssetServer Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an Asset Server.</summary>
 		[DispId(8)]
 		ApiResponsePIAssetServer GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a list of all Analysis Rule Plug-in's.</summary>
 		[DispId(9)]
 		PIItemsAnalysisRulePlugIn GetAnalysisRulePlugIns(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a list of all Analysis Rule Plug-in's.</summary>
 		[DispId(10)]
 		ApiResponsePIItemsAnalysisRulePlugIn GetAnalysisRulePlugInsWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a list of all Asset Databases on the specified Asset Server.</summary>
 		[DispId(11)]
 		PIItemsAssetDatabase GetDatabases(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a list of all Asset Databases on the specified Asset Server.</summary>
 		[DispId(12)]
 		ApiResponsePIItemsAssetDatabase GetDatabasesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create an asset database.</summary>
 		[DispId(13)]
 		Object CreateAssetDatabase(string webId, PIAssetDatabase database);
 
+		/// <summary>Create an asset database.</summary>
 		[DispId(14)]
 		ApiResponseObject CreateAssetDatabaseWithHttpInfo(string webId, PIAssetDatabase database);
 
+		/// <summary>Get the security information of the specified security item associated with the asset server for a specified user.</summary>
 		[DispId(15)]
 		PIItemsSecurityRights GetSecurity(string webId, string securityItems, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Get the security information of the specified security item associated with the asset server for a specified user.</summary>
 		[DispId(16)]
 		ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string securityItems, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries of the specified security item associated with the asset server based on the specified criteria. By default, all security entries for this asset server are returned.</summary>
 		[DispId(17)]
 		PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string securityItem = null, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries of the specified security item associated with the asset server based on the specified criteria. By default, all security entries for this asset server are returned.</summary>
 		[DispId(18)]
 		ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string securityItem = null, string selectedFields = null);
 
+		/// <summary>Create a security entry owned by the asset server.</summary>
 		[DispId(19)]
 		Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Create a security entry owned by the asset server.</summary>
 		[DispId(20)]
 		ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Retrieve the security entry of the specified security item associated with the asset server with the specified name.</summary>
 		[DispId(21)]
 		PISecurityEntry GetSecurityEntryByName(string name, string webId, string securityItem = null, string selectedFields = null);
 
+		/// <summary>Retrieve the security entry of the specified security item associated with the asset server with the specified name.</summary>
 		[DispId(22)]
 		ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string securityItem = null, string selectedFields = null);
 
+		/// <summary>Update a security entry owned by the asset server.</summary>
 		[DispId(23)]
 		Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Update a security entry owned by the asset server.</summary>
 		[DispId(24)]
 		ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Delete a security entry owned by the asset server.</summary>
 		[DispId(25)]
 		Object DeleteSecurityEntry(string name, string webId, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Delete a security entry owned by the asset server.</summary>
 		[DispId(26)]
 		ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Retrieve security identities based on the specified criteria. By default, all security identities in the specified Asset Server are returned.</summary>
 		[DispId(27)]
 		PIItemsSecurityIdentity GetSecurityIdentities(string webId, int maxCount, string field = null, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Retrieve security identities based on the specified criteria. By default, all security identities in the specified Asset Server are returned.</summary>
 		[DispId(28)]
 		ApiResponsePIItemsSecurityIdentity GetSecurityIdentitiesWithHttpInfo(string webId, int maxCount, string field = null, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Create a security identity.</summary>
 		[DispId(29)]
 		Object CreateSecurityIdentity(string webId, PISecurityIdentity securityIdentity);
 
+		/// <summary>Create a security identity.</summary>
 		[DispId(30)]
 		ApiResponseObject CreateSecurityIdentityWithHttpInfo(string webId, PISecurityIdentity securityIdentity);
 
+		/// <summary>Retrieve security identities for a specific user.</summary>
 		[DispId(31)]
 		PIItemsSecurityIdentity GetSecurityIdentitiesForUser(string webId, string userIdentity, string selectedFields = null);
 
+		/// <summary>Retrieve security identities for a specific user.</summary>
 		[DispId(32)]
 		ApiResponsePIItemsSecurityIdentity GetSecurityIdentitiesForUserWithHttpInfo(string webId, string userIdentity, string selectedFields = null);
 
+		/// <summary>Retrieve security mappings based on the specified criteria. By default, all security mappings in the specified Asset Server are returned.</summary>
 		[DispId(33)]
 		PIItemsSecurityMapping GetSecurityMappings(string webId, int maxCount, string field = null, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Retrieve security mappings based on the specified criteria. By default, all security mappings in the specified Asset Server are returned.</summary>
 		[DispId(34)]
 		ApiResponsePIItemsSecurityMapping GetSecurityMappingsWithHttpInfo(string webId, int maxCount, string field = null, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Create a security mapping.</summary>
 		[DispId(35)]
 		Object CreateSecurityMapping(string webId, PISecurityMapping securityMapping);
 
+		/// <summary>Create a security mapping.</summary>
 		[DispId(36)]
 		ApiResponseObject CreateSecurityMappingWithHttpInfo(string webId, PISecurityMapping securityMapping);
 
+		/// <summary>Retrieve a list of all Time Rule Plug-in's.</summary>
 		[DispId(37)]
 		PIItemsTimeRulePlugIn GetTimeRulePlugIns(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a list of all Time Rule Plug-in's.</summary>
 		[DispId(38)]
 		ApiResponsePIItemsTimeRulePlugIn GetTimeRulePlugInsWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a list of all unit classes on the specified Asset Server.</summary>
 		[DispId(39)]
 		PIItemsUnitClass GetUnitClasses(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a list of all unit classes on the specified Asset Server.</summary>
 		[DispId(40)]
 		ApiResponsePIItemsUnitClass GetUnitClassesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create a unit class in the specified Asset Server.</summary>
 		[DispId(41)]
 		Object CreateUnitClass(string webId, PIUnitClass unitClass);
 
+		/// <summary>Create a unit class in the specified Asset Server.</summary>
 		[DispId(42)]
 		ApiResponseObject CreateUnitClassWithHttpInfo(string webId, PIUnitClass unitClass);
 
 		#endregion
 	}
 
-	[Guid("3BA5A617-6525-46DE-BB8D-58FA59A41615")]
+	[Guid("F3257063-3274-4F48-BE3B-7ADCC0A9975A")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IAssetServerApi))]
@@ -185,12 +243,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve a list of all Asset Servers known to this service.</summary>
 		public PIItemsAssetServer List(string selectedFields = null)
 		{
 			ApiResponsePIItemsAssetServer localVarResponse = ListWithHttpInfo(selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a list of all Asset Servers known to this service.</summary>
 		public ApiResponsePIItemsAssetServer ListWithHttpInfo(string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(selectedFields)==true)
@@ -239,12 +299,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAssetServer)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAssetServer)));
 		}
 
+		/// <summary>Retrieve an Asset Server by name.</summary>
 		public PIAssetServer GetByName(string name, string selectedFields = null)
 		{
 			ApiResponsePIAssetServer localVarResponse = GetByNameWithHttpInfo(name, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an Asset Server by name.</summary>
 		public ApiResponsePIAssetServer GetByNameWithHttpInfo(string name, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -300,12 +362,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAssetServer)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAssetServer)));
 		}
 
+		/// <summary>Retrieve an Asset Server by path.</summary>
 		public PIAssetServer GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIAssetServer localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an Asset Server by path.</summary>
 		public ApiResponsePIAssetServer GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -361,12 +425,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAssetServer)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAssetServer)));
 		}
 
+		/// <summary>Retrieve an Asset Server.</summary>
 		public PIAssetServer Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIAssetServer localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an Asset Server.</summary>
 		public ApiResponsePIAssetServer GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -422,12 +488,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAssetServer)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAssetServer)));
 		}
 
+		/// <summary>Retrieve a list of all Analysis Rule Plug-in's.</summary>
 		public PIItemsAnalysisRulePlugIn GetAnalysisRulePlugIns(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsAnalysisRulePlugIn localVarResponse = GetAnalysisRulePlugInsWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a list of all Analysis Rule Plug-in's.</summary>
 		public ApiResponsePIItemsAnalysisRulePlugIn GetAnalysisRulePlugInsWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -483,12 +551,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAnalysisRulePlugIn)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAnalysisRulePlugIn)));
 		}
 
+		/// <summary>Retrieve a list of all Asset Databases on the specified Asset Server.</summary>
 		public PIItemsAssetDatabase GetDatabases(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsAssetDatabase localVarResponse = GetDatabasesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a list of all Asset Databases on the specified Asset Server.</summary>
 		public ApiResponsePIItemsAssetDatabase GetDatabasesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -544,12 +614,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAssetDatabase)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAssetDatabase)));
 		}
 
+		/// <summary>Create an asset database.</summary>
 		public Object CreateAssetDatabase(string webId, PIAssetDatabase database)
 		{
 			ApiResponseObject localVarResponse = CreateAssetDatabaseWithHttpInfo(webId, database);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an asset database.</summary>
 		public ApiResponseObject CreateAssetDatabaseWithHttpInfo(string webId, PIAssetDatabase database)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -610,12 +682,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the asset server for a specified user.</summary>
 		public PIItemsSecurityRights GetSecurity(string webId, string securityItems, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityRights localVarResponse = GetSecurityWithHttpInfo(webId, securityItems, userIdentities, forceRefresh, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the asset server for a specified user.</summary>
 		public ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string securityItems, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			List<string> securityItem = ExtensionMethods.ConvertToList(securityItems);
@@ -676,12 +750,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityRights)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityRights)));
 		}
 
+		/// <summary>Retrieve the security entries of the specified security item associated with the asset server based on the specified criteria. By default, all security entries for this asset server are returned.</summary>
 		public PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string securityItem = null, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityEntry localVarResponse = GetSecurityEntriesWithHttpInfo(webId, nameFilter, securityItem, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entries of the specified security item associated with the asset server based on the specified criteria. By default, all security entries for this asset server are returned.</summary>
 		public ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string securityItem = null, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -747,12 +823,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityEntry)));
 		}
 
+		/// <summary>Create a security entry owned by the asset server.</summary>
 		public Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null)
 		{
 			ApiResponseObject localVarResponse = CreateSecurityEntryWithHttpInfo(webId, securityEntry, applyToChildren, securityItem);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a security entry owned by the asset server.</summary>
 		public ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -819,12 +897,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve the security entry of the specified security item associated with the asset server with the specified name.</summary>
 		public PISecurityEntry GetSecurityEntryByName(string name, string webId, string securityItem = null, string selectedFields = null)
 		{
 			ApiResponsePISecurityEntry localVarResponse = GetSecurityEntryByNameWithHttpInfo(name, webId, securityItem, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entry of the specified security item associated with the asset server with the specified name.</summary>
 		public ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string securityItem = null, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -892,12 +972,14 @@ namespace PIWebAPIWrapper.Api
 				(PISecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PISecurityEntry)));
 		}
 
+		/// <summary>Update a security entry owned by the asset server.</summary>
 		public Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null)
 		{
 			ApiResponseObject localVarResponse = UpdateSecurityEntryWithHttpInfo(name, webId, securityEntry, applyToChildren, securityItem);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update a security entry owned by the asset server.</summary>
 		public ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -971,12 +1053,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a security entry owned by the asset server.</summary>
 		public Object DeleteSecurityEntry(string name, string webId, bool applyToChildren, string securityItem = null)
 		{
 			ApiResponseObject localVarResponse = DeleteSecurityEntryWithHttpInfo(name, webId, applyToChildren, securityItem);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a security entry owned by the asset server.</summary>
 		public ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren, string securityItem = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -1040,12 +1124,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve security identities based on the specified criteria. By default, all security identities in the specified Asset Server are returned.</summary>
 		public PIItemsSecurityIdentity GetSecurityIdentities(string webId, int maxCount, string field = null, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			ApiResponsePIItemsSecurityIdentity localVarResponse = GetSecurityIdentitiesWithHttpInfo(webId, maxCount, field, query, selectedFields, sortField, sortOrder);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve security identities based on the specified criteria. By default, all security identities in the specified Asset Server are returned.</summary>
 		public ApiResponsePIItemsSecurityIdentity GetSecurityIdentitiesWithHttpInfo(string webId, int maxCount, string field = null, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1122,12 +1208,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityIdentity)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityIdentity)));
 		}
 
+		/// <summary>Create a security identity.</summary>
 		public Object CreateSecurityIdentity(string webId, PISecurityIdentity securityIdentity)
 		{
 			ApiResponseObject localVarResponse = CreateSecurityIdentityWithHttpInfo(webId, securityIdentity);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a security identity.</summary>
 		public ApiResponseObject CreateSecurityIdentityWithHttpInfo(string webId, PISecurityIdentity securityIdentity)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1188,12 +1276,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve security identities for a specific user.</summary>
 		public PIItemsSecurityIdentity GetSecurityIdentitiesForUser(string webId, string userIdentity, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityIdentity localVarResponse = GetSecurityIdentitiesForUserWithHttpInfo(webId, userIdentity, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve security identities for a specific user.</summary>
 		public ApiResponsePIItemsSecurityIdentity GetSecurityIdentitiesForUserWithHttpInfo(string webId, string userIdentity, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1256,12 +1346,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityIdentity)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityIdentity)));
 		}
 
+		/// <summary>Retrieve security mappings based on the specified criteria. By default, all security mappings in the specified Asset Server are returned.</summary>
 		public PIItemsSecurityMapping GetSecurityMappings(string webId, int maxCount, string field = null, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			ApiResponsePIItemsSecurityMapping localVarResponse = GetSecurityMappingsWithHttpInfo(webId, maxCount, field, query, selectedFields, sortField, sortOrder);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve security mappings based on the specified criteria. By default, all security mappings in the specified Asset Server are returned.</summary>
 		public ApiResponsePIItemsSecurityMapping GetSecurityMappingsWithHttpInfo(string webId, int maxCount, string field = null, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1338,12 +1430,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityMapping)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityMapping)));
 		}
 
+		/// <summary>Create a security mapping.</summary>
 		public Object CreateSecurityMapping(string webId, PISecurityMapping securityMapping)
 		{
 			ApiResponseObject localVarResponse = CreateSecurityMappingWithHttpInfo(webId, securityMapping);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a security mapping.</summary>
 		public ApiResponseObject CreateSecurityMappingWithHttpInfo(string webId, PISecurityMapping securityMapping)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1404,12 +1498,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve a list of all Time Rule Plug-in's.</summary>
 		public PIItemsTimeRulePlugIn GetTimeRulePlugIns(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsTimeRulePlugIn localVarResponse = GetTimeRulePlugInsWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a list of all Time Rule Plug-in's.</summary>
 		public ApiResponsePIItemsTimeRulePlugIn GetTimeRulePlugInsWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1465,12 +1561,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsTimeRulePlugIn)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsTimeRulePlugIn)));
 		}
 
+		/// <summary>Retrieve a list of all unit classes on the specified Asset Server.</summary>
 		public PIItemsUnitClass GetUnitClasses(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsUnitClass localVarResponse = GetUnitClassesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a list of all unit classes on the specified Asset Server.</summary>
 		public ApiResponsePIItemsUnitClass GetUnitClassesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1526,12 +1624,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsUnitClass)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsUnitClass)));
 		}
 
+		/// <summary>Create a unit class in the specified Asset Server.</summary>
 		public Object CreateUnitClass(string webId, PIUnitClass unitClass)
 		{
 			ApiResponseObject localVarResponse = CreateUnitClassWithHttpInfo(webId, unitClass);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a unit class in the specified Asset Server.</summary>
 		public ApiResponseObject CreateUnitClassWithHttpInfo(string webId, PIUnitClass unitClass)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

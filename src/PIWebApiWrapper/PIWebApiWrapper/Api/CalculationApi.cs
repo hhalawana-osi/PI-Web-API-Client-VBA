@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,41 +27,49 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("40B4F84C-CE75-44EA-AA74-362B6C5058EA")]
+	[Guid("F3D0A38A-957C-4F74-9359-6EEA3B596B96")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface ICalculationApi
 	{
 		#region Synchronous Operations
+		/// <summary>Returns results of evaluating the expression over the time range from the start time to the end time at a defined interval.</summary>
 		[DispId(1)]
 		PITimedValues GetAtIntervals(string endTime = null, string expression = null, string sampleInterval = null, string selectedFields = null, string startTime = null, string webId = null);
 
+		/// <summary>Returns results of evaluating the expression over the time range from the start time to the end time at a defined interval.</summary>
 		[DispId(2)]
 		ApiResponsePITimedValues GetAtIntervalsWithHttpInfo(string endTime = null, string expression = null, string sampleInterval = null, string selectedFields = null, string startTime = null, string webId = null);
 
+		/// <summary>Returns the result of evaluating the expression at each point in time over the time range from the start time to the end time where a recorded value exists for a member of the expression.</summary>
 		[DispId(3)]
 		PITimedValues GetAtRecorded(string endTime = null, string expression = null, string selectedFields = null, string startTime = null, string webId = null);
 
+		/// <summary>Returns the result of evaluating the expression at each point in time over the time range from the start time to the end time where a recorded value exists for a member of the expression.</summary>
 		[DispId(4)]
 		ApiResponsePITimedValues GetAtRecordedWithHttpInfo(string endTime = null, string expression = null, string selectedFields = null, string startTime = null, string webId = null);
 
+		/// <summary>Returns the result of evaluating the expression over the time range from the start time to the end time. The time range is first divided into a number of summary intervals. Then the calculation is performed for the specified summaries over each interval.</summary>
 		[DispId(5)]
 		PIItemsSummaryValue GetSummary(string calculationBasis = null, string endTime = null, string expression = null, string sampleInterval = null, string sampleType = null, string selectedFields = null, string startTime = null, string summaryDuration = null, string summaryTypes = null, string timeType = null, string webId = null);
 
+		/// <summary>Returns the result of evaluating the expression over the time range from the start time to the end time. The time range is first divided into a number of summary intervals. Then the calculation is performed for the specified summaries over each interval.</summary>
 		[DispId(6)]
 		ApiResponsePIItemsSummaryValue GetSummaryWithHttpInfo(string calculationBasis = null, string endTime = null, string expression = null, string sampleInterval = null, string sampleType = null, string selectedFields = null, string startTime = null, string summaryDuration = null, string summaryTypes = null, string timeType = null, string webId = null);
 
+		/// <summary>Returns the result of evaluating the expression at the specified timestamps.</summary>
 		[DispId(7)]
 		PITimedValues GetAtTimes(string expression = null, string selectedFields = null, string sortOrder = null, string times = null, string webId = null);
 
+		/// <summary>Returns the result of evaluating the expression at the specified timestamps.</summary>
 		[DispId(8)]
 		ApiResponsePITimedValues GetAtTimesWithHttpInfo(string expression = null, string selectedFields = null, string sortOrder = null, string times = null, string webId = null);
 
 		#endregion
 	}
 
-	[Guid("E8959297-C344-4DF8-9DA1-6048944BD0CB")]
+	[Guid("6CACD736-98E6-4CDD-9464-408D043F95ED")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(ICalculationApi))]
@@ -83,12 +107,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Returns results of evaluating the expression over the time range from the start time to the end time at a defined interval.</summary>
 		public PITimedValues GetAtIntervals(string endTime = null, string expression = null, string sampleInterval = null, string selectedFields = null, string startTime = null, string webId = null)
 		{
 			ApiResponsePITimedValues localVarResponse = GetAtIntervalsWithHttpInfo(endTime, expression, sampleInterval, selectedFields, startTime, webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Returns results of evaluating the expression over the time range from the start time to the end time at a defined interval.</summary>
 		public ApiResponsePITimedValues GetAtIntervalsWithHttpInfo(string endTime = null, string expression = null, string sampleInterval = null, string selectedFields = null, string startTime = null, string webId = null)
 		{
 			if (string.IsNullOrEmpty(endTime)==true)
@@ -162,12 +188,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimedValues)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimedValues)));
 		}
 
+		/// <summary>Returns the result of evaluating the expression at each point in time over the time range from the start time to the end time where a recorded value exists for a member of the expression.</summary>
 		public PITimedValues GetAtRecorded(string endTime = null, string expression = null, string selectedFields = null, string startTime = null, string webId = null)
 		{
 			ApiResponsePITimedValues localVarResponse = GetAtRecordedWithHttpInfo(endTime, expression, selectedFields, startTime, webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Returns the result of evaluating the expression at each point in time over the time range from the start time to the end time where a recorded value exists for a member of the expression.</summary>
 		public ApiResponsePITimedValues GetAtRecordedWithHttpInfo(string endTime = null, string expression = null, string selectedFields = null, string startTime = null, string webId = null)
 		{
 			if (string.IsNullOrEmpty(endTime)==true)
@@ -236,12 +264,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimedValues)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimedValues)));
 		}
 
+		/// <summary>Returns the result of evaluating the expression over the time range from the start time to the end time. The time range is first divided into a number of summary intervals. Then the calculation is performed for the specified summaries over each interval.</summary>
 		public PIItemsSummaryValue GetSummary(string calculationBasis = null, string endTime = null, string expression = null, string sampleInterval = null, string sampleType = null, string selectedFields = null, string startTime = null, string summaryDuration = null, string summaryTypes = null, string timeType = null, string webId = null)
 		{
 			ApiResponsePIItemsSummaryValue localVarResponse = GetSummaryWithHttpInfo(calculationBasis, endTime, expression, sampleInterval, sampleType, selectedFields, startTime, summaryDuration, summaryTypes, timeType, webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Returns the result of evaluating the expression over the time range from the start time to the end time. The time range is first divided into a number of summary intervals. Then the calculation is performed for the specified summaries over each interval.</summary>
 		public ApiResponsePIItemsSummaryValue GetSummaryWithHttpInfo(string calculationBasis = null, string endTime = null, string expression = null, string sampleInterval = null, string sampleType = null, string selectedFields = null, string startTime = null, string summaryDuration = null, string summaryTypes = null, string timeType = null, string webId = null)
 		{
 			List<string> summaryType = ExtensionMethods.ConvertToList(summaryTypes);
@@ -337,12 +367,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSummaryValue)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSummaryValue)));
 		}
 
+		/// <summary>Returns the result of evaluating the expression at the specified timestamps.</summary>
 		public PITimedValues GetAtTimes(string expression = null, string selectedFields = null, string sortOrder = null, string times = null, string webId = null)
 		{
 			ApiResponsePITimedValues localVarResponse = GetAtTimesWithHttpInfo(expression, selectedFields, sortOrder, times, webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Returns the result of evaluating the expression at the specified timestamps.</summary>
 		public ApiResponsePITimedValues GetAtTimesWithHttpInfo(string expression = null, string selectedFields = null, string sortOrder = null, string times = null, string webId = null)
 		{
 			List<string> time = ExtensionMethods.ConvertToList(times);

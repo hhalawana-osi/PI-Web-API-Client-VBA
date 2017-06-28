@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,173 +27,225 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("EBB1ED64-1CD9-4071-B3D4-6BA73E360401")]
+	[Guid("92F6B27B-B3B4-4C95-BA70-1D1EDC15B0A1")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IElementApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve an element by path.</summary>
 		[DispId(1)]
 		PIElement GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an element by path.</summary>
 		[DispId(2)]
 		ApiResponsePIElement GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an element.</summary>
 		[DispId(3)]
 		PIElement Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an element.</summary>
 		[DispId(4)]
 		ApiResponsePIElement GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update an element by replacing items in its definition.</summary>
 		[DispId(5)]
 		Object Update(string webId, PIElement element);
 
+		/// <summary>Update an element by replacing items in its definition.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PIElement element);
 
+		/// <summary>Delete an element.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete an element.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
+		/// <summary>Retrieve analyses based on the specified conditions.</summary>
 		[DispId(9)]
 		PIItemsAnalysis GetAnalyses(string webId, int maxCount, int startIndex, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Retrieve analyses based on the specified conditions.</summary>
 		[DispId(10)]
 		ApiResponsePIItemsAnalysis GetAnalysesWithHttpInfo(string webId, int maxCount, int startIndex, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Create an Analysis.</summary>
 		[DispId(11)]
 		Object CreateAnalysis(string webId, PIAnalysis analysis);
 
+		/// <summary>Create an Analysis.</summary>
 		[DispId(12)]
 		ApiResponseObject CreateAnalysisWithHttpInfo(string webId, PIAnalysis analysis);
 
+		/// <summary>Get the attributes of the specified element.</summary>
 		[DispId(13)]
 		PIItemsAttribute GetAttributes(string webId, int maxCount, bool searchFullHierarchy, bool showExcluded, bool showHidden, int startIndex, string categoryName = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null, string valueType = null);
 
+		/// <summary>Get the attributes of the specified element.</summary>
 		[DispId(14)]
 		ApiResponsePIItemsAttribute GetAttributesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, bool showExcluded, bool showHidden, int startIndex, string categoryName = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null, string valueType = null);
 
+		/// <summary>Create a new attribute of the specified element.</summary>
 		[DispId(15)]
 		Object CreateAttribute(string webId, PIAttribute attribute);
 
+		/// <summary>Create a new attribute of the specified element.</summary>
 		[DispId(16)]
 		ApiResponseObject CreateAttributeWithHttpInfo(string webId, PIAttribute attribute);
 
+		/// <summary>Get an element's categories.</summary>
 		[DispId(17)]
 		PIItemsElementCategory GetCategories(string webId, string selectedFields = null);
 
+		/// <summary>Get an element's categories.</summary>
 		[DispId(18)]
 		ApiResponsePIItemsElementCategory GetCategoriesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Executes the create configuration function of the data references found within the attributes of the element, and optionally, its children.</summary>
 		[DispId(19)]
 		Object CreateConfig(string webId, bool includeChildElements);
 
+		/// <summary>Executes the create configuration function of the data references found within the attributes of the element, and optionally, its children.</summary>
 		[DispId(20)]
 		ApiResponseObject CreateConfigWithHttpInfo(string webId, bool includeChildElements);
 
+		/// <summary>Retrieves a list of element attributes matching the specified filters from the specified element.</summary>
 		[DispId(21)]
 		PIItemsAttribute FindElementAttributes(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string elementCategory = null, string elementDescriptionFilter = null, string elementNameFilter = null, string elementTemplate = null, string elementType = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Retrieves a list of element attributes matching the specified filters from the specified element.</summary>
 		[DispId(22)]
 		ApiResponsePIItemsAttribute FindElementAttributesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string elementCategory = null, string elementDescriptionFilter = null, string elementNameFilter = null, string elementTemplate = null, string elementType = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Retrieve elements based on the specified conditions. By default, this method selects immediate children of the specified element.</summary>
 		[DispId(23)]
 		PIItemsElement GetElements(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null);
 
+		/// <summary>Retrieve elements based on the specified conditions. By default, this method selects immediate children of the specified element.</summary>
 		[DispId(24)]
 		ApiResponsePIItemsElement GetElementsWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null);
 
+		/// <summary>Create a child element.</summary>
 		[DispId(25)]
 		Object CreateElement(string webId, PIElement element);
 
+		/// <summary>Create a child element.</summary>
 		[DispId(26)]
 		ApiResponseObject CreateElementWithHttpInfo(string webId, PIElement element);
 
+		/// <summary>Retrieve event frames that reference this element based on the specified conditions. By default, returns all event frames that reference this element with a start time in the past 8 hours.</summary>
 		[DispId(27)]
 		PIItemsEventFrame GetEventFrames(string webId, bool canBeAcknowledged, bool isAcknowledged, int maxCount, int startIndex, string categoryName = null, string endTime = null, string nameFilter = null, string searchMode = null, string selectedFields = null, string severities = null, string sortField = null, string sortOrder = null, string startTime = null, string templateName = null);
 
+		/// <summary>Retrieve event frames that reference this element based on the specified conditions. By default, returns all event frames that reference this element with a start time in the past 8 hours.</summary>
 		[DispId(28)]
 		ApiResponsePIItemsEventFrame GetEventFramesWithHttpInfo(string webId, bool canBeAcknowledged, bool isAcknowledged, int maxCount, int startIndex, string categoryName = null, string endTime = null, string nameFilter = null, string searchMode = null, string selectedFields = null, string severities = null, string sortField = null, string sortOrder = null, string startTime = null, string templateName = null);
 
+		/// <summary>Retrieve referenced elements based on the specified conditions. By default, this method selects all referenced elements of the current resource.</summary>
 		[DispId(29)]
 		PIItemsElement GetReferencedElements(string webId, int maxCount, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null);
 
+		/// <summary>Retrieve referenced elements based on the specified conditions. By default, this method selects all referenced elements of the current resource.</summary>
 		[DispId(30)]
 		ApiResponsePIItemsElement GetReferencedElementsWithHttpInfo(string webId, int maxCount, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null);
 
+		/// <summary>Add a reference to an existing element to the child elements collection.</summary>
 		[DispId(31)]
 		Object AddReferencedElement(string webId, string referencedElementWebIds, string referenceType = null);
 
+		/// <summary>Add a reference to an existing element to the child elements collection.</summary>
 		[DispId(32)]
 		ApiResponseObject AddReferencedElementWithHttpInfo(string webId, string referencedElementWebIds, string referenceType = null);
 
+		/// <summary>Remove a reference to an existing element from the child elements collection.</summary>
 		[DispId(33)]
 		Object RemoveReferencedElement(string webId, string referencedElementWebIds);
 
+		/// <summary>Remove a reference to an existing element from the child elements collection.</summary>
 		[DispId(34)]
 		ApiResponseObject RemoveReferencedElementWithHttpInfo(string webId, string referencedElementWebIds);
 
+		/// <summary>Get the security information of the specified security item associated with the element for a specified user.</summary>
 		[DispId(35)]
 		PIItemsSecurityRights GetSecurity(string webId, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Get the security information of the specified security item associated with the element for a specified user.</summary>
 		[DispId(36)]
 		ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries associated with the element based on the specified criteria. By default, all security entries for this element are returned.</summary>
 		[DispId(37)]
 		PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries associated with the element based on the specified criteria. By default, all security entries for this element are returned.</summary>
 		[DispId(38)]
 		ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Create a security entry owned by the element.</summary>
 		[DispId(39)]
 		Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Create a security entry owned by the element.</summary>
 		[DispId(40)]
 		ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Retrieve the security entry associated with the element with the specified name.</summary>
 		[DispId(41)]
 		PISecurityEntry GetSecurityEntryByName(string name, string webId, string selectedFields = null);
 
+		/// <summary>Retrieve the security entry associated with the element with the specified name.</summary>
 		[DispId(42)]
 		ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string selectedFields = null);
 
+		/// <summary>Update a security entry owned by the element.</summary>
 		[DispId(43)]
 		Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Update a security entry owned by the element.</summary>
 		[DispId(44)]
 		ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Delete a security entry owned by the element.</summary>
 		[DispId(45)]
 		Object DeleteSecurityEntry(string name, string webId, bool applyToChildren);
 
+		/// <summary>Delete a security entry owned by the element.</summary>
 		[DispId(46)]
 		ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren);
 
+		/// <summary>Retrieve multiple elements by web id or path.</summary>
 		[DispId(47)]
 		PIItemsItemElement GetMultiple(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null);
 
+		/// <summary>Retrieve multiple elements by web id or path.</summary>
 		[DispId(48)]
 		ApiResponsePIItemsItemElement GetMultipleWithHttpInfo(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null);
 
+		/// <summary>Create a link for a "Search Elements By Attribute Value" operation, whose queries are specified in the request content. The SearchRoot is specified by the Web Id of the root Element. If the SearchRoot is not specified, then the search starts at the Asset Database. ElementTemplate must be provided as the Web ID of the ElementTemplate, which are used to create the Elements. All the attributes in the queries must be defined as AttributeTemplates on the ElementTemplate. An array of attribute value queries are ANDed together to find the desired Element objects. At least one value query must be specified. There are limitations on SearchOperators.</summary>
 		[DispId(49)]
 		Object CreateSearchByAttribute();
 
+		/// <summary>Create a link for a "Search Elements By Attribute Value" operation, whose queries are specified in the request content. The SearchRoot is specified by the Web Id of the root Element. If the SearchRoot is not specified, then the search starts at the Asset Database. ElementTemplate must be provided as the Web ID of the ElementTemplate, which are used to create the Elements. All the attributes in the queries must be defined as AttributeTemplates on the ElementTemplate. An array of attribute value queries are ANDed together to find the desired Element objects. At least one value query must be specified. There are limitations on SearchOperators.</summary>
 		[DispId(50)]
 		ApiResponseObject CreateSearchByAttributeWithHttpInfo();
 
+		/// <summary>Execute a "Search Elements By Attribute Value" operation.</summary>
 		[DispId(51)]
 		Object ExecuteSearchByAttribute(string searchId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Execute a "Search Elements By Attribute Value" operation.</summary>
 		[DispId(52)]
 		ApiResponseObject ExecuteSearchByAttributeWithHttpInfo(string searchId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
 		#endregion
 	}
 
-	[Guid("4D6E56A4-FEF9-4A0F-9C76-448E223F3EF8")]
+	[Guid("032C7FA6-C357-454B-BECC-284291BD404C")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IElementApi))]
@@ -215,12 +283,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve an element by path.</summary>
 		public PIElement GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIElement localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an element by path.</summary>
 		public ApiResponsePIElement GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -276,12 +346,14 @@ namespace PIWebAPIWrapper.Api
 				(PIElement)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIElement)));
 		}
 
+		/// <summary>Retrieve an element.</summary>
 		public PIElement Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIElement localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an element.</summary>
 		public ApiResponsePIElement GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -337,12 +409,14 @@ namespace PIWebAPIWrapper.Api
 				(PIElement)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIElement)));
 		}
 
+		/// <summary>Update an element by replacing items in its definition.</summary>
 		public Object Update(string webId, PIElement element)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, element);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update an element by replacing items in its definition.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PIElement element)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -403,12 +477,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete an element.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete an element.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -459,12 +535,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve analyses based on the specified conditions.</summary>
 		public PIItemsAnalysis GetAnalyses(string webId, int maxCount, int startIndex, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			ApiResponsePIItemsAnalysis localVarResponse = GetAnalysesWithHttpInfo(webId, maxCount, startIndex, selectedFields, sortField, sortOrder);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve analyses based on the specified conditions.</summary>
 		public ApiResponsePIItemsAnalysis GetAnalysesWithHttpInfo(string webId, int maxCount, int startIndex, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -532,12 +610,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAnalysis)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAnalysis)));
 		}
 
+		/// <summary>Create an Analysis.</summary>
 		public Object CreateAnalysis(string webId, PIAnalysis analysis)
 		{
 			ApiResponseObject localVarResponse = CreateAnalysisWithHttpInfo(webId, analysis);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an Analysis.</summary>
 		public ApiResponseObject CreateAnalysisWithHttpInfo(string webId, PIAnalysis analysis)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -598,12 +678,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get the attributes of the specified element.</summary>
 		public PIItemsAttribute GetAttributes(string webId, int maxCount, bool searchFullHierarchy, bool showExcluded, bool showHidden, int startIndex, string categoryName = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null, string valueType = null)
 		{
 			ApiResponsePIItemsAttribute localVarResponse = GetAttributesWithHttpInfo(webId, maxCount, searchFullHierarchy, showExcluded, showHidden, startIndex, categoryName, nameFilter, selectedFields, sortField, sortOrder, templateName, valueType);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the attributes of the specified element.</summary>
 		public ApiResponsePIItemsAttribute GetAttributesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, bool showExcluded, bool showHidden, int startIndex, string categoryName = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null, string valueType = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -694,12 +776,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAttribute)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAttribute)));
 		}
 
+		/// <summary>Create a new attribute of the specified element.</summary>
 		public Object CreateAttribute(string webId, PIAttribute attribute)
 		{
 			ApiResponseObject localVarResponse = CreateAttributeWithHttpInfo(webId, attribute);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a new attribute of the specified element.</summary>
 		public ApiResponseObject CreateAttributeWithHttpInfo(string webId, PIAttribute attribute)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -760,12 +844,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get an element's categories.</summary>
 		public PIItemsElementCategory GetCategories(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsElementCategory localVarResponse = GetCategoriesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get an element's categories.</summary>
 		public ApiResponsePIItemsElementCategory GetCategoriesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -821,12 +907,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsElementCategory)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsElementCategory)));
 		}
 
+		/// <summary>Executes the create configuration function of the data references found within the attributes of the element, and optionally, its children.</summary>
 		public Object CreateConfig(string webId, bool includeChildElements)
 		{
 			ApiResponseObject localVarResponse = CreateConfigWithHttpInfo(webId, includeChildElements);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Executes the create configuration function of the data references found within the attributes of the element, and optionally, its children.</summary>
 		public ApiResponseObject CreateConfigWithHttpInfo(string webId, bool includeChildElements)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -878,12 +966,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieves a list of element attributes matching the specified filters from the specified element.</summary>
 		public PIItemsAttribute FindElementAttributes(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string elementCategory = null, string elementDescriptionFilter = null, string elementNameFilter = null, string elementTemplate = null, string elementType = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			ApiResponsePIItemsAttribute localVarResponse = FindElementAttributesWithHttpInfo(webId, maxCount, searchFullHierarchy, startIndex, attributeCategory, attributeDescriptionFilter, attributeNameFilter, attributeType, elementCategory, elementDescriptionFilter, elementNameFilter, elementTemplate, elementType, selectedFields, sortField, sortOrder);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieves a list of element attributes matching the specified filters from the specified element.</summary>
 		public ApiResponsePIItemsAttribute FindElementAttributesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string elementCategory = null, string elementDescriptionFilter = null, string elementNameFilter = null, string elementTemplate = null, string elementType = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -997,12 +1087,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAttribute)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAttribute)));
 		}
 
+		/// <summary>Retrieve elements based on the specified conditions. By default, this method selects immediate children of the specified element.</summary>
 		public PIItemsElement GetElements(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null)
 		{
 			ApiResponsePIItemsElement localVarResponse = GetElementsWithHttpInfo(webId, maxCount, searchFullHierarchy, startIndex, categoryName, descriptionFilter, elementType, nameFilter, selectedFields, sortField, sortOrder, templateName);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve elements based on the specified conditions. By default, this method selects immediate children of the specified element.</summary>
 		public ApiResponsePIItemsElement GetElementsWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1096,12 +1188,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsElement)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsElement)));
 		}
 
+		/// <summary>Create a child element.</summary>
 		public Object CreateElement(string webId, PIElement element)
 		{
 			ApiResponseObject localVarResponse = CreateElementWithHttpInfo(webId, element);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a child element.</summary>
 		public ApiResponseObject CreateElementWithHttpInfo(string webId, PIElement element)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1162,12 +1256,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve event frames that reference this element based on the specified conditions. By default, returns all event frames that reference this element with a start time in the past 8 hours.</summary>
 		public PIItemsEventFrame GetEventFrames(string webId, bool canBeAcknowledged, bool isAcknowledged, int maxCount, int startIndex, string categoryName = null, string endTime = null, string nameFilter = null, string searchMode = null, string selectedFields = null, string severities = null, string sortField = null, string sortOrder = null, string startTime = null, string templateName = null)
 		{
 			ApiResponsePIItemsEventFrame localVarResponse = GetEventFramesWithHttpInfo(webId, canBeAcknowledged, isAcknowledged, maxCount, startIndex, categoryName, endTime, nameFilter, searchMode, selectedFields, severities, sortField, sortOrder, startTime, templateName);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve event frames that reference this element based on the specified conditions. By default, returns all event frames that reference this element with a start time in the past 8 hours.</summary>
 		public ApiResponsePIItemsEventFrame GetEventFramesWithHttpInfo(string webId, bool canBeAcknowledged, bool isAcknowledged, int maxCount, int startIndex, string categoryName = null, string endTime = null, string nameFilter = null, string searchMode = null, string selectedFields = null, string severities = null, string sortField = null, string sortOrder = null, string startTime = null, string templateName = null)
 		{
 			List<string> severity = ExtensionMethods.ConvertToList(severities);
@@ -1269,12 +1365,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsEventFrame)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsEventFrame)));
 		}
 
+		/// <summary>Retrieve referenced elements based on the specified conditions. By default, this method selects all referenced elements of the current resource.</summary>
 		public PIItemsElement GetReferencedElements(string webId, int maxCount, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null)
 		{
 			ApiResponsePIItemsElement localVarResponse = GetReferencedElementsWithHttpInfo(webId, maxCount, startIndex, categoryName, descriptionFilter, elementType, nameFilter, selectedFields, sortField, sortOrder, templateName);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve referenced elements based on the specified conditions. By default, this method selects all referenced elements of the current resource.</summary>
 		public ApiResponsePIItemsElement GetReferencedElementsWithHttpInfo(string webId, int maxCount, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1367,12 +1465,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsElement)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsElement)));
 		}
 
+		/// <summary>Add a reference to an existing element to the child elements collection.</summary>
 		public Object AddReferencedElement(string webId, string referencedElementWebIds, string referenceType = null)
 		{
 			ApiResponseObject localVarResponse = AddReferencedElementWithHttpInfo(webId, referencedElementWebIds, referenceType);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Add a reference to an existing element to the child elements collection.</summary>
 		public ApiResponseObject AddReferencedElementWithHttpInfo(string webId, string referencedElementWebIds, string referenceType = null)
 		{
 			List<string> referencedElementWebId = ExtensionMethods.ConvertToList(referencedElementWebIds);
@@ -1430,12 +1530,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Remove a reference to an existing element from the child elements collection.</summary>
 		public Object RemoveReferencedElement(string webId, string referencedElementWebIds)
 		{
 			ApiResponseObject localVarResponse = RemoveReferencedElementWithHttpInfo(webId, referencedElementWebIds);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Remove a reference to an existing element from the child elements collection.</summary>
 		public ApiResponseObject RemoveReferencedElementWithHttpInfo(string webId, string referencedElementWebIds)
 		{
 			List<string> referencedElementWebId = ExtensionMethods.ConvertToList(referencedElementWebIds);
@@ -1488,12 +1590,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the element for a specified user.</summary>
 		public PIItemsSecurityRights GetSecurity(string webId, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityRights localVarResponse = GetSecurityWithHttpInfo(webId, userIdentities, forceRefresh, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the element for a specified user.</summary>
 		public ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			List<string> userIdentity = ExtensionMethods.ConvertToList(userIdentities);
@@ -1552,12 +1656,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityRights)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityRights)));
 		}
 
+		/// <summary>Retrieve the security entries associated with the element based on the specified criteria. By default, all security entries for this element are returned.</summary>
 		public PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityEntry localVarResponse = GetSecurityEntriesWithHttpInfo(webId, nameFilter, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entries associated with the element based on the specified criteria. By default, all security entries for this element are returned.</summary>
 		public ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1618,12 +1724,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityEntry)));
 		}
 
+		/// <summary>Create a security entry owned by the element.</summary>
 		public Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = CreateSecurityEntryWithHttpInfo(webId, securityEntry, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a security entry owned by the element.</summary>
 		public ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1685,12 +1793,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve the security entry associated with the element with the specified name.</summary>
 		public PISecurityEntry GetSecurityEntryByName(string name, string webId, string selectedFields = null)
 		{
 			ApiResponsePISecurityEntry localVarResponse = GetSecurityEntryByNameWithHttpInfo(name, webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entry associated with the element with the specified name.</summary>
 		public ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -1753,12 +1863,14 @@ namespace PIWebAPIWrapper.Api
 				(PISecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PISecurityEntry)));
 		}
 
+		/// <summary>Update a security entry owned by the element.</summary>
 		public Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = UpdateSecurityEntryWithHttpInfo(name, webId, securityEntry, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update a security entry owned by the element.</summary>
 		public ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -1827,12 +1939,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a security entry owned by the element.</summary>
 		public Object DeleteSecurityEntry(string name, string webId, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = DeleteSecurityEntryWithHttpInfo(name, webId, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a security entry owned by the element.</summary>
 		public ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -1891,12 +2005,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve multiple elements by web id or path.</summary>
 		public PIItemsItemElement GetMultiple(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null)
 		{
 			ApiResponsePIItemsItemElement localVarResponse = GetMultipleWithHttpInfo(asParallel, includeMode, paths, selectedFields, webIds);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve multiple elements by web id or path.</summary>
 		public ApiResponsePIItemsItemElement GetMultipleWithHttpInfo(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null)
 		{
 			List<string> path = ExtensionMethods.ConvertToList(paths);
@@ -1955,12 +2071,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsItemElement)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsItemElement)));
 		}
 
+		/// <summary>Create a link for a "Search Elements By Attribute Value" operation, whose queries are specified in the request content. The SearchRoot is specified by the Web Id of the root Element. If the SearchRoot is not specified, then the search starts at the Asset Database. ElementTemplate must be provided as the Web ID of the ElementTemplate, which are used to create the Elements. All the attributes in the queries must be defined as AttributeTemplates on the ElementTemplate. An array of attribute value queries are ANDed together to find the desired Element objects. At least one value query must be specified. There are limitations on SearchOperators.</summary>
 		public Object CreateSearchByAttribute()
 		{
 			ApiResponseObject localVarResponse = CreateSearchByAttributeWithHttpInfo();
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a link for a "Search Elements By Attribute Value" operation, whose queries are specified in the request content. The SearchRoot is specified by the Web Id of the root Element. If the SearchRoot is not specified, then the search starts at the Asset Database. ElementTemplate must be provided as the Web ID of the ElementTemplate, which are used to create the Elements. All the attributes in the queries must be defined as AttributeTemplates on the ElementTemplate. An array of attribute value queries are ANDed together to find the desired Element objects. At least one value query must be specified. There are limitations on SearchOperators.</summary>
 		public ApiResponseObject CreateSearchByAttributeWithHttpInfo()
 		{
 
@@ -2004,12 +2122,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Execute a "Search Elements By Attribute Value" operation.</summary>
 		public Object ExecuteSearchByAttribute(string searchId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			ApiResponseObject localVarResponse = ExecuteSearchByAttributeWithHttpInfo(searchId, maxCount, searchFullHierarchy, startIndex, categoryName, descriptionFilter, nameFilter, selectedFields, sortField, sortOrder);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Execute a "Search Elements By Attribute Value" operation.</summary>
 		public ApiResponseObject ExecuteSearchByAttributeWithHttpInfo(string searchId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			if (string.IsNullOrEmpty(searchId)==true)

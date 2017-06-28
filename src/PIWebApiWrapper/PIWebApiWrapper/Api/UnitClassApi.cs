@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,59 +27,73 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("B51C43DB-A48B-43E7-B32B-5AE414D30762")]
+	[Guid("77E0BDB7-3200-4184-B673-4EB90ECB11AB")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IUnitClassApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve a unit class by path.</summary>
 		[DispId(1)]
 		PIUnitClass GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a unit class by path.</summary>
 		[DispId(2)]
 		ApiResponsePIUnitClass GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a unit class.</summary>
 		[DispId(3)]
 		PIUnitClass Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a unit class.</summary>
 		[DispId(4)]
 		ApiResponsePIUnitClass GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update a unit class.</summary>
 		[DispId(5)]
 		Object Update(string webId, PIUnitClass unitClassDTO);
 
+		/// <summary>Update a unit class.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PIUnitClass unitClassDTO);
 
+		/// <summary>Delete a unit class.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete a unit class.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
+		/// <summary>Get the canonical unit of a unit class.</summary>
 		[DispId(9)]
 		PIUnit GetCanonicalUnit(string webId, string selectedFields = null);
 
+		/// <summary>Get the canonical unit of a unit class.</summary>
 		[DispId(10)]
 		ApiResponsePIUnit GetCanonicalUnitWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Get a list of all units belonging to the unit class.</summary>
 		[DispId(11)]
 		PIUnit GetUnits(string webId, string selectedFields = null);
 
+		/// <summary>Get a list of all units belonging to the unit class.</summary>
 		[DispId(12)]
 		ApiResponsePIUnit GetUnitsWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create a unit in the specified Unit Class.</summary>
 		[DispId(13)]
 		Object CreateUnit(string webId, PIUnit unitDTO);
 
+		/// <summary>Create a unit in the specified Unit Class.</summary>
 		[DispId(14)]
 		ApiResponseObject CreateUnitWithHttpInfo(string webId, PIUnit unitDTO);
 
 		#endregion
 	}
 
-	[Guid("7DF54E38-B3C9-4D56-A5AB-B7C16B21683D")]
+	[Guid("3F18E925-6FA0-467F-A8AB-0C45C7858FAD")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IUnitClassApi))]
@@ -101,12 +131,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve a unit class by path.</summary>
 		public PIUnitClass GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIUnitClass localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a unit class by path.</summary>
 		public ApiResponsePIUnitClass GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -162,12 +194,14 @@ namespace PIWebAPIWrapper.Api
 				(PIUnitClass)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIUnitClass)));
 		}
 
+		/// <summary>Retrieve a unit class.</summary>
 		public PIUnitClass Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIUnitClass localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a unit class.</summary>
 		public ApiResponsePIUnitClass GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -223,12 +257,14 @@ namespace PIWebAPIWrapper.Api
 				(PIUnitClass)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIUnitClass)));
 		}
 
+		/// <summary>Update a unit class.</summary>
 		public Object Update(string webId, PIUnitClass unitClassDTO)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, unitClassDTO);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update a unit class.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PIUnitClass unitClassDTO)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -289,12 +325,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a unit class.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a unit class.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -345,12 +383,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get the canonical unit of a unit class.</summary>
 		public PIUnit GetCanonicalUnit(string webId, string selectedFields = null)
 		{
 			ApiResponsePIUnit localVarResponse = GetCanonicalUnitWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the canonical unit of a unit class.</summary>
 		public ApiResponsePIUnit GetCanonicalUnitWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -406,12 +446,14 @@ namespace PIWebAPIWrapper.Api
 				(PIUnit)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIUnit)));
 		}
 
+		/// <summary>Get a list of all units belonging to the unit class.</summary>
 		public PIUnit GetUnits(string webId, string selectedFields = null)
 		{
 			ApiResponsePIUnit localVarResponse = GetUnitsWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get a list of all units belonging to the unit class.</summary>
 		public ApiResponsePIUnit GetUnitsWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -467,12 +509,14 @@ namespace PIWebAPIWrapper.Api
 				(PIUnit)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIUnit)));
 		}
 
+		/// <summary>Create a unit in the specified Unit Class.</summary>
 		public Object CreateUnit(string webId, PIUnit unitDTO)
 		{
 			ApiResponseObject localVarResponse = CreateUnitWithHttpInfo(webId, unitDTO);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a unit in the specified Unit Class.</summary>
 		public ApiResponseObject CreateUnitWithHttpInfo(string webId, PIUnit unitDTO)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,65 +27,81 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("DB752CFA-E729-4C66-8EE0-177CF1338E03")]
+	[Guid("B973C2EE-8D9A-483B-B7FE-BD863C386A18")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IDataServerApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve a list of Data Servers known to this service.</summary>
 		[DispId(1)]
 		PIItemsDataServer List(string selectedFields = null);
 
+		/// <summary>Retrieve a list of Data Servers known to this service.</summary>
 		[DispId(2)]
 		ApiResponsePIItemsDataServer ListWithHttpInfo(string selectedFields = null);
 
+		/// <summary>Retrieve a Data Server by name.</summary>
 		[DispId(3)]
 		PIDataServer GetByName(string name, string selectedFields = null);
 
+		/// <summary>Retrieve a Data Server by name.</summary>
 		[DispId(4)]
 		ApiResponsePIDataServer GetByNameWithHttpInfo(string name, string selectedFields = null);
 
+		/// <summary>Retrieve a Data Server by path.</summary>
 		[DispId(5)]
 		PIDataServer GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a Data Server by path.</summary>
 		[DispId(6)]
 		ApiResponsePIDataServer GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a Data Server.</summary>
 		[DispId(7)]
 		PIDataServer Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a Data Server.</summary>
 		[DispId(8)]
 		ApiResponsePIDataServer GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve enumeration sets for given Data Server.</summary>
 		[DispId(9)]
 		PIItemsEnumerationSet GetEnumerationSets(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve enumeration sets for given Data Server.</summary>
 		[DispId(10)]
 		ApiResponsePIItemsEnumerationSet GetEnumerationSetsWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create an enumeration set on the Data Server.</summary>
 		[DispId(11)]
 		Object CreateEnumerationSet(string webId, PIEnumerationSet enumerationSet);
 
+		/// <summary>Create an enumeration set on the Data Server.</summary>
 		[DispId(12)]
 		ApiResponseObject CreateEnumerationSetWithHttpInfo(string webId, PIEnumerationSet enumerationSet);
 
+		/// <summary>Retrieve a list of points on a specified Data Server.</summary>
 		[DispId(13)]
 		PIItemsPoint GetPoints(string webId, int maxCount, int startIndex, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Retrieve a list of points on a specified Data Server.</summary>
 		[DispId(14)]
 		ApiResponsePIItemsPoint GetPointsWithHttpInfo(string webId, int maxCount, int startIndex, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Create a point in the specified Data Server.</summary>
 		[DispId(15)]
 		Object CreatePoint(string webId, PIPoint pointDTO);
 
+		/// <summary>Create a point in the specified Data Server.</summary>
 		[DispId(16)]
 		ApiResponseObject CreatePointWithHttpInfo(string webId, PIPoint pointDTO);
 
 		#endregion
 	}
 
-	[Guid("950ED38D-9517-4404-99E6-BAE73E2F9F45")]
+	[Guid("BFD2ADEA-3137-4D3B-B3A5-4F45C1DB9081")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IDataServerApi))]
@@ -107,12 +139,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve a list of Data Servers known to this service.</summary>
 		public PIItemsDataServer List(string selectedFields = null)
 		{
 			ApiResponsePIItemsDataServer localVarResponse = ListWithHttpInfo(selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a list of Data Servers known to this service.</summary>
 		public ApiResponsePIItemsDataServer ListWithHttpInfo(string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(selectedFields)==true)
@@ -161,12 +195,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsDataServer)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsDataServer)));
 		}
 
+		/// <summary>Retrieve a Data Server by name.</summary>
 		public PIDataServer GetByName(string name, string selectedFields = null)
 		{
 			ApiResponsePIDataServer localVarResponse = GetByNameWithHttpInfo(name, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a Data Server by name.</summary>
 		public ApiResponsePIDataServer GetByNameWithHttpInfo(string name, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -222,12 +258,14 @@ namespace PIWebAPIWrapper.Api
 				(PIDataServer)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIDataServer)));
 		}
 
+		/// <summary>Retrieve a Data Server by path.</summary>
 		public PIDataServer GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIDataServer localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a Data Server by path.</summary>
 		public ApiResponsePIDataServer GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -283,12 +321,14 @@ namespace PIWebAPIWrapper.Api
 				(PIDataServer)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIDataServer)));
 		}
 
+		/// <summary>Retrieve a Data Server.</summary>
 		public PIDataServer Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIDataServer localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a Data Server.</summary>
 		public ApiResponsePIDataServer GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -344,12 +384,14 @@ namespace PIWebAPIWrapper.Api
 				(PIDataServer)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIDataServer)));
 		}
 
+		/// <summary>Retrieve enumeration sets for given Data Server.</summary>
 		public PIItemsEnumerationSet GetEnumerationSets(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsEnumerationSet localVarResponse = GetEnumerationSetsWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve enumeration sets for given Data Server.</summary>
 		public ApiResponsePIItemsEnumerationSet GetEnumerationSetsWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -405,12 +447,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsEnumerationSet)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsEnumerationSet)));
 		}
 
+		/// <summary>Create an enumeration set on the Data Server.</summary>
 		public Object CreateEnumerationSet(string webId, PIEnumerationSet enumerationSet)
 		{
 			ApiResponseObject localVarResponse = CreateEnumerationSetWithHttpInfo(webId, enumerationSet);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an enumeration set on the Data Server.</summary>
 		public ApiResponseObject CreateEnumerationSetWithHttpInfo(string webId, PIEnumerationSet enumerationSet)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -471,12 +515,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve a list of points on a specified Data Server.</summary>
 		public PIItemsPoint GetPoints(string webId, int maxCount, int startIndex, string nameFilter = null, string selectedFields = null)
 		{
 			ApiResponsePIItemsPoint localVarResponse = GetPointsWithHttpInfo(webId, maxCount, startIndex, nameFilter, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a list of points on a specified Data Server.</summary>
 		public ApiResponsePIItemsPoint GetPointsWithHttpInfo(string webId, int maxCount, int startIndex, string nameFilter = null, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -539,12 +585,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsPoint)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsPoint)));
 		}
 
+		/// <summary>Create a point in the specified Data Server.</summary>
 		public Object CreatePoint(string webId, PIPoint pointDTO)
 		{
 			ApiResponseObject localVarResponse = CreatePointWithHttpInfo(webId, pointDTO);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a point in the specified Data Server.</summary>
 		public ApiResponseObject CreatePointWithHttpInfo(string webId, PIPoint pointDTO)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

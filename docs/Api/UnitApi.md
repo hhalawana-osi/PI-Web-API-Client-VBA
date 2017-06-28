@@ -1,0 +1,163 @@
+# UnitApi
+
+Method | HTTP request | Description
+------------ | ------------- | -------------
+[**GetByPath**](UnitApi.md#getbypath) | **GET** /units | Retrieve a unit by path.
+[**GetByPathWithHttpInfo**](UnitApi.md#getbypathwithhttpinfo) | **GET** /units | Retrieve a unit by path.
+[**Get**](UnitApi.md#get) | **GET** /units/{webId} | Retrieve a unit.
+[**GetWithHttpInfo**](UnitApi.md#getwithhttpinfo) | **GET** /units/{webId} | Retrieve a unit.
+[**Update**](UnitApi.md#update) | **PATCH** /units/{webId} | Update a unit.
+[**UpdateWithHttpInfo**](UnitApi.md#updatewithhttpinfo) | **PATCH** /units/{webId} | Update a unit.
+[**Delete**](UnitApi.md#delete) | **DELETE** /units/{webId} | Delete a unit.
+[**DeleteWithHttpInfo**](UnitApi.md#deletewithhttpinfo) | **DELETE** /units/{webId} | Delete a unit.
+
+
+# **GetByPathWithHttpInfo**
+> GetByPathWithHttpInfo(string path, string selectedFields = null)
+
+Retrieve a unit by path.
+
+### Parameters
+
+Name | Type | Description | Notes
+------------ - | ------------- | ------------- | -------------
+ **path** | **string**| The path to the unit.. |
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+
+
+### Return type
+
+[**ApiResponsePIUnit**](../Responses/ApiResponsePIUnit.md)
+
+[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **GetByPath**
+> GetByPath(string path, string selectedFields = null)
+
+Retrieve a unit by path.
+
+### Parameters
+
+Name | Type | Description | Notes
+------------ - | ------------- | ------------- | -------------
+ **path** | **string**| The path to the unit.. |
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+
+
+### Return type
+
+[**PIUnit**](../Model/PIUnit.md)
+
+[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **GetWithHttpInfo**
+> GetWithHttpInfo(string webId, string selectedFields = null)
+
+Retrieve a unit.
+
+### Parameters
+
+Name | Type | Description | Notes
+------------ - | ------------- | ------------- | -------------
+ **webId** | **string**| The ID of the unit.. |
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+
+
+### Return type
+
+[**ApiResponsePIUnit**](../Responses/ApiResponsePIUnit.md)
+
+[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **Get**
+> Get(string webId, string selectedFields = null)
+
+Retrieve a unit.
+
+### Parameters
+
+Name | Type | Description | Notes
+------------ - | ------------- | ------------- | -------------
+ **webId** | **string**| The ID of the unit.. |
+ **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
+
+
+### Return type
+
+[**PIUnit**](../Model/PIUnit.md)
+
+[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **UpdateWithHttpInfo**
+> UpdateWithHttpInfo(string webId, PIUnit unitDTO)
+
+Update a unit.
+
+### Parameters
+
+Name | Type | Description | Notes
+------------ - | ------------- | ------------- | -------------
+ **webId** | **string**| The ID of the unit.. |
+ **unitDTO** | **PIUnit**| A partial unit containing the desired changes.. |
+
+
+### Return type
+
+[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+
+[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **Update**
+> Update(string webId, PIUnit unitDTO)
+
+Update a unit.
+
+### Parameters
+
+Name | Type | Description | Notes
+------------ - | ------------- | ------------- | -------------
+ **webId** | **string**| The ID of the unit.. |
+ **unitDTO** | **PIUnit**| A partial unit containing the desired changes.. |
+
+
+### Return type
+
+[**Object**](../Model/Object.md)
+
+[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **DeleteWithHttpInfo**
+> DeleteWithHttpInfo(string webId)
+
+Delete a unit.
+
+### Parameters
+
+Name | Type | Description | Notes
+------------ - | ------------- | ------------- | -------------
+ **webId** | **string**| The ID of the unit.. |
+
+
+### Return type
+
+[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+
+[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **Delete**
+> Delete(string webId)
+
+Delete a unit.
+
+### Parameters
+
+Name | Type | Description | Notes
+------------ - | ------------- | ------------- | -------------
+ **webId** | **string**| The ID of the unit.. |
+
+
+### Return type
+
+[**Object**](../Model/Object.md)
+
+[[Back to top]](#) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)

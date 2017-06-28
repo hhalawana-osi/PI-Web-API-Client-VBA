@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,29 +27,33 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("F14E0324-0D2C-41AF-A2DB-46E0A70A3868")]
+	[Guid("A4E3C64E-52FF-4753-9C56-B6938DA8B885")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface ITimeRulePlugInApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve a Time Rule Plug-in by path.</summary>
 		[DispId(1)]
 		PITimeRulePlugIn GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a Time Rule Plug-in by path.</summary>
 		[DispId(2)]
 		ApiResponsePITimeRulePlugIn GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve a Time Rule Plug-in.</summary>
 		[DispId(3)]
 		PITimeRulePlugIn Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve a Time Rule Plug-in.</summary>
 		[DispId(4)]
 		ApiResponsePITimeRulePlugIn GetWithHttpInfo(string webId, string selectedFields = null);
 
 		#endregion
 	}
 
-	[Guid("0C40823A-81E5-45A0-B6ED-022A9D1A11B0")]
+	[Guid("8D0CF44F-8C9A-4706-9B7C-727FC2CDC5DF")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(ITimeRulePlugInApi))]
@@ -71,12 +91,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve a Time Rule Plug-in by path.</summary>
 		public PITimeRulePlugIn GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePITimeRulePlugIn localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a Time Rule Plug-in by path.</summary>
 		public ApiResponsePITimeRulePlugIn GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -132,12 +154,14 @@ namespace PIWebAPIWrapper.Api
 				(PITimeRulePlugIn)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITimeRulePlugIn)));
 		}
 
+		/// <summary>Retrieve a Time Rule Plug-in.</summary>
 		public PITimeRulePlugIn Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePITimeRulePlugIn localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve a Time Rule Plug-in.</summary>
 		public ApiResponsePITimeRulePlugIn GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

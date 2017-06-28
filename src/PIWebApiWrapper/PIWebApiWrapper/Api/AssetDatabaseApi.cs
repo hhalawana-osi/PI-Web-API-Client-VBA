@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,245 +27,321 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("BD4E9670-97DC-43EB-9F82-2D09417DDB42")]
+	[Guid("D3411B46-D987-430B-B7C6-0D9E4462A080")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IAssetDatabaseApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve an Asset Database by path.</summary>
 		[DispId(1)]
 		PIAssetDatabase GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an Asset Database by path.</summary>
 		[DispId(2)]
 		ApiResponsePIAssetDatabase GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an Asset Database.</summary>
 		[DispId(3)]
 		PIAssetDatabase Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an Asset Database.</summary>
 		[DispId(4)]
 		ApiResponsePIAssetDatabase GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update an asset database by replacing items in its definition.</summary>
 		[DispId(5)]
 		Object Update(string webId, PIAssetDatabase database);
 
+		/// <summary>Update an asset database by replacing items in its definition.</summary>
 		[DispId(6)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PIAssetDatabase database);
 
+		/// <summary>Delete an asset database.</summary>
 		[DispId(7)]
 		Object Delete(string webId);
 
+		/// <summary>Delete an asset database.</summary>
 		[DispId(8)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
+		/// <summary>Retrieve analyses based on the specified conditions.</summary>
 		[DispId(9)]
 		PIItemsAnalysis FindAnalyses(string webId, string fields, int maxCount, int startIndex, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Retrieve analyses based on the specified conditions.</summary>
 		[DispId(10)]
 		ApiResponsePIItemsAnalysis FindAnalysesWithHttpInfo(string webId, string fields, int maxCount, int startIndex, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Retrieve analysis categories for a given Asset Database.</summary>
 		[DispId(11)]
 		PIItemsAnalysisCategory GetAnalysisCategories(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve analysis categories for a given Asset Database.</summary>
 		[DispId(12)]
 		ApiResponsePIItemsAnalysisCategory GetAnalysisCategoriesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create an analysis category at the Asset Database root.</summary>
 		[DispId(13)]
 		Object CreateAnalysisCategory(string webId, PIAnalysisCategory analysisCategory);
 
+		/// <summary>Create an analysis category at the Asset Database root.</summary>
 		[DispId(14)]
 		ApiResponseObject CreateAnalysisCategoryWithHttpInfo(string webId, PIAnalysisCategory analysisCategory);
 
+		/// <summary>Retrieve analysis templates based on the specified criteria. By default, all analysis templates in the specified Asset Database are returned.</summary>
 		[DispId(15)]
 		PIItemsAnalysisTemplate GetAnalysisTemplates(string webId, string fields, int maxCount, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Retrieve analysis templates based on the specified criteria. By default, all analysis templates in the specified Asset Database are returned.</summary>
 		[DispId(16)]
 		ApiResponsePIItemsAnalysisTemplate GetAnalysisTemplatesWithHttpInfo(string webId, string fields, int maxCount, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Create an analysis template at the Asset Database root.</summary>
 		[DispId(17)]
 		Object CreateAnalysisTemplate(string webId, PIAnalysisTemplate template);
 
+		/// <summary>Create an analysis template at the Asset Database root.</summary>
 		[DispId(18)]
 		ApiResponseObject CreateAnalysisTemplateWithHttpInfo(string webId, PIAnalysisTemplate template);
 
+		/// <summary>Retrieve attribute categories for a given Asset Database.</summary>
 		[DispId(19)]
 		PIItemsAttributeCategory GetAttributeCategories(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve attribute categories for a given Asset Database.</summary>
 		[DispId(20)]
 		ApiResponsePIItemsAttributeCategory GetAttributeCategoriesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create an attribute category at the Asset Database root.</summary>
 		[DispId(21)]
 		Object CreateAttributeCategory(string webId, PIAttributeCategory attributeCategory);
 
+		/// <summary>Create an attribute category at the Asset Database root.</summary>
 		[DispId(22)]
 		ApiResponseObject CreateAttributeCategoryWithHttpInfo(string webId, PIAttributeCategory attributeCategory);
 
+		/// <summary>Retrieves a list of element attributes matching the specified filters from the specified asset database.</summary>
 		[DispId(23)]
 		PIItemsAttribute FindElementAttributes(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string elementCategory = null, string elementDescriptionFilter = null, string elementNameFilter = null, string elementTemplate = null, string elementType = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Retrieves a list of element attributes matching the specified filters from the specified asset database.</summary>
 		[DispId(24)]
 		ApiResponsePIItemsAttribute FindElementAttributesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string elementCategory = null, string elementDescriptionFilter = null, string elementNameFilter = null, string elementTemplate = null, string elementType = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Retrieve element categories for a given Asset Database.</summary>
 		[DispId(25)]
 		PIItemsElementCategory GetElementCategories(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve element categories for a given Asset Database.</summary>
 		[DispId(26)]
 		ApiResponsePIItemsElementCategory GetElementCategoriesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create an element category at the Asset Database root.</summary>
 		[DispId(27)]
 		Object CreateElementCategory(string webId, PIElementCategory elementCategory);
 
+		/// <summary>Create an element category at the Asset Database root.</summary>
 		[DispId(28)]
 		ApiResponseObject CreateElementCategoryWithHttpInfo(string webId, PIElementCategory elementCategory);
 
+		/// <summary>Retrieve elements based on the specified conditions. By default, this method selects immediate children of the specified asset database.</summary>
 		[DispId(29)]
 		PIItemsElement GetElements(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null);
 
+		/// <summary>Retrieve elements based on the specified conditions. By default, this method selects immediate children of the specified asset database.</summary>
 		[DispId(30)]
 		ApiResponsePIItemsElement GetElementsWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null);
 
+		/// <summary>Create a child element.</summary>
 		[DispId(31)]
 		Object CreateElement(string webId, PIElement element);
 
+		/// <summary>Create a child element.</summary>
 		[DispId(32)]
 		ApiResponseObject CreateElementWithHttpInfo(string webId, PIElement element);
 
+		/// <summary>Retrieve element templates based on the specified criteria. Only templates of instance type "Element" and "EventFrame" are returned. By default, all element and event frame templates in the specified Asset Database are returned.</summary>
 		[DispId(33)]
 		PIItemsElementTemplate GetElementTemplates(string webId, string fields, int maxCount, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Retrieve element templates based on the specified criteria. Only templates of instance type "Element" and "EventFrame" are returned. By default, all element and event frame templates in the specified Asset Database are returned.</summary>
 		[DispId(34)]
 		ApiResponsePIItemsElementTemplate GetElementTemplatesWithHttpInfo(string webId, string fields, int maxCount, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null);
 
+		/// <summary>Create a template at the Asset Database root. Specify InstanceType of "Element" or "EventFrame" to create element or event frame template respectively. Only these two types of templates can be created.</summary>
 		[DispId(35)]
 		Object CreateElementTemplate(string webId, PIElementTemplate template);
 
+		/// <summary>Create a template at the Asset Database root. Specify InstanceType of "Element" or "EventFrame" to create element or event frame template respectively. Only these two types of templates can be created.</summary>
 		[DispId(36)]
 		ApiResponseObject CreateElementTemplateWithHttpInfo(string webId, PIElementTemplate template);
 
+		/// <summary>Retrieve enumeration sets for given asset database.</summary>
 		[DispId(37)]
 		PIItemsEnumerationSet GetEnumerationSets(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve enumeration sets for given asset database.</summary>
 		[DispId(38)]
 		ApiResponsePIItemsEnumerationSet GetEnumerationSetsWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create an enumeration set at the Asset Database.</summary>
 		[DispId(39)]
 		Object CreateEnumerationSet(string webId, PIEnumerationSet enumerationSet);
 
+		/// <summary>Create an enumeration set at the Asset Database.</summary>
 		[DispId(40)]
 		ApiResponseObject CreateEnumerationSetWithHttpInfo(string webId, PIEnumerationSet enumerationSet);
 
+		/// <summary>Retrieves a list of event frame attributes matching the specified filters from the specified asset database.</summary>
 		[DispId(41)]
 		PIItemsAttribute FindEventFrameAttributes(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string endTime = null, string eventFrameCategory = null, string eventFrameDescriptionFilter = null, string eventFrameNameFilter = null, string eventFrameTemplate = null, string referencedElementNameFilter = null, string searchMode = null, string selectedFields = null, string sortField = null, string sortOrder = null, string startTime = null);
 
+		/// <summary>Retrieves a list of event frame attributes matching the specified filters from the specified asset database.</summary>
 		[DispId(42)]
 		ApiResponsePIItemsAttribute FindEventFrameAttributesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string endTime = null, string eventFrameCategory = null, string eventFrameDescriptionFilter = null, string eventFrameNameFilter = null, string eventFrameTemplate = null, string referencedElementNameFilter = null, string searchMode = null, string selectedFields = null, string sortField = null, string sortOrder = null, string startTime = null);
 
+		/// <summary>Retrieve event frames based on the specified conditions. By default, returns all children of the specified root resource with a start time in the past 8 hours.</summary>
 		[DispId(43)]
 		PIItemsEventFrame GetEventFrames(string webId, bool canBeAcknowledged, bool isAcknowledged, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string endTime = null, string nameFilter = null, string referencedElementNameFilter = null, string referencedElementTemplateName = null, string searchMode = null, string selectedFields = null, string severities = null, string sortField = null, string sortOrder = null, string startTime = null, string templateName = null);
 
+		/// <summary>Retrieve event frames based on the specified conditions. By default, returns all children of the specified root resource with a start time in the past 8 hours.</summary>
 		[DispId(44)]
 		ApiResponsePIItemsEventFrame GetEventFramesWithHttpInfo(string webId, bool canBeAcknowledged, bool isAcknowledged, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string endTime = null, string nameFilter = null, string referencedElementNameFilter = null, string referencedElementTemplateName = null, string searchMode = null, string selectedFields = null, string severities = null, string sortField = null, string sortOrder = null, string startTime = null, string templateName = null);
 
+		/// <summary>Create an event frame.</summary>
 		[DispId(45)]
 		Object CreateEventFrame(string webId, PIEventFrame eventFrame);
 
+		/// <summary>Create an event frame.</summary>
 		[DispId(46)]
 		ApiResponseObject CreateEventFrameWithHttpInfo(string webId, PIEventFrame eventFrame);
 
+		/// <summary>Export the asset database.</summary>
 		[DispId(47)]
 		Object Export(string webId, string endTime = null, string exportModes = null, string startTime = null);
 
+		/// <summary>Export the asset database.</summary>
 		[DispId(48)]
 		ApiResponseObject ExportWithHttpInfo(string webId, string endTime = null, string exportModes = null, string startTime = null);
 
+		/// <summary>Import an asset database.</summary>
 		[DispId(49)]
 		Object Import(string webId, string importModes = null);
 
+		/// <summary>Import an asset database.</summary>
 		[DispId(50)]
 		ApiResponseObject ImportWithHttpInfo(string webId, string importModes = null);
 
+		/// <summary>Retrieve referenced elements based on the specified conditions. By default, this method selects all referenced elements at the root level of the asset database.</summary>
 		[DispId(51)]
 		PIItemsElement GetReferencedElements(string webId, int maxCount, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null);
 
+		/// <summary>Retrieve referenced elements based on the specified conditions. By default, this method selects all referenced elements at the root level of the asset database.</summary>
 		[DispId(52)]
 		ApiResponsePIItemsElement GetReferencedElementsWithHttpInfo(string webId, int maxCount, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null);
 
+		/// <summary>Add a reference to an existing element to the specified database.</summary>
 		[DispId(53)]
 		Object AddReferencedElement(string webId, string referencedElementWebIds, string referenceType = null);
 
+		/// <summary>Add a reference to an existing element to the specified database.</summary>
 		[DispId(54)]
 		ApiResponseObject AddReferencedElementWithHttpInfo(string webId, string referencedElementWebIds, string referenceType = null);
 
+		/// <summary>Remove a reference to an existing element from the specified database.</summary>
 		[DispId(55)]
 		Object RemoveReferencedElement(string webId, string referencedElementWebIds);
 
+		/// <summary>Remove a reference to an existing element from the specified database.</summary>
 		[DispId(56)]
 		ApiResponseObject RemoveReferencedElementWithHttpInfo(string webId, string referencedElementWebIds);
 
+		/// <summary>Get the security information of the specified security item associated with the asset database for a specified user.</summary>
 		[DispId(57)]
 		PIItemsSecurityRights GetSecurity(string webId, string securityItems, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Get the security information of the specified security item associated with the asset database for a specified user.</summary>
 		[DispId(58)]
 		ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string securityItems, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries of the specified security item associated with the asset database based on the specified criteria. By default, all security entries for this asset database are returned.</summary>
 		[DispId(59)]
 		PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string securityItem = null, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries of the specified security item associated with the asset database based on the specified criteria. By default, all security entries for this asset database are returned.</summary>
 		[DispId(60)]
 		ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string securityItem = null, string selectedFields = null);
 
+		/// <summary>Create a security entry owned by the asset database.</summary>
 		[DispId(61)]
 		Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Create a security entry owned by the asset database.</summary>
 		[DispId(62)]
 		ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Retrieve the security entry of the specified security item associated with the asset database with the specified name.</summary>
 		[DispId(63)]
 		PISecurityEntry GetSecurityEntryByName(string name, string webId, string securityItem = null, string selectedFields = null);
 
+		/// <summary>Retrieve the security entry of the specified security item associated with the asset database with the specified name.</summary>
 		[DispId(64)]
 		ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string securityItem = null, string selectedFields = null);
 
+		/// <summary>Update a security entry owned by the asset database.</summary>
 		[DispId(65)]
 		Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Update a security entry owned by the asset database.</summary>
 		[DispId(66)]
 		ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Delete a security entry owned by the asset database.</summary>
 		[DispId(67)]
 		Object DeleteSecurityEntry(string name, string webId, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Delete a security entry owned by the asset database.</summary>
 		[DispId(68)]
 		ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren, string securityItem = null);
 
+		/// <summary>Retrieve table categories for a given Asset Database.</summary>
 		[DispId(69)]
 		PIItemsTableCategory GetTableCategories(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve table categories for a given Asset Database.</summary>
 		[DispId(70)]
 		ApiResponsePIItemsTableCategory GetTableCategoriesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create a table category on the Asset Database.</summary>
 		[DispId(71)]
 		Object CreateTableCategory(string webId, PITableCategory tableCategory);
 
+		/// <summary>Create a table category on the Asset Database.</summary>
 		[DispId(72)]
 		ApiResponseObject CreateTableCategoryWithHttpInfo(string webId, PITableCategory tableCategory);
 
+		/// <summary>Retrieve tables for given Asset Database.</summary>
 		[DispId(73)]
 		PIItemsTable GetTables(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve tables for given Asset Database.</summary>
 		[DispId(74)]
 		ApiResponsePIItemsTable GetTablesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Create a table on the Asset Database.</summary>
 		[DispId(75)]
 		Object CreateTable(string webId, PITable table);
 
+		/// <summary>Create a table on the Asset Database.</summary>
 		[DispId(76)]
 		ApiResponseObject CreateTableWithHttpInfo(string webId, PITable table);
 
 		#endregion
 	}
 
-	[Guid("6528F4D4-C234-49BA-B3B8-3D820B8A5FA8")]
+	[Guid("2B6B7EF0-973D-454F-8C8A-C2A9CED4E7C4")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IAssetDatabaseApi))]
@@ -287,12 +379,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve an Asset Database by path.</summary>
 		public PIAssetDatabase GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIAssetDatabase localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an Asset Database by path.</summary>
 		public ApiResponsePIAssetDatabase GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -348,12 +442,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAssetDatabase)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAssetDatabase)));
 		}
 
+		/// <summary>Retrieve an Asset Database.</summary>
 		public PIAssetDatabase Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIAssetDatabase localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an Asset Database.</summary>
 		public ApiResponsePIAssetDatabase GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -409,12 +505,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAssetDatabase)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAssetDatabase)));
 		}
 
+		/// <summary>Update an asset database by replacing items in its definition.</summary>
 		public Object Update(string webId, PIAssetDatabase database)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, database);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update an asset database by replacing items in its definition.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PIAssetDatabase database)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -475,12 +573,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete an asset database.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete an asset database.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -531,12 +631,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve analyses based on the specified conditions.</summary>
 		public PIItemsAnalysis FindAnalyses(string webId, string fields, int maxCount, int startIndex, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			ApiResponsePIItemsAnalysis localVarResponse = FindAnalysesWithHttpInfo(webId, fields, maxCount, startIndex, query, selectedFields, sortField, sortOrder);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve analyses based on the specified conditions.</summary>
 		public ApiResponsePIItemsAnalysis FindAnalysesWithHttpInfo(string webId, string fields, int maxCount, int startIndex, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			List<string> field = ExtensionMethods.ConvertToList(fields);
@@ -611,12 +713,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAnalysis)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAnalysis)));
 		}
 
+		/// <summary>Retrieve analysis categories for a given Asset Database.</summary>
 		public PIItemsAnalysisCategory GetAnalysisCategories(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsAnalysisCategory localVarResponse = GetAnalysisCategoriesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve analysis categories for a given Asset Database.</summary>
 		public ApiResponsePIItemsAnalysisCategory GetAnalysisCategoriesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -672,12 +776,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAnalysisCategory)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAnalysisCategory)));
 		}
 
+		/// <summary>Create an analysis category at the Asset Database root.</summary>
 		public Object CreateAnalysisCategory(string webId, PIAnalysisCategory analysisCategory)
 		{
 			ApiResponseObject localVarResponse = CreateAnalysisCategoryWithHttpInfo(webId, analysisCategory);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an analysis category at the Asset Database root.</summary>
 		public ApiResponseObject CreateAnalysisCategoryWithHttpInfo(string webId, PIAnalysisCategory analysisCategory)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -738,12 +844,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve analysis templates based on the specified criteria. By default, all analysis templates in the specified Asset Database are returned.</summary>
 		public PIItemsAnalysisTemplate GetAnalysisTemplates(string webId, string fields, int maxCount, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			ApiResponsePIItemsAnalysisTemplate localVarResponse = GetAnalysisTemplatesWithHttpInfo(webId, fields, maxCount, query, selectedFields, sortField, sortOrder);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve analysis templates based on the specified criteria. By default, all analysis templates in the specified Asset Database are returned.</summary>
 		public ApiResponsePIItemsAnalysisTemplate GetAnalysisTemplatesWithHttpInfo(string webId, string fields, int maxCount, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			List<string> field = ExtensionMethods.ConvertToList(fields);
@@ -817,12 +925,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAnalysisTemplate)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAnalysisTemplate)));
 		}
 
+		/// <summary>Create an analysis template at the Asset Database root.</summary>
 		public Object CreateAnalysisTemplate(string webId, PIAnalysisTemplate template)
 		{
 			ApiResponseObject localVarResponse = CreateAnalysisTemplateWithHttpInfo(webId, template);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an analysis template at the Asset Database root.</summary>
 		public ApiResponseObject CreateAnalysisTemplateWithHttpInfo(string webId, PIAnalysisTemplate template)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -883,12 +993,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve attribute categories for a given Asset Database.</summary>
 		public PIItemsAttributeCategory GetAttributeCategories(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsAttributeCategory localVarResponse = GetAttributeCategoriesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve attribute categories for a given Asset Database.</summary>
 		public ApiResponsePIItemsAttributeCategory GetAttributeCategoriesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -944,12 +1056,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAttributeCategory)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAttributeCategory)));
 		}
 
+		/// <summary>Create an attribute category at the Asset Database root.</summary>
 		public Object CreateAttributeCategory(string webId, PIAttributeCategory attributeCategory)
 		{
 			ApiResponseObject localVarResponse = CreateAttributeCategoryWithHttpInfo(webId, attributeCategory);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an attribute category at the Asset Database root.</summary>
 		public ApiResponseObject CreateAttributeCategoryWithHttpInfo(string webId, PIAttributeCategory attributeCategory)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1010,12 +1124,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieves a list of element attributes matching the specified filters from the specified asset database.</summary>
 		public PIItemsAttribute FindElementAttributes(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string elementCategory = null, string elementDescriptionFilter = null, string elementNameFilter = null, string elementTemplate = null, string elementType = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			ApiResponsePIItemsAttribute localVarResponse = FindElementAttributesWithHttpInfo(webId, maxCount, searchFullHierarchy, startIndex, attributeCategory, attributeDescriptionFilter, attributeNameFilter, attributeType, elementCategory, elementDescriptionFilter, elementNameFilter, elementTemplate, elementType, selectedFields, sortField, sortOrder);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieves a list of element attributes matching the specified filters from the specified asset database.</summary>
 		public ApiResponsePIItemsAttribute FindElementAttributesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string elementCategory = null, string elementDescriptionFilter = null, string elementNameFilter = null, string elementTemplate = null, string elementType = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1129,12 +1245,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAttribute)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAttribute)));
 		}
 
+		/// <summary>Retrieve element categories for a given Asset Database.</summary>
 		public PIItemsElementCategory GetElementCategories(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsElementCategory localVarResponse = GetElementCategoriesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve element categories for a given Asset Database.</summary>
 		public ApiResponsePIItemsElementCategory GetElementCategoriesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1190,12 +1308,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsElementCategory)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsElementCategory)));
 		}
 
+		/// <summary>Create an element category at the Asset Database root.</summary>
 		public Object CreateElementCategory(string webId, PIElementCategory elementCategory)
 		{
 			ApiResponseObject localVarResponse = CreateElementCategoryWithHttpInfo(webId, elementCategory);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an element category at the Asset Database root.</summary>
 		public ApiResponseObject CreateElementCategoryWithHttpInfo(string webId, PIElementCategory elementCategory)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1256,12 +1376,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve elements based on the specified conditions. By default, this method selects immediate children of the specified asset database.</summary>
 		public PIItemsElement GetElements(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null)
 		{
 			ApiResponsePIItemsElement localVarResponse = GetElementsWithHttpInfo(webId, maxCount, searchFullHierarchy, startIndex, categoryName, descriptionFilter, elementType, nameFilter, selectedFields, sortField, sortOrder, templateName);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve elements based on the specified conditions. By default, this method selects immediate children of the specified asset database.</summary>
 		public ApiResponsePIItemsElement GetElementsWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1355,12 +1477,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsElement)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsElement)));
 		}
 
+		/// <summary>Create a child element.</summary>
 		public Object CreateElement(string webId, PIElement element)
 		{
 			ApiResponseObject localVarResponse = CreateElementWithHttpInfo(webId, element);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a child element.</summary>
 		public ApiResponseObject CreateElementWithHttpInfo(string webId, PIElement element)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1421,12 +1545,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve element templates based on the specified criteria. Only templates of instance type "Element" and "EventFrame" are returned. By default, all element and event frame templates in the specified Asset Database are returned.</summary>
 		public PIItemsElementTemplate GetElementTemplates(string webId, string fields, int maxCount, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			ApiResponsePIItemsElementTemplate localVarResponse = GetElementTemplatesWithHttpInfo(webId, fields, maxCount, query, selectedFields, sortField, sortOrder);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve element templates based on the specified criteria. Only templates of instance type "Element" and "EventFrame" are returned. By default, all element and event frame templates in the specified Asset Database are returned.</summary>
 		public ApiResponsePIItemsElementTemplate GetElementTemplatesWithHttpInfo(string webId, string fields, int maxCount, string query = null, string selectedFields = null, string sortField = null, string sortOrder = null)
 		{
 			List<string> field = ExtensionMethods.ConvertToList(fields);
@@ -1500,12 +1626,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsElementTemplate)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsElementTemplate)));
 		}
 
+		/// <summary>Create a template at the Asset Database root. Specify InstanceType of "Element" or "EventFrame" to create element or event frame template respectively. Only these two types of templates can be created.</summary>
 		public Object CreateElementTemplate(string webId, PIElementTemplate template)
 		{
 			ApiResponseObject localVarResponse = CreateElementTemplateWithHttpInfo(webId, template);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a template at the Asset Database root. Specify InstanceType of "Element" or "EventFrame" to create element or event frame template respectively. Only these two types of templates can be created.</summary>
 		public ApiResponseObject CreateElementTemplateWithHttpInfo(string webId, PIElementTemplate template)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1566,12 +1694,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve enumeration sets for given asset database.</summary>
 		public PIItemsEnumerationSet GetEnumerationSets(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsEnumerationSet localVarResponse = GetEnumerationSetsWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve enumeration sets for given asset database.</summary>
 		public ApiResponsePIItemsEnumerationSet GetEnumerationSetsWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1627,12 +1757,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsEnumerationSet)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsEnumerationSet)));
 		}
 
+		/// <summary>Create an enumeration set at the Asset Database.</summary>
 		public Object CreateEnumerationSet(string webId, PIEnumerationSet enumerationSet)
 		{
 			ApiResponseObject localVarResponse = CreateEnumerationSetWithHttpInfo(webId, enumerationSet);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an enumeration set at the Asset Database.</summary>
 		public ApiResponseObject CreateEnumerationSetWithHttpInfo(string webId, PIEnumerationSet enumerationSet)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1693,12 +1825,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieves a list of event frame attributes matching the specified filters from the specified asset database.</summary>
 		public PIItemsAttribute FindEventFrameAttributes(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string endTime = null, string eventFrameCategory = null, string eventFrameDescriptionFilter = null, string eventFrameNameFilter = null, string eventFrameTemplate = null, string referencedElementNameFilter = null, string searchMode = null, string selectedFields = null, string sortField = null, string sortOrder = null, string startTime = null)
 		{
 			ApiResponsePIItemsAttribute localVarResponse = FindEventFrameAttributesWithHttpInfo(webId, maxCount, searchFullHierarchy, startIndex, attributeCategory, attributeDescriptionFilter, attributeNameFilter, attributeType, endTime, eventFrameCategory, eventFrameDescriptionFilter, eventFrameNameFilter, eventFrameTemplate, referencedElementNameFilter, searchMode, selectedFields, sortField, sortOrder, startTime);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieves a list of event frame attributes matching the specified filters from the specified asset database.</summary>
 		public ApiResponsePIItemsAttribute FindEventFrameAttributesWithHttpInfo(string webId, int maxCount, bool searchFullHierarchy, int startIndex, string attributeCategory = null, string attributeDescriptionFilter = null, string attributeNameFilter = null, string attributeType = null, string endTime = null, string eventFrameCategory = null, string eventFrameDescriptionFilter = null, string eventFrameNameFilter = null, string eventFrameTemplate = null, string referencedElementNameFilter = null, string searchMode = null, string selectedFields = null, string sortField = null, string sortOrder = null, string startTime = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -1827,12 +1961,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAttribute)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAttribute)));
 		}
 
+		/// <summary>Retrieve event frames based on the specified conditions. By default, returns all children of the specified root resource with a start time in the past 8 hours.</summary>
 		public PIItemsEventFrame GetEventFrames(string webId, bool canBeAcknowledged, bool isAcknowledged, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string endTime = null, string nameFilter = null, string referencedElementNameFilter = null, string referencedElementTemplateName = null, string searchMode = null, string selectedFields = null, string severities = null, string sortField = null, string sortOrder = null, string startTime = null, string templateName = null)
 		{
 			ApiResponsePIItemsEventFrame localVarResponse = GetEventFramesWithHttpInfo(webId, canBeAcknowledged, isAcknowledged, maxCount, searchFullHierarchy, startIndex, categoryName, endTime, nameFilter, referencedElementNameFilter, referencedElementTemplateName, searchMode, selectedFields, severities, sortField, sortOrder, startTime, templateName);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve event frames based on the specified conditions. By default, returns all children of the specified root resource with a start time in the past 8 hours.</summary>
 		public ApiResponsePIItemsEventFrame GetEventFramesWithHttpInfo(string webId, bool canBeAcknowledged, bool isAcknowledged, int maxCount, bool searchFullHierarchy, int startIndex, string categoryName = null, string endTime = null, string nameFilter = null, string referencedElementNameFilter = null, string referencedElementTemplateName = null, string searchMode = null, string selectedFields = null, string severities = null, string sortField = null, string sortOrder = null, string startTime = null, string templateName = null)
 		{
 			List<string> severity = ExtensionMethods.ConvertToList(severities);
@@ -1945,12 +2081,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsEventFrame)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsEventFrame)));
 		}
 
+		/// <summary>Create an event frame.</summary>
 		public Object CreateEventFrame(string webId, PIEventFrame eventFrame)
 		{
 			ApiResponseObject localVarResponse = CreateEventFrameWithHttpInfo(webId, eventFrame);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an event frame.</summary>
 		public ApiResponseObject CreateEventFrameWithHttpInfo(string webId, PIEventFrame eventFrame)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -2011,12 +2149,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Export the asset database.</summary>
 		public Object Export(string webId, string endTime = null, string exportModes = null, string startTime = null)
 		{
 			ApiResponseObject localVarResponse = ExportWithHttpInfo(webId, endTime, exportModes, startTime);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Export the asset database.</summary>
 		public ApiResponseObject ExportWithHttpInfo(string webId, string endTime = null, string exportModes = null, string startTime = null)
 		{
 			List<string> exportMode = ExtensionMethods.ConvertToList(exportModes);
@@ -2079,12 +2219,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Import an asset database.</summary>
 		public Object Import(string webId, string importModes = null)
 		{
 			ApiResponseObject localVarResponse = ImportWithHttpInfo(webId, importModes);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Import an asset database.</summary>
 		public ApiResponseObject ImportWithHttpInfo(string webId, string importModes = null)
 		{
 			List<string> importMode = ExtensionMethods.ConvertToList(importModes);
@@ -2137,12 +2279,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve referenced elements based on the specified conditions. By default, this method selects all referenced elements at the root level of the asset database.</summary>
 		public PIItemsElement GetReferencedElements(string webId, int maxCount, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null)
 		{
 			ApiResponsePIItemsElement localVarResponse = GetReferencedElementsWithHttpInfo(webId, maxCount, startIndex, categoryName, descriptionFilter, elementType, nameFilter, selectedFields, sortField, sortOrder, templateName);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve referenced elements based on the specified conditions. By default, this method selects all referenced elements at the root level of the asset database.</summary>
 		public ApiResponsePIItemsElement GetReferencedElementsWithHttpInfo(string webId, int maxCount, int startIndex, string categoryName = null, string descriptionFilter = null, string elementType = null, string nameFilter = null, string selectedFields = null, string sortField = null, string sortOrder = null, string templateName = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -2235,12 +2379,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsElement)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsElement)));
 		}
 
+		/// <summary>Add a reference to an existing element to the specified database.</summary>
 		public Object AddReferencedElement(string webId, string referencedElementWebIds, string referenceType = null)
 		{
 			ApiResponseObject localVarResponse = AddReferencedElementWithHttpInfo(webId, referencedElementWebIds, referenceType);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Add a reference to an existing element to the specified database.</summary>
 		public ApiResponseObject AddReferencedElementWithHttpInfo(string webId, string referencedElementWebIds, string referenceType = null)
 		{
 			List<string> referencedElementWebId = ExtensionMethods.ConvertToList(referencedElementWebIds);
@@ -2298,12 +2444,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Remove a reference to an existing element from the specified database.</summary>
 		public Object RemoveReferencedElement(string webId, string referencedElementWebIds)
 		{
 			ApiResponseObject localVarResponse = RemoveReferencedElementWithHttpInfo(webId, referencedElementWebIds);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Remove a reference to an existing element from the specified database.</summary>
 		public ApiResponseObject RemoveReferencedElementWithHttpInfo(string webId, string referencedElementWebIds)
 		{
 			List<string> referencedElementWebId = ExtensionMethods.ConvertToList(referencedElementWebIds);
@@ -2356,12 +2504,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the asset database for a specified user.</summary>
 		public PIItemsSecurityRights GetSecurity(string webId, string securityItems, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityRights localVarResponse = GetSecurityWithHttpInfo(webId, securityItems, userIdentities, forceRefresh, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the asset database for a specified user.</summary>
 		public ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string securityItems, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			List<string> securityItem = ExtensionMethods.ConvertToList(securityItems);
@@ -2422,12 +2572,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityRights)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityRights)));
 		}
 
+		/// <summary>Retrieve the security entries of the specified security item associated with the asset database based on the specified criteria. By default, all security entries for this asset database are returned.</summary>
 		public PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string securityItem = null, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityEntry localVarResponse = GetSecurityEntriesWithHttpInfo(webId, nameFilter, securityItem, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entries of the specified security item associated with the asset database based on the specified criteria. By default, all security entries for this asset database are returned.</summary>
 		public ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string securityItem = null, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -2493,12 +2645,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityEntry)));
 		}
 
+		/// <summary>Create a security entry owned by the asset database.</summary>
 		public Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null)
 		{
 			ApiResponseObject localVarResponse = CreateSecurityEntryWithHttpInfo(webId, securityEntry, applyToChildren, securityItem);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a security entry owned by the asset database.</summary>
 		public ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -2565,12 +2719,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve the security entry of the specified security item associated with the asset database with the specified name.</summary>
 		public PISecurityEntry GetSecurityEntryByName(string name, string webId, string securityItem = null, string selectedFields = null)
 		{
 			ApiResponsePISecurityEntry localVarResponse = GetSecurityEntryByNameWithHttpInfo(name, webId, securityItem, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entry of the specified security item associated with the asset database with the specified name.</summary>
 		public ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string securityItem = null, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -2638,12 +2794,14 @@ namespace PIWebAPIWrapper.Api
 				(PISecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PISecurityEntry)));
 		}
 
+		/// <summary>Update a security entry owned by the asset database.</summary>
 		public Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null)
 		{
 			ApiResponseObject localVarResponse = UpdateSecurityEntryWithHttpInfo(name, webId, securityEntry, applyToChildren, securityItem);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update a security entry owned by the asset database.</summary>
 		public ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren, string securityItem = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -2717,12 +2875,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a security entry owned by the asset database.</summary>
 		public Object DeleteSecurityEntry(string name, string webId, bool applyToChildren, string securityItem = null)
 		{
 			ApiResponseObject localVarResponse = DeleteSecurityEntryWithHttpInfo(name, webId, applyToChildren, securityItem);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a security entry owned by the asset database.</summary>
 		public ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren, string securityItem = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -2786,12 +2946,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve table categories for a given Asset Database.</summary>
 		public PIItemsTableCategory GetTableCategories(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsTableCategory localVarResponse = GetTableCategoriesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve table categories for a given Asset Database.</summary>
 		public ApiResponsePIItemsTableCategory GetTableCategoriesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -2847,12 +3009,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsTableCategory)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsTableCategory)));
 		}
 
+		/// <summary>Create a table category on the Asset Database.</summary>
 		public Object CreateTableCategory(string webId, PITableCategory tableCategory)
 		{
 			ApiResponseObject localVarResponse = CreateTableCategoryWithHttpInfo(webId, tableCategory);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a table category on the Asset Database.</summary>
 		public ApiResponseObject CreateTableCategoryWithHttpInfo(string webId, PITableCategory tableCategory)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -2913,12 +3077,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve tables for given Asset Database.</summary>
 		public PIItemsTable GetTables(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsTable localVarResponse = GetTablesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve tables for given Asset Database.</summary>
 		public ApiResponsePIItemsTable GetTablesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -2974,12 +3140,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsTable)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsTable)));
 		}
 
+		/// <summary>Create a table on the Asset Database.</summary>
 		public Object CreateTable(string webId, PITable table)
 		{
 			ApiResponseObject localVarResponse = CreateTableWithHttpInfo(webId, table);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a table on the Asset Database.</summary>
 		public ApiResponseObject CreateTableWithHttpInfo(string webId, PITable table)
 		{
 			if (string.IsNullOrEmpty(webId)==true)

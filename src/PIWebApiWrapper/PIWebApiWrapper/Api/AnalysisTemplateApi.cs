@@ -1,3 +1,19 @@
+// ************************************************************************
+//
+// * Copyright 2017 OSIsoft, LLC
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// * 
+// *   <http://www.apache.org/licenses/LICENSE-2.0>
+// * 
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// ************************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,89 +27,113 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("AEC4EB7F-CCE0-4237-90C7-842101B57D62")]
+	[Guid("8CAB5BF4-71D9-4D92-B176-53A95B176256")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
 	public interface IAnalysisTemplateApi
 	{
 		#region Synchronous Operations
+		/// <summary>Retrieve an analysis template by path.</summary>
 		[DispId(1)]
 		PIAnalysisTemplate GetByPath(string path, string selectedFields = null);
 
+		/// <summary>Retrieve an analysis template by path.</summary>
 		[DispId(2)]
 		ApiResponsePIAnalysisTemplate GetByPathWithHttpInfo(string path, string selectedFields = null);
 
+		/// <summary>Create an Analysis template based upon a specified Analysis.</summary>
 		[DispId(3)]
 		Object CreateFromAnalysis(string analysisWebId, string name = null);
 
+		/// <summary>Create an Analysis template based upon a specified Analysis.</summary>
 		[DispId(4)]
 		ApiResponseObject CreateFromAnalysisWithHttpInfo(string analysisWebId, string name = null);
 
+		/// <summary>Retrieve an analysis template.</summary>
 		[DispId(5)]
 		PIAnalysisTemplate Get(string webId, string selectedFields = null);
 
+		/// <summary>Retrieve an analysis template.</summary>
 		[DispId(6)]
 		ApiResponsePIAnalysisTemplate GetWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Update an analysis template by replacing items in its definition.</summary>
 		[DispId(7)]
 		Object Update(string webId, PIAnalysisTemplate template);
 
+		/// <summary>Update an analysis template by replacing items in its definition.</summary>
 		[DispId(8)]
 		ApiResponseObject UpdateWithHttpInfo(string webId, PIAnalysisTemplate template);
 
+		/// <summary>Delete an analysis template.</summary>
 		[DispId(9)]
 		Object Delete(string webId);
 
+		/// <summary>Delete an analysis template.</summary>
 		[DispId(10)]
 		ApiResponseObject DeleteWithHttpInfo(string webId);
 
+		/// <summary>Get an analysis template's categories.</summary>
 		[DispId(11)]
 		PIItemsAnalysisCategory GetCategories(string webId, string selectedFields = null);
 
+		/// <summary>Get an analysis template's categories.</summary>
 		[DispId(12)]
 		ApiResponsePIItemsAnalysisCategory GetCategoriesWithHttpInfo(string webId, string selectedFields = null);
 
+		/// <summary>Get the security information of the specified security item associated with the analysis template for a specified user.</summary>
 		[DispId(13)]
 		PIItemsSecurityRights GetSecurity(string webId, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Get the security information of the specified security item associated with the analysis template for a specified user.</summary>
 		[DispId(14)]
 		ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string userIdentities, bool forceRefresh, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries associated with the analysis template based on the specified criteria. By default, all security entries for this analysis template are returned.</summary>
 		[DispId(15)]
 		PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Retrieve the security entries associated with the analysis template based on the specified criteria. By default, all security entries for this analysis template are returned.</summary>
 		[DispId(16)]
 		ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string selectedFields = null);
 
+		/// <summary>Create a security entry owned by the analysis template.</summary>
 		[DispId(17)]
 		Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Create a security entry owned by the analysis template.</summary>
 		[DispId(18)]
 		ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Retrieve the security entry associated with the analysis template with the specified name.</summary>
 		[DispId(19)]
 		PISecurityEntry GetSecurityEntryByName(string name, string webId, string selectedFields = null);
 
+		/// <summary>Retrieve the security entry associated with the analysis template with the specified name.</summary>
 		[DispId(20)]
 		ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string selectedFields = null);
 
+		/// <summary>Update a security entry owned by the analysis template.</summary>
 		[DispId(21)]
 		Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Update a security entry owned by the analysis template.</summary>
 		[DispId(22)]
 		ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren);
 
+		/// <summary>Delete a security entry owned by the analysis template.</summary>
 		[DispId(23)]
 		Object DeleteSecurityEntry(string name, string webId, bool applyToChildren);
 
+		/// <summary>Delete a security entry owned by the analysis template.</summary>
 		[DispId(24)]
 		ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren);
 
 		#endregion
 	}
 
-	[Guid("6D39E74A-F238-4D99-917E-1F28B3595E6A")]
+	[Guid("F3D4B1A0-DB13-49BE-88A9-10B710C4D5D7")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IAnalysisTemplateApi))]
@@ -131,12 +171,14 @@ namespace PIWebAPIWrapper.Api
 			set { _exceptionFactory = value; }
 		}
 
+		/// <summary>Retrieve an analysis template by path.</summary>
 		public PIAnalysisTemplate GetByPath(string path, string selectedFields = null)
 		{
 			ApiResponsePIAnalysisTemplate localVarResponse = GetByPathWithHttpInfo(path, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an analysis template by path.</summary>
 		public ApiResponsePIAnalysisTemplate GetByPathWithHttpInfo(string path, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(path)==true)
@@ -192,12 +234,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAnalysisTemplate)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAnalysisTemplate)));
 		}
 
+		/// <summary>Create an Analysis template based upon a specified Analysis.</summary>
 		public Object CreateFromAnalysis(string analysisWebId, string name = null)
 		{
 			ApiResponseObject localVarResponse = CreateFromAnalysisWithHttpInfo(analysisWebId, name);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create an Analysis template based upon a specified Analysis.</summary>
 		public ApiResponseObject CreateFromAnalysisWithHttpInfo(string analysisWebId, string name = null)
 		{
 			if (string.IsNullOrEmpty(analysisWebId)==true)
@@ -253,12 +297,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve an analysis template.</summary>
 		public PIAnalysisTemplate Get(string webId, string selectedFields = null)
 		{
 			ApiResponsePIAnalysisTemplate localVarResponse = GetWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve an analysis template.</summary>
 		public ApiResponsePIAnalysisTemplate GetWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -314,12 +360,14 @@ namespace PIWebAPIWrapper.Api
 				(PIAnalysisTemplate)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIAnalysisTemplate)));
 		}
 
+		/// <summary>Update an analysis template by replacing items in its definition.</summary>
 		public Object Update(string webId, PIAnalysisTemplate template)
 		{
 			ApiResponseObject localVarResponse = UpdateWithHttpInfo(webId, template);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update an analysis template by replacing items in its definition.</summary>
 		public ApiResponseObject UpdateWithHttpInfo(string webId, PIAnalysisTemplate template)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -380,12 +428,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete an analysis template.</summary>
 		public Object Delete(string webId)
 		{
 			ApiResponseObject localVarResponse = DeleteWithHttpInfo(webId);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete an analysis template.</summary>
 		public ApiResponseObject DeleteWithHttpInfo(string webId)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -436,12 +486,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Get an analysis template's categories.</summary>
 		public PIItemsAnalysisCategory GetCategories(string webId, string selectedFields = null)
 		{
 			ApiResponsePIItemsAnalysisCategory localVarResponse = GetCategoriesWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get an analysis template's categories.</summary>
 		public ApiResponsePIItemsAnalysisCategory GetCategoriesWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -497,12 +549,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsAnalysisCategory)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsAnalysisCategory)));
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the analysis template for a specified user.</summary>
 		public PIItemsSecurityRights GetSecurity(string webId, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityRights localVarResponse = GetSecurityWithHttpInfo(webId, userIdentities, forceRefresh, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Get the security information of the specified security item associated with the analysis template for a specified user.</summary>
 		public ApiResponsePIItemsSecurityRights GetSecurityWithHttpInfo(string webId, string userIdentities, bool forceRefresh, string selectedFields = null)
 		{
 			List<string> userIdentity = ExtensionMethods.ConvertToList(userIdentities);
@@ -561,12 +615,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityRights)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityRights)));
 		}
 
+		/// <summary>Retrieve the security entries associated with the analysis template based on the specified criteria. By default, all security entries for this analysis template are returned.</summary>
 		public PIItemsSecurityEntry GetSecurityEntries(string webId, string nameFilter = null, string selectedFields = null)
 		{
 			ApiResponsePIItemsSecurityEntry localVarResponse = GetSecurityEntriesWithHttpInfo(webId, nameFilter, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entries associated with the analysis template based on the specified criteria. By default, all security entries for this analysis template are returned.</summary>
 		public ApiResponsePIItemsSecurityEntry GetSecurityEntriesWithHttpInfo(string webId, string nameFilter = null, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -627,12 +683,14 @@ namespace PIWebAPIWrapper.Api
 				(PIItemsSecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIItemsSecurityEntry)));
 		}
 
+		/// <summary>Create a security entry owned by the analysis template.</summary>
 		public Object CreateSecurityEntry(string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = CreateSecurityEntryWithHttpInfo(webId, securityEntry, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Create a security entry owned by the analysis template.</summary>
 		public ApiResponseObject CreateSecurityEntryWithHttpInfo(string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
@@ -694,12 +752,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Retrieve the security entry associated with the analysis template with the specified name.</summary>
 		public PISecurityEntry GetSecurityEntryByName(string name, string webId, string selectedFields = null)
 		{
 			ApiResponsePISecurityEntry localVarResponse = GetSecurityEntryByNameWithHttpInfo(name, webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Retrieve the security entry associated with the analysis template with the specified name.</summary>
 		public ApiResponsePISecurityEntry GetSecurityEntryByNameWithHttpInfo(string name, string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -762,12 +822,14 @@ namespace PIWebAPIWrapper.Api
 				(PISecurityEntry)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PISecurityEntry)));
 		}
 
+		/// <summary>Update a security entry owned by the analysis template.</summary>
 		public Object UpdateSecurityEntry(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = UpdateSecurityEntryWithHttpInfo(name, webId, securityEntry, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Update a security entry owned by the analysis template.</summary>
 		public ApiResponseObject UpdateSecurityEntryWithHttpInfo(string name, string webId, PISecurityEntry securityEntry, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(name)==true)
@@ -836,12 +898,14 @@ namespace PIWebAPIWrapper.Api
 				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
+		/// <summary>Delete a security entry owned by the analysis template.</summary>
 		public Object DeleteSecurityEntry(string name, string webId, bool applyToChildren)
 		{
 			ApiResponseObject localVarResponse = DeleteSecurityEntryWithHttpInfo(name, webId, applyToChildren);
 			return localVarResponse.Data;
 		}
 
+		/// <summary>Delete a security entry owned by the analysis template.</summary>
 		public ApiResponseObject DeleteSecurityEntryWithHttpInfo(string name, string webId, bool applyToChildren)
 		{
 			if (string.IsNullOrEmpty(name)==true)
