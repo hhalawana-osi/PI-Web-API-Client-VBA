@@ -53,7 +53,7 @@ Retrieve an Analysis by path.
 ### Parameters
 
 Name | Type | Description | Notes
------------- - | ------------- | ------------- | -------------
+------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to the Analysis.. |
  **selectedFields** | **string**| List of fields to be returned in the response, separated by semicolons (;). If this parameter is not specified, all available fields will be returned.. |
 
