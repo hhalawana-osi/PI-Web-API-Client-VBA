@@ -73,7 +73,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValue**](../Responses/ApiResponsePIItemsStreamValue.md)
+[**ApiResponsePIItemsStreamValue**](../Response/ApiResponsePIItemsStreamValue.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -123,7 +123,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValue**](../Responses/ApiResponsePIItemsStreamValue.md)
+[**ApiResponsePIItemsStreamValue**](../Response/ApiResponsePIItemsStreamValue.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -179,7 +179,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -240,7 +240,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -299,7 +299,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -360,7 +360,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -413,7 +413,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsItemsSubstatus**](../Responses/ApiResponsePIItemsItemsSubstatus.md)
+[**ApiResponsePIItemsItemsSubstatus**](../Response/ApiResponsePIItemsItemsSubstatus.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -462,7 +462,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -519,7 +519,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -583,7 +583,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamSummaries**](../Responses/ApiResponsePIItemsStreamSummaries.md)
+[**ApiResponsePIItemsStreamSummaries**](../Response/ApiResponsePIItemsStreamSummaries.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -645,7 +645,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValue**](../Responses/ApiResponsePIItemsStreamValue.md)
+[**ApiResponsePIItemsStreamValue**](../Response/ApiResponsePIItemsStreamValue.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -693,7 +693,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsSubstatus**](../Responses/ApiResponsePIItemsSubstatus.md)
+[**ApiResponsePIItemsSubstatus**](../Response/ApiResponsePIItemsSubstatus.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -733,7 +733,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValue**](../Responses/ApiResponsePIItemsStreamValue.md)
+[**ApiResponsePIItemsStreamValue**](../Response/ApiResponsePIItemsStreamValue.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -771,7 +771,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -815,7 +815,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -864,7 +864,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -911,7 +911,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -960,7 +960,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1006,7 +1006,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsItemsSubstatus**](../Responses/ApiResponsePIItemsItemsSubstatus.md)
+[**ApiResponsePIItemsItemsSubstatus**](../Response/ApiResponsePIItemsItemsSubstatus.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1048,7 +1048,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValue**](../Responses/ApiResponsePIItemsStreamValue.md)
+[**ApiResponsePIItemsStreamValue**](../Response/ApiResponsePIItemsStreamValue.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1093,7 +1093,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1145,7 +1145,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamSummaries**](../Responses/ApiResponsePIItemsStreamSummaries.md)
+[**ApiResponsePIItemsStreamSummaries**](../Response/ApiResponsePIItemsStreamSummaries.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1195,7 +1195,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValue**](../Responses/ApiResponsePIItemsStreamValue.md)
+[**ApiResponsePIItemsStreamValue**](../Response/ApiResponsePIItemsStreamValue.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1236,7 +1236,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsSubstatus**](../Responses/ApiResponsePIItemsSubstatus.md)
+[**ApiResponsePIItemsSubstatus**](../Response/ApiResponsePIItemsSubstatus.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

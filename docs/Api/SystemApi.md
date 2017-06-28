@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePISystemLanding**](../Responses/ApiResponsePISystemLanding.md)
+[**ApiResponsePISystemLanding**](../Response/ApiResponsePISystemLanding.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -61,7 +61,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsCacheInstance**](../Responses/ApiResponsePIItemsCacheInstance.md)
+[**ApiResponsePIItemsCacheInstance**](../Response/ApiResponsePIItemsCacheInstance.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -95,7 +95,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePISystemStatus**](../Responses/ApiResponsePISystemStatus.md)
+[**ApiResponsePISystemStatus**](../Response/ApiResponsePISystemStatus.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -129,7 +129,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIUserInfo**](../Responses/ApiResponsePIUserInfo.md)
+[**ApiResponsePIUserInfo**](../Response/ApiResponsePIUserInfo.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -163,7 +163,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

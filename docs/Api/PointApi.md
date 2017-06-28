@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIPoint**](../Responses/ApiResponsePIPoint.md)
+[**ApiResponsePIPoint**](../Response/ApiResponsePIPoint.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -71,7 +71,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIPoint**](../Responses/ApiResponsePIPoint.md)
+[**ApiResponsePIPoint**](../Response/ApiResponsePIPoint.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -109,7 +109,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -146,7 +146,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -185,7 +185,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsPointAttribute**](../Responses/ApiResponsePIItemsPointAttribute.md)
+[**ApiResponsePIItemsPointAttribute**](../Response/ApiResponsePIItemsPointAttribute.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -226,7 +226,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIPointAttribute**](../Responses/ApiResponsePIPointAttribute.md)
+[**ApiResponsePIPointAttribute**](../Response/ApiResponsePIPointAttribute.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -268,7 +268,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsItemPoint**](../Responses/ApiResponsePIItemsItemPoint.md)
+[**ApiResponsePIItemsItemPoint**](../Response/ApiResponsePIItemsItemPoint.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

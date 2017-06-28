@@ -60,7 +60,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsAssetServer**](../Responses/ApiResponsePIItemsAssetServer.md)
+[**ApiResponsePIItemsAssetServer**](../Response/ApiResponsePIItemsAssetServer.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -97,7 +97,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIAssetServer**](../Responses/ApiResponsePIAssetServer.md)
+[**ApiResponsePIAssetServer**](../Response/ApiResponsePIAssetServer.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -135,7 +135,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIAssetServer**](../Responses/ApiResponsePIAssetServer.md)
+[**ApiResponsePIAssetServer**](../Response/ApiResponsePIAssetServer.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -173,7 +173,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIAssetServer**](../Responses/ApiResponsePIAssetServer.md)
+[**ApiResponsePIAssetServer**](../Response/ApiResponsePIAssetServer.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -211,7 +211,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsAnalysisRulePlugIn**](../Responses/ApiResponsePIItemsAnalysisRulePlugIn.md)
+[**ApiResponsePIItemsAnalysisRulePlugIn**](../Response/ApiResponsePIItemsAnalysisRulePlugIn.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -249,7 +249,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsAssetDatabase**](../Responses/ApiResponsePIItemsAssetDatabase.md)
+[**ApiResponsePIItemsAssetDatabase**](../Response/ApiResponsePIItemsAssetDatabase.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -287,7 +287,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -328,7 +328,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsSecurityRights**](../Responses/ApiResponsePIItemsSecurityRights.md)
+[**ApiResponsePIItemsSecurityRights**](../Response/ApiResponsePIItemsSecurityRights.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -371,7 +371,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsSecurityEntry**](../Responses/ApiResponsePIItemsSecurityEntry.md)
+[**ApiResponsePIItemsSecurityEntry**](../Response/ApiResponsePIItemsSecurityEntry.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -413,7 +413,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -455,7 +455,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePISecurityEntry**](../Responses/ApiResponsePISecurityEntry.md)
+[**ApiResponsePISecurityEntry**](../Response/ApiResponsePISecurityEntry.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -498,7 +498,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -541,7 +541,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -586,7 +586,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsSecurityIdentity**](../Responses/ApiResponsePIItemsSecurityIdentity.md)
+[**ApiResponsePIItemsSecurityIdentity**](../Response/ApiResponsePIItemsSecurityIdentity.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -629,7 +629,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -668,7 +668,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsSecurityIdentity**](../Responses/ApiResponsePIItemsSecurityIdentity.md)
+[**ApiResponsePIItemsSecurityIdentity**](../Response/ApiResponsePIItemsSecurityIdentity.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -712,7 +712,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsSecurityMapping**](../Responses/ApiResponsePIItemsSecurityMapping.md)
+[**ApiResponsePIItemsSecurityMapping**](../Response/ApiResponsePIItemsSecurityMapping.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -755,7 +755,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -793,7 +793,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsTimeRulePlugIn**](../Responses/ApiResponsePIItemsTimeRulePlugIn.md)
+[**ApiResponsePIItemsTimeRulePlugIn**](../Response/ApiResponsePIItemsTimeRulePlugIn.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -831,7 +831,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsUnitClass**](../Responses/ApiResponsePIItemsUnitClass.md)
+[**ApiResponsePIItemsUnitClass**](../Response/ApiResponsePIItemsUnitClass.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -869,7 +869,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

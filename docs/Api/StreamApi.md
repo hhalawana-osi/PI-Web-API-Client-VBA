@@ -43,7 +43,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsStreamValues**](../Responses/ApiResponsePIItemsStreamValues.md)
+[**ApiResponsePIItemsStreamValues**](../Response/ApiResponsePIItemsStreamValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -82,7 +82,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePITimedValue**](../Responses/ApiResponsePITimedValue.md)
+[**ApiResponsePITimedValue**](../Response/ApiResponsePITimedValue.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -128,7 +128,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePITimedValues**](../Responses/ApiResponsePITimedValues.md)
+[**ApiResponsePITimedValues**](../Response/ApiResponsePITimedValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -179,7 +179,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePITimedValues**](../Responses/ApiResponsePITimedValues.md)
+[**ApiResponsePITimedValues**](../Response/ApiResponsePITimedValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -228,7 +228,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePITimedValues**](../Responses/ApiResponsePITimedValues.md)
+[**ApiResponsePITimedValues**](../Response/ApiResponsePITimedValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -279,7 +279,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePITimedValues**](../Responses/ApiResponsePITimedValues.md)
+[**ApiResponsePITimedValues**](../Response/ApiResponsePITimedValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -327,7 +327,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsSubstatus**](../Responses/ApiResponsePIItemsSubstatus.md)
+[**ApiResponsePIItemsSubstatus**](../Response/ApiResponsePIItemsSubstatus.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -371,7 +371,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePITimedValue**](../Responses/ApiResponsePITimedValue.md)
+[**ApiResponsePITimedValue**](../Response/ApiResponsePITimedValue.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -418,7 +418,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePITimedValues**](../Responses/ApiResponsePITimedValues.md)
+[**ApiResponsePITimedValues**](../Response/ApiResponsePITimedValues.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -471,7 +471,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsSummaryValue**](../Responses/ApiResponsePIItemsSummaryValue.md)
+[**ApiResponsePIItemsSummaryValue**](../Response/ApiResponsePIItemsSummaryValue.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -522,7 +522,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePITimedValue**](../Responses/ApiResponsePITimedValue.md)
+[**ApiResponsePITimedValue**](../Response/ApiResponsePITimedValue.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -565,7 +565,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

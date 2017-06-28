@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIItemsAttributeTrait**](../Responses/ApiResponsePIItemsAttributeTrait.md)
+[**ApiResponsePIItemsAttributeTrait**](../Response/ApiResponsePIItemsAttributeTrait.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -61,7 +61,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIAttributeTrait**](../Responses/ApiResponsePIAttributeTrait.md)
+[**ApiResponsePIAttributeTrait**](../Response/ApiResponsePIAttributeTrait.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

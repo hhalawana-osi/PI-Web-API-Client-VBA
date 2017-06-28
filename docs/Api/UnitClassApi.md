@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIUnitClass**](../Responses/ApiResponsePIUnitClass.md)
+[**ApiResponsePIUnitClass**](../Response/ApiResponsePIUnitClass.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -71,7 +71,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIUnitClass**](../Responses/ApiResponsePIUnitClass.md)
+[**ApiResponsePIUnitClass**](../Response/ApiResponsePIUnitClass.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -109,7 +109,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -146,7 +146,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -183,7 +183,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIUnit**](../Responses/ApiResponsePIUnit.md)
+[**ApiResponsePIUnit**](../Response/ApiResponsePIUnit.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -221,7 +221,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponsePIUnit**](../Responses/ApiResponsePIUnit.md)
+[**ApiResponsePIUnit**](../Response/ApiResponsePIUnit.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -259,7 +259,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Responses/ApiResponseObject.md)
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
