@@ -32,7 +32,7 @@ As this is a .NET library with COM objects and methods exposed to be able be con
 
  - VBA is not compatible with async methods. Therefore, only sync methods are ar available in this library.
  - For each PI Web API action/method of each controller, there are two methods on this client library. One returns the object itself and the other returns also the some http information, such as status code.
- - The Batch, Channel and Configuration controllers are not exposed.
+ - The Batch and Channel controllers are not exposed.
  - When working with models with an Items property (such as PIItemsElement), do not access or modify this property directly. Use CreateItemsArray(), GetItem(), SetItem() and GetItemsLength() instead.
  - For models that have the Value property, use SetValueWithString(), SetValueWithInt(), SetValueWithDouble() methods to set this propery.
  - For the Api methods, all variables whose type are not a string must be defined. If a string variable is optional, define it as an empty string instead of Null. 
@@ -59,6 +59,17 @@ If you want to use basic authentication instead of Kerberos, set useKerberos to 
     Set dataServer = client.dataServer.GetByName(tbPIDataArchiveName.Text)
 ```
 
+### Create a new PI Point
+
+```vb# 
+    Dim response As ApiResponseObject
+    Dim newPIPoint As New PIPoint
+    newPIPoint.Name = "MyNewPIPoint"
+    newPIPoint.Descriptor = "Point created for wrapper test"
+    newPIPoint.PointClass = "classic"
+    newPIPoint.PointType = "Float32"
+    Set response = client.dataServer.CreatePointWithHttpInfo(dataServer.webId, newPIPoint)
+```
 
 ### Get PI Points WebIds
 
@@ -428,8 +439,6 @@ Class | Method | HTTP request | Description
 *CalculationApi* | [**GetSummaryWithHttpInfo**](docs/Api/CalculationApi.md#getsummarywithhttpinfo) | **GET** /calculation/summary | Returns the result of evaluating the expression over the time range from the start time to the end time. The time range is first divided into a number of summary intervals. Then the calculation is performed for the specified summaries over each interval.
 *CalculationApi* | [**GetAtTimes**](docs/Api/CalculationApi.md#getattimes) | **GET** /calculation/times | Returns the result of evaluating the expression at the specified timestamps.
 *CalculationApi* | [**GetAtTimesWithHttpInfo**](docs/Api/CalculationApi.md#getattimeswithhttpinfo) | **GET** /calculation/times | Returns the result of evaluating the expression at the specified timestamps.
-*ChannelApi* | [**Instances**](docs/Api/ChannelApi.md#instances) | **GET** /channels/instances | Retrieves a list of currently running channel instances.
-*ChannelApi* | [**InstancesWithHttpInfo**](docs/Api/ChannelApi.md#instanceswithhttpinfo) | **GET** /channels/instances | Retrieves a list of currently running channel instances.
 *DataServerApi* | [**List**](docs/Api/DataServerApi.md#list) | **GET** /dataservers | Retrieve a list of Data Servers known to this service.
 *DataServerApi* | [**ListWithHttpInfo**](docs/Api/DataServerApi.md#listwithhttpinfo) | **GET** /dataservers | Retrieve a list of Data Servers known to this service.
 *DataServerApi* | [**GetByName**](docs/Api/DataServerApi.md#getbyname) | **GET** /dataservers#name | Retrieve a Data Server by name.
@@ -1043,7 +1052,6 @@ Class | Method | HTTP request | Description
 - [ApiResponsePIUserInfo](docs/Response/ApiResponsePIUserInfo.md)
 - [ApiResponsePIValue](docs/Response/ApiResponsePIValue.md)
 - [ApiResponsePIVersion](docs/Response/ApiResponsePIVersion.md)
-
 
 
 

@@ -63,8 +63,6 @@
     <Compile Include="Api\AttributeTemplateApi.cs" />
     <Compile Include="Api\AttributeTraitApi.cs" />
     <Compile Include="Api\CalculationApi.cs" />
-    <Compile Include="Api\ChannelApi.cs" />
-    <Compile Include="Api\ConfigurationApi.cs" />
     <Compile Include="Api\DataServerApi.cs" />
     <Compile Include="Api\ElementApi.cs" />
     <Compile Include="Api\ElementCategoryApi.cs" />
@@ -94,6 +92,7 @@
     <Compile Include="Client\IValidatableObject.cs" />
     <Compile Include="Client\ValidationContext.cs" />
     <Compile Include="Client\ValidationResult.cs" />
+    <Compile Include="ConfigurationApi.cs" />
     <Compile Include="CustomDictionaryForQueryString.cs" />
     <Compile Include="Client\ExtensionMethods.cs" />
     <Compile Include="Model\PIAnalysis.cs" />
