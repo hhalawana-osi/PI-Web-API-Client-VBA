@@ -47,7 +47,7 @@ There are two PI ProcessBook displays available on the Samples folder of this re
 ```vb# 
     Dim client As New PIWebApiClient
     Dim connectedToPIWebAPI As Boolean
-    connectedToPIWebAPI = client.DefineProperties("https://marc-web-sql.marc.net/piwebapi", True)
+    connectedToPIWebAPI = client.Connect("https://marc-web-sql.marc.net/piwebapi", True)
 ``` 
 
 If you want to use basic authentication instead of Kerberos, set useKerberos to False and set the username and password accordingly.
