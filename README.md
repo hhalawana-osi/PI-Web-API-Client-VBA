@@ -26,6 +26,17 @@ Create or edit a PI ProcessBook display. Press ALT+F11 to open Visual Basic for 
 ## Source code
 The Visual Studio solution that generates the final library is available on the src folder. You might want to add or edit a method and rebuild the solution in order to generate custom assemblies.
 
+## Remember
+
+As this is a .NET library with COM objects and methods exposed to be able be consumed within the VBA environment, there are some things to have in mind, specially when comparing with C# development.
+
+ - VBA is not compatible with async methods. Therefore, only sync methods are ar available in this library.
+ - For each PI Web API action/method of each controller, there are two methods on this client library. One returns the object itself and the other returns also the some http information, such as status code.
+ - The BATCH controller is not exposed.
+ - When working with models with an Items property (such as PIItemsElement), do not access or modify this property directly. Use CreateItemsArray(), GetItem(), SetItem() and GetItemsLength() instead.
+ - For models that have the Value property, use SetValueWithString(), SetValueWithInt(), SetValueWithDouble() methods to set this propery.
+ - For the Api methods, all variables whose type are not a string must be defined. If a string variable is optional, define it as an empty string instead of Null. 
+
 ## Examples
 
 There are two PI ProcessBook displays available on the Samples folder of this repository. In addition, please refer to the following examples to understand how to use this library: 
