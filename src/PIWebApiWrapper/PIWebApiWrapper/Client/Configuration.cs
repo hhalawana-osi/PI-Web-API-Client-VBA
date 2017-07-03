@@ -63,11 +63,28 @@ namespace PIWebAPIWrapper.Client
             UserAgent = userAgent;
 
             if (defaultHeader != null)
+            {
                 DefaultHeader = defaultHeader;
+            }
+
+            if (!String.IsNullOrEmpty(Username) || !String.IsNullOrEmpty(Password))
+            {
+                if (DefaultHeader==null)
+                {
+                    DefaultHeader = new Dictionary<string, string>();
+                }
+                DefaultHeader["Authorization"] = "Basic " + ApiClient.Base64Encode(Username + ":" + Password);
+            }
+
+
             if (apiKey != null)
+            {
                 ApiKey = apiKey;
+            }
             if (apiKeyPrefix != null)
+            {
                 ApiKeyPrefix = apiKeyPrefix;
+            }
 
             TempFolderPath = tempFolderPath;
             DateTimeFormat = dateTimeFormat;

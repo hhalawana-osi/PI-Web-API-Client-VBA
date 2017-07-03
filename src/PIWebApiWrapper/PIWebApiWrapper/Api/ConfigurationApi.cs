@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("FB9EE459-E01E-4D49-8DCA-BB5DF8945205")]
+	[Guid("83C4CE27-CB93-4D81-BFFC-65A088F4B731")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -58,10 +58,18 @@ namespace PIWebAPIWrapper.Api
 		[DispId(6)]
 		ApiResponseObject DeleteWithHttpInfo(string key);
 
+		/// <summary>Create or update a configuration item.</summary>
+		[DispId(7)]
+		Object Put(string key, object value);
+
+		/// <summary>Create or update a configuration item.</summary>
+		[DispId(8)]
+		ApiResponseObject PutWithHttpInfo(string key, object value);
+
 		#endregion
 	}
 
-	[Guid("D107D9FB-1966-4D2C-8BC7-0E77D1B297EC")]
+	[Guid("C0BAFD49-675C-41A5-8F1A-38B2F2655164")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IConfigurationApi))]
@@ -129,10 +137,6 @@ namespace PIWebAPIWrapper.Api
 			localVarPathParams.Add("format", "json");
 
 
-			if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
-			{
-				localVarHeaderParams["Authorization"] = "Basic" + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
-			}
 			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
 				Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
 				localVarPathParams, localVarHttpContentType);
@@ -187,10 +191,6 @@ namespace PIWebAPIWrapper.Api
 
 			if (key!= null) localVarPathParams.Add("key", Configuration.ApiClient.ParameterToString(key));
 
-			if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
-			{
-				localVarHeaderParams["Authorization"] = "Basic" + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
-			}
 			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
 				Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
 				localVarPathParams, localVarHttpContentType);
@@ -245,10 +245,6 @@ namespace PIWebAPIWrapper.Api
 
 			if (key!= null) localVarPathParams.Add("key", Configuration.ApiClient.ParameterToString(key));
 
-			if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
-			{
-				localVarHeaderParams["Authorization"] = "Basic" + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
-			}
 			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
 				Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
 				localVarPathParams, localVarHttpContentType);
@@ -258,6 +254,70 @@ namespace PIWebAPIWrapper.Api
 			if (ExceptionFactory != null)
 			{
 				Exception exception = ExceptionFactory("Delete", localVarResponse);
+				if (exception != null) throw exception;
+			}
+
+			return new ApiResponseObject(localVarStatusCode,
+				localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+		}
+
+		/// <summary>Create or update a configuration item.</summary>
+		public Object Put(string key, object value)
+		{
+			ApiResponseObject localVarResponse = PutWithHttpInfo(key, value);
+			return localVarResponse.Data;
+		}
+
+		/// <summary>Create or update a configuration item.</summary>
+		public ApiResponseObject PutWithHttpInfo(string key, object value)
+		{
+			if (string.IsNullOrEmpty(key)==true)
+			{
+				key = null;
+			}
+			if (key == null)
+				throw new ApiException(400, "Missing required parameter 'key'");
+			if (value == null)
+				throw new ApiException(400, "Missing required parameter 'value'");
+
+			var localVarPath = "/system/configuration/{key}";
+			var localVarPathParams = new Dictionary<String, String>();
+			var localVarQueryParams = new CustomDictionaryForQueryString();
+			var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+			var localVarFormParams = new Dictionary<String, String>();
+			var localVarFileParams = new Dictionary<String, FileParameter>();
+			Object localVarPostBody = null;
+
+			String[] localVarHttpContentTypes = new String[] { }; 
+			String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+			String[] localVarHttpHeaderAccepts = new String[] { "application/json", "text/json", "text/xml" };
+			String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+
+			if (localVarHttpHeaderAccept != null)
+				localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+			localVarPathParams.Add("format", "json");
+
+			if (key!= null) localVarPathParams.Add("key", Configuration.ApiClient.ParameterToString(key));
+			if (value != null && value.GetType() != typeof(byte[]))
+			{
+				localVarPostBody = Configuration.ApiClient.Serialize(value);
+			}
+			else
+			{
+				localVarPostBody = value;
+			}
+
+			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
+				Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+				localVarPathParams, localVarHttpContentType);
+
+			int localVarStatusCode = (int)localVarResponse.StatusCode;
+
+			if (ExceptionFactory != null)
+			{
+				Exception exception = ExceptionFactory("Put", localVarResponse);
 				if (exception != null) throw exception;
 			}
 

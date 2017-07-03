@@ -179,6 +179,7 @@ namespace PIWebAPIWrapper
             if ((useKerberos == false) && (userName != null) && (password != null))
             {
                 config = new Configuration(client, null, userName, password);
+       
             }
             else
             {

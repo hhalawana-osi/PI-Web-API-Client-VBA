@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("B8D30FA7-6C43-4A5A-9373-03B8C354E12F")]
+	[Guid("B6E31C19-CF0F-4802-A978-9ACBDA2A7432")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -45,7 +45,7 @@ namespace PIWebAPIWrapper.Api
 		#endregion
 	}
 
-	[Guid("28153BE3-0B76-436A-83C4-C783A9B707FE")]
+	[Guid("02E3A1F1-1522-4355-8342-03F4A97315DE")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IHomeApi))]
@@ -113,10 +113,6 @@ namespace PIWebAPIWrapper.Api
 			localVarPathParams.Add("format", "json");
 
 
-			if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
-			{
-				localVarHeaderParams["Authorization"] = "Basic" + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
-			}
 			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
 				Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
 				localVarPathParams, localVarHttpContentType);

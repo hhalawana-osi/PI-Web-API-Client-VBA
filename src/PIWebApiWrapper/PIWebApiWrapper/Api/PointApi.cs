@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("457CE2E4-22C3-4B0E-A3CF-3B9D4ABBFCE5")]
+	[Guid("BBBD63BC-9F72-43AD-8751-4B6CE8082C5E")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -82,18 +82,26 @@ namespace PIWebAPIWrapper.Api
 		[DispId(12)]
 		ApiResponsePIPointAttribute GetAttributeByNameWithHttpInfo(string name, string webId, string selectedFields = null);
 
-		/// <summary>Retrieve multiple points by web id or path.</summary>
+		/// <summary>Update a point attribute value.</summary>
 		[DispId(13)]
+		Object UpdateAttributeValue(string webId, string name, object value);
+
+		/// <summary>Update a point attribute value.</summary>
+		[DispId(14)]
+		ApiResponseObject UpdateAttributeValueWithHttpInfo(string webId, string name, object value);
+
+		/// <summary>Retrieve multiple points by web id or path.</summary>
+		[DispId(15)]
 		PIItemsItemPoint GetMultiple(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null);
 
 		/// <summary>Retrieve multiple points by web id or path.</summary>
-		[DispId(14)]
+		[DispId(16)]
 		ApiResponsePIItemsItemPoint GetMultipleWithHttpInfo(bool asParallel, string includeMode = null, string paths = null, string selectedFields = null, string webIds = null);
 
 		#endregion
 	}
 
-	[Guid("E557B1D9-C4B9-436E-B50A-6F1AD26601BD")]
+	[Guid("49248339-8396-4A07-8662-481FB2D09921")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IPointApi))]
@@ -173,10 +181,6 @@ namespace PIWebAPIWrapper.Api
 			if (path!= null) localVarQueryParams.Add("path", Configuration.ApiClient.ParameterToString(path));
 			if (selectedFields!= null) localVarQueryParams.Add("selectedFields", Configuration.ApiClient.ParameterToString(selectedFields));
 
-			if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
-			{
-				localVarHeaderParams["Authorization"] = "Basic" + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
-			}
 			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
 				Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
 				localVarPathParams, localVarHttpContentType);
@@ -236,10 +240,6 @@ namespace PIWebAPIWrapper.Api
 			if (webId!= null) localVarPathParams.Add("webId", Configuration.ApiClient.ParameterToString(webId));
 			if (selectedFields!= null) localVarQueryParams.Add("selectedFields", Configuration.ApiClient.ParameterToString(selectedFields));
 
-			if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
-			{
-				localVarHeaderParams["Authorization"] = "Basic" + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
-			}
 			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
 				Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
 				localVarPathParams, localVarHttpContentType);
@@ -304,10 +304,6 @@ namespace PIWebAPIWrapper.Api
 				localVarPostBody = pointDTO;
 			}
 
-			if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
-			{
-				localVarHeaderParams["Authorization"] = "Basic" + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
-			}
 			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
 				Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
 				localVarPathParams, localVarHttpContentType);
@@ -362,10 +358,6 @@ namespace PIWebAPIWrapper.Api
 
 			if (webId!= null) localVarPathParams.Add("webId", Configuration.ApiClient.ParameterToString(webId));
 
-			if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
-			{
-				localVarHeaderParams["Authorization"] = "Basic" + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
-			}
 			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
 				Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
 				localVarPathParams, localVarHttpContentType);
@@ -432,10 +424,6 @@ namespace PIWebAPIWrapper.Api
 			if (nameFilter!= null) localVarQueryParams.Add("nameFilter", Configuration.ApiClient.ParameterToString(nameFilter));
 			if (selectedFields!= null) localVarQueryParams.Add("selectedFields", Configuration.ApiClient.ParameterToString(selectedFields));
 
-			if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
-			{
-				localVarHeaderParams["Authorization"] = "Basic" + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
-			}
 			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
 				Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
 				localVarPathParams, localVarHttpContentType);
@@ -502,10 +490,6 @@ namespace PIWebAPIWrapper.Api
 			if (webId!= null) localVarPathParams.Add("webId", Configuration.ApiClient.ParameterToString(webId));
 			if (selectedFields!= null) localVarQueryParams.Add("selectedFields", Configuration.ApiClient.ParameterToString(selectedFields));
 
-			if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
-			{
-				localVarHeaderParams["Authorization"] = "Basic" + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
-			}
 			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
 				Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
 				localVarPathParams, localVarHttpContentType);
@@ -521,6 +505,77 @@ namespace PIWebAPIWrapper.Api
 			return new ApiResponsePIPointAttribute(localVarStatusCode,
 				localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
 				(PIPointAttribute)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PIPointAttribute)));
+		}
+
+		/// <summary>Update a point attribute value.</summary>
+		public Object UpdateAttributeValue(string webId, string name, object value)
+		{
+			ApiResponseObject localVarResponse = UpdateAttributeValueWithHttpInfo(webId, name, value);
+			return localVarResponse.Data;
+		}
+
+		/// <summary>Update a point attribute value.</summary>
+		public ApiResponseObject UpdateAttributeValueWithHttpInfo(string webId, string name, object value)
+		{
+			if (string.IsNullOrEmpty(webId)==true)
+			{
+				webId = null;
+			}
+			if (string.IsNullOrEmpty(name)==true)
+			{
+				name = null;
+			}
+			if (webId == null)
+				throw new ApiException(400, "Missing required parameter 'webId'");
+			if (name == null)
+				throw new ApiException(400, "Missing required parameter 'name'");
+			if (value == null)
+				throw new ApiException(400, "Missing required parameter 'value'");
+
+			var localVarPath = "/points/{webId}/attributes/{name}";
+			var localVarPathParams = new Dictionary<String, String>();
+			var localVarQueryParams = new CustomDictionaryForQueryString();
+			var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+			var localVarFormParams = new Dictionary<String, String>();
+			var localVarFileParams = new Dictionary<String, FileParameter>();
+			Object localVarPostBody = null;
+
+			String[] localVarHttpContentTypes = new String[] { }; 
+			String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+			String[] localVarHttpHeaderAccepts = new String[] { "application/json", "text/json", "text/xml" };
+			String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+
+			if (localVarHttpHeaderAccept != null)
+				localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+			localVarPathParams.Add("format", "json");
+
+			if (webId!= null) localVarPathParams.Add("webId", Configuration.ApiClient.ParameterToString(webId));
+			if (name!= null) localVarPathParams.Add("name", Configuration.ApiClient.ParameterToString(name));
+			if (value != null && value.GetType() != typeof(byte[]))
+			{
+				localVarPostBody = Configuration.ApiClient.Serialize(value);
+			}
+			else
+			{
+				localVarPostBody = value;
+			}
+
+			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
+				Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+				localVarPathParams, localVarHttpContentType);
+
+			int localVarStatusCode = (int)localVarResponse.StatusCode;
+
+			if (ExceptionFactory != null)
+			{
+				Exception exception = ExceptionFactory("UpdateAttributeValue", localVarResponse);
+				if (exception != null) throw exception;
+			}
+
+			return new ApiResponseObject(localVarStatusCode,
+				localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
 		}
 
 		/// <summary>Retrieve multiple points by web id or path.</summary>
@@ -568,10 +623,6 @@ namespace PIWebAPIWrapper.Api
 			if (selectedFields!= null) localVarQueryParams.Add("selectedFields", Configuration.ApiClient.ParameterToString(selectedFields));
 			localVarQueryParams.Add("webId", Configuration.ApiClient.ParameterToString(webId));
 
-			if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
-			{
-				localVarHeaderParams["Authorization"] = "Basic" + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
-			}
 			IRestResponse localVarResponse = (IRestResponse)Configuration.ApiClient.CallApi(localVarPath,
 				Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
 				localVarPathParams, localVarHttpContentType);

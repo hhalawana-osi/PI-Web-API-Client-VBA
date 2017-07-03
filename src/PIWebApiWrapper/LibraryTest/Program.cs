@@ -114,6 +114,7 @@ namespace LibraryTest
             streamValuesItems.SetItem(2, streamValue3);
 
             ApiResponsePIItemsItemsSubstatus responsee = client.StreamSet.UpdateValuesAdHocWithHttpInfo(streamValuesItems);
+            var responsee2 = client.StreamSet.UpdateValueAdHocWithHttpInfo(streamValuesItems);
             Console.WriteLine(response.StatusCode);
 
           
