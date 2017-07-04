@@ -164,7 +164,6 @@ If you want to use basic authentication instead of Kerberos, set useKerberos to 
     Set efs = client.AssetData.GetEventFrames(db.webId, False, False, 100, True, 0, "", "*", "", elem.Name, elem.templateName, "", "", "None", "", "", "*-900", "*")
 ```
 
-
 ## Documentation for API Endpoints
 
 Class | Method | HTTP request | Description
@@ -655,6 +654,8 @@ Class | Method | HTTP request | Description
 *PointApi* | [**GetAttributesWithHttpInfo**](docs/Api/PointApi.md#getattributeswithhttpinfo) | **GET** /points/{webId}/attributes | Get point attributes.
 *PointApi* | [**GetAttributeByName**](docs/Api/PointApi.md#getattributebyname) | **GET** /points/{webId}/attributes/{name} | Get a point attribute by name.
 *PointApi* | [**GetAttributeByNameWithHttpInfo**](docs/Api/PointApi.md#getattributebynamewithhttpinfo) | **GET** /points/{webId}/attributes/{name} | Get a point attribute by name.
+*PointApi* | [**UpdateAttributeValue**](docs/Api/PointApi.md#updateattributevalue) | **PUT** /points/{webId}/attributes/{name} | Update a point attribute value.
+*PointApi* | [**UpdateAttributeValueWithHttpInfo**](docs/Api/PointApi.md#updateattributevaluewithhttpinfo) | **PUT** /points/{webId}/attributes/{name} | Update a point attribute value.
 *PointApi* | [**GetMultiple**](docs/Api/PointApi.md#getmultiple) | **GET** /points/multiple | Retrieve multiple points by web id or path.
 *PointApi* | [**GetMultipleWithHttpInfo**](docs/Api/PointApi.md#getmultiplewithhttpinfo) | **GET** /points/multiple | Retrieve multiple points by web id or path.
 *SecurityIdentityApi* | [**GetByPath**](docs/Api/SecurityIdentityApi.md#getbypath) | **GET** /securityidentities | Retrieve a security identity by path.
@@ -775,6 +776,8 @@ Class | Method | HTTP request | Description
 *ConfigurationApi* | [**GetWithHttpInfo**](docs/Api/ConfigurationApi.md#getwithhttpinfo) | **GET** /system/configuration/{key} | Get the value of a configuration item.
 *ConfigurationApi* | [**Delete**](docs/Api/ConfigurationApi.md#delete) | **DELETE** /system/configuration/{key} | Delete a configuration item.
 *ConfigurationApi* | [**DeleteWithHttpInfo**](docs/Api/ConfigurationApi.md#deletewithhttpinfo) | **DELETE** /system/configuration/{key} | Delete a configuration item.
+*ConfigurationApi* | [**Put**](docs/Api/ConfigurationApi.md#put) | **PUT** /system/configuration/{key} | Create or update a configuration item.
+*ConfigurationApi* | [**PutWithHttpInfo**](docs/Api/ConfigurationApi.md#putwithhttpinfo) | **PUT** /system/configuration/{key} | Create or update a configuration item.
 *TableCategoryApi* | [**GetByPath**](docs/Api/TableCategoryApi.md#getbypath) | **GET** /tablecategories | Retrieve a table category by path.
 *TableCategoryApi* | [**GetByPathWithHttpInfo**](docs/Api/TableCategoryApi.md#getbypathwithhttpinfo) | **GET** /tablecategories | Retrieve a table category by path.
 *TableCategoryApi* | [**Get**](docs/Api/TableCategoryApi.md#get) | **GET** /tablecategories/{webId} | Retrieve a table category.
@@ -953,6 +956,9 @@ Class | Method | HTTP request | Description
 - [PIUserInfo](docs/Model/PIUserInfo.md)
 - [PIValue](docs/Model/PIValue.md)
 - [PIVersion](docs/Model/PIVersion.md)
+- [PISearchByAttributeEventFrame](docs/Model/PISearchByAttributeEventFrame.md)
+- [PISearchByAttributeElement](docs/Model/PISearchByAttributeElement.md)
+- [PIAttributeValueQuery](docs/Model/PIAttributeValueQuery.md)
 
 ## Documentation For ApiResponses
 
@@ -1052,6 +1058,9 @@ Class | Method | HTTP request | Description
 - [ApiResponsePIUserInfo](docs/Response/ApiResponsePIUserInfo.md)
 - [ApiResponsePIValue](docs/Response/ApiResponsePIValue.md)
 - [ApiResponsePIVersion](docs/Response/ApiResponsePIVersion.md)
+- [ApiResponsePISearchByAttributeEventFrame](docs/Response/ApiResponsePISearchByAttributeEventFrame.md)
+- [ApiResponsePISearchByAttributeElement](docs/Response/ApiResponsePISearchByAttributeElement.md)
+- [ApiResponsePIAttributeValueQuery](docs/Response/ApiResponsePIAttributeValueQuery.md)
 
 
 

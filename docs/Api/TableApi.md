@@ -233,7 +233,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**ApiResponseObject**](../Response/ApiResponseObject.md)
+[**ApiResponsePITableData**](../Response/ApiResponsePITableData.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -252,7 +252,7 @@ Name | Type | Description | Notes
 
 ### Return type
 
-[**Object**](../Model/Object.md)
+[**PITableData**](../Model/PITableData.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

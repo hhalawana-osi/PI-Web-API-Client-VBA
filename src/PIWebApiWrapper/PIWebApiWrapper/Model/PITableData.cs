@@ -32,7 +32,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Model
 {
 
-	[Guid("8F8A3300-080E-4041-8D9F-209BAEDBB09F")]
+	[Guid("31AC96B8-D81A-4A98-B7B5-6BB46DB18C32")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -42,11 +42,11 @@ namespace PIWebAPIWrapper.Model
 		object Columns { get; set; }
 
 		[DispId(2)]
-		object[] Rows { get; set; }
+		object Rows { get; set; }
 
 	}
 
-	[Guid("A53700B7-F063-4E4F-B8A0-A3C5AFF274F5")]
+	[Guid("51B776D1-CF62-4153-A0A3-48596CC8B545")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IPITableData))]
@@ -63,7 +63,7 @@ namespace PIWebAPIWrapper.Model
 		public object Columns { get; set; }
 
 		[DataMember(Name = "Rows", EmitDefaultValue = false)]
-		public object[] Rows { get; set; }
+		public object Rows { get; set; }
 
 	}
 }

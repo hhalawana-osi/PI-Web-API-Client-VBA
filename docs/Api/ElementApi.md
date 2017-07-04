@@ -1113,7 +1113,7 @@ Name | Type | Description | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **CreateSearchByAttributeWithHttpInfo**
-> CreateSearchByAttributeWithHttpInfo()
+> CreateSearchByAttributeWithHttpInfo(PISearchByAttributeElement search)
 
 Create a link for a "Search Elements By Attribute Value" operation, whose queries are specified in the request content. The SearchRoot is specified by the Web Id of the root Element. If the SearchRoot is not specified, then the search starts at the Asset Database. ElementTemplate must be provided as the Web ID of the ElementTemplate, which are used to create the Elements. All the attributes in the queries must be defined as AttributeTemplates on the ElementTemplate. An array of attribute value queries are ANDed together to find the desired Element objects. At least one value query must be specified. There are limitations on SearchOperators.
 
@@ -1121,6 +1121,7 @@ Create a link for a "Search Elements By Attribute Value" operation, whose querie
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
+ **search** | **PISearchByAttributeElement**| . | [required]
 
 
 ### Return type
@@ -1130,7 +1131,7 @@ Name | Type | Description | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **CreateSearchByAttribute**
-> CreateSearchByAttribute()
+> CreateSearchByAttribute(PISearchByAttributeElement search)
 
 Create a link for a "Search Elements By Attribute Value" operation, whose queries are specified in the request content. The SearchRoot is specified by the Web Id of the root Element. If the SearchRoot is not specified, then the search starts at the Asset Database. ElementTemplate must be provided as the Web ID of the ElementTemplate, which are used to create the Elements. All the attributes in the queries must be defined as AttributeTemplates on the ElementTemplate. An array of attribute value queries are ANDed together to find the desired Element objects. At least one value query must be specified. There are limitations on SearchOperators.
 
@@ -1138,6 +1139,7 @@ Create a link for a "Search Elements By Attribute Value" operation, whose querie
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
+ **search** | **PISearchByAttributeElement**| . | [required]
 
 
 ### Return type

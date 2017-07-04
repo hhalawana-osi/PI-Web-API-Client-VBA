@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("EECA1D8C-38B7-4F0B-B0A2-39F74E67B430")]
+	[Guid("4619CE2D-1A2D-404E-AEEB-CF0DD187C063")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -341,7 +341,7 @@ namespace PIWebAPIWrapper.Api
 		#endregion
 	}
 
-	[Guid("184F69E3-E2A8-4992-94B8-1B6697F55F57")]
+	[Guid("F17FC7AC-FB3D-46F2-B6FE-2B2C76FB179E")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IAssetDatabaseApi))]

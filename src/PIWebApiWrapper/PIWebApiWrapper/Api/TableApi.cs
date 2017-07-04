@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("538ADB50-0764-4904-BE47-880B855D5727")]
+	[Guid("2E2BBB3A-4E5A-4348-A01F-9021573E88F0")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -76,11 +76,11 @@ namespace PIWebAPIWrapper.Api
 
 		/// <summary>Get the table's data.</summary>
 		[DispId(11)]
-		Object GetData(string webId, string selectedFields = null);
+		PITableData GetData(string webId, string selectedFields = null);
 
 		/// <summary>Get the table's data.</summary>
 		[DispId(12)]
-		ApiResponseObject GetDataWithHttpInfo(string webId, string selectedFields = null);
+		ApiResponsePITableData GetDataWithHttpInfo(string webId, string selectedFields = null);
 
 		/// <summary>Update the table's data.</summary>
 		[DispId(13)]
@@ -141,7 +141,7 @@ namespace PIWebAPIWrapper.Api
 		#endregion
 	}
 
-	[Guid("25E04F18-8048-44D9-BC64-E3DB18242707")]
+	[Guid("9B9EBF5B-E036-4BE8-B7E4-B185E20D7D76")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(ITableApi))]
@@ -475,14 +475,14 @@ namespace PIWebAPIWrapper.Api
 		}
 
 		/// <summary>Get the table's data.</summary>
-		public Object GetData(string webId, string selectedFields = null)
+		public PITableData GetData(string webId, string selectedFields = null)
 		{
-			ApiResponseObject localVarResponse = GetDataWithHttpInfo(webId, selectedFields);
+			ApiResponsePITableData localVarResponse = GetDataWithHttpInfo(webId, selectedFields);
 			return localVarResponse.Data;
 		}
 
 		/// <summary>Get the table's data.</summary>
-		public ApiResponseObject GetDataWithHttpInfo(string webId, string selectedFields = null)
+		public ApiResponsePITableData GetDataWithHttpInfo(string webId, string selectedFields = null)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
 			{
@@ -528,9 +528,9 @@ namespace PIWebAPIWrapper.Api
 				if (exception != null) throw exception;
 			}
 
-			return new ApiResponseObject(localVarStatusCode,
+			return new ApiResponsePITableData(localVarStatusCode,
 				localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-				(Object)Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+				(PITableData)Configuration.ApiClient.Deserialize(localVarResponse, typeof(PITableData)));
 		}
 
 		/// <summary>Update the table's data.</summary>

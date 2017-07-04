@@ -1221,7 +1221,7 @@ Name | Type | Description | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **UpdateValueAdHocWithHttpInfo**
-> UpdateValueAdHocWithHttpInfo(PIItemsStreamValues values, string bufferOption = null, string updateOption = null)
+> UpdateValueAdHocWithHttpInfo(PIItemsStreamValue values, string bufferOption = null, string updateOption = null)
 
 Updates a single value for the specified streams.
 
@@ -1229,7 +1229,7 @@ Updates a single value for the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **values** | **PIItemsStreamValues**| The values to add or update.. | [required]
+ **values** | **PIItemsStreamValue**| The values to add or update.. | [required]
  **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. | [optional] - always use empty strings("") instead of Null
  **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. | [optional] - always use empty strings("") instead of Null
 
@@ -1241,7 +1241,7 @@ Name | Type | Description | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **UpdateValueAdHoc**
-> UpdateValueAdHoc(PIItemsStreamValues values, string bufferOption = null, string updateOption = null)
+> UpdateValueAdHoc(PIItemsStreamValue values, string bufferOption = null, string updateOption = null)
 
 Updates a single value for the specified streams.
 
@@ -1249,7 +1249,7 @@ Updates a single value for the specified streams.
 
 Name | Type | Description | Notes
 ------------- | ------------- | ------------- | -------------
- **values** | **PIItemsStreamValues**| The values to add or update.. | [required]
+ **values** | **PIItemsStreamValue**| The values to add or update.. | [required]
  **bufferOption** | **string**| The desired AFBufferOption. The default is 'BufferIfPossible'.. | [optional] - always use empty strings("") instead of Null
  **updateOption** | **string**| The desired AFUpdateOption. The default is 'Replace'.. | [optional] - always use empty strings("") instead of Null
 

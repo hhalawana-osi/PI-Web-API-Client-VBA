@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("4D4B83CA-FE8E-49D0-9F85-2462BDC13403")]
+	[Guid("968CB869-C674-4C09-9C8A-436D94B4D3EC")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -220,16 +220,16 @@ namespace PIWebAPIWrapper.Api
 
 		/// <summary>Updates a single value for the specified streams.</summary>
 		[DispId(47)]
-		PIItemsSubstatus UpdateValueAdHoc(PIItemsStreamValues values, string bufferOption = null, string updateOption = null);
+		PIItemsSubstatus UpdateValueAdHoc(PIItemsStreamValue values, string bufferOption = null, string updateOption = null);
 
 		/// <summary>Updates a single value for the specified streams.</summary>
 		[DispId(48)]
-		ApiResponsePIItemsSubstatus UpdateValueAdHocWithHttpInfo(PIItemsStreamValues values, string bufferOption = null, string updateOption = null);
+		ApiResponsePIItemsSubstatus UpdateValueAdHocWithHttpInfo(PIItemsStreamValue values, string bufferOption = null, string updateOption = null);
 
 		#endregion
 	}
 
-	[Guid("75FBE823-AF76-43AE-908F-6129420D104D")]
+	[Guid("BCF8FF8D-7DE2-406F-8244-F1758C19CD8D")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IStreamSetApi))]
@@ -2141,14 +2141,14 @@ namespace PIWebAPIWrapper.Api
 		}
 
 		/// <summary>Updates a single value for the specified streams.</summary>
-		public PIItemsSubstatus UpdateValueAdHoc(PIItemsStreamValues values, string bufferOption = null, string updateOption = null)
+		public PIItemsSubstatus UpdateValueAdHoc(PIItemsStreamValue values, string bufferOption = null, string updateOption = null)
 		{
 			ApiResponsePIItemsSubstatus localVarResponse = UpdateValueAdHocWithHttpInfo(values, bufferOption, updateOption);
 			return localVarResponse.Data;
 		}
 
 		/// <summary>Updates a single value for the specified streams.</summary>
-		public ApiResponsePIItemsSubstatus UpdateValueAdHocWithHttpInfo(PIItemsStreamValues values, string bufferOption = null, string updateOption = null)
+		public ApiResponsePIItemsSubstatus UpdateValueAdHocWithHttpInfo(PIItemsStreamValue values, string bufferOption = null, string updateOption = null)
 		{
 			if (string.IsNullOrEmpty(bufferOption)==true)
 			{

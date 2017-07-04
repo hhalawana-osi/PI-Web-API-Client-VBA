@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("83C4CE27-CB93-4D81-BFFC-65A088F4B731")]
+	[Guid("8EEADAF7-712A-4619-B312-25F4EBD35DBB")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -60,16 +60,16 @@ namespace PIWebAPIWrapper.Api
 
 		/// <summary>Create or update a configuration item.</summary>
 		[DispId(7)]
-		Object Put(string key, object value);
+		Object Put(string key, string value);
 
 		/// <summary>Create or update a configuration item.</summary>
 		[DispId(8)]
-		ApiResponseObject PutWithHttpInfo(string key, object value);
+		ApiResponseObject PutWithHttpInfo(string key, string value);
 
 		#endregion
 	}
 
-	[Guid("C0BAFD49-675C-41A5-8F1A-38B2F2655164")]
+	[Guid("2B762952-C9F6-468F-BCC8-6B7BB486E98A")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IConfigurationApi))]
@@ -263,14 +263,14 @@ namespace PIWebAPIWrapper.Api
 		}
 
 		/// <summary>Create or update a configuration item.</summary>
-		public Object Put(string key, object value)
+		public Object Put(string key, string value)
 		{
 			ApiResponseObject localVarResponse = PutWithHttpInfo(key, value);
 			return localVarResponse.Data;
 		}
 
 		/// <summary>Create or update a configuration item.</summary>
-		public ApiResponseObject PutWithHttpInfo(string key, object value)
+		public ApiResponseObject PutWithHttpInfo(string key, string value)
 		{
 			if (string.IsNullOrEmpty(key)==true)
 			{

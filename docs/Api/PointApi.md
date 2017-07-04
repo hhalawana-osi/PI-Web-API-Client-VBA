@@ -14,6 +14,8 @@ Method | HTTP request | Description
 [**GetAttributesWithHttpInfo**](PointApi.md#getattributeswithhttpinfo) | **GET** /points/{webId}/attributes | Get point attributes.
 [**GetAttributeByName**](PointApi.md#getattributebyname) | **GET** /points/{webId}/attributes/{name} | Get a point attribute by name.
 [**GetAttributeByNameWithHttpInfo**](PointApi.md#getattributebynamewithhttpinfo) | **GET** /points/{webId}/attributes/{name} | Get a point attribute by name.
+[**UpdateAttributeValue**](PointApi.md#updateattributevalue) | **PUT** /points/{webId}/attributes/{name} | Update a point attribute value.
+[**UpdateAttributeValueWithHttpInfo**](PointApi.md#updateattributevaluewithhttpinfo) | **PUT** /points/{webId}/attributes/{name} | Update a point attribute value.
 [**GetMultiple**](PointApi.md#getmultiple) | **GET** /points/multiple | Retrieve multiple points by web id or path.
 [**GetMultipleWithHttpInfo**](PointApi.md#getmultiplewithhttpinfo) | **GET** /points/multiple | Retrieve multiple points by web id or path.
 
@@ -247,6 +249,46 @@ Name | Type | Description | Notes
 ### Return type
 
 [**PIPointAttribute**](../Model/PIPointAttribute.md)
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **UpdateAttributeValueWithHttpInfo**
+> UpdateAttributeValueWithHttpInfo(string webId, string name, string value)
+
+Update a point attribute value.
+
+### Parameters
+
+Name | Type | Description | Notes
+------------- | ------------- | ------------- | -------------
+ **webId** | **string**| The ID of the point.. | [required]
+ **name** | **string**| The name of the attribute to be updated.. | [required]
+ **value** | **string**| The new value of the attribute to be updated.. | [required]
+
+
+### Return type
+
+[**ApiResponseObject**](../Response/ApiResponseObject.md)
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **UpdateAttributeValue**
+> UpdateAttributeValue(string webId, string name, string value)
+
+Update a point attribute value.
+
+### Parameters
+
+Name | Type | Description | Notes
+------------- | ------------- | ------------- | -------------
+ **webId** | **string**| The ID of the point.. | [required]
+ **name** | **string**| The name of the attribute to be updated.. | [required]
+ **value** | **string**| The new value of the attribute to be updated.. | [required]
+
+
+### Return type
+
+[**Object**](../Model/Object.md)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

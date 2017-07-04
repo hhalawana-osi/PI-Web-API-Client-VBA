@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("BBBD63BC-9F72-43AD-8751-4B6CE8082C5E")]
+	[Guid("CE3B4C29-EE3D-46A0-A067-8A42A038C217")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -84,11 +84,11 @@ namespace PIWebAPIWrapper.Api
 
 		/// <summary>Update a point attribute value.</summary>
 		[DispId(13)]
-		Object UpdateAttributeValue(string webId, string name, object value);
+		Object UpdateAttributeValue(string webId, string name, string value);
 
 		/// <summary>Update a point attribute value.</summary>
 		[DispId(14)]
-		ApiResponseObject UpdateAttributeValueWithHttpInfo(string webId, string name, object value);
+		ApiResponseObject UpdateAttributeValueWithHttpInfo(string webId, string name, string value);
 
 		/// <summary>Retrieve multiple points by web id or path.</summary>
 		[DispId(15)]
@@ -101,7 +101,7 @@ namespace PIWebAPIWrapper.Api
 		#endregion
 	}
 
-	[Guid("49248339-8396-4A07-8662-481FB2D09921")]
+	[Guid("E701189C-0AEA-47A5-82FE-71A6AA1A5E50")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IPointApi))]
@@ -508,14 +508,14 @@ namespace PIWebAPIWrapper.Api
 		}
 
 		/// <summary>Update a point attribute value.</summary>
-		public Object UpdateAttributeValue(string webId, string name, object value)
+		public Object UpdateAttributeValue(string webId, string name, string value)
 		{
 			ApiResponseObject localVarResponse = UpdateAttributeValueWithHttpInfo(webId, name, value);
 			return localVarResponse.Data;
 		}
 
 		/// <summary>Update a point attribute value.</summary>
-		public ApiResponseObject UpdateAttributeValueWithHttpInfo(string webId, string name, object value)
+		public ApiResponseObject UpdateAttributeValueWithHttpInfo(string webId, string name, string value)
 		{
 			if (string.IsNullOrEmpty(webId)==true)
 			{
