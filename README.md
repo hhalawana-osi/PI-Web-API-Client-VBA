@@ -166,7 +166,7 @@ If you want to use basic authentication instead of Kerberos, set useKerberos to 
 
 ## Documentation
 
-All classes and methods are described on the DOCUMENTATION.md(DOCUMENTATION.md) file. You can also use the Object Browser from Visual Basic for Application to read the same information.
+All classes and methods are described on the [DOCUMENTATION.md](DOCUMENTATION.md). You can also use the Object Browser from Visual Basic for Application to read the same information.
 
 
 ## Licensing
