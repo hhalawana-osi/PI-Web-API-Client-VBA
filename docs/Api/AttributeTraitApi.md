@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIItemsAttributeTrait**](../Response/ApiResponsePIItemsAttributeTrait.md)
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../DOCUMENTATION.md#documentation-for-api-endpoints) [[Back to Model list]](../../DOCUMENTATION.md#documentation-for-models) [[Back to DOCUMENTATION]](../../DOCUMENTATION.md)
 
 # **GetByCategory**
 > GetByCategory(string categorys, string selectedFields = null)
@@ -44,7 +44,7 @@ Name | Type | Description | Notes
 
 [**PIItemsAttributeTrait**](../Model/PIItemsAttributeTrait.md)
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../DOCUMENTATION.md#documentation-for-api-endpoints) [[Back to Model list]](../../DOCUMENTATION.md#documentation-for-models) [[Back to DOCUMENTATION]](../../DOCUMENTATION.md)
 
 # **GetWithHttpInfo**
 > GetWithHttpInfo(string name, string selectedFields = null)
@@ -63,7 +63,7 @@ Name | Type | Description | Notes
 
 [**ApiResponsePIAttributeTrait**](../Response/ApiResponsePIAttributeTrait.md)
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../DOCUMENTATION.md#documentation-for-api-endpoints) [[Back to Model list]](../../DOCUMENTATION.md#documentation-for-models) [[Back to DOCUMENTATION]](../../DOCUMENTATION.md)
 
 # **Get**
 > Get(string name, string selectedFields = null)
@@ -82,4 +82,4 @@ Name | Type | Description | Notes
 
 [**PIAttributeTrait**](../Model/PIAttributeTrait.md)
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../DOCUMENTATION.md#documentation-for-api-endpoints) [[Back to Model list]](../../DOCUMENTATION.md#documentation-for-models) [[Back to DOCUMENTATION]](../../DOCUMENTATION.md)

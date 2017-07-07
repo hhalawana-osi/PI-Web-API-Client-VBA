@@ -32,7 +32,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Model
 {
 
-	[Guid("211DBF03-CF72-40B6-89E7-383275C95109")]
+	[Guid("1ECAC90F-5240-423E-A642-367CEE8B8EB8")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -55,7 +55,7 @@ namespace PIWebAPIWrapper.Model
 
 	}
 
-	[Guid("8C2ED5A5-6D2C-4322-BFAB-E2C5351B2BD5")]
+	[Guid("8983DDBC-E450-4005-84E2-2BDC687437E1")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IPICacheInstance))]
