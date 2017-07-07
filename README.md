@@ -14,9 +14,10 @@ This repository has the source code package of the PI Web API Wrapper for VBA.
 ## Installation
 
  - Download this source code
- - Create a new folder under %PIHOME% named WebAPIWrapper 
- - Copy all files from the dist folder to %PIHOME%\WebAPIWrapper 
- - Run as Administrator the reg.bat located on %PIHOME%\WebAPIWrapper in order to register the PIWebApiWrapper assmebly.
+ - Create a new folder under %PIHOME% named WebAPIClient, if it doesn't exist.
+ - Create a new folder under WebAPIClient named VBA, if it doesn't exist.
+ - Copy all files from the dist folder to %PIHOME%\WebAPIClient\VBA.
+ - Run as Administrator the reg.bat located on %PIHOME%\WebAPIClient\VBA in order to register the PIWebApiWrapper assmebly.
 
 
 ## Usage
