@@ -26,6 +26,11 @@ Create or edit a PI ProcessBook display. Press ALT+F11 to open Visual Basic for 
 ## Source code
 The Visual Studio solution that generates the final library is available on the src folder. You might want to add or edit a method and rebuild the solution in order to generate custom assemblies.
 
+## Documentation
+
+All classes and methods are described on the [DOCUMENTATION.md](DOCUMENTATION.md). You can also use the Object Browser from Visual Basic for Application to read the same information.
+
+
 ## Remember
 
 As this is a .NET library with COM objects and methods exposed to be able be consumed within the VBA environment, there are some things to have in mind, specially when comparing with C# development.
@@ -163,10 +168,6 @@ If you want to use basic authentication instead of Kerberos, set useKerberos to 
     Set db = client.AssetData.GetByPath(dbPath)
     Set efs = client.AssetData.GetEventFrames(db.webId, False, False, 100, True, 0, "", "*", "", elem.Name, elem.templateName, "", "", "None", "", "", "*-900", "*")
 ```
-
-## Documentation
-
-All classes and methods are described on the [DOCUMENTATION.md](DOCUMENTATION.md). You can also use the Object Browser from Visual Basic for Application to read the same information.
 
 
 ## Licensing
