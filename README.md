@@ -37,7 +37,7 @@ All classes and methods are described on the [DOCUMENTATION](DOCUMENTATION.md). 
 As this is a .NET library with COM objects and methods exposed to be able be consumed within the VBA environment, there are some things to have in mind, specially when comparing with C# development.
 
  - VBA is not compatible with async methods. Therefore, only sync methods are available in this library.
- - For each PI Web API action/method of each controller, there are two methods on this client library. One returns the object itself and the other returns also some http information, such as status code. Please refer to the [Get](DOCUMENTATION.md) and [GetWithHttpInfo](DOCUMENTATION.md) methods on our documentation and you will realize the different between them.
+ - For each PI Web API action/method of each controller, there are two methods on this client library. One returns the object itself and the other returns also some http information, such as status code. Please refer to the [**Get**](docs/Api/HomeApi.md#get) and [**GetWithHttpInfo**](docs/Api/HomeApi.md#getwithhttpinfo) methods on our documentation and you will realize the different between them.
  - The Batch and Channel controllers are not exposed.
  - When working with data transfer objects (models) with an Items property (such as PIItemsElement), do not access or modify this property directly. Use CreateItemsArray(), GetItem(), SetItem() and GetItemsLength() instead.
  - For models that have the Value property, use SetValueWithString(), SetValueWithInt(), SetValueWithDouble() methods to set this property.
