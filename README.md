@@ -1,7 +1,7 @@
 PI Web API Wrapper for VBA
 ===
 
-## Organization
+## Overview
 This repository has the source code package of the PI Web API Wrapper for VBA.
 
 ## Requirements
@@ -29,7 +29,7 @@ The Visual Studio solution that generates the final library is available on the 
 
 ## Documentation
 
-All classes and methods are described on the [DOCUMENTATION.md](DOCUMENTATION.md). You can also use the Object Browser from Visual Basic for Application to read the same information.
+All classes and methods are described on the [DOCUMENTATION.md](DOCUMENTATION). You can also use the Object Browser from Visual Basic for Application to read the same information.
 
 
 ## Remember
@@ -37,9 +37,9 @@ All classes and methods are described on the [DOCUMENTATION.md](DOCUMENTATION.md
 As this is a .NET library with COM objects and methods exposed to be able be consumed within the VBA environment, there are some things to have in mind, specially when comparing with C# development.
 
  - VBA is not compatible with async methods. Therefore, only sync methods are available in this library.
- - For each PI Web API action/method of each controller, there are two methods on this client library. One returns the object itself and the other returns also some http information, such as status code.
+ - For each PI Web API action/method of each controller, there are two methods on this client library. One returns the object itself and the other returns also some http information, such as status code. Please refer to the Get and GetWithHttpInfo methods on our documentation and you will realize the different between them.
  - The Batch and Channel controllers are not exposed.
- - When working with models with an Items property (such as PIItemsElement), do not access or modify this property directly. Use CreateItemsArray(), GetItem(), SetItem() and GetItemsLength() instead.
+ - When working with data transfer objects (models) with an Items property (such as PIItemsElement), do not access or modify this property directly. Use CreateItemsArray(), GetItem(), SetItem() and GetItemsLength() instead.
  - For models that have the Value property, use SetValueWithString(), SetValueWithInt(), SetValueWithDouble() methods to set this property.
  - For the Api methods, all variables whose type are not a string must be defined. If a string variable is optional, define it as an empty string instead of Null. 
 
@@ -56,8 +56,7 @@ There are two PI ProcessBook displays available on the Samples folder of this re
     connectedToPIWebAPI = client.Connect("https://marc-web-sql.marc.net/piwebapi", True)
 ``` 
 
-If you want to use basic authentication instead of Kerberos, set useKerberos to False and set the username and password accordingly.
-
+If you want to use basic authentication instead of Kerberos, set useKerberos to False and set the username and password accordingly. We recommend using Kerberos because it is the safest option. For basic authentication, the password needs to be hardcoded which is not recommended. If using Kerberos authentication is not an option, protect your VBA code with a password.
 
 ### Get the PI Data Archive WebId
 
