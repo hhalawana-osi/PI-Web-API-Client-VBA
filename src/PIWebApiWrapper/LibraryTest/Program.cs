@@ -114,9 +114,6 @@ namespace LibraryTest
             streamValuesItems.SetItem(2, streamValue3);
 
             ApiResponsePIItemsItemsSubstatus responsee = client.StreamSet.UpdateValuesAdHocWithHttpInfo(streamValuesItems);
-            var responsee2 = client.StreamSet.UpdateValueAdHocWithHttpInfo(streamValuesItems);
-            Console.WriteLine(response.StatusCode);
-
           
             PIElement myElement = client.Element.GetByPath("\\\\MARC-PI2016\\CrossPlatformLab\\marc.adm");
             Console.WriteLine(myElement.Description);

@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 namespace PIWebAPIWrapper.Api
 {
 
-	[Guid("32BC0985-D3CE-4281-AE0D-0698985B848B")]
+	[Guid("889C656B-30E5-42EE-814B-CCC25862DD41")]
 	[ComVisible(true)]
 	[InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
 
@@ -101,7 +101,7 @@ namespace PIWebAPIWrapper.Api
 		#endregion
 	}
 
-	[Guid("33A8EC94-80F1-43DA-91AE-D8D46E11CB4E")]
+	[Guid("A6EBC4D6-5D9A-47A7-9F87-249232D380B5")]
 	[ComVisible(true)]
 	[ClassInterface(ClassInterfaceType.None)]
 	[ComSourceInterfaces(typeof(IDataServerApi))]

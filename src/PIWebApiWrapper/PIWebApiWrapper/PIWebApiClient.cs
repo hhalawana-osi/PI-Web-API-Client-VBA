@@ -99,15 +99,15 @@ namespace PIWebAPIWrapper
 		
 		/// <summary>Get defined user name</summary>
         [DispId(33)]
-        string GetUserName();
+        string UserName { get; }
 		
 		/// <summary>Get defined PI Web API base service url</summary>
         [DispId(34)]
-        string GeBaseUrl();
+        string BaseUrl { get; }
 		
 		/// <summary>Check if the authentication which is being used is Kerberos or Basic</summary>
         [DispId(35)]
-        bool IsUsingKerberos();
+        bool UseKerberos { get; }
 
     }
 
@@ -152,26 +152,33 @@ namespace PIWebAPIWrapper
             }
         }
 
-		
-
-		
-	    /// <summary>Get defined user name</summary>
-        public string GetUserName()
-        {
-            return userName;
-        }
+		/// <summary>Get defined user name</summary>
+        public string UserName 
+		{ 
+			get
+			{
+				return userName;
+			}
+		}
 		
 		/// <summary>Get defined PI Web API base service url</summary>
-        public string GeBaseUrl()
-        {
-            return baseUrl;
-        }
+		public string BaseUrl 
+		{ 
+			get
+			{
+				return baseUrl;
+			}
+		}
 		
-	    /// <summary>Check if the authentication which is being used is Kerberos or Basic</summary>
-        public bool IsUsingKerberos()
-        {
-            return useKerberos;
-        }
+		/// <summary>Check if the authentication which is being used is Kerberos or Basic</summary>
+		public bool UseKerberos
+		{ 
+			get
+			{
+				return useKerberos;
+			}
+		}		
+
 
         private Configuration GetConfiguration(bool NoCacheHeaderCompatible)
         {

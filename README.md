@@ -43,18 +43,32 @@ As this is a .NET library with COM objects and methods exposed to be able be con
  - For models that have the Value property, use SetValueWithString(), SetValueWithInt(), SetValueWithDouble() methods to set this property.
  - For the Api methods, all variables whose type are not a string must be defined. If a string variable is optional, define it as an empty string instead of Null. 
 
+## Feedback 
+
+Plese provide feedback by commenting the related [PI Developer Club blog post](https://pisquare.osisoft.com/community/developers-club/blog/2017/07/10/announcing-pi-web-api-wrapper-for-vba).
+ 
+ 
 ## Examples
 
 There are two PI ProcessBook displays available on the Samples folder of this repository. In addition, please refer to the following examples to understand how to use this library: 
 
 
-### Create an instance of the PI Web API top level object.
+### Create an instance of the PI Web API top level object using Kerberos authentication.
 
 ```vb# 
     Dim client As New PIWebApiClient
     Dim connectedToPIWebAPI As Boolean
     connectedToPIWebAPI = client.Connect("https://marc-web-sql.marc.net/piwebapi", True)
 ``` 
+
+### Create an instance of the PI Web API top level object using Basic authentication.
+
+```vb# 
+    Dim client As New PIWebApiClient
+    Dim connectedToPIWebAPI As Boolean
+    connectedToPIWebAPI = client.Connect("https://marc-web-sql.marc.net/piwebapi", False, username, password) 
+``` 
+
 
 If you want to use basic authentication instead of Kerberos, set useKerberos to False and set the username and password accordingly. We recommend using Kerberos because it is the safest option. For basic authentication, the password needs to be hardcoded which is not recommended. If using Kerberos authentication is not an option, protect your VBA code with a password.
 
